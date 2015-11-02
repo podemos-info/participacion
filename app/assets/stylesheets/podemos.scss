@@ -320,6 +320,8 @@ footer {
 ul.pagination li.current a,
 ul.pagination li.current button,
 .proposal-featured .supports .not-logged,
-.proposal .supports .not-logged{
-    background: $morado;
+.proposal .supports .not-logged,
+.debate-featured .votes .not-logged,
+.debate .votes .not-logged {
+    background: $verde;
 }
