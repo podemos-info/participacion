@@ -72,7 +72,7 @@ class User < ActiveRecord::Base
     if user.nil?
       name_parts = auth.info.name.split(' ')
       user_alias = name_parts[0][0]+name_parts[1]
-      nicks_count = User.where(username: user_alias).count
+      nicks_count = User.where("username ~ ?",  "^#{user_alias}").count
       user_alias += (nicks_count+1).to_s if nicks_count != 0
       user = User.new(
         #username: auth.info.nickname || auth.info.name || auth.extra.raw_info.name.parameterize('-') || auth.uid ,
