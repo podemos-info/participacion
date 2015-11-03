@@ -396,9 +396,6 @@ es:
     proposal:
       title: "ICPs"
       description: "Iniciativas Ciudadanas Populares: herramienta a través de la cual los inscritos en PODEMOS pueden hacer propuestas que, si reciben el apoyo suficiente, son llevadas a referéndum interno vinculante para su posible adopción."
-    podemos-proposal:
-      title: "ICPs"
-      description: "Iniciativas Ciudadanas Populares: herramienta a través de la cual los inscritos en PODEMOS pueden hacer propuestas que, si reciben el apoyo suficiente, son llevadas a referéndum interno vinculante para su posible adopción."
     programa:
       title: "Programa"
       description: "Conoce al detalle las propuestas del programa electoral de PODEMOS antes de votarlas en nuestro portal de Participación."
