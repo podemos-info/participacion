@@ -15,7 +15,7 @@ es:
       participation: Participación
       open_city_title: "Un lugar de encuentro para construir PODEMOS."
       open_city_slogan_html:
-        "Esta plaza es un espacio de participación en el que puedes hacer propuestas, debatir y econtrarte con otros para construir la organización del cambio."
+        "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
       #"Empecemos escuchando qué tiene que decir Madrid.
       #Para ello abrimos esta Puerta del Sol digital, donde toda la gente de Madrid podemos encontrarnos para debatir y compartir todo lo que queramos."
       # open_city_text:
@@ -228,9 +228,9 @@ es:
   proposals:
     index:
       title: ICPs
-      start_proposal: Crea una propuesta
+      start_proposal: Crea una ICP
       select_order: Ordenar por
-      select_order_long: Estás viendo las propuestas
+      select_order_long: Estás viendo las ICPs
       orders:
         confidence_score: "más apoyadas"
         hot_score: "más activas"
@@ -243,14 +243,14 @@ es:
       search_form:
         title: Search
         button: Search
-        placeholder: "Buscar propuestas..."
+        placeholder: "Buscar ICPS..."
       search_results:
         one: " que contiene '%{search_term}'"
         other: " que contienen '%{search_term}'"
     proposal:
-      proposal: Propuesta
+      proposal: ICP
       support: "Apoyar"
-      support_title: "Apoyar esta propuesta"
+      support_title: "Apoyar esta ICP"
       comments:
         zero: Sin comentarios
         one: 1 Comentario
@@ -262,27 +262,27 @@ es:
       supports_necessary: "764 apoyos necesarios"
       census_percent: "0.2% del Censo"
       total_percent: "100%"
-      already_supported: "¡Ya has apoyado esta propuesta, compártela!"
+      already_supported: "¡Ya has apoyado esta ICP, compártela!"
     form:
-      proposal_title: Título de la propuesta
-      proposal_question: Pregunta de la propuesta
+      proposal_title: Título de la ICP
+      proposal_question: Pregunta de la ICP
       proposal_question_example_html: "Debe ser resumida en una pregunta cuya respuesta sea Sí o No. <em>Ej. '¿Está usted de acuerdo en peatonalizar la calle Mayor?'</em>"
       proposal_summary: "Resumen de la propuesta"
       proposal_summary_note: "(máximo 200 caracteres)"
-      proposal_text: Texto desarrollado de la propuesta
+      proposal_text: Texto desarrollado de la ICP
       proposal_external_url: Enlace a documentación adicional
       proposal_video_url: "Enlace a vídeo externo"
       proposal_video_url_note: "Puedes añadir un enlace a YouTube o Vimeo"
-      proposal_responsible_name: "Nombre y apellidos de la persona que hace esta propuesta"
+      proposal_responsible_name: "Nombre y apellidos de la persona que hace esta ICP"
       proposal_responsible_name_note: "(individualmente o como representante de un colectivo; no se mostrará públicamente)"
       tags_label: Temas
       tags_instructions: >
-        Etiqueta esta propuesta. Puedes elegir entre nuestras propuestas o introducir las que desees.
+        Etiqueta esta propuesta. Puedes elegir entre nuestras ICPs o introducir las que desees.
       tags_placeholder: "Escribe las etiquetas que desees separadas por una coma (',')"
     show:
       back_link: Volver
       author_deleted: Usuario eliminado
-      code: "Código de la propuesta:"
+      code: "Código de la ICP:"
       comments_title: Comentarios
       comments:
         zero: Sin comentarios
@@ -291,26 +291,26 @@ es:
       login_to_comment: "Necesitas %{signin} para comentar."
       edit_proposal_link: Editar
       share: Compartir
-      flag: "Esta propuesta ha sido marcada como inapropiada por varios usuarios."
+      flag: "Esta ICP ha sido marcada como inapropiada por varios usuarios."
     edit:
-      editing: Editar propuesta
-      show_link: Ver propuesta
+      editing: Editar ICP
+      show_link: Ver ICP
       back_link: Volver
       form:
         submit_button: "Guardar cambios"
     new:
-      start_new: Crear una propuesta
-      more_info: "¿Cómo funcionan las propuestas?"
+      start_new: Crear una ICP
+      more_info: "¿Cómo funcionan las ICPs?"
       back_link: Volver
-      recommendations_title: Recomendaciones para crear una propuesta
-      recommendation_one: "No escribas el título de la propuesta o frases enteras en mayúsculas. En internet eso se considera gritar. Y a nadie le gusta que le griten."
-      recommendation_two: "Cualquier propuesta o comentario que implique una acción ilegal será eliminada, también las que tengan la intención de sabotear los espacios de propuesta, todo lo demás está permitido."
+      recommendations_title: Recomendaciones para crear una ICP
+      recommendation_one: "No escribas el título de la ICP o frases enteras en mayúsculas. En internet eso se considera gritar. Y a nadie le gusta que le griten."
+      recommendation_two: "Cualquier ICP o comentario que implique una acción ilegal será eliminada, también las que tengan la intención de sabotear los espacios de propuesta, todo lo demás está permitido."
       recommendation_three: "Disfruta de este espacio, de las voces que lo llenan, también es tuyo."
       form:
-        submit_button: "Crear propuesta"
+        submit_button: "Crear ICP"
     create:
       form:
-        submit_button: "Crear propuesta"
+        submit_button: "Crear ICP"
     update:
       form:
         submit_button: "Guardar cambios"
@@ -392,16 +392,16 @@ es:
     signed_in_home_title: Actividad reciente
     debates:
       title: "Debates y Opinión"
-      description: "Exprésate, debate con otros y contribuye a enriquecer el pensamiento colectivo."
+      description: "Exprésate, debate y comparte tus ideas con el resto de inscritos."
     proposal:
       title: "ICPs"
       description: "Las que tengan un 10% de apoyos del resto de participantes se trasladarán al portal de participación y si reciben el apoyo de los inscritos se llevarán a referéndum interno vinculante."
     podemos-proposal:
       title: "ICPs"
-      description: "Las que tengan un 10% de apoyos del resto de participantes se trasladarán al portal de participación y si reciben el apoyo de los inscritos se llevarán a referéndum interno vinculante."
+      description: "Iniciativas Ciudadanas Populares: herramienta a través de la cual los inscritos en PODEMOS pueden hacer propuestas que, si reciben el apoyo suficiente, son llevadas a referéndum interno vinculante para su posible adopción."
     programa:
       title: "Programa"
-      description: "La ciudadanía decide si acepta o rechaza las propuestas más apoyadas."
+      description: "Conoce al detalle las propuestas del programa electoral de PODEMOS antes de votarlas en nuestro portal de Participación."
     do:
       title: "Se hace"
       description: "Si la propuesta es aceptada mayoritariamente se asume como propia y se hace."
