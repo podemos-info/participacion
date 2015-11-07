@@ -133,7 +133,7 @@ MDM.markdownActions = {
  * The logic for the textile controls
  */
 MDM.textileActions = {
-    render: function(inputElement) {
+    render: function(markup) {
         return textile(markup);
     },
 
@@ -232,14 +232,14 @@ MDM.Utils = {
     },
 
     insertLink: function (inputElement, format) {
-        var url = prompt("Link to URL", "http://");
+        var url = prompt("Link to URL", "https://");
         var selection = inputElement.getSelection();
         var link = format.replace(/url/g, url).replace(/text/g, selection.text);
         inputElement.replaceSelection(link);
     },
 
     insertImage: function (inputElement, format) {
-        var url = prompt("Link to image URL", "http://");
+        var url = prompt("Link to image URL", "https://");
         var selection = inputElement.getSelection();
         var link = format.replace(/url/g, url).replace(/text/g, selection.text);
         inputElement.replaceSelection(link);
@@ -265,9 +265,6 @@ MDM.Utils = {
 };
 
 $(function () {
-    if (typeof window.MDM_SILENT == 'undefined' || window.MDM_SILENT == false) {
-        console.debug("loading MDMagick v" + MDM_VERSION + "...");
-    }
 
     jQuery.fn.mdmagick = function () {
         this.each(function (index, inputElement) {
