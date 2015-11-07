@@ -38,6 +38,8 @@
 //= require legal_cookie
 //= require a-tools
 //= require showdown
+//= require marked
+//= require textile
 //= require mdmagick
 
 var initialize_modules = function() {
