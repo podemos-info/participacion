@@ -36,6 +36,9 @@
 //= require users
 //= require votes
 //= require legal_cookie
+//= require a-tools
+//= require showdown
+//= require mdmagick
 
 var initialize_modules = function() {
   App.Comments.initialize();

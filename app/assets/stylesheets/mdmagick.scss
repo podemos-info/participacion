@@ -1,0 +1,183 @@
+@keyframes slideOut {
+  from { max-height: 0; }
+  to { max-height: 500px; }
+}
+
+@keyframes slideIn {
+  from { max-height: 500px; }
+  to { max-height: 0; }
+}
+
+@-webkit-keyframes slideOut {
+  from { max-height: 0; }
+  to { max-height: 500px; }
+}
+
+@-webkit-keyframes slideIn {
+  from { max-height: 500px; }
+  to { max-height: 0; }
+}
+
+@-o-keyframes slideOut {
+  from { max-height: 0; }
+  to { max-height: 500px; }
+}
+
+@-o-keyframes slideIn {
+  from { max-height: 500px; }
+  to { max-height: 0; }
+}
+
+@-moz-keyframes slideOut {
+  from { max-height: 0; }
+  to { max-height: 500px; }
+}
+
+@-moz-keyframes slideIn {
+  from { max-height: 500px; }
+  to { max-height: 0; }
+}
+
+div.mdm-buttons,
+div.mdm-preview {
+  line-height: 1em;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+div.mdm-buttons.blur,
+div.mdm-preview.blur {
+  -webkit-animation: slideIn .5s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation: slideIn .5s;
+  -moz-animation-fill-mode: forwards;
+  -o-animation: slideIn .5s;
+  -o-animation-fill-mode: forwards;
+  animation: slideIn .5s;
+  animation-fill-mode: forwards;
+}
+
+div.mdm-buttons.focus,
+div.mdm-preview.focus {
+  -webkit-animation: slideOut 2s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation: slideOut 2s;
+  -moz-animation-fill-mode: forwards;
+  -o-animation: slideOut 2s;
+  -o-animation-fill-mode: forwards;
+  animation: slideOut 2s;
+  animation-fill-mode: forwards;
+}
+
+div.mdm-preview.focus {
+  padding: 5px;
+}
+
+div.mdm-buttons {
+  width: 148px;
+  font-size: 12px;
+}
+
+div.mdm-buttons ul {
+  margin: 10px;
+}
+
+div.mdm-buttons ul li {
+  display: inline;
+  margin: 0;
+  padding: 5px;
+  color: black;
+  text-decoration: none;
+}
+
+div.mdm-buttons ul li.mdm-button:hover {
+  color: white;
+  background-color: #4c97cc;
+}
+
+div.mdm-buttons ul li.mdm-button:active {
+  color: #ccc;
+  position: relative;
+  top: 1px;
+}
+
+div.mdm-buttons ul li.mdm-separator {
+  color: darkgray;
+}
+
+div.mdm-preview strong {
+  font-weight: bold;
+}
+
+div.mdm-preview em {
+  font-style: italic;
+}
+
+div.mdm-preview ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+div.mdm-preview h1, div.mdm-preview h2, div.mdm-preview h3 {
+  font-weight: bold;
+}
+
+div.mdm-preview h1 {
+  font-size: 18px;
+}
+
+div.mdm-preview h2 {
+  font-size: 14px;
+}
+
+div.mdm-preview h3 {
+  font-size: 12px;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: font-url('icomoon.eot');
+    src: font-url('icomoon.eot?#iefix') format('embedded-opentype'), font-url('icomoon.svg#icomoon') format('svg'), font-url('icomoon.woff') format('woff'), font-url('icomoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+.mdm-buttons [data-mdm-icon]:before {
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    speak: none;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+.mdm-buttons [class^="mdm-icon-"]:before, [class*=" mdm-icon-"]:before {
+    font-family: 'icomoon';
+    font-style: normal;
+    speak: none;
+}
+
+.mdm-icon-bold:before {
+    content: "\21";
+}
+
+.mdm-icon-title:before {
+    content: "\22";
+}
+
+.mdm-icon-italic:before {
+    content: "\23";
+}
+
+.mdm-icon-underline:before {
+    content: "\24";
+}
+
+.mdm-icon-list:before {
+    content: "\26";
+}
+
+.mdm-icon-link:before {
+    content: "\25";
+}
