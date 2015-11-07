@@ -245,6 +245,8 @@ button.success:hover, .button.success:hover {background: $morado-claro;}
 
 .comments .comment-children .comment-body .comment-user.is-author {background: #eee;}
 
+.comments .comment .comment-body p { margin-bottom: 1.5em; }
+
 .is-author {background: $verde;}
 
 .js-add-comment-link, .verify-account .already-verified {color: $verde;}
