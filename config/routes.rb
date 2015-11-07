@@ -254,7 +254,7 @@ Rails.application.routes.draw do
   get "/opendata", to: "pages#opendata"
   get "/participation", to: "pages#participation"
   get "/transparency", to: "pages#transparency"
-  get "/proposals_info", to: "pages#proposals_info"
+#  get "/proposals_info", to: "pages#proposals_info"
   get "/participation_facts", to: "pages#participation_facts"
   get "/participation_world", to: "pages#participation_world"
   get "/blog", to: "pages#blog"
