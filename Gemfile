@@ -60,6 +60,7 @@ gem 'browser'
 gem 'roo'
 
 gem 'gravtastic'
+gem 'redcarpet'
 
 
 group :development, :test do
