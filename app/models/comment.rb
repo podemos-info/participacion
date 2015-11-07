@@ -85,7 +85,7 @@ class Comment < ActiveRecord::Base
   end
 
   def self.body_max_length
-    1000
+    15000
   end
 
   private
