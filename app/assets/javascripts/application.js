@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require simplemde.min
+//= require markdown_editor
 //= require ckeditor/init
 //= require_directory ./ckeditor
 //= require social-share-button
