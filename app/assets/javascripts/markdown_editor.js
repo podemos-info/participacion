@@ -1,49 +1,49 @@
 
 var toolbar_markdown_editor =  [{
 		name: "bold",
-		action: toggleBold,
+		action: SimpleMDE.toggleBold,
 		className: "fa fa-bold",
 		title: "Negrita (Ctrl+B)"
 	}, {
 		name: "italic",
-		action: toggleItalic,
+		action: SimpleMDE.toggleItalic,
 		className: "fa fa-italic",
 		title: "Cursiva (Ctrl+I)"
 	}, {
 		name: "strikethrough",
-		action: toggleStrikethrough,
+		action: SimpleMDE.toggleStrikethrough,
 		className: "fa fa-strikethrough",
 		title: "Tachado"
 	}, {
 		name: "heading",
-		action: toggleHeadingSmaller,
+		action: SimpleMDE.toggleHeadingSmaller,
 		className: "fa fa-header",
 		title: "Encabezado (Ctrl+H)"
 	}, {
 		name: "unordered-list",
-		action: toggleUnorderedList,
+		action: SimpleMDE.toggleUnorderedList,
 		className: "fa fa-list-ul",
 		title: "Lista (Ctrl+L)"
 	}, {
 		name: "ordered-list",
-		action: toggleOrderedList,
+		action: SimpleMDE.toggleOrderedList,
 		className: "fa fa-list-ol",
 		title: "Lista numerada (Ctrl+Alt+L)"
 	}, 
     "|",
     {
 		name: "preview",
-		action: togglePreview,
+		action: SimpleMDE.togglePreview,
 		className: "fa fa-eye no-disable",
 		title: "Previsualizar (Ctrl+P)"
 	}, {
 		name: "side-by-side",
-		action: toggleSideBySide,
+		action: SimpleMDE.toggleSideBySide,
 		className: "fa fa-columns no-disable no-mobile",
 		title: "Vista a 2 columnas (F9)"
 	}, {
 		name: "fullscreen",
-		action: toggleFullScreen,
+		action: SimpleMDE.toggleFullScreen,
 		className: "fa fa-arrows-alt no-disable no-mobile",
 		title: "Vista a pantalla completa (F11)"
 	}
