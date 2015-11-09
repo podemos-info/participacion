@@ -339,3 +339,27 @@ ul.pagination li.current button,
 @media screen and (max-width: 768px) {
     .subnavigation a {margin-bottom: 1rem;}
 }
+
+.social-share-button-reddit {
+  background: white;
+  color: #3B5998;
+  height: rem-calc(48);
+  position: relative;
+  width: rem-calc(48);
+
+  &:before {
+    content: "\f1a2";
+    font-family: "FontAwesome" !important;
+    font-size: rem-calc(24);
+    left: 50%;
+    line-height: $line-height*2;
+    margin-left: rem-calc(-11);
+    position: absolute;
+    top: 0;
+  }
+
+  &:hover {
+    color: #354F88;
+  }
+}
+
