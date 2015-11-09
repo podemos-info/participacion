@@ -52,8 +52,8 @@ var toolbar_markdown_editor =  [{
 var markdown_editors = [];
 
 $(function() {
-	$('textarea.markdown-editor').each(function(el) {
-		markdown_editors.push(new SimpleMDE({element: el, toolbar: toolbar_markdown_editor}));
+	$('textarea.markdown-editor').each(function() {
+		markdown_editors.push(new SimpleMDE({element: this, spellChecker: false, toolbar: toolbar_markdown_editor}));
 	});
 });
 
