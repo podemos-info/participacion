@@ -190,17 +190,21 @@
     }
   }
 
-  .button-support {
-    background: white;
-    color: $proposals;
-    display: inline-block;
-    font-size: rem-calc(14);
-    margin-top: rem-calc(12);
 
-    &:hover {
-      background: $proposals-border;
-      color: white;
-      cursor: pointer;
+      a {
+        clear: both;
+        color: $text;
+        display: block;
+        font-size: rem-calc(16);
+        line-height: $line-height;
+/*
+        text-transform: lowercase;
+
+        &:first-letter {
+          text-transform: uppercase;
+        }
+*/
+      }
     }
 
     &:active {
@@ -361,11 +365,13 @@
     font-size: rem-calc(30);
     font-weight: bold;
     margin: 0;
+/*
     text-transform: lowercase;
 
     &:first-letter {
       text-transform: uppercase;
     }
+*/
   }
 
   h4 {

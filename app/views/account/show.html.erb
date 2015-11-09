@@ -1,20 +1,52 @@
 <div class="row account">
   <div class="small-12 column">
-    <div class="right text-right">
-      <%= link_to t("account.show.change_credentials_link"), edit_user_registration_path, class: "button radius small secondary" %>
-      <br>
-      <%= link_to t("account.show.erase_account_link"), users_registrations_delete_form_path, class: "delete" %>
-    </div>
-
-    <%= avatar_image(@account, seed: @account.id, size: 60) %>
-
-    <h1 class="inline-block avatar"><%= t("account.show.title") %></h1>
+    <%= link_to t("account.show.change_credentials_link"), edit_user_registration_path, class: "button radius small secondary right" %>
+     <div>
+        <span class="right verify-account">
+          <% if current_user.reddit_user.blank? %>
+            <%= link_to t("omniauth.reddit.sign_in"), user_omniauth_authorize_path(:reddit), class: "button radius small secondary right" %>
+          <% else %>
+              <p class="already-verified">
+                <i class="icon-check"></i>
+                <%= t("omniauth.reddit.verified_account") %>
+              </p>
+          <%end %>
+        </span>
+      </div>
+    <% unless @account.organization? %>
+      <div>
+        <span class="right verify-account">
+          <% if current_user.level_three_verified? %>
+            <p class="already-verified">
+              <i class="icon-check"></i>
+              <%= t("account.show.verified_account") %>
+            </p>
+          <% elsif current_user.level_two_verified? %>
+            <%= link_to t("account.show.finish_verification"), verification_path, class: "button radius small success right" %>
+          <% else %>
+            <%= link_to t("account.show.verify_my_account"), verification_path, class: "button radius small success right" %>
+          <% end %>
+        </span>
+      </div>
+    <% end %>
+    <h1 class="inline-block"><%= t("account.show.title") %></h1>
 
     <%= form_for @account, as: :account, url: account_path do |f| %>
       <%= render "shared/errors", resource: @account %>
 
       <div class="row">
-        <div class="small-12 medium-6 column">
+        <div class="small-12 column">
+          <h2><%= t("account.show.avatar")%></h2>
+          <a href="https://es.gravatar.com" target="_blank">
+          <%= image_tag(
+                @account.gravatar_url(
+                  size: 200,
+                  default: 'identicon'
+                ),
+                size: 200,
+                class: "avatar") %>
+          <%= t("account.show.gravatar_text") %>
+          </a>
 
           <h2><%= t("account.show.personal")%></h2>
 

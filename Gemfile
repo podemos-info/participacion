@@ -25,6 +25,8 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook', '~> 3.0.0'
 gem 'omniauth-google-oauth2', '~> 0.2.7'
+gem 'omniauth-openid'
+gem 'omniauth-reddit' , :git => 'git://github.com/jackdempsey/omniauth-reddit.git'
 
 gem 'kaminari'
 gem 'ancestry'
@@ -36,7 +38,8 @@ gem 'acts_as_votable'
 gem 'simple_captcha2', require: 'simple_captcha'
 gem 'ckeditor'
 gem 'cancancan'
-gem 'social-share-button', git: 'https://github.com/huacnlee/social-share-button.git', ref: 'e46a6a3e82b86023bc'
+gem 'social-share-button', git: 'https://github.com/joker-x/social-share-button.git'
+#, ref: 'e46a6a3e82b86023bc'
 gem 'initialjs-rails', '0.2.0.1'
 gem 'unicorn'
 gem 'paranoia'
@@ -55,6 +58,12 @@ gem 'ahoy_matey', '~> 1.2.1'
 gem 'groupdate'   # group temporary data
 
 gem 'browser'
+
+gem 'roo'
+
+gem 'gravtastic'
+gem 'redcarpet'
+gem 'font-awesome-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -37,6 +37,9 @@ en:
       proposal:
         one: "Citizen proposal"
         other: "Citizen proposals"
+      medida: 
+        one: "Medida"
+        other: "Medidas"
     attributes:
       comment:
         body: "Comment"

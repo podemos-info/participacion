@@ -10,18 +10,20 @@ en:
       index:
         title: "Administration"
     menu:
-      settings: "General settings"
-      debate_topics: "Debate topics"
-      hidden_proposals: "Hidden proposals"
-      hidden_debates: "Hidden debates"
-      hidden_comments: "Hidden comments"
-      hidden_users: "Hidden users"
-      incomplete_verifications: "Incomplete verifications"
-      organizations: "Organisations"
-      officials: "Officials"
-      moderators: "Moderators"
-      stats: "Statistics"
-      activity: "Moderator activity"
+      settings: Global settings
+      debate_topics: Debate topics
+      medida_topics: Measure topics
+      hidden_proposals: Hidden proposals
+      hidden_debates: Hidden debates
+      hidden_medidas: Hidden measures
+      hidden_comments: Hidden comments
+      hidden_users: Blocked users
+      incomplete_verifications: Incomplete verifications
+      organizations: Organizations
+      officials: Officials
+      moderators: Moderators
+      stats: Statistics
+      activity: Moderation Activity
     shared:
       user_search:
         placeholder: "Search user by name or email'"
@@ -70,7 +72,8 @@ en:
         title: "Hidden comments"
         hidden_proposal: "Hidden proposal"
         hidden_debate: "Hidden debate"
-        filter: "Filter"
+        hidden_medida: "Hidden measure"
+        filter: Filter
         filters:
           all: "All"
           with_confirmed_hide: "Confirmed"
@@ -80,9 +83,17 @@ en:
         title: "Hidden debates"
         filter: "Filter"
         filters:
-          all: "All"
-          with_confirmed_hide: "Confirmed"
-          without_confirmed_hide: "Pending"
+          all: All
+          with_confirmed_hide: Confirmed
+          without_confirmed_hide: Pending
+    medidas:
+      index:
+        title: Hidden measures
+        filter: Filter
+        filters:
+          all: All
+          with_confirmed_hide: Confirmed
+          without_confirmed_hide: Pending
     proposals:
       index:
         title: "Hidden proposals"
@@ -148,11 +159,12 @@ en:
         type: "Type"
         filter: "Show"
         filters:
-          all: "All"
-          on_proposals: "Proposals"
-          on_debates: "Debates"
-          on_comments: "Comments"
-          on_users: "Users"
+          all: All
+          on_proposals: On Proposals
+          on_debates: On Debates
+          on_medidas: On Measures
+          on_comments: On Comments
+          on_users: On Users
         actions:
           hide: "Hidden"
           restore: "Restored"
@@ -163,16 +175,16 @@ en:
         visits_title: "Visits"
         combined_title: "Combined"
         summary:
-          visits: "Visits"
-          debates: "Debates"
-          proposals: "Proposals"
-          comments: "Comments"
-          debate_votes: "Debate votes"
-          proposal_votes: "Proposal votes"
-          comment_votes: "Comment votes"
-          votes: "Total votes"
-          user_level_three: "Level three users"
-          user_level_two: "Level two users"
-          unverified_users: "Unverified users"
-          verified_users: "Verified users"
-          users: "Total users"
+          visits: Visits
+          debates: Debates
+          proposals: Proposals
+          comments: Comments
+          debate_votes: Debate votes
+          proposal_votes: Proposal votes
+          comment_votes: Comment votes
+          votes: Total votes
+          user_level_three: Level three users
+          user_level_two: Level two users
+          unverified_users: Unverified users
+          verified_users: Verified users
+          users: Total users

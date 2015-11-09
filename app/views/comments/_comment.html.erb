@@ -17,7 +17,13 @@
           <% if comment.user.organization? %>
             <%= image_tag("collective_avatar.png", size: 32, class: "avatar left") %>
           <% else %>
-            <%= avatar_image(comment.user, seed: comment.user_id, size: 32, class: "left") %>
+            <%= image_tag(
+                  comment.user.gravatar_url(
+                    size: 32,
+                    default: 'identicon'
+                  ),
+                  size: 32,
+                  class: "avatar left") %>
           <% end %>
           <% if comment.user.hidden? || comment.user.erased? %>
             <i class="icon-deleted user-deleted"></i>
@@ -62,12 +68,19 @@
             &nbsp;&bull;&nbsp;<time><%= l comment.created_at.to_datetime, format: :datetime %></time>
           </div>
 
-          <div class="comment-user
-                    <%= user_level_class comment %>
-                    <%= comment_author_class comment, @commentable.author_id %>">
-            <%= text_with_links comment.body %>
-          </div>
-
+          <% if comment.as_administrator? %>
+            <p class="comment-user is-admin"><%= markdown comment.body %></p>
+          <% elsif comment.as_moderator? %>
+            <p class="comment-user is-moderator"><%= markdown comment.body %></p>
+          <% elsif comment.user.official? && comment.user_id == @commentable.author_id %>
+            <p class="comment-user level-<%= comment.user.official_level %> is-author"><%= markdown comment.body %></p>
+          <% elsif comment.user.official? %>
+            <p class="comment-user level-<%= comment.user.official_level %>"><%= markdown comment.body %></p>
+          <% elsif comment.user_id == @commentable.author_id %>
+            <p class="comment-user is-author"><%= markdown comment.body %></p>
+          <% else %>
+            <p class="comment-user"><%= markdown comment.body %></p>
+          <% end %>
           <span id="<%= dom_id(comment) %>_votes" class="comment-votes right">
             <%= render 'comments/votes', comment: comment %>
           </span>

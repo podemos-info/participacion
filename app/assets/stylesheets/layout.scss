@@ -1085,6 +1085,13 @@ label.error, label.error a {
     opacity: .5;
   }
 
+  .icon-medidas {
+    color: $medidas;
+    font-size: rem-calc(60);
+    line-height: $line-height;
+    opacity: .5;
+  }
+
   .avatar {
     margin-bottom: rem-calc(24);
   }
@@ -1256,6 +1263,18 @@ img.avatar, img.admin-avatar, img.moderator-avatar, img.initialjs-avatar {
       margin-left: 0;
     }
   }
+
+  .medidas-order {
+    text-align: left;
+
+    @media (min-width: $small-breakpoint) {
+      text-align: right;
+    }
+
+    select {
+      margin-left: 0;
+    }
+  }
 }
 
 .search-form {
@@ -1349,6 +1368,7 @@ table {
 // 15. Social
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
+/*
 .button.button-twitter {
   background: #45B0E3;
 
@@ -1426,6 +1446,45 @@ table {
   &:hover {
     background: white;
     color: #354F88;
+  }
+}
+
+.button.button-openid {
+  background: #612D62;
+
+  &:before {
+    background: #612D62;
+    content: "P";
+    font-family: "icons" !important;
+    font-size: rem-calc(24);
+    left: 0;
+    line-height: $line-height*2;
+    padding: 0 rem-calc(20);
+    position: absolute;
+    top: 0;
+  }
+}
+
+.social-share-button-openid {
+  background: #612D62;
+  color: white;
+  height: rem-calc(48);
+  position: relative;
+  width: rem-calc(48);
+
+  &:before {
+    content: "P";
+    font-family: "icons" !important;
+    font-size: rem-calc(24);
+    left: 50%;
+    line-height: $line-height*2;
+    margin-left: rem-calc(-11);
+    position: absolute;
+    top: 0;
+  }
+
+  &:hover {
+    color: #814D82;
   }
 }
 
@@ -1575,6 +1634,8 @@ table {
     }
   }
 }
+
+*/
 
 // 16. Pages
 // - - - - - - - - - - - - - - - - - - - - - - - - -

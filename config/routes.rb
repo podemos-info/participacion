@@ -44,7 +44,15 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :proposals do
+  resources :medidas do
+    member do
+      post :vote
+      put :flag
+      put :unflag
+    end
+  end
+
+  resources :proposals, path: 'propuestas' do
     member do
       post :vote
       post :vote_featured
@@ -98,6 +106,13 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :medidas, only: :index do
+      member do
+        put :restore
+        put :confirm_hide
+      end
+    end
+
     resources :proposals, only: :index do
       member do
         put :restore
@@ -145,6 +160,15 @@ Rails.application.routes.draw do
     end
 
     resources :debates, only: :index do
+      member do
+        put :hide
+      end
+      collection do
+        put :moderate
+      end
+    end
+
+    resources :medidas, only: :index do
       member do
         put :hide
       end
@@ -268,7 +292,7 @@ Rails.application.routes.draw do
   get "/opendata", to: "pages#opendata"
   get "/participation", to: "pages#participation"
   get "/transparency", to: "pages#transparency"
-  get "/proposals_info", to: "pages#proposals_info"
+#  get "/proposals_info", to: "pages#proposals_info"
   get "/participation_facts", to: "pages#participation_facts"
   get "/participation_world", to: "pages#participation_world"
   get "/faq", to: "pages#faq"

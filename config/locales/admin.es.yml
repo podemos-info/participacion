@@ -10,18 +10,20 @@ es:
       index:
         title: "Administración"
     menu:
-      settings: "Configuración global"
-      debate_topics: "Temas de debate"
-      hidden_proposals: "Propuestas ocultas"
-      hidden_debates: "Debates ocultos"
-      hidden_comments: "Comentarios ocultos"
-      hidden_users: "Usuarios bloqueados"
-      incomplete_verifications: "Verificaciones incompletas"
-      organizations: "Organizaciones"
-      officials: "Cargos públicos"
-      moderators: "Moderadores"
-      stats: "Estadísticas"
-      activity: "Actividad de moderadores"
+      settings: Configuración global
+      debate_topics: Temas de debate
+      medida_topics: Temas de medida
+      hidden_proposals: Propuestas ocultas
+      hidden_debates: Debates ocultos
+      hidden_medidas: Medidas ocultas
+      hidden_comments: Comentarios ocultos
+      hidden_users: Usuarios bloqueados
+      incomplete_verifications: Verificaciones incompletas
+      organizations: Organizaciones
+      officials: Cargos públicos
+      moderators: Moderadores
+      stats: Estadísticas
+      activity: Actividad de moderadores
     shared:
       user_search:
         placeholder: "Buscar usuario por nombre o email"
@@ -80,9 +82,17 @@ es:
         title: "Debates ocultos"
         filter: "Filtro"
         filters:
-          all: "Todos"
-          with_confirmed_hide: "Confirmados"
-          without_confirmed_hide: "Pendientes"
+          all: Todos
+          with_confirmed_hide: Confirmados
+          without_confirmed_hide: Pendientes
+    medidas:
+      index:
+        title: Medidas ocultos
+        filter: Filtro
+        filters:
+          all: Todos
+          with_confirmed_hide: Confirmados
+          without_confirmed_hide: Pendientes
     proposals:
       index:
         title: "Propuestas ocultos"
