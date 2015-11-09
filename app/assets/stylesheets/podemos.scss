@@ -347,6 +347,7 @@ ul.pagination li.current button,
   background: white;
   color: #45B0E3;
   display: inline-block;
+  width: 50px;
 
   &:before {
     content: "\f082";
@@ -363,6 +364,7 @@ ul.pagination li.current button,
   background: white;
   color: #3B5998;
   display: inline-block;
+  width: 50px;
 
   &:before {
     content: "\f082";
@@ -379,6 +381,7 @@ ul.pagination li.current button,
   background: white;
   color: #DE4C34;
   display: inline-block;
+  width: 50px;
 
   &:before {
     content: "\f0d4";
@@ -393,8 +396,9 @@ ul.pagination li.current button,
 
 .social-share-button-reddit {
   background: white;
-  color: #3B5998;
+  color: #3B9859;
   display: inline-block;
+  width: 50px;
 
   &:before {
     content: "\f1a2";
@@ -403,7 +407,7 @@ ul.pagination li.current button,
   }
 
   &:hover {
-    color: #354F88;
+    color: #35884F;
   }
 }
 
