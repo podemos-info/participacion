@@ -340,22 +340,66 @@ ul.pagination li.current button,
     .subnavigation a {margin-bottom: 1rem;}
 }
 
+// Social
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.social-share-button-twitter {
+  background: white;
+  color: #45B0E3;
+  display: inline-block;
+
+  &:before {
+    content: "\f082";
+    font-family: "FontAwesome" !important;
+    font-size: 56px;
+  }
+
+  &:hover {
+    color: #40A2D1;
+  }
+}
+
+.social-share-button-facebook {
+  background: white;
+  color: #3B5998;
+  display: inline-block;
+
+  &:before {
+    content: "\f082";
+    font-family: "FontAwesome" !important;
+    font-size: 56px;
+  }
+
+  &:hover {
+    color: #354F88;
+  }
+}
+
+.social-share-button-google_plus {
+  background: white;
+  color: #DE4C34;
+  display: inline-block;
+
+  &:before {
+    content: "\f0d4";
+    font-family: "FontAwesome" !important;
+    font-size: 56px;
+  }
+
+  &:hover {
+    color: #CE3E26;
+  }
+}
+
 .social-share-button-reddit {
   background: white;
   color: #3B5998;
-  height: rem-calc(48);
-  position: relative;
-  width: rem-calc(48);
+  display: inline-block;
 
   &:before {
     content: "\f1a2";
     font-family: "FontAwesome" !important;
-    font-size: rem-calc(24);
-    left: 50%;
-    line-height: $line-height*2;
-    margin-left: rem-calc(-11);
-    position: absolute;
-    top: 0;
+    font-size: 56px;
   }
 
   &:hover {
