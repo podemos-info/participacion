@@ -27,6 +27,7 @@ header {
 .home-plaza-podemos {
     .contain-to-grid {background: none;}
     section[role="main"] {padding: 2.5em 0 1em;}
+    .top-bar-section ul {width: auto;}
     .top-bar-section ul li > a.button {background: $morado; border: 0;}
     .top-bar-section ul li > a.button:hover {background: $verde !important;}
 
@@ -344,6 +345,8 @@ ul.pagination li.current button,
 
 .top-bar {height: 5rem;}
 .top-bar .name {float: left;}
+
+.top-bar .toggle-topbar.menu-icon {margin-top: 0;}
 
 
 /************** RESPONSIVE ************/
