@@ -38,7 +38,13 @@ header {
 header .search-form .postfix, .button,
 .top-links {background: $morado;}
 .top-bar-section ul li > a.button {
-    background: rgba(0, 0, 0, 0.6); border: 1px solid white;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid white;
+    border-radius: 0.1875rem;
+    line-height: 0.9375rem;
+    padding-left: 0.9375rem;
+    text-align: center;
+
     &:hover {background: none !important;}
 }
 .tag-cloud h3, .footer {border-color: $morado;}
@@ -336,9 +342,20 @@ ul.pagination li.current button,
     background: $verde;
 }
 
+.top-bar {height: 5rem;}
+.top-bar .name {float: left;}
+
+
+/************** RESPONSIVE ************/
+
 @media screen and (max-width: 768px) {
     .subnavigation a {margin-bottom: 1rem;}
 }
+
+@media only screen {
+    .show-for-medium-up {display: block !important;}
+}
+
 
 // Social
 // - - - - - - - - - - - - - - - - - - - - - - - - -
