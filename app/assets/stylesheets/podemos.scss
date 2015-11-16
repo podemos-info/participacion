@@ -364,15 +364,13 @@ ul.pagination li.current button,
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .social-share-button-twitter {
-  background: white;
   color: #45B0E3;
   display: inline-block;
-  width: 50px;
 
   &:before {
     content: "\f081";
     font-family: "FontAwesome" !important;
-    font-size: 56px;
+    font-size: 25px;
   }
 
   &:hover {
@@ -381,15 +379,13 @@ ul.pagination li.current button,
 }
 
 .social-share-button-facebook {
-  background: white;
   color: #3B5998;
   display: inline-block;
-  width: 50px;
 
   &:before {
     content: "\f082";
     font-family: "FontAwesome" !important;
-    font-size: 56px;
+    font-size: 25px;
   }
 
   &:hover {
@@ -398,15 +394,13 @@ ul.pagination li.current button,
 }
 
 .social-share-button-google_plus {
-  background: white;
   color: #DE4C34;
   display: inline-block;
-  width: 50px;
 
   &:before {
     content: "\f0d4";
     font-family: "FontAwesome" !important;
-    font-size: 56px;
+    font-size: 25px;
   }
 
   &:hover {
@@ -415,15 +409,13 @@ ul.pagination li.current button,
 }
 
 .social-share-button-reddit {
-  background: white;
   color: #3B9859;
   display: inline-block;
-  width: 50px;
 
   &:before {
     content: "\f1a2";
     font-family: "FontAwesome" !important;
-    font-size: 56px;
+    font-size: 25px;
   }
 
   &:hover {
