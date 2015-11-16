@@ -13,9 +13,16 @@ es:
       plaza_podemos: "Plaza Podemos 2.0"
       open: "abierto"
       participation: Participación
+
+      #open_city_title: "Rueda de Masas"
+      #open_city_slogan_html:
+      #"Pregunta lo que quieras a cuatro de nuestros cantidatos a las elecciones del 20D. En directo desde las 17h a las 21h."
+
       open_city_title: "Un lugar de encuentro para construir PODEMOS."
       open_city_slogan_html:
-        "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
+      "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
+
+
       #"Empecemos escuchando qué tiene que decir Madrid.
       #Para ello abrimos esta Puerta del Sol digital, donde toda la gente de Madrid podemos encontrarnos para debatir y compartir todo lo que queramos."
       # open_city_text:
