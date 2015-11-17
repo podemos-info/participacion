@@ -27,6 +27,7 @@ header {
 .home-plaza-podemos {
     .contain-to-grid {background: none;}
     section[role="main"] {padding: 2.5em 0 1em;}
+    .top-bar-section ul {width: auto;}
     .top-bar-section ul li > a.button {background: $morado; border: 0;}
     .top-bar-section ul li > a.button:hover {background: $verde !important;}
 
@@ -38,7 +39,13 @@ header {
 header .search-form .postfix, .button,
 .top-links {background: $morado;}
 .top-bar-section ul li > a.button {
-    background: rgba(0, 0, 0, 0.6); border: 1px solid white;
+    background: rgba(0, 0, 0, 0.6);
+    border:1px solid #fff;
+    border-radius: 0.1875rem;
+    line-height: 0.9375rem;
+    padding-left: 0.9375rem;
+    text-align: center;
+
     &:hover {background: none !important;}
 }
 .tag-cloud h3, .footer {border-color: $morado;}
@@ -336,23 +343,34 @@ ul.pagination li.current button,
     background: $verde;
 }
 
+.top-bar {height: 5rem;}
+.top-bar .name {float: left;}
+
+.top-bar .toggle-topbar.menu-icon {margin-top: 0;}
+
+
+/************** RESPONSIVE ************/
+
 @media screen and (max-width: 768px) {
     .subnavigation a {margin-bottom: 1rem;}
 }
+
+@media only screen {
+    .show-for-medium-up {display: block !important;}
+}
+
 
 // Social
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .social-share-button-twitter {
-  background: white;
   color: #45B0E3;
   display: inline-block;
-  width: 50px;
 
   &:before {
     content: "\f081";
     font-family: "FontAwesome" !important;
-    font-size: 56px;
+    font-size: 25px;
   }
 
   &:hover {
@@ -361,15 +379,13 @@ ul.pagination li.current button,
 }
 
 .social-share-button-facebook {
-  background: white;
   color: #3B5998;
   display: inline-block;
-  width: 50px;
 
   &:before {
     content: "\f082";
     font-family: "FontAwesome" !important;
-    font-size: 56px;
+    font-size: 25px;
   }
 
   &:hover {
@@ -378,15 +394,13 @@ ul.pagination li.current button,
 }
 
 .social-share-button-google_plus {
-  background: white;
   color: #DE4C34;
   display: inline-block;
-  width: 50px;
 
   &:before {
     content: "\f0d4";
     font-family: "FontAwesome" !important;
-    font-size: 56px;
+    font-size: 25px;
   }
 
   &:hover {
@@ -395,15 +409,13 @@ ul.pagination li.current button,
 }
 
 .social-share-button-reddit {
-  background: white;
   color: #3B9859;
   display: inline-block;
-  width: 50px;
 
   &:before {
     content: "\f1a2";
     font-family: "FontAwesome" !important;
-    font-size: 56px;
+    font-size: 25px;
   }
 
   &:hover {
