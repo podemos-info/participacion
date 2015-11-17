@@ -47,6 +47,7 @@ module Abilities
 
       if user.level_two_or_three_verified?
         can :vote, Proposal
+        can :vote_featured, Proposal
       end
 
     end

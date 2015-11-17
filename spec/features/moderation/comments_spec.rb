@@ -104,11 +104,11 @@ feature 'Moderate comments' do
       scenario "remembering page, filter and order" do
         create_list(:comment, 52)
 
-        visit moderation_comments_path(filter: 'all', page: '2', order: 'created_at')
+        visit moderation_comments_path(filter: 'all', page: '2', order: 'newest')
 
         click_on "Ignore flags"
 
-        expect(page).to have_selector('.js-order-selector[data-order="created_at"]')
+        expect(page).to have_selector('.js-order-selector[data-order="newest"]')
 
         expect(current_url).to include('filter=all')
         expect(current_url).to include('page=2')
@@ -174,7 +174,7 @@ feature 'Moderate comments' do
       create(:comment, body: "Flagged newer comment", created_at: Time.now - 12.hours, flags_count: 3)
       create(:comment, body: "Newer comment", created_at: Time.now)
 
-      visit moderation_comments_path(order: 'created_at')
+      visit moderation_comments_path(order: 'newest')
 
       expect("Flagged newer comment").to appear_before("Flagged comment")
 
@@ -182,7 +182,7 @@ feature 'Moderate comments' do
 
       expect("Flagged comment").to appear_before("Flagged newer comment")
 
-      visit moderation_comments_path(filter: 'all', order: 'created_at')
+      visit moderation_comments_path(filter: 'all', order: 'newest')
 
       expect("Newer comment").to appear_before("Flagged newer comment")
       expect("Flagged newer comment").to appear_before("Flagged comment")

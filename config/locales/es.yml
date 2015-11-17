@@ -1,23 +1,35 @@
 es:
   locale: "Español"
+  errors:
+    messages:
+      user_not_found: "No se encontró el usuario"
   layouts:
     header:
       programa: Programa
-      external_link_transparency: Transparencia
+      external_link_transparency: "Transparencia"
       external_link_transparency_url: "https://transparencia.podemos.info/"
-      external_link_opendata: Datos abiertos
+      external_link_opendata: "Datos abiertos"
       external_link_opendata_url: "http://datos.madrid.es"
-      external_link_blog: Blog
+      external_link_blog: "Blog"
       external_link_blog_url: "/blog"
       open_gov: "Gobierno %{open}"
       plaza_podemos: "Plaza Podemos 2.0"
       open: "abierto"
+<<<<<<< HEAD
       participation: Participación
 
       #open_city_title: "Rueda de Masas"
       #open_city_slogan_html:
       #"Pregunta lo que quieras a cuatro de nuestros cantidatos a las elecciones del 20D. En directo desde las 17h a las 21h."
 
+=======
+      participation: "Participación"
+      transparency: "Transparencia"
+      open_data: "Datos abiertos"
+      #open_city_title: "Rueda de Masas"
+      #open_city_slogan_html:
+      #"Pregunta lo que quieras a cuatro de nuestros cantidatos a las elecciones del 20D. En directo desde las 17h a las 21h."
+>>>>>>> destacadas
       open_city_title: "Un lugar de encuentro para construir PODEMOS."
       open_city_slogan_html:
       "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
@@ -30,15 +42,15 @@ es:
       #    más importantes de cada momento. Los responsables del gobierno tienen cuentas de usuario propias con las que podrán participar en los debates, y ser evaluados
       #    al mismo nivel que todos los demás."
       # open_city_soon: "Muy pronto abriremos la sección de propuestas, donde cualquiera podrá presentar propuestas y, si reciben apoyo, serán puestas en marcha por el Ayuntamiento."
-      see_all: Ver debates y propuestas
-      my_account_link: Mi cuenta
+      see_all: "Ver debates y propuestas"
+      my_account_link: "Mi cuenta"
       locale: "Idioma:"
-      administration: Administrar
-      moderation: Moderar
-      highlights: "Portada"
-      more_information: "+ Información"
+      administration: "Administrar"
+      moderation: "Moderar"
+      #highlights: "Portada"
+      more_information: "Más información"
       debates: Debates y Opinión
-      proposals: ICPs
+      proposals: "ICPs"
     footer:
       description: "Este portal usa la %{consul}, que es %{open_source}, y está basado en el portal de <a href='https://decide.madrid.es/' target='_blank'>Participación</a> del Ayuntamiento de Madrid."
       open_source: "software libre"
@@ -48,9 +60,9 @@ es:
       copyright: "Podemos, %{year}"
       participation_title: "Participación"
       participation_text: "Decide cómo debe ser la ciudad de Madrid que quieres."
-      transparency_title: Transparencia
+      transparency_title: "Transparencia"
       transparency_text: "Obtén cualquier información sobre el Ayuntamiento de Madrid."
-      open_data_title: Datos Abiertos
+      open_data_title: "Datos Abiertos"
       open_data_text: "Todos los datos del Ayuntamiento son tuyos."
       contact_us: "Contacta con nosotros en"
       podemos_privacy: "Condiciones generales de uso, empleo de cookies y política de privacidad"
@@ -60,22 +72,26 @@ es:
       accessibility: "Accesibilidad"
     application:
       ie_title: "Esta web no está optimizada para tu navegador"
-      ie:
-        "Hemos detectado que estás navegando desde Internet Explorer.
-        Para una mejor experiencia te recomendamos utilizar %{chrome} o %{firefox}."
+      ie: "Hemos detectado que estás navegando desde Internet Explorer. Para una mejor experiencia te recomendamos utilizar %{chrome} o %{firefox}."
       chrome: "Google Chrome"
       firefox: "Firefox"
+  social:
+    twitter: "Twitter"
+    facebook: "Facebook"
+    blog: "Blog"
+    youtube: "YouTube"
   form:
-      error: error
-      errors: errores
-      not_saved: "impidieron guardar %{resource}:"
-      accept_terms: "Acepto la %{policy} y las %{conditions}"
-      policy: "Política de privacidad"
-      conditions: "Condiciones de uso"
-      user: la cuenta
-      debate: el debate
-      proposal: la propuesta
-      verification::sms: el teléfono
+    error: "error"
+    errors: "errores"
+    not_saved: "impidieron guardar %{resource}:"
+    accept_terms: "Acepto la %{policy} y las %{conditions}"
+    policy: "Política de privacidad"
+    conditions: "Condiciones de uso"
+    user: "la cuenta"
+    debate: "el debate"
+    proposal: "la propuesta"
+    verification::sms: "el teléfono"
+    verification::letter: "la verificación"
   application:
     alert:
       only_beta_testers: "Lo sentimos sólo los usuarios de pruebas tienen acceso de momento"
@@ -83,10 +99,10 @@ es:
     menu: "Menú"
   debates:
     index:
-      title: Debates y Opinión
-      start_debate: Empieza un debate
-      select_order: Ordenar por
-      select_order_long: Estás viendo los debates
+      title: "Debates y Opinión"
+      start_debate: "Empieza un debate"
+      select_order: "Ordenar por"
+      select_order_long: "Estás viendo los debates"
       orders:
         confidence_score: "mejor valorados"
         hot_score: "más activos"
@@ -97,53 +113,52 @@ es:
         one: " con el tema '%{topic}'"
         other: " con el tema '%{topic}'"
       search_form:
-        title: Buscar
-        button: Buscar
+        title: "Buscar"
+        button: "Buscar"
         placeholder: "Buscar debates..."
       search_results:
         one: " que contiene '%{search_term}'"
         other: " que contienen '%{search_term}'"
     debate:
-      debate: Debate
+      debate: "Debate"
       comments:
-        zero: Sin comentarios
-        one: 1 Comentario
+        zero: "Sin comentarios"
+        one: "1 Comentario"
         other: "%{count} Comentarios"
       votes:
-        zero: Sin votos
-        one: 1 voto
+        zero: "Sin votos"
+        one: "1 voto"
         other: "%{count} votos"
     form:
-      debate_title: Título del debate
-      debate_text: Texto inicial del debate
-      tags_label: Temas
-      tags_instructions: >
-        Etiqueta este debate. Puedes elegir entre nuestras propuestas o introducir las que desees.
+      debate_title: "Título del debate"
+      debate_text: "Texto inicial del debate"
+      tags_label: "Temas"
+      tags_instructions: "Etiqueta este debate. Puedes elegir entre nuestras propuestas o introducir las que desees."
       tags_placeholder: "Escribe las etiquetas que desees separadas por coma (',')"
     show:
-      back_link: Volver
-      author_deleted: Usuario eliminado
-      comments_title: Comentarios
+      back_link: "Volver"
+      author_deleted: "Usuario eliminado"
+      comments_title: "Comentarios"
       comments:
-        zero: Sin comentarios
-        one: 1 Comentario
+        zero: "Sin comentarios"
+        one: "1 Comentario"
         other: "%{count} Comentarios"
       login_to_comment: "Necesitas %{signin} para comentar."
-      edit_debate_link: Editar
-      share: Compartir
+      edit_debate_link: "Editar debate"
+      share: "Compartir"
       flag: "Este debate ha sido marcado como inapropiado por varios usuarios."
     edit:
-      editing: Editar debate
-      show_link: Ver debate
-      back_link: Volver
+      editing: "Editar debate"
+      show_link: "Ver debate"
+      back_link: "Volver"
       form:
         submit_button: "Guardar cambios"
     new:
-      start_new: Empezar un debate
-      info: "Un debate es un foro de discusión, no una propuesta ciudadana."
+      start_new: "Empezar un debate"
+      info: "Un debate es un foro de discusión, no una propuesta ciudadana. Muy pronto abriremos la sección de propuestas ciudadanas, donde cualquiera podrá presentar propuestas y, si reciben apoyo, serán puestas en marcha por el Ayuntamiento."
       more_info: "Más información"
-      back_link: Volver
-      recommendations_title: Recomendaciones para crear un debate
+      back_link: "Volver"
+      recommendations_title: "Recomendaciones para crear un debate"
       recommendation_one: "No escribas el título del debate o frases enteras en mayúsculas. En internet eso se considera gritar. Y a nadie le gusta que le griten."
       recommendation_two: "Cualquier debate o comentario que implique una acción ilegal será eliminado, también los que tengan la intención de sabotear los espacios de debate, todo lo demás está permitido."
       recommendation_three: "Las críticas despiadadas son muy bienvenidas. Este es un espacio de pensamiento. Pero te recomendamos conservar la elegancia y la inteligencia. El mundo es mejor con ellas presentes."
@@ -159,10 +174,10 @@ es:
 
   medidas:
     index:
-      title: Programa
-      start_medida: Propón una medida
-      select_order: Ordenar por
-      select_order_long: Estás viendo las medidas
+      title: "Programa"
+      start_medida: "Propón una medida"
+      select_order: "Ordenar por"
+      select_order_long: "Estás viendo las medidas"
       orders:
         confidence_score: "mejor valorados"
         hot_score: "más activos"
@@ -173,53 +188,52 @@ es:
         one: " con el tema '%{topic}'"
         other: " con el tema '%{topic}'"
       search_form:
-        title: Buscar
-        button: Buscar
+        title: "Buscar"
+        button: "Buscar"
         placeholder: "Buscar medidas..."
       search_results:
         one: " que contiene '%{search_term}'"
         other: " que contienen '%{search_term}'"
     medida:
-      medida: medida
+      medida: "medida"
       comments:
-        zero: Sin comentarios
-        one: 1 Comentario
+        zero: "Sin comentarios"
+        one: "1 Comentario"
         other: "%{count} Comentarios"
       votes:
-        zero: Sin votos
-        one: 1 voto
+        zero: "Sin votos"
+        one: "1 voto"
         other: "%{count} votos"
     form:
-      medida_title: Título de la medida
-      medida_text: Texto inicial de la medida
-      tags_label: Temas
-      tags_instructions: >
-        Etiqueta este medida. Puedes elegir entre nuestras propuestas o introducir las que desees.
+      medida_title: "Título de la medida"
+      medida_text: "Texto inicial de la medida"
+      tags_label: "Temas"
+      tags_instructions: "Etiqueta este medida. Puedes elegir entre nuestras propuestas o introducir las que desees."
       tags_placeholder: "Escribe las etiquetas que desees separadas por coma (',')"
     show:
-      back_link: Volver
-      author_deleted: Usuario eliminado
-      comments_title: Comentarios
+      back_link: "Volver"
+      author_deleted: "Usuario eliminado"
+      comments_title: "Comentarios"
       comments:
-        zero: Sin comentarios
-        one: 1 Comentario
+        zero: "Sin comentarios"
+        one: "1 Comentario"
         other: "%{count} Comentarios"
       login_to_comment: "Necesitas %{signin} para comentar."
-      edit_medida_link: Editar
-      share: Compartir
+      edit_medida_link: "Editar"
+      share: "Compartir"
       flag: "Este medida ha sido marcado como inapropiado por varios usuarios."
     edit:
-      editing: Editar medida
-      show_link: Ver medida
-      back_link: Volver
+      editing: "Editar medida"
+      show_link: "Ver medida"
+      back_link: "Volver"
       form:
         submit_button: "Guardar cambios"
     new:
-      start_new: Empezar un medida
+      start_new: "Empezar un medida"
       info: "Un medida es un foro de discusión, no una propuesta ciudadana."
       more_info: "Más información"
-      back_link: Volver
-      recommendations_title: Recomendaciones para crear un medida
+      back_link: "Volver"
+      recommendations_title: "Recomendaciones para crear un medida"
       recommendation_one: "No escribas el título de la medida o frases enteras en mayúsculas. En internet eso se considera gritar. Y a nadie le gusta que le griten."
       recommendation_two: "Cualquier medida o comentario que implique una acción ilegal será eliminado, también los que tengan la intención de sabotear los espacios de medida, todo lo demás está permitido."
       recommendation_three: "Las críticas despiadadas son muy bienvenidas. Este es un espacio de pensamiento. Pero te recomendamos conservar la elegancia y la inteligencia. El mundo es mejor con ellas presentes."
@@ -234,10 +248,11 @@ es:
         submit_button: "Guardar cambios"
   proposals:
     index:
-      title: ICPs
-      start_proposal: Crea una ICP
-      select_order: Ordenar por
-      select_order_long: Estás viendo las ICPs
+      title: "ICPs"
+      featured_proposals_html: "ICPs<br>destacadas"
+      start_proposal: "Crea una ICP"
+      select_order: "Ordenar por"
+      select_order_long: "Estás viendo las ICPs"
       orders:
         confidence_score: "más apoyadas"
         hot_score: "más activas"
@@ -248,68 +263,67 @@ es:
         one: " con el tema '%{topic}'"
         other: " con el tema '%{topic}'"
       search_form:
-        title: Search
-        button: Search
+        title: "Search"
+        button: "Search"
         placeholder: "Buscar ICPS..."
       search_results:
         one: " que contiene '%{search_term}'"
         other: " que contienen '%{search_term}'"
     proposal:
-      proposal: ICP
+      proposal: "ICP"
       support: "Apoyar"
       support_title: "Apoyar esta ICP"
       comments:
-        zero: Sin comentarios
-        one: 1 Comentario
+        zero: "Sin comentarios"
+        one: "1 Comentario"
         other: "%{count} Comentarios"
       supports:
-        zero: Sin apoyos
-        one: 1 apoyo
+        zero: "Sin apoyos"
+        one: "1 apoyo"
         other: "%{count} apoyos"
       supports_necessary: "764 apoyos necesarios"
       census_percent: "0.2% del Censo"
       total_percent: "100%"
       already_supported: "¡Ya has apoyado esta ICP, compártela!"
     form:
-      proposal_title: Título de la ICP
-      proposal_question: Pregunta de la ICP
+      proposal_title: "Título de la ICP"
+      proposal_question: "Pregunta de la ICP"
       proposal_question_example_html: "Debe ser resumida en una pregunta cuya respuesta sea Sí o No. <em>Ej. '¿Está usted de acuerdo en peatonalizar la calle Mayor?'</em>"
       proposal_summary: "Resumen de la propuesta"
       proposal_summary_note: "(máximo 200 caracteres)"
-      proposal_text: Texto desarrollado de la ICP
-      proposal_external_url: Enlace a documentación adicional
+      proposal_text: "Texto desarrollado de la ICP"
+      proposal_external_url: "Enlace a documentación adicional"
       proposal_video_url: "Enlace a vídeo externo"
       proposal_video_url_note: "Puedes añadir un enlace a YouTube o Vimeo"
       proposal_responsible_name: "Nombre y apellidos de la persona que hace esta ICP"
       proposal_responsible_name_note: "(individualmente o como representante de un colectivo; no se mostrará públicamente)"
-      tags_label: Temas
-      tags_instructions: >
-        Etiqueta esta propuesta. Puedes elegir entre nuestras ICPs o introducir las que desees.
+      tags_label: "Temas"
+      tags_instructions: "Etiqueta esta propuesta. Puedes elegir entre nuestras ICPs o introducir las que desees."
       tags_placeholder: "Escribe las etiquetas que desees separadas por una coma (',')"
     show:
-      back_link: Volver
-      author_deleted: Usuario eliminado
+      back_link: "Volver"
+      author_deleted: "Usuario eliminado"
       code: "Código de la ICP:"
-      comments_title: Comentarios
+      comments_title: "Comentarios"
       comments:
-        zero: Sin comentarios
-        one: 1 Comentario
+        zero: "Sin comentarios"
+        one: "1 Comentario"
         other: "%{count} Comentarios"
       login_to_comment: "Necesitas %{signin} para comentar."
-      edit_proposal_link: Editar
-      share: Compartir
+      edit_proposal_link: "Editar"
+      share: "Compartir"
       flag: "Esta ICP ha sido marcada como inapropiada por varios usuarios."
     edit:
-      editing: Editar ICP
-      show_link: Ver ICP
-      back_link: Volver
+      editing: "Editar ICP"
+      show_link: "Ver ICP"
+      back_link: "Volver"
       form:
         submit_button: "Guardar cambios"
     new:
-      start_new: Crear una ICP
+      start_new: "Crear una ICP"
       more_info: "¿Cómo funcionan las ICPs?"
-      back_link: Volver
-      recommendations_title: Recomendaciones para crear una ICP
+      back_link: "Volver"
+      recommendations_title: "Recomendaciones para crear una ICP"
       recommendation_one: "No escribas el título de la ICP o frases enteras en mayúsculas. En internet eso se considera gritar. Y a nadie le gusta que le griten."
       recommendation_two: "Cualquier ICP o comentario que implique una acción ilegal será eliminada, también las que tengan la intención de sabotear los espacios de propuesta, todo lo demás está permitido."
       recommendation_three: "Disfruta de este espacio, de las voces que lo llenan, también es tuyo."
@@ -322,45 +336,51 @@ es:
       form:
         submit_button: "Guardar cambios"
   comments:
+    select_order: "Ordenar por"
+    orders:
+      most_voted: "Más votados"
+      newest: "Más nuevos primero"
+      oldest: "Más antiguos primero"
     form:
-      leave_comment: Deja tu comentario
-      comment_as_moderator: Comentar como moderador
-      comment_as_admin: Comentar como administrador
+      leave_comment: "Deja tu comentario"
+      comment_as_moderator: "Comentar como moderador"
+      comment_as_admin: "Comentar como administrador"
     comment:
-      author: Autor
-      moderator: Moderador
-      admin: Administrador
-      deleted: Este comentario ha sido eliminado
-      user_deleted: Usuario eliminado
+      author: "Autor"
+      moderator: "Moderador"
+      admin: "Administrador"
+      deleted: "Este comentario ha sido eliminado"
+      user_deleted: "Usuario eliminado"
       responses:
-        zero: Sin respuestas
-        one: 1 Respuesta
+        zero: "Sin respuestas"
+        one: "1 Respuesta"
         other: "%{count} Respuestas"
       votes:
-        zero: Sin votos
-        one: 1 voto
+        zero: "Sin votos"
+        one: "1 voto"
         other: "%{count} votos"
   comments_helper:
-    comment_link: Comentar
-    comment_button: Publicar comentario
-    reply_link: Responder
-    reply_button: Publicar respuesta
+    comment_link: "Comentar"
+    comment_button: "Publicar comentario"
+    reply_link: "Responder"
+    reply_button: "Publicar respuesta"
   votes:
-    agree: Estoy de acuerdo
-    disagree: No estoy de acuerdo
-    supports: Apoyos
+    agree: "Estoy de acuerdo"
+    disagree: "No estoy de acuerdo"
+    supports: "Apoyos"
     unauthenticated: "Necesitas %{signin} para continuar."
-    signin: iniciar sesión
-    signup: registrarte
+    signin: "iniciar sesión"
+    signup: "registrarte"
     anonymous: "Demasiados votos anónimos, para poder votar %{verify_account}."
     verified_only: "Las propuestas sólo pueden ser votadas por usuarios verificados, %{verify_account}."
-    verify_account: verifica tu cuenta
-    organizations: Las organizaciones no pueden votar
+    verify_account: "verifica tu cuenta"
+    organizations: "Las organizaciones no pueden votar"
   account:
     show:
       title: "Mi cuenta"
       save_changes_submit: "Guardar cambios"
       change_credentials_link: "Cambiar mis datos de acceso"
+      public_activity_label: "Mostrar públicamente mi lista de actividades"
       email_on_comment_label: "Recibir un email cuando alguien comenta en mis propuestas o debates"
       email_on_comment_reply_label: "Recibir un email cuando alguien contesta a mis comentarios"
       avatar: "Avatar"
@@ -369,11 +389,19 @@ es:
       phone_number_label: "Teléfono"
       organization_name_label: "Nombre de la organización"
       organization_responsible_name_placeholder: "Representante de la asociación/colectivo"
-      notifications: Notificaciones
+      notifications: "Notificaciones"
       finish_verification: "Finalizar verificación"
-      verified_account: Cuenta verificada
-      verify_my_account: Verificar mi cuenta
+      verified_account: "Cuenta verificada"
+      verify_my_account: "Verificar mi cuenta"
       gravatar_text: "Cambiar tu avatar con Gravatar"
+      user_permission_title: "Participación"
+      user_permission_info: "Con tu cuenta ya puedes..."
+      user_permission_debates: "Participar en debates"
+      user_permission_proposal: "Crear nuevas propuestas"
+      user_permission_support_proposal: "Apoyar propuestas*"
+      user_permission_votes: "Participar en las votaciones finales*"
+      user_permission_verify: "Para poder realizar todas las acciones verifica tu cuenta."
+      user_permission_verify_info: "* Sólo usuarios empadronados en el municipio de Madrid."
   simple_captcha:
     placeholder: "Introduce el texto de la imagen"
     label: "Introduce el texto de la imagen en la siguiente caja"
@@ -383,20 +411,41 @@ es:
       debate: "el código secreto no coincide con la imagen"
       proposal: "el código secreto no coincide con la imagen"
   shared:
+    author_info:
+      author_deleted: Usuario eliminado
     tags_cloud:
-      tags: Tendencias
-    flag: Denunciar como inapropiado
-    unflag: Deshacer denuncia
-    collective: Colectivo
-    check: Seleccionar
-    check_all: Todos
-    check_none: Ninguno
+      tags: "Tendencias"
+    print:
+      print_button: "Imprimir esta información"
+    flag: "Denunciar como inapropiado"
+    unflag: "Deshacer denuncia"
+    collective: "Colectivo"
+    check: "Seleccionar"
+    check_all: "Todos"
+    check_none: "Ninguno"
+  users:
+    show:
+      filters:
+        proposals:
+          one: "1 Propuesta"
+          other: "%{count} Propuestas"
+        debates:
+          one: "1 Debate"
+          other: "%{count} Debates"
+        comments:
+          one: "1 Comentario"
+          other: "%{count} Comentarios"
+      no_activity: "Usuario sin actividad pública"
+      private_activity: "Este usuario ha decidido mantener en privado su lista de actividades"
+      deleted: "Eliminado"
+      deleted_debate: "Este debate ha sido eliminado"
+      deleted_proposal: "Este propuesta ha sido eliminada"
   unauthorized:
     default: "No tienes permiso para acceder a esta página."
     manage:
       all: "No tienes permiso para realizar la acción '%{action}' sobre %{subject}."
   welcome:
-    signed_in_home_title: Actividad reciente
+    signed_in_home_title: "Actividad reciente"
     debates:
       title: "Debates y Opinión"
       description: "Exprésate, debate y comparte tus ideas con el resto de inscritos."
@@ -410,7 +459,7 @@ es:
       title: "Se hace"
       description: "Si la propuesta es aceptada mayoritariamente se asume como propia y se hace."
     welcome:
-      title: Verificación de cuenta
+      title: "Verificación de cuenta"
       instructions_1_html: "Bienvenido a la página de participación ciudadana"
       instructions_2_html: "Hemos detectado que <b>tu dirección de email está confirmada pero no hemos verificado tus datos todavía</b>."
       instructions_3_html: "Sin verificar tus datos <b>el acceso que tienes es limitado</b>. Verificarlos ahora te permitirá, por ejemplo, apoyar propuestas."
@@ -419,20 +468,20 @@ es:
       instructions_4_html: "Si quieres verificarte más tarde, puedes hacerlo en <i>Mi cuenta > Verificar mi cuenta</i>."
   omniauth:
     finish_signup:
-      title: Añade tu email
+      title: "Añade tu email"
     twitter:
-      sign_in: Entra con Twitter
-      sign_up: Regístrate con Twitter
+      sign_in: "Entra con Twitter"
+      sign_up: "Regístrate con Twitter"
     facebook:
-      sign_in: Entra con Facebook
-      sign_up: Regístrate con Facebook
+      sign_in: "Entra con Facebook"
+      sign_up: "Regístrate con Facebook"
     openid:
-      sign_in: Entra con Participa
-      sign_up: Regístrate con Participa
+      sign_in: "Entra con Participa"
+      sign_up: "Regístrate con Participa"
     google_oauth2:
-      sign_in: Entra con Google
-      sign_up: Regístrate con Google
+      sign_in: "Entra con Google"
+      sign_up: "Regístrate con Google"
     reddit:
-      sign_in: Entra con Reddit
-      sign_up: Regístrate con Reddit
-      verified_account: Reddit Verificado
+      sign_in: "Entra con Reddit"
+      sign_up: "Regístrate con Reddit"
+      verified_account: "Reddit Verificado"

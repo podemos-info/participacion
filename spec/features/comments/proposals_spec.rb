@@ -20,6 +20,49 @@ feature 'Commenting proposals' do
     end
   end
 
+  scenario 'Comment order' do
+    c1 = create(:comment, :with_confidence_score, commentable: proposal, cached_votes_up: 100, cached_votes_total: 120, created_at: Time.now - 2)
+    c2 = create(:comment, :with_confidence_score, commentable: proposal, cached_votes_up: 10, cached_votes_total: 12, created_at: Time.now - 1)
+    c3 = create(:comment, :with_confidence_score, commentable: proposal, cached_votes_up: 1, cached_votes_total: 2, created_at: Time.now)
+
+    visit proposal_path(proposal, order: :most_voted)
+
+    expect(c1.body).to appear_before(c2.body)
+    expect(c2.body).to appear_before(c3.body)
+
+    visit proposal_path(proposal, order: :newest)
+
+    expect(c3.body).to appear_before(c2.body)
+    expect(c2.body).to appear_before(c1.body)
+
+    visit proposal_path(proposal, order: :oldest)
+
+    expect(c1.body).to appear_before(c2.body)
+    expect(c2.body).to appear_before(c3.body)
+  end
+
+  scenario 'Creation date works differently in roots and in child comments, when sorting by confidence_score' do
+   old_root = create(:comment, commentable: proposal, created_at: Time.now - 10)
+   new_root = create(:comment, commentable: proposal, created_at: Time.now)
+   old_child = create(:comment, commentable: proposal, parent_id: new_root.id, created_at: Time.now - 10)
+   new_child = create(:comment, commentable: proposal, parent_id: new_root.id, created_at: Time.now)
+
+   visit proposal_path(proposal, order: :most_voted)
+
+   expect(new_root.body).to appear_before(old_root.body)
+   expect(old_child.body).to appear_before(new_child.body)
+
+   visit proposal_path(proposal, order: :newest)
+
+   expect(new_root.body).to appear_before(old_root.body)
+   expect(new_child.body).to appear_before(old_child.body)
+
+   visit proposal_path(proposal, order: :oldest)
+
+   expect(old_root.body).to appear_before(new_root.body)
+   expect(old_child.body).to appear_before(new_child.body)
+  end
+
   scenario 'Turns links into html links' do
     create :comment, commentable: proposal, body: 'Built with http://rubyonrails.org/'
 
@@ -67,11 +110,10 @@ feature 'Commenting proposals' do
       create(:comment, commentable: proposal)
       visit proposal_path(proposal)
 
-      expect(page).to have_content 'You need to sign in or sign up to comment'
+      expect(page).to have_content 'You must Sign in or Sign up to leave a comment'
       within('#comments') do
         expect(page).to_not have_content 'Write a comment'
         expect(page).to_not have_content 'Reply'
-        expect(page).to_not have_css('form')
       end
     end
   end
@@ -85,6 +127,7 @@ feature 'Commenting proposals' do
 
     within "#comments" do
       expect(page).to have_content 'Have you thought about...?'
+      expect(page).to have_content '(1)'
     end
   end
 
@@ -193,6 +236,18 @@ feature 'Commenting proposals' do
     end
   end
 
+  scenario "Erasing a comment's author" do
+    proposal = create(:proposal)
+    comment = create(:comment, commentable: proposal, body: "this should be visible")
+    comment.user.erase
+
+    visit proposal_path(proposal)
+    within "#comment_#{comment.id}" do
+      expect(page).to have_content('User deleted')
+      expect(page).to have_content('this should be visible')
+    end
+  end
+
   feature "Moderators" do
     scenario "can create comment as a moderator", :js do
       moderator = create(:moderator)
@@ -207,7 +262,7 @@ feature 'Commenting proposals' do
       within "#comments" do
         expect(page).to have_content "I am moderating!"
         expect(page).to have_content "Moderator ##{moderator.id}"
-        expect(page).to have_css "p.is-moderator"
+        expect(page).to have_css "div.is-moderator"
         expect(page).to have_css "img.moderator-avatar"
       end
     end
@@ -232,7 +287,7 @@ feature 'Commenting proposals' do
       within "#comment_#{comment.id}" do
         expect(page).to have_content "I am moderating!"
         expect(page).to have_content "Moderator ##{moderator.id}"
-        expect(page).to have_css "p.is-moderator"
+        expect(page).to have_css "div.is-moderator"
         expect(page).to have_css "img.moderator-avatar"
       end
 
@@ -263,7 +318,7 @@ feature 'Commenting proposals' do
       within "#comments" do
         expect(page).to have_content "I am your Admin!"
         expect(page).to have_content "Administrator ##{admin.id}"
-        expect(page).to have_css "p.is-admin"
+        expect(page).to have_css "div.is-admin"
         expect(page).to have_css "img.admin-avatar"
       end
     end
@@ -288,7 +343,7 @@ feature 'Commenting proposals' do
       within "#comment_#{comment.id}" do
         expect(page).to have_content "Top of the world!"
         expect(page).to have_content "Administrator ##{admin.id}"
-        expect(page).to have_css "p.is-admin"
+        expect(page).to have_css "div.is-admin"
         expect(page).to have_css "img.admin-avatar"
       end
 

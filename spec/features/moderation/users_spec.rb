@@ -62,7 +62,7 @@ feature 'Moderate users' do
 
     within(".admin-list") do
         expect(page).to have_content citizen.name
-        expect(page).not_to have_content "Banned"
+        expect(page).not_to have_content "Blocked"
         click_link 'Ban'
     end
 
