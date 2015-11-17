@@ -15,21 +15,12 @@ es:
       open_gov: "Gobierno %{open}"
       plaza_podemos: "Plaza Podemos 2.0"
       open: "abierto"
-<<<<<<< HEAD
-      participation: Participación
-
-      #open_city_title: "Rueda de Masas"
-      #open_city_slogan_html:
-      #"Pregunta lo que quieras a cuatro de nuestros cantidatos a las elecciones del 20D. En directo desde las 17h a las 21h."
-
-=======
       participation: "Participación"
       transparency: "Transparencia"
       open_data: "Datos abiertos"
       #open_city_title: "Rueda de Masas"
       #open_city_slogan_html:
       #"Pregunta lo que quieras a cuatro de nuestros cantidatos a las elecciones del 20D. En directo desde las 17h a las 21h."
->>>>>>> destacadas
       open_city_title: "Un lugar de encuentro para construir PODEMOS."
       open_city_slogan_html:
       "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
