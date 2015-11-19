@@ -81,6 +81,7 @@ en:
   debates:
     index:
       title: "Debates"
+      featured_debates_html: "Featured<br>Debates"
       start_debate: "Start a debate"
       select_order: "Order by"
       select_order_long: "You are viewing debates according to:"
@@ -229,6 +230,7 @@ en:
   proposals:
     index:
       title: Proposals
+      featured_proposals_html: "Featured<br>ICPs"
       start_proposal: Start a proposal
       select_order: Order by
       select_order_long: Order proposals by
