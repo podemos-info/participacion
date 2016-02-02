@@ -8,6 +8,8 @@ module TagsHelper
       medidas_path(tag: tag_name)
     when 'proposal'
       proposals_path(tag: tag_name)
+    when 'enquiry'
+      enquiries_path(tag: tag_name)
     else
       '#'
     end

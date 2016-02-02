@@ -1,0 +1,22 @@
+<div id="<%= dom_id(enquiry) %>" class="enquiry-featured small-12 column">
+  <div class="panel">
+    <div class="content small-12 medium-9 left">
+      <h3><%= link_to enquiry.title, enquiry %></h3>
+      <div class="info">
+        <span class="author">
+          <% if enquiry.author.hidden? %>
+          <%= t("enquiries.show.author_deleted") %>
+          <% else %>
+          <%= enquiry.author.name %>
+          <% end %>
+        </span>
+        <span>&nbsp;&bull;&nbsp;</span>
+        <%= t("enquiries.enquiry.supports", count: enquiry.total_votes) %>
+      </div>
+    </div>
+
+    <div id="<%= dom_id(enquiry) %>_votes" class="small-12 medium-3 left">
+      <%= render 'featured_votes', enquiry: enquiry %>
+    </div>
+  </div>
+</div>

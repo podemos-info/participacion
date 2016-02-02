@@ -14,6 +14,7 @@ en:
       debate_topics: "Debate topics"
       medida_topics: "Measure topics"
       hidden_proposals: "Hidden proposals"
+      hidden_enquiries: "Hidden enquiries"
       hidden_debates: "Hidden debates"
       hidden_medidas: "Hidden measures"
       hidden_comments: "Hidden comments"
@@ -30,6 +31,9 @@ en:
         button: "Search"
       proposal_search:
         placeholder: "Search proposals by title, description or question"
+        button: "Search"
+      enquiry_search:
+        placeholder: "Search enquiries by title, description or question"
         button: "Search"
     organizations:
       index:
@@ -71,6 +75,7 @@ en:
       index:
         title: "Hidden comments"
         hidden_proposal: "Hidden proposal"
+        hidden_enquiry: "Hidden enquiry"
         hidden_debate: "Hidden debate"
         hidden_medida: "Hidden measure"
         filter: "Filter"
@@ -97,6 +102,14 @@ en:
     proposals:
       index:
         title: "Hidden proposals"
+        filter: "Filter"
+        filters:
+          all: "All"
+          with_confirmed_hide: "Confirmed"
+          without_confirmed_hide: "Pending"
+    enquiries:
+      index:
+        title: "Hidden enquiries"
         filter: "Filter"
         filters:
           all: "All"
@@ -161,6 +174,7 @@ en:
         filters:
           all: "All"
           on_proposals: "Proposals"
+          on_enquiries: "Enquiries"
           on_debates: "Debates"
           on_medidas: "On Measures"
           on_comments: "Comments"
@@ -178,9 +192,11 @@ en:
           visits: "Visits"
           debates: "Debates"
           proposals: "Proposals"
+          enquiries: "Enquiries"
           comments: "Comments"
           debate_votes: "Debate votes"
           proposal_votes: "Proposal votes"
+          enquiry_votes: "Enquiry votes"
           comment_votes: "Comment votes"
           votes: "Total votes"
           user_level_three: "Level three users"

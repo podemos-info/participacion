@@ -1,0 +1,76 @@
+<h2><%= t("moderation.enquiries.index.title") %></h2>
+
+<%= render 'shared/filter_subnav', i18n_namespace: "moderation.enquiries.index" %>
+
+<div class="row">
+  <h3 class="small-8 large-8 columns"><%= page_entries_info @enquiries %></h3>
+  <div class="small-4 large-4 columns">
+    <div class="right">
+      <%= t("moderation.enquiries.index.order") %>
+      <%= render 'shared/order_selector', i18n_namespace: "moderation.enquiries.index" %>
+    </div>
+  </div>
+</div>
+
+<%= form_tag moderate_moderation_enquiries_path(request.query_parameters), method: :put do %>
+  <p class="left js-check">
+    <%= t('shared.check') %>:
+    <%= link_to t('shared.check_all'), '#', data: {check_all: "enquiry_ids[]"} %>
+    |
+    <%= link_to t('shared.check_none'), '#', data: {check_none: "enquiry_ids[]"} %>
+  </p>
+
+  <table class="clear">
+    <tr>
+      <th>
+        <%= t("moderation.enquiries.index.headers.enquiry") %>
+      </th>
+      <th>
+        <%= t("moderation.enquiries.index.headers.moderate") %>
+      </th>
+    </tr>
+    <% @enquiries.each do |enquiry| %>
+    <tr id="enquiry_<%= enquiry.id %>">
+        <td>
+          <%= link_to enquiry.title, enquiry, target: "_blank" %>
+          <br>
+          <span class="date"><%= l enquiry.updated_at.to_date %></span>
+          <span class="bullet">&nbsp;&bull;&nbsp;</span>
+          <%= enquiry.flags_count %><i class="icon-flag flag-disable"></i>
+          <span class="bullet">&nbsp;&bull;&nbsp;</span>
+          <%= enquiry.author.username %>
+          <br>
+          <div class="moderation-description">
+            <%= enquiry.description %>
+          </div>
+        </td>
+        <td class="text-center">
+          <%= check_box_tag "enquiry_ids[]", enquiry.id, nil, id: "#{dom_id(enquiry)}_check" %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+<%= submit_tag t('moderation.enquiries.index.block_authors'),
+    name: "block_authors",
+    class: "button radius alert",
+data: {confirm: t('moderation.enquiries.index.confirm')}
+  %>
+
+  <div class="right">
+    <%= submit_tag t('moderation.enquiries.index.hide_enquiries'),
+name: "hide_enquiries",
+      class: "button radius alert",
+data: {confirm: t('moderation.enquiries.index.confirm')}
+    %>
+    <%= submit_tag t('moderation.enquiries.index.ignore_flags'),
+      name: "ignore_flags",
+      class: "button radius success",
+data: {confirm: t('moderation.enquiries.index.confirm')}
+    %>
+  </div>
+
+<%= paginate @enquiries %>
+
+<% end %>
+

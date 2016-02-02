@@ -53,6 +53,35 @@ feature 'Emails' do
     end
   end
 
+  context 'Enquiry comments' do
+    scenario "Send email on enquiry comment", :js do
+      user = create(:user, email_on_comment: true)
+      enquiry = create(:enquiry, author: user)
+      comment_on(enquiry)
+
+      email = open_last_email
+      expect(email).to have_subject('Someone has commented on your citizen enquiry')
+      expect(email).to deliver_to(enquiry.author)
+      expect(email).to have_body_text(enquiry_path(enquiry))
+    end
+
+    scenario 'Do not send email about own enquiry comments', :js do
+      user = create(:user, email_on_comment: true)
+      enquiry = create(:enquiry, author: user)
+      comment_on(enquiry, user)
+
+      expect { open_last_email }.to raise_error "No email has been sent!"
+    end
+
+    scenario 'Do not send email about enquiry comment unless set in preferences', :js do
+      user = create(:user, email_on_comment: false)
+      enquiry = create(:enquiry, author: user)
+      comment_on(enquiry)
+
+      expect { open_last_email }.to raise_error "No email has been sent!"
+    end
+  end
+
   context 'Debate comments' do
     scenario "Send email on debate comment", :js do
       user = create(:user, email_on_comment: true)

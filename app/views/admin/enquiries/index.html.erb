@@ -1,0 +1,44 @@
+<h2><%= t("admin.enquiries.index.title") %></h2>
+
+<%= render 'shared/filter_subnav', i18n_namespace: "admin.enquiries.index" %>
+
+<h3><%= page_entries_info @enquiries %></h3>
+
+<table>
+  <% @enquiries.each do |enquiry| %>
+    <tr id="<%= dom_id(enquiry) %>">
+      <td>
+        <strong><%= enquiry.title %></strong>
+        <br>
+        <div class="moderation-description">
+          <p><%= enquiry.summary %></p>
+          <%= enquiry.description %>
+          <% if enquiry.external_url.present? %>
+            <p><%= text_with_links enquiry.external_url %></p>
+          <% end %>
+          <% if enquiry.video_url.present? %>
+            <p><%= text_with_links enquiry.video_url %></p>
+          <% end %>
+          <p><%= enquiry.question %></p>
+        </div>
+      </td>
+      <td>
+        <%= link_to t("admin.actions.restore"),
+              restore_admin_enquiry_path(enquiry, request.query_parameters),
+              method: :put,
+              data: { confirm: t("admin.actions.confirm") },
+              class: "button radius tiny success no-margin" %>
+      </td>
+      <td>
+        <% unless enquiry.confirmed_hide? %>
+          <%= link_to t("admin.actions.confirm_hide"),
+                confirm_hide_admin_enquiry_path(enquiry, request.query_parameters),
+                method: :put,
+                class: "button radius tiny warning right" %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<%= paginate @enquiries %>

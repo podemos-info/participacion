@@ -27,6 +27,12 @@
           <%= activity.actionable.username %> (<%= activity.actionable.email %>)
         <% when "Comment" %>
           <%= activity.actionable.body %>
+        <% when "Enquiry" %>
+          <strong><%= activity.actionable.title %></strong>
+          <br>
+          <div class="enquiry-description">
+            <%= activity.actionable.description %>
+          </div>
         <% else %>
           <strong><%= activity.actionable.title %></strong>
           <br>

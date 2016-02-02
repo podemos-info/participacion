@@ -1,0 +1,28 @@
+<% cache [locale_and_user_status, commentable_cache_key(@enquiry), @all_visible_comments, @all_visible_comments.map(&:author), @enquiry.comments_count, @comment_flags] do %>
+  <section class="row-full comments">
+    <div class="row">
+      <div id="comments" class="small-12 column">
+        <h2>
+          <%= t("enquiries.show.comments_title") %>
+          <span>(<%= @enquiry.comments_count %>)</span>
+        </h2>
+
+        <% if user_signed_in? %>
+          <%= render 'comments/form', {commentable: @enquiry, parent_id: nil, toggeable: false} %>
+        <% else %>
+        <br>
+
+        <div class="alert-box radius info">
+          <%= t("enquiries.show.login_to_comment",
+              signin: link_to(t("votes.signin"), user_omniauth_authorize_path(:openid))).html_safe %>
+          </div>
+        <% end %>
+
+        <% @root_comments.each do |comment| %>
+          <%= render 'comments/comment', comment: comment  %>
+        <% end %>
+        <%= paginate @root_comments %>
+      </div>
+    </div>
+  </section>
+<% end %>

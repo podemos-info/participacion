@@ -11,6 +11,10 @@ ActsAsVotable::Vote.class_eval do
     where(votable_type: 'Proposal', votable_id: proposals)
   end
 
+  def self.for_enquiries(enquiries)
+    where(votable_type: 'Enquiry', votable_id: enquiries)
+  end
+
   def value
     vote_flag
   end

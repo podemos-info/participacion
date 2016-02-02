@@ -14,6 +14,7 @@ es:
       debate_topics: "Temas de debate"
       medida_topics: "Temas de medida"
       hidden_proposals: "Propuestas ocultas"
+      hidden_enquiries: "Preguntas ocultas"
       hidden_debates: "Debates ocultos"
       hidden_medidas: "Medidas ocultas"
       hidden_comments: "Comentarios ocultos"
@@ -30,6 +31,9 @@ es:
         button: "Buscar"
       proposal_search:
         placeholder: "Buscar propuestas por título, descripción o pregunta"
+        button: "Buscar"
+      enquiry_search:
+        placeholder: "Buscar preguntas por título, descripción o pregunta"
         button: "Buscar"
     organizations:
       index:
@@ -71,6 +75,7 @@ es:
       index:
         title: "Comentarios ocultos"
         hidden_proposal: "Propuesta oculta"
+        hidden_enquiry: "Pregunta oculta"
         hidden_debate: "Debate oculto"
         filter: "Filtro"
         filters:
@@ -96,6 +101,14 @@ es:
     proposals:
       index:
         title: "Propuestas ocultas"
+        filter: "Filtro"
+        filters:
+          all: "Todas"
+          with_confirmed_hide: "Confirmadas"
+          without_confirmed_hide: "Pendientes"
+    enquiries:
+      index:
+        title: "Preguntas ocultas"
         filter: "Filtro"
         filters:
           all: "Todas"
@@ -160,6 +173,7 @@ es:
         filters:
           all: "Todo"
           on_proposals: "Propuestas"
+          on_enquiries: "Preguntas"
           on_debates: "Debates"
           on_medidas: "Medidas"
           on_comments: "Comentarios"
@@ -177,9 +191,11 @@ es:
           visits: "Visitas"
           debates: "Debates"
           proposals: "Propuestas"
+          enquiries: "Preguntas"
           comments: "Comentarios"
           debate_votes: "Votos en debates"
           proposal_votes: "Votos en propuestas"
+          enquiry_votes: "Votos en preguntas"
           comment_votes: "Votos en comentarios"
           votes: "Votos"
           user_level_three: "Usuarios de nivel tres"
