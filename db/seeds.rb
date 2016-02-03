@@ -6,11 +6,11 @@ end
 
 # Names for the moderation console, as a hint for moderators
 # to know better how to assign users with official positions
-Setting.create(key: 'official_level_1_name', value: 'Empleados públicos')
-Setting.create(key: 'official_level_2_name', value: 'Organización Municipal')
-Setting.create(key: 'official_level_3_name', value: 'Directores generales')
-Setting.create(key: 'official_level_4_name', value: 'Concejales')
-Setting.create(key: 'official_level_5_name', value: 'Alcaldesa')
+Setting.create(key: 'official_level_1_name', value: 'Portavoces')
+Setting.create(key: 'official_level_2_name', value: 'Consejos Ciudadanos')
+Setting.create(key: 'official_level_3_name', value: 'Círculos')
+Setting.create(key: 'official_level_4_name', value: 'Moderadores')
+Setting.create(key: 'official_level_5_name', value: 'Entrevistados')
 
 # Max percentage of allowed anonymous votes on a debate
 Setting.create(key: 'max_ratio_anon_votes_on_debates', value: '50')
@@ -32,3 +32,12 @@ Setting.create(key: 'proposal_code_prefix', value: 'MAD')
 
 # Number of votes needed for proposal success
 Setting.create(key: 'votes_for_proposal_success', value: '53726')
+
+# Max votes where a enquiry is still editable
+Setting.create(key: 'max_votes_for_enquiry_edit', value: '1000')
+
+# Prefix for the Enquiry codes
+Setting.create(key: 'enquiry_code_prefix', value: 'MAD')
+
+# Number of votes needed for enquiry success
+Setting.create(key: 'votes_for_enquiry_success', value: '53726')

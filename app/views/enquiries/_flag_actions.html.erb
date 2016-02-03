@@ -1,0 +1,23 @@
+<span class="flag-content">
+  <% if show_flag_action? enquiry %>
+    <a id="flag-expand-enquiry-<%= enquiry.id %>" data-dropdown="flag-drop-enquiry-<%= enquiry.id %>" aria-controls="flag-drop-enquiry-<%= enquiry.id %>" aria-expanded="false" title="<%= t('shared.flag') %>">
+      &nbsp;<i class="icon-flag flag-disable"></i>&nbsp;&nbsp;
+    </a>
+    <ul id="flag-drop-enquiry-<%= enquiry.id %>" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+      <li>
+        <%= link_to t('shared.flag'), flag_enquiry_path(enquiry), method: :put, remote: true, id: "flag-enquiry-#{ enquiry.id }" %>
+      </li>
+    </ul>
+  <% end %>
+
+  <% if show_unflag_action? enquiry %>
+    <a id="unflag-expand-enquiry-<%= enquiry.id %>" data-dropdown="unflag-drop-enquiry-<%= enquiry.id %>" aria-controls="unflag-drop-enquiry-<%= enquiry.id %>" aria-expanded="false" title="<%= t('shared.unflag') %>">
+      &nbsp;<i class="icon-flag flag-active"></i>&nbsp;&nbsp;
+    </a>
+    <ul id="unflag-drop-enquiry-<%= enquiry.id %>" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+      <li>
+        <%= link_to t('shared.unflag'), unflag_enquiry_path(enquiry), method: :put, remote: true, id: "unflag-enquiry-#{ enquiry.id }" %>
+      </li>
+    </ul>
+  <% end %>
+</span>

@@ -1,0 +1,42 @@
+<div class="supports">
+  <div class="in-favor">
+    <% if voted_for?(@featured_debates_votes, debate) %>
+      <div class="supported">
+        <%= t("debates.debate.already_supported") %>
+      </div>
+    <% else %>
+    <%= link_to vote_featured_debate_path(debate, value: 'yes'),
+          class: "button button-support tiny radius expand",
+title: t('debates.debate.support_title'), method: "post", remote: true do %>
+    <%= t("debates.debate.support") %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <% if user_signed_in? && current_user.organization? %>
+  <div class="organizations-votes" style='display:none'>
+    <p>
+      <%= t("votes.organizations") %>
+    </p>
+  </div>
+  <% elsif user_signed_in? && !debate.votable_by?(current_user)%>
+  <div class="anonymous-votes" style='display:none'>
+    <p>
+      <%= t("votes.verified_only",
+          verify_account: link_to(t("votes.verify_account"), verification_path )).html_safe %>
+    </p>
+  </div>
+  <% elsif !user_signed_in? %>
+  <div class="not-logged" style='display:none'>
+    <%= t("votes.unauthenticated",
+      signin: link_to(t("votes.signin"), user_omniauth_authorize_path(:openid)),
+      signup: link_to(t("votes.signup"), user_omniauth_authorize_path(:openid))).html_safe %>
+  </div>
+  <% end %>
+
+  <% if voted_for?(@featured_debates_votes, debate) %>
+    <div class="share-supported">
+      <%= social_share_button_tag(debate.title, url: debate_url(debate), via: "AbriendoMadrid") %>
+    </div>
+  <% end %>
+</div>

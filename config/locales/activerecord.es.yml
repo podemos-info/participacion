@@ -34,6 +34,9 @@ es:
       proposal:
         one: Propuesta ciudadana
         other: Propuestas ciudadanas
+      enquiry:
+        one: Pregunta ciudadana
+        other: Preguntas ciudadanas
     attributes:
       comment:
         body: Comentario
@@ -49,6 +52,12 @@ es:
         terms_of_service: Términos de servicio
         title: Título
       proposal:
+        author: Autor
+        title: Título
+        question: Pregunta
+        description: Descripción
+        terms_of_service: Términos de servicio
+      enquiry:
         author: Autor
         title: Título
         question: Pregunta

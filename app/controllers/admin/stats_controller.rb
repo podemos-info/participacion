@@ -7,10 +7,12 @@ class Admin::StatsController < Admin::BaseController
     @debates = Debate.with_hidden.count
     @medidas = Medida.with_hidden.count
     @proposals = Proposal.with_hidden.count
+    @enquiries = Enquiry.with_hidden.count
     @comments = Comment.with_hidden.count
 
     @debate_votes = Vote.where(votable_type: 'Debate').count
     @proposal_votes = Vote.where(votable_type: 'Proposal').count
+    @enquiry_votes = Vote.where(votable_type: 'Enquiry').count
     @comment_votes = Vote.where(votable_type: 'Comment').count
     @votes = Vote.count
 

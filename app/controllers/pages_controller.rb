@@ -40,6 +40,9 @@ class PagesController < ApplicationController
   def proposals_info
   end
 
+  def enquiries_info
+  end
+
   def participation_facts
   end
 

@@ -1,9 +1,13 @@
-<% cache [locale_and_user_status, @featured_debates, @featured_medidas, @featured_proposals, 'featured'] do %>
+<% cache [locale_and_user_status, @featured_debates, @featured_medidas, @featured_proposals, @featured_enquiries, 'featured'] do %>
   <section role="main">
     <div class="row">
         <div class="small-12 medium-4 column">
             <h3><%= t("welcome.proposal.title") %></h3>
             <p><%= t("welcome.proposal.description") %></p>
+        </div>
+        <div class="small-12 medium-4 column">
+          <h3><%= t("welcome.enquiry.title") %></h3>
+          <p><%= t("welcome.enquiry.description") %></p>
         </div>
         <div class="small-12 medium-4 column">
             <h3><%= t("welcome.debates.title") %></h3>

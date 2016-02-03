@@ -3,17 +3,20 @@ require 'database_cleaner'
 DatabaseCleaner.clean_with :truncation
 
 puts "Creating Settings"
-Setting.create(key: 'official_level_1_name', value: 'Empleados públicos')
-Setting.create(key: 'official_level_2_name', value: 'Organización Municipal')
-Setting.create(key: 'official_level_3_name', value: 'Directores generales')
-Setting.create(key: 'official_level_4_name', value: 'Concejales')
-Setting.create(key: 'official_level_5_name', value: 'Alcaldesa')
+Setting.create(key: 'official_level_1_name', value: 'Portavoces')
+Setting.create(key: 'official_level_2_name', value: 'Consejos Ciudadanos')
+Setting.create(key: 'official_level_3_name', value: 'Círculos')
+Setting.create(key: 'official_level_4_name', value: 'Moderadores')
+Setting.create(key: 'official_level_5_name', value: 'Entrevistados')
 Setting.create(key: 'max_ratio_anon_votes_on_debates', value: '50')
 Setting.create(key: 'max_ratio_anon_votes_on_medidas', value: '50')
 Setting.create(key: 'max_votes_for_debate_edit', value: '1000')
 Setting.create(key: 'max_votes_for_proposal_edit', value: '1000')
 Setting.create(key: 'proposal_code_prefix', value: 'MAD')
 Setting.create(key: 'votes_for_proposal_success', value: '100')
+Setting.create(key: 'max_votes_for_enquiry_edit', value: '1000')
+Setting.create(key: 'enquiry_code_prefix', value: 'MAD')
+Setting.create(key: 'votes_for_enquiry_success', value: '100')
 
 puts "Creating Users"
 
@@ -51,9 +54,10 @@ end
 (1..40).each do |i|
   user = create_user("user#{i}@madrid.es")
   level = [1,2,3].sample
-  if level == 2 then
+  if level > 1 then
     user.update(residence_verified_at: Time.now, confirmed_phone: Faker::PhoneNumber.phone_number, document_number: Faker::Number.number(10) )
-  elsif level == 3 then
+  end
+  if level == 3 then
     user.update(verified_at: Time.now, document_number: Faker::Number.number(10) )
   end
 end
@@ -114,6 +118,26 @@ tags = Faker::Lorem.words(25)
   puts "    #{proposal.title}"
 end
 
+puts "Creating Enquiries"
+
+tags = Faker::Lorem.words(25)
+
+(1..30).each do |i|
+  author = User.reorder("RANDOM()").first
+  description = "<p>#{Faker::Lorem.paragraphs.join('</p><p>')}</p>"
+  enquiry = Enquiry.create!(author: author,
+                              title: Faker::Lorem.sentence(3).truncate(60),
+                              question: Faker::Lorem.sentence(3),
+                              summary: Faker::Lorem.sentence(3),
+                              responsible_name: Faker::Name.name,
+                              external_url: Faker::Internet.url,
+                              description: description,
+                              created_at: rand((Time.now - 1.week) .. Time.now),
+                              tag_list: tags.sample(3).join(','),
+                              terms_of_service: "1")
+  puts "    #{enquiry.title}"
+end
+
 
 puts "Commenting Debates"
 
@@ -148,6 +172,17 @@ puts "Commenting Proposals"
                   body: Faker::Lorem.sentence)
 end
 
+puts "Commenting Enquiries"
+
+(1..100).each do |i|
+  author = User.reorder("RANDOM()").first
+  enquiry = Enquiry.reorder("RANDOM()").first
+  Comment.create!(user: author,
+    created_at: rand(enquiry.created_at .. Time.now),
+    commentable: enquiry,
+    body: Faker::Lorem.sentence)
+end
+
 
 puts "Commenting Comments"
 
@@ -163,7 +198,7 @@ puts "Commenting Comments"
 end
 
 
-puts "Voting Debates, Medidas, Proposals & Comments"
+puts "Voting Debates, Medidas, Proposals, Enquiries & Comments"
 
 (1..100).each do |i|
   voter  = not_org_users.reorder("RANDOM()").first
@@ -192,6 +227,11 @@ end
   proposal.vote_by(voter: voter, vote: true)
 end
 
+(1..100).each do |i|
+  voter  = User.level_two_or_three_verified.reorder("RANDOM()").first
+  enquiry = Enquiry.reorder("RANDOM()").first
+  enquiry.vote_by(voter: voter, vote: true)
+end
 
 puts "Flagging Debates, Medidas & Comments"
 
@@ -219,26 +259,32 @@ end
   Flag.flag(flagger, proposal)
 end
 
+(1..40).each do |i|
+  enquiry = Enquiry.reorder("RANDOM()").first
+  flagger = User.where(["users.id <> ?", enquiry.author_id]).reorder("RANDOM()").first
+  Flag.flag(flagger, enquiry)
+end
 
-puts "Ignoring flags in Debates, Medidas, comments & proposals"
+puts "Ignoring flags in Debates, Medidas,Enquiries, comments & proposals"
 
 Debate.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
 Medida.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
 Comment.flagged.reorder("RANDOM()").limit(30).each(&:ignore_flag)
 Proposal.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
+Enquiry.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
 
-
-puts "Hiding debates, medidas, comments & proposals"
+puts "Hiding debates, medidas, enquiries, comments & proposals"
 
 Comment.with_hidden.flagged.reorder("RANDOM()").limit(30).each(&:hide)
 Debate.with_hidden.flagged.reorder("RANDOM()").limit(5).each(&:hide)
 Medida.with_hidden.flagged.reorder("RANDOM()").limit(5).each(&:hide)
 Proposal.with_hidden.flagged.reorder("RANDOM()").limit(10).each(&:hide)
+Enquiry.with_hidden.flagged.reorder("RANDOM()").limit(10).each(&:hide)
 
-
-puts "Confirming hiding in debates, medidas, comments & proposals"
+puts "Confirming hiding in debates, medidas, enquiries, comments & proposals"
 
 Comment.only_hidden.flagged.reorder("RANDOM()").limit(10).each(&:confirm_hide)
 Debate.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)
 Medida.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)
 Proposal.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)
+Enquiry.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)

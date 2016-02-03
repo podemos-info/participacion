@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require simplemde.min
+//= require markdown_editor
 //= require ckeditor/init
 //= require_directory ./ckeditor
 //= require social-share-button
@@ -29,6 +31,7 @@
 //= require moderator_debates
 //= require moderator_medidas
 //= require moderator_proposals
+//= require moderator_enquiries
 //= require prevent_double_submission
 //= require rem.min
 //= require respond.min
@@ -36,6 +39,11 @@
 //= require users
 //= require votes
 //= require legal_cookie
+//= require a-tools
+//= require showdown
+//= require marked
+//= require textile
+//= require mdmagick
 
 var initialize_modules = function() {
   App.Comments.initialize();

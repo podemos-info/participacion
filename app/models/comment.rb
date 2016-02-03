@@ -10,17 +10,28 @@ class Comment < ActiveRecord::Base
 
   validates :body, presence: true
   validates :user, presence: true
-  validates_inclusion_of :commentable_type, in: ["Debate", "Proposal","Medida"]
+  validates_inclusion_of :commentable_type, in: ["Debate", "Proposal","Enquiry","Medida"]
 
   validate :validate_body_length
 
   belongs_to :commentable, -> { with_hidden }, polymorphic: true, counter_cache: true
   belongs_to :user, -> { with_hidden }
 
+  before_save :calculate_confidence_score
   scope :recent, -> { order(id: :desc) }
   scope :for_render, -> { with_hidden.includes(user: :organization) }
   scope :with_visible_author, -> { joins(:user).where("users.hidden_at IS NULL") }
+  scope :not_as_admin_or_moderator, -> { where("administrator_id IS NULL").where("moderator_id IS NULL")}
   scope :sort_by_flags, -> { order(flags_count: :desc, updated_at: :desc) }
+  scope :sort_by_most_voted , -> { order(confidence_score: :desc, created_at: :desc) }
+  scope :sort_by_confidence_score , -> { order(confidence_score: :desc, created_at: :desc) }
+  scope :sort_descendants_by_most_voted , -> { order(confidence_score: :desc, created_at: :asc) }
+  scope :sort_descendants_by_confidence_score , -> { order(confidence_score: :desc, created_at: :asc) }
+  scope :sort_by_newest, -> { order(created_at: :desc) }
+  scope :sort_descendants_by_newest, -> { order(created_at: :desc) }
+
+  scope :sort_by_oldest, -> { order(created_at: :asc) }
+  scope :sort_descendants_by_oldest, -> { order(created_at: :asc) }
   scope :sort_by_created_at, -> { order(created_at: :desc) }
 
   after_create :call_after_commented
@@ -86,6 +97,11 @@ class Comment < ActiveRecord::Base
 
   def self.body_max_length
     15000
+  end
+
+  def calculate_confidence_score
+    self.confidence_score = ScoreCalculator.confidence_score(cached_votes_total,
+                                                             cached_votes_up)
   end
 
   private

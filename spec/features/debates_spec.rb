@@ -73,7 +73,7 @@ feature 'Debates' do
     click_button 'Start a debate'
 
     expect(page).to have_content 'A title for a debate'
-    expect(page).to have_content 'Debate was successfully created.'
+    expect(page).to have_content 'Debate created successfully.'
     expect(page).to have_content 'This is very important because...'
     expect(page).to have_content author.name
     expect(page).to have_content I18n.l(Debate.last.created_at.to_date)
@@ -90,13 +90,13 @@ feature 'Debates' do
 
     click_button "Start a debate"
 
-    expect(page).to_not have_content "Debate was successfully created."
+    expect(page).to_not have_content "Debate created successfully."
     expect(page).to have_content "1 error"
 
     fill_in 'debate_captcha', with: correct_captcha_text
     click_button "Start a debate"
 
-    expect(page).to have_content "Debate was successfully created."
+    expect(page).to have_content "Debate created successfully."
   end
 
   scenario 'Failed creation goes back to new showing featured tags' do
@@ -112,7 +112,7 @@ feature 'Debates' do
 
     click_button "Start a debate"
 
-    expect(page).to_not have_content "Debate was successfully created."
+    expect(page).to_not have_content "Debate created successfully."
     expect(page).to have_content "error"
     within(".tags") do
       expect(page).to have_content featured_tag.name
@@ -141,7 +141,7 @@ feature 'Debates' do
 
     click_button 'Start a debate'
 
-    expect(page).to have_content 'Debate was successfully created.'
+    expect(page).to have_content 'Debate created successfully.'
     expect(page).to have_content 'Testing an attack'
     expect(page.html).to include '<p>This is alert("an attack");</p>'
     expect(page.html).to_not include '<script>alert("an attack");</script>'
@@ -160,7 +160,7 @@ feature 'Debates' do
 
     click_button 'Start a debate'
 
-    expect(page).to have_content 'Debate was successfully created.'
+    expect(page).to have_content 'Debate created successfully.'
     expect(page).to have_content 'Testing auto link'
     expect(page).to have_link('www.example.org', href: 'http://www.example.org')
   end
@@ -177,7 +177,7 @@ feature 'Debates' do
 
     click_button 'Start a debate'
 
-    expect(page).to have_content 'Debate was successfully created.'
+    expect(page).to have_content 'Debate created successfully.'
     expect(page).to have_content 'Testing auto link'
     expect(page).to have_link('http://example.org', href: 'http://example.org')
     expect(page).not_to have_link('click me')
@@ -215,7 +215,7 @@ feature 'Debates' do
 
       click_button 'Start a debate'
 
-      expect(page).to have_content 'Debate was successfully created.'
+      expect(page).to have_content 'Debate created successfully.'
       ['Medio Ambiente', 'Ciencia'].each do |tag_name|
         expect(page).to have_content tag_name
       end
@@ -233,7 +233,7 @@ feature 'Debates' do
 
       click_button 'Start a debate'
 
-      expect(page).to have_content 'Debate was successfully created.'
+      expect(page).to have_content 'Debate created successfully.'
       expect(page).to have_content 'user_id1'
       expect(page).to have_content 'a3'
       expect(page).to have_content 'scriptalert("hey");script'
@@ -249,7 +249,7 @@ feature 'Debates' do
     visit edit_debate_path(debate)
     expect(current_path).not_to eq(edit_debate_path(debate))
     expect(current_path).to eq(proposals_path)
-    expect(page).to have_content 'not authorized'
+    expect(page).to have_content "You do not have permission to carry out the action 'edit' on debate."
   end
 
   scenario 'Update should not be posible if debate is not editable' do
@@ -264,7 +264,7 @@ feature 'Debates' do
 
     expect(current_path).not_to eq(edit_debate_path(debate))
     expect(current_path).to eq(proposals_path)
-    expect(page).to have_content 'not authorized'
+    expect(page).to have_content 'You do not have permission to'
   end
 
   scenario 'Update should be posible for the author of an editable debate' do
@@ -280,7 +280,7 @@ feature 'Debates' do
 
     click_button "Save changes"
 
-    expect(page).to have_content "Debate was successfully updated."
+    expect(page).to have_content "Debate updated successfully."
     expect(page).to have_content "End child poverty"
     expect(page).to have_content "Let's do something to end child poverty"
   end
@@ -307,13 +307,13 @@ feature 'Debates' do
     fill_in 'debate_captcha', with: "wrong!"
     click_button "Save changes"
 
-    expect(page).to_not have_content "Debate was successfully updated."
+    expect(page).to_not have_content "Debate updated successfully."
     expect(page).to have_content "error"
 
     fill_in 'debate_captcha', with: correct_captcha_text
     click_button "Save changes"
 
-    expect(page).to have_content "Debate was successfully updated."
+    expect(page).to have_content "Debate updated successfully."
   end
 
   scenario 'Failed update goes back to edit showing featured tags' do
@@ -329,7 +329,7 @@ feature 'Debates' do
     fill_in 'debate_captcha', with: correct_captcha_text
     click_button "Save changes"
 
-    expect(page).to_not have_content "Debate was successfully updated."
+    expect(page).to_not have_content "Debate updated successfully."
     expect(page).to have_content "error"
     within(".tags") do
       expect(page).to have_content featured_tag.name
@@ -339,7 +339,7 @@ feature 'Debates' do
 
   describe 'Limiting tags shown' do
     scenario 'Index page shows up to 5 tags per debate' do
-      tag_list = ["Hacienda", "Economía", "Medio Ambiente", "Corrupción", "Fiestas populares", "Prensa", "Huelgas"]
+      tag_list = ["Hacienda", "Economía", "Medio Ambiente", "Corrupción", "Fiestas populares", "Prensa"]
       create :debate, tag_list: tag_list
 
       visit debates_path
@@ -418,7 +418,7 @@ feature 'Debates' do
       create(:debate, title: 'Medium').update_column(:confidence_score, 5)
 
       visit debates_path
-      select 'best rated', from: 'order-selector'
+      select 'highest rated', from: 'order-selector'
 
       expect(page).to have_selector('.js-order-selector[data-order="confidence_score"]')
 
@@ -517,9 +517,9 @@ feature 'Debates' do
     conflictive_debate = create(:debate, :conflictive)
 
     visit debate_path(conflictive_debate)
-    expect(page).to have_content "This debate has been flag as innapropiate for some users."
+    expect(page).to have_content "This debate has been flagged as inappropriate by several users."
 
     visit debate_path(good_debate)
-    expect(page).to_not have_content "This debate has been flag as innapropiate for some users."
+    expect(page).to_not have_content "This debate has been flagged as inappropriate by several users."
   end
 end

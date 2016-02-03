@@ -19,7 +19,7 @@ feature 'Emails' do
     reset_password
 
     email = open_last_email
-    expect(email).to have_subject('Reset password instructions')
+    expect(email).to have_subject('Instructions for resetting your password')
     expect(email).to deliver_to('manuela@madrid.es')
     expect(email).to have_body_text(edit_user_password_path)
   end
@@ -31,7 +31,7 @@ feature 'Emails' do
       comment_on(proposal)
 
       email = open_last_email
-      expect(email).to have_subject('Someone has commented on your proposal')
+      expect(email).to have_subject('Someone has commented on your citizen proposal')
       expect(email).to deliver_to(proposal.author)
       expect(email).to have_body_text(proposal_path(proposal))
     end
@@ -48,6 +48,35 @@ feature 'Emails' do
       user = create(:user, email_on_comment: false)
       proposal = create(:proposal, author: user)
       comment_on(proposal)
+
+      expect { open_last_email }.to raise_error "No email has been sent!"
+    end
+  end
+
+  context 'Enquiry comments' do
+    scenario "Send email on enquiry comment", :js do
+      user = create(:user, email_on_comment: true)
+      enquiry = create(:enquiry, author: user)
+      comment_on(enquiry)
+
+      email = open_last_email
+      expect(email).to have_subject('Someone has commented on your citizen enquiry')
+      expect(email).to deliver_to(enquiry.author)
+      expect(email).to have_body_text(enquiry_path(enquiry))
+    end
+
+    scenario 'Do not send email about own enquiry comments', :js do
+      user = create(:user, email_on_comment: true)
+      enquiry = create(:enquiry, author: user)
+      comment_on(enquiry, user)
+
+      expect { open_last_email }.to raise_error "No email has been sent!"
+    end
+
+    scenario 'Do not send email about enquiry comment unless set in preferences', :js do
+      user = create(:user, email_on_comment: false)
+      enquiry = create(:enquiry, author: user)
+      comment_on(enquiry)
 
       expect { open_last_email }.to raise_error "No email has been sent!"
     end
@@ -117,9 +146,9 @@ feature 'Emails' do
       reply_to(user)
 
       email = open_last_email
-      expect(email).to have_subject('Someone has replied to your comment')
+      expect(email).to have_subject('Someone has responded to your comment')
       expect(email).to deliver_to(user)
-      expect(email).to have_body_text(medida_path(Comment.first.commentable))
+      expect(email).to have_body_text(debate_path(Comment.first.commentable))
     end
 
     scenario "Do not send email about own replies to own comments", :js do

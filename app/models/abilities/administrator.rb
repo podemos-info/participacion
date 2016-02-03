@@ -17,6 +17,9 @@ module Abilities
       can :restore, Proposal
       cannot :restore, Proposal, hidden_at: nil
 
+      can :restore, Enquiry
+      cannot :restore, Enquiry, hidden_at: nil
+
       can :restore, User
       cannot :restore, User, hidden_at: nil
 
@@ -32,10 +35,13 @@ module Abilities
       can :confirm_hide, Proposal
       cannot :confirm_hide, Proposal, hidden_at: nil
 
+      can :confirm_hide, Enquiry
+      cannot :confirm_hide, Enquiry, hidden_at: nil
+
       can :confirm_hide, User
       cannot :confirm_hide, User, hidden_at: nil
 
-      can :comment_as_administrator, [Debate, Medida, Comment, Proposal]
+      can :comment_as_administrator, [Debate, Medida, Comment, Proposal, Enquiry]
 
       can [:search, :create, :index, :destroy], ::Moderator
     end

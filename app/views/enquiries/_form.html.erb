@@ -1,0 +1,84 @@
+<%= form_for(@enquiry, url: form_url) do |f| %>
+  <%= render 'shared/errors', resource: @enquiry %>
+
+  <div class="row">
+    <div class="small-12 column">
+      <%= f.label :title, t("enquiries.form.enquiry_title") %>
+      <%= f.text_field :title, maxlength: Enquiry.title_max_length, placeholder: t("enquiries.form.enquiry_title"), label: false %>
+    </div>
+
+    <div class="small-12 column">
+      <%= f.label :question, t("enquiries.form.enquiry_question") %>
+      <span class="note-marked">
+        <%= t("enquiries.form.enquiry_question_example_html") %>
+      </span>
+      <%= f.text_field :question, maxlength: Enquiry.question_max_length, placeholder: t("enquiries.form.enquiry_question"), label: false %>
+    </div>
+
+    <div class="small-12 column">
+      <%= f.label :summary, t("enquiries.form.enquiry_summary") %>
+      <p class="note"><%= t("enquiries.form.enquiry_summary_note") %></p>
+      <%= f.text_area :summary, rows: 4, maxlength: 200, label: false,
+placeholder: t('enquiries.form.enquiry_summary') %>
+    </div>
+
+    <div class="ckeditor small-12 column">
+      <%= f.label :description, t("enquiries.form.enquiry_text") %>
+      <%= f.cktext_area :description, maxlength: Enquiry.description_max_length, ckeditor: { language: I18n.locale }, label: false %>
+    </div>
+
+
+    <div class="small-12 column">
+      <%= f.label :video_url, t("enquiries.form.enquiry_video_url") %>
+      <p class="note"><%= t("enquiries.form.enquiry_video_url_note") %></p>
+      <%= f.text_field :video_url, placeholder: t("enquiries.form.enquiry_video_url"), label: false %>
+    </div>
+
+    <div class="small-12 column">
+      <%= f.label :external_url, t("enquiries.form.enquiry_external_url") %>
+      <%= f.text_field :external_url, placeholder: t("enquiries.form.enquiry_external_url"), label: false %>
+    </div>
+
+    <div class="small-12 column">
+      <%= f.label :tag_list, t("enquiries.form.tags_label") %>
+      <p class="note"><%= t("enquiries.form.tags_instructions") %></p>
+      <span class="tags">
+        <% @featured_tags.each do |tag| %>
+          <a class="js-add-tag-link"><%= tag.name %></a>
+        <% end %>
+      </span>
+      <%= f.text_field :tag_list, value: @enquiry.tag_list.to_s, label: false, placeholder: t("enquiries.form.tags_placeholder"), class: 'js-tag-list' %>
+    </div>
+
+    <% if current_user.unverified? %>
+      <div class="small-12 column">
+        <%= f.label :responsible_name, t("enquiries.form.enquiry_responsible_name") %>
+        <p class="note"><%= t("enquiries.form.enquiry_responsible_name_note") %></p>
+        <%= f.text_field :responsible_name, placeholder: t("enquiries.form.enquiry_responsible_name"), label: false %>
+      </div>
+    <% end %>
+
+    <div class="small-12 column">
+      <% if @enquiry.new_record? %>
+        <%= f.label :terms_of_service do %>
+          <%= f.check_box :terms_of_service, label: false %>
+          <span class="checkbox">
+            <%= t("form.accept_terms",
+                policy: link_to(t("form.policy"), "/privacy", target: "blank"),
+                conditions: link_to(t("form.conditions"), "/conditions", target: "blank")).html_safe %>
+          </span>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="small-12 column">
+      <%= f.simple_captcha input_html: { required: false } %>
+    </div>
+
+    <div class="actions small-12 column">
+      <%= f.submit(class: "button radius", value: t("enquiries.#{action_name}.form.submit_button")) %>
+    </div>
+  </div>
+<% end %>
+
+
