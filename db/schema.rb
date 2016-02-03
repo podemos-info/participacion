@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 20160202083138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "unaccent"
+  enable_extension "pg_trgm"
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
@@ -47,6 +49,13 @@ ActiveRecord::Schema.define(version: 20160202083138) do
   add_index "ahoy_events", ["time"], name: "index_ahoy_events_on_time", using: :btree
   add_index "ahoy_events", ["user_id"], name: "index_ahoy_events_on_user_id", using: :btree
   add_index "ahoy_events", ["visit_id"], name: "index_ahoy_events_on_visit_id", using: :btree
+
+  create_table "campaigns", force: :cascade do |t|
+    t.string   "name"
+    t.string   "track_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.integer  "commentable_id"
@@ -327,7 +336,7 @@ ActiveRecord::Schema.define(version: 20160202083138) do
   add_index "tags", ["proposals_count"], name: "index_tags_on_proposals_count", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                                default: "",    null: false
+    t.string   "email",                                default: ""
     t.string   "encrypted_password",                   default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -354,7 +363,6 @@ ActiveRecord::Schema.define(version: 20160202083138) do
     t.string   "document_number"
     t.string   "document_type"
     t.datetime "residence_verified_at"
-    t.datetime "letter_sent_at"
     t.string   "email_verification_token"
     t.datetime "verified_at"
     t.string   "unconfirmed_phone"
@@ -365,8 +373,9 @@ ActiveRecord::Schema.define(version: 20160202083138) do
     t.integer  "failed_census_calls_count",            default: 0
     t.string   "reddit_user"
     t.string   "reddit_uid"
-    t.integer  "circle_agent",                         default: 0
-    t.boolean  "public_activity",                      default: true
+    t.datetime "level_two_verified_at"
+    t.string   "erase_reason"
+    t.datetime "erased_at"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
