@@ -405,6 +405,11 @@ ul.pagination li.current button,
     .show-for-medium-up {display: block !important;}
 }
 
+@media (min-width: 40em) {
+    .subnavigation a {
+        margin-right: 2em;
+    }
+}
 
 // Social
 // - - - - - - - - - - - - - - - - - - - - - - - - -
