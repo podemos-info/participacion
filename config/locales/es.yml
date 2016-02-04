@@ -41,7 +41,7 @@ es:
       more_information: "Más información"
       debates: Debates y Opinión
       proposals: "ICPs"
-      enquiries: "Preguntas"
+      enquiries: "La pregunta de la Gente"
     footer:
       description: "Este portal usa la %{consul}, que es %{open_source}, y está basado en el portal de <a href='https://decide.madrid.es/' target='_blank'>Participación</a> del Ayuntamiento de Madrid."
       open_source: "software libre"
@@ -332,7 +332,7 @@ es:
 
   enquiries:
     index:
-      title: "Preguntas"
+      title: "La pregunta de la gente"
       featured_enquiries_html: "Preguntas<br>destacadas"
       start_enquiry: "Crea una Pregunta"
       select_order: "Ordenar por"
@@ -545,8 +545,8 @@ es:
       title: "ICPs"
       description: "Iniciativas Ciudadanas Populares: herramienta a través de la cual los inscritos en PODEMOS pueden hacer propuestas que, si reciben el apoyo suficiente, son llevadas a referéndum interno vinculante para su posible adopción."
     enquiry:
-      title: "Preguntas"
-      description: "Pregunta la Gente: herramienta a través de la cual los inscritos en PODEMOS pueden hacer preguntas que, si reciben el apoyo suficiente, son llevadas a referéndum interno vinculante para su posible adopción."
+      title: "La pregunta de la Gente"
+      description: "Herramienta a través de la cual los inscritos en PODEMOS pueden hacer preguntas que, si reciben el apoyo suficiente, son llevadas a referéndum interno vinculante para su posible adopción."
     programa:
       title: "Programa"
       description: "Conoce al detalle las propuestas del programa electoral de PODEMOS antes de votarlas en nuestro portal de Participación."

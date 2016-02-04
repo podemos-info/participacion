@@ -394,6 +394,8 @@ ul.pagination li.current button,
 
 .top-bar .toggle-topbar.menu-icon {margin-top: 0;}
 
+#enquiries .enquiry .supports .progress, #enquiries .enquiry .supports .total-supports span {display: none;}
+
 
 /************** RESPONSIVE ************/
 
@@ -407,7 +409,7 @@ ul.pagination li.current button,
 
 @media (min-width: 40em) {
     .subnavigation a {
-        margin-right: 2em;
+        margin-right: 1em;
     }
 }
 
