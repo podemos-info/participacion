@@ -476,3 +476,19 @@ ul.pagination li.current button,
   }
 }
 
+// Social supported
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.share-supported .social-share-button {
+    display: inline-block;
+}
+
+.share-supported .social-share-button-twitter,
+.share-supported .social-share-button-facebook,
+.share-supported .social-share-button-google_plus {
+    background: none;
+    color: white;
+    height: 1.5rem;
+    width: 3rem;
+}
+
