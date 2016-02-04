@@ -417,8 +417,12 @@ ul.pagination li.current button,
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .social-share-button-twitter {
-  color: #45B0E3;
+  background: #45B0E3;
+  color: white;
   display: inline-block;
+  height: 3rem;
+  position: relative;
+  width: 3rem;
 
   &:before {
     content: "\f081";
@@ -432,8 +436,12 @@ ul.pagination li.current button,
 }
 
 .social-share-button-facebook {
-  color: #3B5998;
+  background: #3B5998;
+  color: white;
   display: inline-block;
+  height: 3rem;
+  position: relative;
+  width: 3rem;
 
   &:before {
     content: "\f082";
@@ -447,7 +455,13 @@ ul.pagination li.current button,
 }
 
 .social-share-button-google_plus {
-  color: #DE4C34;
+  background: #DE4C34;
+  color: white;
+  display: inline-block;
+  height: 3rem;
+  position: relative;
+  width: 3rem;
+
   display: inline-block;
 
   &:before {
@@ -510,6 +524,4 @@ ul.pagination li.current button,
     font-family: "icons" !important;
     font-size: 1.5rem;
 }
-
-
 
