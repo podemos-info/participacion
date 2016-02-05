@@ -5,7 +5,8 @@ module HasOrders
     def has_orders(valid_orders, *args)
       before_action(*args) do
         @valid_orders = valid_orders
-        @current_order = @valid_orders.include?(params[:order]) ? params[:order] : @valid_orders.first
+        #@current_order = @valid_orders.include?(params[:order]) ? params[:order] : @valid_orders.first
+        @current_order = @valid_orders.include?(params[:order]) ? params[:order] : @valid_orders[1]
       end
     end
   end

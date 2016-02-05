@@ -13,7 +13,8 @@ class EnquiriesController < ApplicationController
   respond_to :html, :js
 
   def index_customization
-    @featured_enquiries = Enquiry.all.sort_by_confidence_score.limit(3) if (@search_terms.blank? && @tag_filter.blank?)
+    #@featured_enquiries = Enquiry.all.sort_by_confidence_score.limit(3) if (@search_terms.blank? && @tag_filter.blank?)
+    @featured_enquiries = Enquiry.where("chosen = true") if (@search_terms.blank? && @tag_filter.blank?)
     if @featured_enquiries.present?
       set_featured_enquiry_votes(@featured_enquiries)
       @resources = @resources.where('enquiries.id NOT IN (?)', @featured_enquiries.map(&:id))

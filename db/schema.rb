@@ -11,12 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160202083138) do
+ActiveRecord::Schema.define(version: 20160205100735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "unaccent"
-  enable_extension "pg_trgm"
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
@@ -49,13 +47,6 @@ ActiveRecord::Schema.define(version: 20160202083138) do
   add_index "ahoy_events", ["time"], name: "index_ahoy_events_on_time", using: :btree
   add_index "ahoy_events", ["user_id"], name: "index_ahoy_events_on_user_id", using: :btree
   add_index "ahoy_events", ["visit_id"], name: "index_ahoy_events_on_visit_id", using: :btree
-
-  create_table "campaigns", force: :cascade do |t|
-    t.string   "name"
-    t.string   "track_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "comments", force: :cascade do |t|
     t.integer  "commentable_id"
@@ -148,12 +139,14 @@ ActiveRecord::Schema.define(version: 20160202083138) do
     t.datetime "confirmed_hide_at"
     t.integer  "hot_score",         limit: 8,  default: 0
     t.integer  "confidence_score",             default: 0
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.string   "responsible_name",  limit: 60
     t.text     "summary"
     t.string   "video_url"
     t.integer  "physical_votes",               default: 0
+    t.integer  "id_enquiry_set",               default: 0
+    t.boolean  "chosen",                       default: false
   end
 
   add_index "enquiries", ["author_id", "hidden_at"], name: "index_enquiries_on_author_id_and_hidden_at", using: :btree
@@ -336,7 +329,7 @@ ActiveRecord::Schema.define(version: 20160202083138) do
   add_index "tags", ["proposals_count"], name: "index_tags_on_proposals_count", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                                default: ""
+    t.string   "email",                                default: "",    null: false
     t.string   "encrypted_password",                   default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -363,6 +356,7 @@ ActiveRecord::Schema.define(version: 20160202083138) do
     t.string   "document_number"
     t.string   "document_type"
     t.datetime "residence_verified_at"
+    t.datetime "letter_sent_at"
     t.string   "email_verification_token"
     t.datetime "verified_at"
     t.string   "unconfirmed_phone"
@@ -373,9 +367,8 @@ ActiveRecord::Schema.define(version: 20160202083138) do
     t.integer  "failed_census_calls_count",            default: 0
     t.string   "reddit_user"
     t.string   "reddit_uid"
-    t.datetime "level_two_verified_at"
-    t.string   "erase_reason"
-    t.datetime "erased_at"
+    t.integer  "circle_agent",                         default: 0
+    t.boolean  "public_activity",                      default: true
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

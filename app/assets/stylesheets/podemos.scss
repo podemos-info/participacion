@@ -394,6 +394,8 @@ ul.pagination li.current button,
 
 .top-bar .toggle-topbar.menu-icon {margin-top: 0;}
 
+#enquiries .enquiry .supports .progress, #enquiries .enquiry .supports .total-supports span {display: none;}
+
 
 /************** RESPONSIVE ************/
 
@@ -405,67 +407,8 @@ ul.pagination li.current button,
     .show-for-medium-up {display: block !important;}
 }
 
-
-// Social
-// - - - - - - - - - - - - - - - - - - - - - - - - -
-
-.social-share-button-twitter {
-  color: #45B0E3;
-  display: inline-block;
-
-  &:before {
-    content: "\f081";
-    font-family: "FontAwesome" !important;
-    font-size: 25px;
-  }
-
-  &:hover {
-    color: #40A2D1;
-  }
+@media (min-width: 40em) {
+    .subnavigation a {
+        margin-right: 1em;
+    }
 }
-
-.social-share-button-facebook {
-  color: #3B5998;
-  display: inline-block;
-
-  &:before {
-    content: "\f082";
-    font-family: "FontAwesome" !important;
-    font-size: 25px;
-  }
-
-  &:hover {
-    color: #354F88;
-  }
-}
-
-.social-share-button-google_plus {
-  color: #DE4C34;
-  display: inline-block;
-
-  &:before {
-    content: "\f0d4";
-    font-family: "FontAwesome" !important;
-    font-size: 25px;
-  }
-
-  &:hover {
-    color: #CE3E26;
-  }
-}
-
-.social-share-button-reddit {
-  color: #3B9859;
-  display: inline-block;
-
-  &:before {
-    content: "\f1a2";
-    font-family: "FontAwesome" !important;
-    font-size: 25px;
-  }
-
-  &:hover {
-    color: #35884F;
-  }
-}
-
