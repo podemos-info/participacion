@@ -36,7 +36,7 @@ title: t('enquiries.enquiry.support_title'), method: "post", remote: true do %>
 
   <% if voted_for?(@featured_enquiries_votes, enquiry) %>
     <div class="share-supported">
-      <%= social_share_button_tag(enquiry.title, url: enquiry_url(enquiry), via: "AbriendoMadrid") %>
+      <%= social_share_button_tag(enquiry.title, url: enquiry_url(enquiry), via: "ahorapodemos") %>
     </div>
   <% end %>
 </div>
