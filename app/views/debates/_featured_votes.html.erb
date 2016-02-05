@@ -36,7 +36,7 @@ title: t('debates.debate.support_title'), method: "post", remote: true do %>
 
   <% if voted_for?(@featured_debates_votes, debate) %>
     <div class="share-supported">
-      <%= social_share_button_tag(debate.title, url: debate_url(debate), via: "AbriendoMadrid") %>
+      <%= social_share_button_tag(debate.title, url: debate_url(debate), via: "ahorapodemos") %>
     </div>
   <% end %>
 </div>
