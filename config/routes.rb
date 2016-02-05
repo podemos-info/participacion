@@ -55,7 +55,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :enquiries, path: 'preguntas' do
+  #resources :enquiries, path: 'preguntas' do
+  resources :enquiries, path: 'la-gente-pregunta/asamblea-madrid' do
     member do
       post :vote
       post :vote_featured

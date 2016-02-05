@@ -29,7 +29,7 @@ class Enquiry < ActiveRecord::Base
 
   before_validation :set_responsible_name
 
-  before_save :calculate_hot_score, :calculate_confidence_score
+  before_save :calculate_hot_score, :calculate_confidence_score, :set_current_enquiry_set
 
   scope :for_render, -> { includes(:tags) }
   scope :sort_by_hot_score , -> { order(hot_score: :desc) }
@@ -100,6 +100,10 @@ class Enquiry < ActiveRecord::Base
 
   def calculate_confidence_score
     self.confidence_score = ScoreCalculator.confidence_score(total_votes, total_votes)
+  end
+
+  def set_current_enquiry_set
+    self.id_enquiry_set = Rails.application.secrets.current_enquiry_set
   end
 
   def after_hide

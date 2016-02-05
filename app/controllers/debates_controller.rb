@@ -11,13 +11,14 @@ class DebatesController < ApplicationController
   load_and_authorize_resource
   respond_to :html, :js
 
-  def index_customization
-    @featured_debates = Debate.all.sort_by_confidence_score.limit(3) if (@search_terms.blank? && @tag_filter.blank?)
-    if @featured_debates.present?
-      set_featured_debate_votes(@featured_debates)
-      @resources = @resources.where('debates.id NOT IN (?)', @featured_debates.map(&:id))
-    end
-  end
+  #def index_customization
+  #  #presentación de los debates destacados
+  #  @featured_debates = Debate.all.sort_by_confidence_score.limit(3) if (@search_terms.blank? && @tag_filter.blank?)
+  #  if @featured_debates.present?
+  #    set_featured_debate_votes(@featured_debates)
+  #    @resources = @resources.where('debates.id NOT IN (?)', @featured_debates.map(&:id))
+  #  end
+  #end
 
   def vote
     @debate.register_vote(current_user, params[:value])

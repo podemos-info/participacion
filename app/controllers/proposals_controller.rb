@@ -12,13 +12,14 @@ class ProposalsController < ApplicationController
   load_and_authorize_resource
   respond_to :html, :js
 
-  def index_customization
-    @featured_proposals = Proposal.all.sort_by_confidence_score.limit(3) if (@search_terms.blank? && @tag_filter.blank?)
-    if @featured_proposals.present?
-      set_featured_proposal_votes(@featured_proposals)
-      @resources = @resources.where('proposals.id NOT IN (?)', @featured_proposals.map(&:id))
-    end
-  end
+  #def index_customization
+  #  #presentación de los debates destacados
+  #  @featured_proposals = Proposal.all.sort_by_confidence_score.limit(3) if (@search_terms.blank? && @tag_filter.blank?)
+  #  if @featured_proposals.present?
+  #    set_featured_proposal_votes(@featured_proposals)
+  #    @resources = @resources.where('proposals.id NOT IN (?)', @featured_proposals.map(&:id))
+  #  end
+  #end
 
   def vote
     @proposal.register_vote(current_user, 'yes')

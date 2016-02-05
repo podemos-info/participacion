@@ -21,9 +21,10 @@ es:
       #open_city_title: "Rueda de Masas"
       #open_city_slogan_html:
       #"Pregunta lo que quieras a cuatro de nuestros cantidatos a las elecciones del 20D. En directo desde las 17h a las 21h."
-      open_city_title: "Un lugar de encuentro para construir PODEMOS."
-      open_city_slogan_html: "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
-
+      #open_city_title: "Un lugar de encuentro para construir PODEMOS."
+      #open_city_slogan_html: "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
+      open_city_title: "¿Qué le preguntarías a Esperanza Aguirre?"
+      open_city_slogan_html: "Ha sido llamada a declarar a la Comisión de Corrupción de la Asamblea de Madrid este próximo viernes 12 de febrero. ¿Tienes alguna pregunta para ella? Nuestros/as diputados/as María Espinosa,  Miguel Ongil, Ramón Espinar y Marco Candela, le formularan dos de las cinco más votadas para que rinda cuentas sobre su nefasta gestión"
 
       #"Empecemos escuchando qué tiene que decir Madrid.
       #Para ello abrimos esta Puerta del Sol digital, donde toda la gente de Madrid podemos encontrarnos para debatir y compartir todo lo que queramos."
@@ -32,7 +33,8 @@ es:
       #    más importantes de cada momento. Los responsables del gobierno tienen cuentas de usuario propias con las que podrán participar en los debates, y ser evaluados
       #    al mismo nivel que todos los demás."
       # open_city_soon: "Muy pronto abriremos la sección de propuestas, donde cualquiera podrá presentar propuestas y, si reciben apoyo, serán puestas en marcha por el Ayuntamiento."
-      see_all: "Ver debates y propuestas"
+      #see_all: "Ver debates y propuestas"
+      see_all: "Pregunta a Esperanza"
       my_account_link: "Mi cuenta"
       locale: "Idioma:"
       administration: "Administrar"
@@ -41,7 +43,7 @@ es:
       more_information: "Más información"
       debates: Debates y Opinión
       proposals: "ICPs"
-      enquiries: "Pregunta la Gente"
+      enquiries: "La Gente Pregunta"
     footer:
       description: "Este portal usa la %{consul}, que es %{open_source}, y está basado en el portal de <a href='https://decide.madrid.es/' target='_blank'>Participación</a> del Ayuntamiento de Madrid."
       open_source: "software libre"
@@ -332,11 +334,11 @@ es:
 
   enquiries:
     index:
-      title: "Pregunta la Gente"
+      title: "La Gente Pregunta"
       featured_enquiries_html: "Preguntas<br>destacadas"
-      start_enquiry: "Crea una Pregunta"
+      start_enquiry: "Crea una pregunta"
       select_order: "Ordenar por"
-      select_order_long: "Preguntas Asamblea de Madrid"
+      select_order_long: "La gente pregunta y Aguirre responde"
       orders:
         confidence_score: "más apoyadas"
         hot_score: "más activas"
@@ -545,7 +547,7 @@ es:
       title: "ICPs"
       description: "Iniciativas Ciudadanas Populares: herramienta a través de la cual los inscritos en PODEMOS pueden hacer propuestas que, si reciben el apoyo suficiente, son llevadas a referéndum interno vinculante para su posible adopción."
     enquiry:
-      title: "Pregunta la Gente"
+      title: "La Gente Pregunta"
       description: "Herramienta a través de la cual los inscritos en PODEMOS pueden hacer preguntas que, si reciben el apoyo suficiente, son llevadas a referéndum interno vinculante para su posible adopción."
     programa:
       title: "Programa"
