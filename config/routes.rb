@@ -278,6 +278,7 @@ Rails.application.routes.draw do
   get "/how_it_works", to: "pages#how_it_works"
   get "/how_to_use", to: "pages#how_to_use"
   get "/more_information", to: "pages#more_information"
+  get "/que-es-la-gente-pregunta", to: "pages#que_es_la_gente_pregunta"
   get "/opendata", to: "pages#opendata"
   get "/participation", to: "pages#participation"
   get "/transparency", to: "pages#transparency"
