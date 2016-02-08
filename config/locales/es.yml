@@ -563,6 +563,7 @@ es:
       verify_account: "Verificar mi cuenta"
       go_to_index: "Quiero entrar como un usuario no verificado (acceso limitado)"
       instructions_4_html: "Si quieres verificarte más tarde, puedes hacerlo en <i>Mi cuenta > Verificar mi cuenta</i>."
+    highlights: ""
   omniauth:
     finish_signup:
       title: "Añade tu email"
