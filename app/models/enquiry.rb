@@ -82,6 +82,10 @@ class Enquiry < ActiveRecord::Base
   #    user.voted_for?(self)
   #end
 
+  def is_closed?
+    true
+  end
+
   def votable_by?(user)
     user && user.level_two_or_three_verified?
   end

@@ -358,6 +358,7 @@ en:
       census_percent: "2% of census"
       total_percent: "100%"
       already_supported: "You have already supported this enquiry. Share it!"
+      already_closed: "The vote is over!"
     form:
       enquiry_title: "Enquiry title"
       enquiry_question: "Enquiry question"
