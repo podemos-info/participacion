@@ -2046,10 +2046,12 @@ table {
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .featured-enquiries-container {
-        border: 4px dotted #ddd;
-    padding: 1em 1em 2em;
+    border: 4px dotted #ddd;
+    padding: 2em 1em;
     margin-bottom: 4em !important;
-  .show-for-medium-up img {display: none;}
+    .small-12 {width: 100%;}
+    h2 br {display: none;}
+    .show-for-medium-up img {display: none;}
     .enquiry-featured .supports .supported, .enquiry .supports .supported {color: #333;}
 
   @media (min-width: $medium-breakpoint) {
@@ -2076,7 +2078,8 @@ table {
     }
   }
 
-  .enquiry-featured {padding: 0;}
+  .enquiry-featured {padding: 0; border: 1px solid #ddd;}
+  .enquiry-featured .panel {padding-top: 0;}
   .enquiry-featured .panel, .enquiry .panel {border: 0;}
   .enquiry-featured .panel h3, .enquiry .panel h3 {min-height: 0;}
 
