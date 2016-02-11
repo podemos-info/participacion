@@ -66,19 +66,24 @@ class Enquiry < ActiveRecord::Base
   end
 
   def editable?
-    #CAMBIAR PARA SIGUIENTE PREGUNTA
-    #total_votes <= Setting.value_for("max_votes_for_enquiry_edit").to_i
-    false
+    total_votes <= Setting.value_for("max_votes_for_enquiry_edit").to_i
   end
 
   def editable_by?(user)
     author_id == user.id && editable?
   end
 
+  #versión antigua
+  #def votable_by?(user)
+  #  total_votes <= 100 ||
+  #    !user.unverified? ||
+  #    Setting.value_for('max_ratio_anon_votes_on_medidas').to_i == 100 ||
+  #    anonymous_votes_ratio < Setting.value_for('max_ratio_anon_votes_on_medidas').to_i ||
+  #    user.voted_for?(self)
+  #end
+
   def votable_by?(user)
-    #CAMBIAR PARA SIGUIENTE PREGUNTA
-    #user && user.level_two_or_three_verified?
-    false
+    user && user.level_two_or_three_verified?
   end
 
   def register_vote(user, vote_value)

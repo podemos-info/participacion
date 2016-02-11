@@ -17,17 +17,18 @@
   </span>
 
   <div class="in-favor">
-    <% if voted_for?(@enquiry_votes, enquiry) %>
+    <!-- #CAMBIAR PARA SIGUIENTE PREGUNTA -->
+    <!-- % if voted_for?(@enquiry_votes, enquiry) % -->
       <div class="supported">
         <%= t("enquiries.enquiry.already_supported") %>
       </div>
-    <% else %>
-    <%= link_to vote_enquiry_path(enquiry, value: 'yes'),
+    <!-- % else % -->
+    <!--%= link_to vote_enquiry_path(enquiry, value: 'yes'),
           class: "button button-support tiny radius expand",
-title: t('enquiries.enquiry.support_title'), method: "post", remote: true do %>
-    <%= t("enquiries.enquiry.support") %>
-      <% end %>
-    <% end %>
+title: t('enquiries.enquiry.support_title'), method: "post", remote: true do % -->
+    <!-- %= t("enquiries.enquiry.support") % -->
+      <!-- % end % -->
+    <!-- % end % -->
   </div>
 
   <% if user_signed_in? && current_user.organization? %>
