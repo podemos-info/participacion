@@ -42,10 +42,9 @@ i18n_namespace: "enquiries.index.search_form" %>
         <% end %>
         <div>
           <p> Hemos entrado en las instituciones para ponerlas al servicio de la gente. A la espera de hacer posible que sea la propia gente la que las presente en los plenos y comisiones, queremos ceder a la ciudadanía algunas de nuestras preguntas en los plenos y comisiones. Es muy fácil, regularmente se abrirá el espacio de preguntas para que todo el mundo haga la suya y vote las del resto. Desde el grupo Podemos recogeremos las más votadas y las formularemos por todos los canales posibles.
-              <br><br>Empezamos con Esperanza Aguirre, presidenta de la Comunidad de Madrid durante una década en donde ha reinado el despilfarro y la corrupción ¿Tienes alguna pregunta para ella? Nuestros/as diputados/as María Espinosa,  Miguel Ongil, Ramón Espinar y Marco Candela, le formularan dos de las cinco más votadas para que rinda cuentas sobre su nefasta gestión.<br><br>
-            1- Participa enviando tu pregunta haciendo clic en "Crea una pregunta".<br>
-            2- Una vez enviada, difúndela para que las demás personas inscritas puedan votarla y vota las que más te gusten.<br>
-            3- El jueves 11 a las 12h cierra el plazo y comunicaremos las preguntas más votadas que se le formularan a Esperanza Aguirre.</p>
+              <br><br>
+            Hace una semana comenzamos con la recepción de preguntas para Esperanza Aguirre, presidenta de la Comunidad de Madrid durante una década en donde ha reinado el despilfarro y la corrupción. Ya tenemos las 5 preguntas más apoyadas, entre las cuales, nuestros/as diputados/as María Espinosa, Miguel Ongil, Ramón Espinar y Marco Candela, le formularan dos de ellas en la Comisión de Corrupción el sábado 12 de febrero.
+          </p>
         </div>
         <div class="show-for-small-only">
           <%= link_to t("enquiries.index.start_enquiry"), new_enquiry_path, class: 'button radius expand' %>
@@ -53,15 +52,15 @@ i18n_namespace: "enquiries.index.search_form" %>
 
         <% if @featured_enquiries.present? %>
           <div id="featured-enquiries" class="row featured-enquiries-container">
-            <div class="small-12 medium-3 column">
+            <div class="small-12 medium-12 column">
               <h2>
-                <%= t("enquiries.index.featured_enquiries_html") %>
+                PREGUNTAS DESTACADAS
               </h2>
               <span class="show-for-medium-up">
                 <%= image_tag("featured_enquiries.jpg", size: "210x135") %>
               </span>
             </div>
-            <div class="small-12 medium-9 column enquiries-list">
+            <div class="small-12 medium-12 column enquiries-list">
               <% @featured_enquiries.each do |featured_enquiry| %>
                 <%= render "featured_enquiry", enquiry: featured_enquiry %>
               <% end %>
