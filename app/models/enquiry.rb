@@ -74,7 +74,9 @@ class Enquiry < ActiveRecord::Base
   end
 
   def votable_by?(user)
-    user && user.level_two_or_three_verified?
+    #CAMBIAR EN NUEVA PREGUNTA
+    #user && user.level_two_or_three_verified?
+    false
   end
 
   def register_vote(user, vote_value)
