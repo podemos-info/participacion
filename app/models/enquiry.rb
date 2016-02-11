@@ -66,6 +66,7 @@ class Enquiry < ActiveRecord::Base
   end
 
   def editable?
+    #CAMBIAR PARA SIGUIENTE PREGUNTA
     #total_votes <= Setting.value_for("max_votes_for_enquiry_edit").to_i
     false
   end
@@ -75,7 +76,9 @@ class Enquiry < ActiveRecord::Base
   end
 
   def votable_by?(user)
-    user && user.level_two_or_three_verified?
+    #CAMBIAR PARA SIGUIENTE PREGUNTA
+    #user && user.level_two_or_three_verified?
+    false
   end
 
   def register_vote(user, vote_value)
