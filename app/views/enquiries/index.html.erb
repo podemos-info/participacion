@@ -53,7 +53,7 @@ i18n_namespace: "enquiries.index.search_form" %>
 
         <% if @featured_enquiries.present? %>
           <div id="featured-enquiries" class="row featured-enquiries-container">
-            <div class="small-12 medium-3 column">
+            <div class="small-12 medium-12 column">
               <h2>
                 <%= t("enquiries.index.featured_enquiries_html") %>
               </h2>
@@ -61,7 +61,7 @@ i18n_namespace: "enquiries.index.search_form" %>
                 <%= image_tag("featured_enquiries.jpg", size: "210x135") %>
               </span>
             </div>
-            <div class="small-12 medium-9 column enquiries-list">
+            <div class="small-12 medium-12 column enquiries-list">
               <% @featured_enquiries.each do |featured_enquiry| %>
                 <%= render "featured_enquiry", enquiry: featured_enquiry %>
               <% end %>
