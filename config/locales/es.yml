@@ -371,6 +371,7 @@ es:
       census_percent: "0.2% del Censo"
       total_percent: "100%"
       already_supported: "¡Ya has apoyado esta Pregunta, compártela!"
+      already_closed: "¡Este Proceso Ya se ha cerrado!"
     form:
       enquiry_title: "Título de la Pregunta"
       enquiry_question: "texto de la Pregunta"

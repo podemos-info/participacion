@@ -20,7 +20,8 @@
     <!-- #CAMBIAR PARA SIGUIENTE PREGUNTA -->
     <!-- % if voted_for?(@enquiry_votes, enquiry) % -->
       <div class="supported">
-        <%= t("enquiries.enquiry.already_supported") %>
+        <!-- %= t("enquiries.enquiry.already_supported") % -->
+        <%= t("enquiries.enquiry.already_closed") %>
       </div>
     <!-- % else % -->
     <!--%= link_to vote_enquiry_path(enquiry, value: 'yes'),
