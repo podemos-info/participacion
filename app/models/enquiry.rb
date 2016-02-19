@@ -30,8 +30,8 @@ class Enquiry < ActiveRecord::Base
   before_validation :set_responsible_name
 
   before_save :calculate_hot_score, :calculate_confidence_score, :set_current_enquiry_set
-
-  scope :for_render, -> { includes(:tags) }
+  scope :with_tags, -> { includes(:tags) }
+  scope :for_render, -> { where(id_enquiry_set: "#{Rails.application.secrets.current_enquiry_set}").with_tags }
   scope :sort_by_hot_score , -> { order(hot_score: :desc) }
   scope :sort_by_confidence_score , -> { order(confidence_score: :desc) }
   scope :sort_by_created_at, -> { order(created_at: :desc) }
@@ -83,7 +83,7 @@ class Enquiry < ActiveRecord::Base
   #end
 
   def is_closed?
-    true
+    return (DateTime.now.to_s >= DateTime.parse(Rails.application.secrets.closed_enquiry_date).to_s)
   end
 
   def votable_by?(user)

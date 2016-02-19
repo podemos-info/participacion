@@ -18,19 +18,21 @@
 
   <div class="in-favor">
     <!-- #CAMBIAR PARA SIGUIENTE PREGUNTA -->
-    <!-- % if @enquiry.is_closed? % -->
-    <!-- % if voted_for?(@enquiry_votes, enquiry) % -->
+    <% if  (enquiry.is_closed?) %>
       <div class="supported">
-        <!-- %= t("enquiries.enquiry.already_supported") % -->
         <%= t("enquiries.enquiry.already_closed") %>
       </div>
-    <!-- % else % -->
-    <!--%= link_to vote_enquiry_path(enquiry, value: 'yes'),
+    <% elsif voted_for?(@enquiry_votes, enquiry) %>
+      <div class="supported">
+        <%= t("enquiries.enquiry.already_supported") %>
+      </div>
+    <% else %>
+    <%= link_to vote_enquiry_path(enquiry, value: 'yes'),
           class: "button button-support tiny radius expand",
-title: t('enquiries.enquiry.support_title'), method: "post", remote: true do % -->
-    <!-- %= t("enquiries.enquiry.support") % -->
-      <!-- % end % -->
-    <!-- % end % -->
+title: t('enquiries.enquiry.support_title'), method: "post", remote: true do %>
+    <%= t("enquiries.enquiry.support") %>
+      <% end %>
+    <% end %>
   </div>
 
   <% if user_signed_in? && current_user.organization? %>

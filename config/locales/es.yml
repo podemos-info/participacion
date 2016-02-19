@@ -5,7 +5,7 @@ es:
       user_not_found: "No se encontró el usuario"
   layouts:
     header:
-      programa: Programa
+      programa: "Programa"
       external_link_transparency: "Transparencia"
       external_link_transparency_url: "https://transparencia.podemos.info/"
       external_link_opendata: "Datos abiertos"
@@ -21,27 +21,20 @@ es:
       #open_city_title: "Rueda de Masas"
       #open_city_slogan_html:
       #"Pregunta lo que quieras a cuatro de nuestros cantidatos a las elecciones del 20D. En directo desde las 17h a las 21h."
-      open_city_title: "Un lugar de encuentro para construir PODEMOS."
-      open_city_slogan_html: "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
-      #open_city_title: "La Gente Pregunta. Esperanza Aguirre responde por la corrupción"
-      #open_city_slogan_html: "Ha sido llamada a declarar a la Comisión de Corrupción de la Asamblea de Madrid este próximo viernes 12 de febrero. ¿Tienes alguna pregunta para ella? Nuestros/as diputados/as María Espinosa, Miguel Ongil, Ramón Espinar y Marco Candela, le formularan dos de las cinco más votadas en la Comisión de Corrupción para que rinda cuentas sobre su nefasta gestión."
+      #open_city_title: "Un lugar de encuentro para construir PODEMOS."
+      #open_city_slogan_html: "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
+      open_city_title: "La Gente Pregunta."
+      open_city_slogan_html: "Cada mes abriremos un plazo de tiempo para poder proponer preguntas y apoyar la del resto de la gente. Las preguntas más apoyadas serán trasladadas al grupo parlamentario de la Asamblea de Madrid para que sean expuestas en los plenos de ese mes por parte de nuestros diputados.<br>Hemos abierto el plazo hasta el martes 8 de marzo para recibir tus preguntas."
 
-      #"Empecemos escuchando qué tiene que decir Madrid.
-      #Para ello abrimos esta Puerta del Sol digital, donde toda la gente de Madrid podemos encontrarnos para debatir y compartir todo lo que queramos."
-      # open_city_text:
-      #   "Aquí cualquier voz tiene su espacio y son los ciudadanos y ciudadanas, y nadie en su nombre, quienes deciden votando los debates cuáles son los temas
-      #    más importantes de cada momento. Los responsables del gobierno tienen cuentas de usuario propias con las que podrán participar en los debates, y ser evaluados
-      #    al mismo nivel que todos los demás."
-      # open_city_soon: "Muy pronto abriremos la sección de propuestas, donde cualquiera podrá presentar propuestas y, si reciben apoyo, serán puestas en marcha por el Ayuntamiento."
-      see_all: "Ver debates y propuestas"
-      #see_all: "Pregunta a Esperanza"
+      #see_all: "Ver debates y propuestas"
+      see_all: "¡Participa!"
       my_account_link: "Mi cuenta"
       locale: "Idioma:"
       administration: "Administrar"
       moderation: "Moderar"
       highlights: "Portada"
       more_information: "Más información"
-      debates: Debates y Opinión
+      debates: "Debates y Opinión"
       proposals: "ICPs"
       enquiries: "La Gente Pregunta"
     footer:
@@ -339,7 +332,7 @@ es:
       featured_enquiries_html: "Preguntas<br>destacadas"
       start_enquiry: "Crea una pregunta"
       select_order: "Ordenar por"
-      select_order_long: "La gente pregunta y Aguirre responde"
+      select_order_long: "La gente pregunta"
       orders:
         confidence_score: "más apoyadas"
         hot_score: "más activas"
