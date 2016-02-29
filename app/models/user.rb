@@ -73,16 +73,10 @@ class User < ActiveRecord::Base
     if user.nil?
       name_parts = auth.info.name.split(' ')
       user_alias = name_parts[0][0]+name_parts[1]
-      nicks_sum=0
-      alias_tmp= user_alias
-      nicks_count = User.where("username ~ ?",  "^#{alias_tmp}").count
-      while nicks_count >0 do
-        alias_tmp= user_alias
-        nicks_sum+=1
-        alias_tmp += (nicks_count+nicks_sum).to_s
-        nicks_count = User.where("username ~ ?",  "^#{alias_tmp}").count
-      end
-      user_alias = alias_tmp
+      lista = User.where("username ~ ?", "^#{user_alias}[0-9]+").pluck("username").map! { |nombre| nombre.gsub(/[^0-9]/,'').to_i }
+      maximo = lista.max + 1
+      diferencia = (2..maximo).to_a - lista
+      user_alias += diferencia.first.to_s
 
       user = User.new(
         #username: auth.info.nickname || auth.info.name || auth.extra.raw_info.name.parameterize('-') || auth.uid ,
