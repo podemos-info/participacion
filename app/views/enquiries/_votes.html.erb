@@ -18,7 +18,7 @@
 
   <div class="in-favor">
     <!-- #CAMBIAR PARA SIGUIENTE PREGUNTA -->
-    <% if  (enquiry.is_closed?) %>
+    <% if  (Enquiry.is_closed?) %>
       <div class="supported">
         <%= t("enquiries.enquiry.already_closed") %>
       </div>

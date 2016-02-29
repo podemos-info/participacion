@@ -1,6 +1,6 @@
 <div class="supports">
   <div class="in-favor">
-    <% if enquiry.is_closed? %>
+    <% if Enquiry.is_closed? %>
     <div class="supported">
         <%= t("enquiries.enquiry.already_closed") %>
       </div>

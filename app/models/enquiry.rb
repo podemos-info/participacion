@@ -82,7 +82,7 @@ class Enquiry < ActiveRecord::Base
   #    user.voted_for?(self)
   #end
 
-  def is_closed?
+  def self.is_closed?
     return (DateTime.now.to_s >= DateTime.parse(Rails.application.secrets.closed_enquiry_date).to_s)
   end
 
