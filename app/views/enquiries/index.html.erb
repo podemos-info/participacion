@@ -54,10 +54,12 @@ i18n_namespace: "enquiries.index.search_form" %>
           </p>
 
         </div>
+        <% if  (!Enquiry.is_closed?) %>
         <div class="show-for-small-only">
+
           <%= link_to t("enquiries.index.start_enquiry"), new_enquiry_path, class: 'button radius expand' %>
         </div>
-
+        <% end %>
         <% if @featured_enquiries.present? %>
           <div id="featured-enquiries" class="row featured-enquiries-container">
             <div class="small-12 medium-12 column">
@@ -83,7 +85,9 @@ i18n_namespace: "enquiries.index.search_form" %>
 
     <div class="small-12 medium-3 column">
       <aside class="sidebar" role="complementary">
+        <% if  (!Enquiry.is_closed?) %>
         <%= link_to t("enquiries.index.start_enquiry"), new_enquiry_path, class: 'button radius expand' %>
+        <% end %>
         <%= render "shared/tag_cloud", taggable: 'enquiry' %>
       </aside>
     </div>
