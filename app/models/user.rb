@@ -76,7 +76,7 @@ class User < ActiveRecord::Base
       nick_count = User.where("username ~ ?",  "^#{user_alias}").count
       if nick_count >0
         lista = User.where("username ~ ?", "^#{user_alias}[0-9]+").pluck("username").map! { |nombre| nombre.gsub(/[^0-9]/,'').to_i }
-        maximo = lista.max + 1
+        maximo = lista.max.nil? ? 1 : lista.max + 1
         diferencia = (2..maximo).to_a - lista
         user_alias += diferencia.first.to_s
       end
