@@ -30,4 +30,4 @@
 .ruby-gemset
 
 # Gemfile local machine file
-Gemfile.lock
+/Gemfile.lock
