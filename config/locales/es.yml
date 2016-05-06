@@ -23,7 +23,7 @@ es:
       #"Pregunta lo que quieras a cuatro de nuestros cantidatos a las elecciones del 20D. En directo desde las 17h a las 21h."
       open_city_title: "Un lugar de encuentro para construir PODEMOS."
       open_city_slogan_html: "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
-      #open_city_title: "La Gente Pregunta."
+      #open_city_title: "Escaño Abierto."
       #open_city_slogan_html: "Cada mes abriremos un plazo de tiempo para poder proponer preguntas y apoyar la del resto de la gente. Las preguntas más apoyadas serán trasladadas al grupo parlamentario de la Asamblea de Madrid para que sean expuestas en los plenos de ese mes por parte de nuestros diputados.<br>Hemos abierto el plazo hasta el martes 26 de abril para recibir tus preguntas."
 
       see_all: "Ver debates y propuestas"
@@ -37,7 +37,7 @@ es:
       more_information: "Más información"
       debates: "Debates y Opinión"
       proposals: "ICPs"
-      enquiries: "La Gente Pregunta"
+      enquiries: "Escaño Abierto"
     footer:
       description: "Este portal usa la %{consul}, que es %{open_source}, y está basado en el portal de <a href='https://decide.madrid.es/' target='_blank'>Participación</a> del Ayuntamiento de Madrid."
       open_source: "software libre"
@@ -329,11 +329,11 @@ es:
 
   enquiries:
     index:
-      title: "La Gente Pregunta"
+      title: "Escaño Abierto"
       featured_enquiries_html: "Preguntas<br>destacadas"
       start_enquiry: "Crea una pregunta"
       select_order: "Ordenar por"
-      select_order_long: "La gente pregunta"
+      select_order_long: "Escaño Abierto"
       orders:
         confidence_score: "más apoyadas"
         hot_score: "más activas"
@@ -544,7 +544,7 @@ es:
       title: "ICPs"
       description: "Iniciativas Ciudadanas Populares: herramienta a través de la cual los inscritos en PODEMOS pueden hacer propuestas que, si reciben el apoyo suficiente, son llevadas a referéndum interno vinculante para su posible adopción."
     enquiry:
-      title: "La Gente Pregunta"
+      title: "Escaño Abierto: tu voz en el parlamento"
       description: "Herramienta a través de la cual los inscritos en PODEMOS pueden hacer preguntas que, si reciben el apoyo suficiente, son llevadas a para su formulación en la Asamblea de Madrid."
     programa:
       title: "Programa"
