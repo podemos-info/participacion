@@ -2,7 +2,7 @@ require 'socket'
 
 namespace :memcached do
   desc 'Flushes whole memcached local instance'
-  task :flush do
+  task :flush_all do
     server  = '127.0.0.1'
     port    = 11211
     command = "flush_all\r\n"
@@ -16,5 +16,10 @@ namespace :memcached do
     end
 
     socket.close
+  end
+
+  desc 'Clears the Rails cache'
+  task :flush_rails_cache => :environment do
+    Rails.cache.clear
   end
 end
