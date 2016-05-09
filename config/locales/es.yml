@@ -21,14 +21,15 @@ es:
       #open_city_title: "Rueda de Masas"
       #open_city_slogan_html:
       #"Pregunta lo que quieras a cuatro de nuestros cantidatos a las elecciones del 20D. En directo desde las 17h a las 21h."
-      open_city_title: "Un lugar de encuentro para construir PODEMOS."
-      open_city_slogan_html: "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
-      #open_city_title: "Escaño Abierto."
-      #open_city_slogan_html: "Cada mes abriremos un plazo de tiempo para poder proponer preguntas y apoyar la del resto de la gente. Las preguntas más apoyadas serán trasladadas al grupo parlamentario de la Asamblea de Madrid para que sean expuestas en los plenos de ese mes por parte de nuestros diputados.<br>Hemos abierto el plazo hasta el martes 26 de abril para recibir tus preguntas."
+      closed_city_title: "Un lugar de encuentro para construir PODEMOS."
+      closed_city_slogan_html: "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
+      open_city_title: "Escaño Abierto."
+      open_city_slogan_html: "Cada mes abriremos un plazo de tiempo para poder proponer preguntas y apoyar la del resto de la gente. Las preguntas más apoyadas serán trasladadas al grupo parlamentario de la Asamblea de Madrid para que sean expuestas en los plenos de ese mes por parte de nuestros diputados."
+      open_city_deadline_prev: "Hemos abierto el plazo hasta el "
+      open_city_deadline_post: " para recibir tus preguntas."
 
-      see_all: "Ver debates y propuestas"
-      #renombrar como see_all_open a y see_all_closed y dependiendo de si el pregunta está abierta o cerrada que muestre una cosa u otra
-      #see_all: "¡Participa!"
+      see_all_closed: "Ver debates y propuestas"
+      see_all_open: "¡Participa!"
       my_account_link: "Mi cuenta"
       locale: "Idioma:"
       administration: "Administrar"

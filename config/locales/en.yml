@@ -13,14 +13,17 @@ en:
       external_link_blog_url: "/blog"
       open_gov: "%{open} government"
       open: "open"
-      participation: Participation
+      participation: "Participation"
       transparency: "Transparency"
       open_data: "Open data"
-      open_city_title: "Love the city, and it will become a city you love."
-      open_city_slogan_html:
-        "There are cities that are governed directly by their inhabitants, who <b>discuss</b> the topics they are concerned about, <b>propose</b> ideas to improve
-        their lives and <b>decide</b> among themselves which ones will be carried out. Madrid is already one of these cities."
-      see_all: "See proposals"
+      closed_city_title: "A meeting place to build PODEMOS."
+      closed_city_slogan_html: "This square is a space in which political participation can discuss, propose initiatives and share your ideas in order to build jointly PODEMOS."
+      open_city_title: "Seat Open."
+      open_city_slogan_html: "Each month we will open a period of time to propose questions and support the rest of the people The most supported questions will be forwarded to the parliamentary group of the Assembly of Madrid to be set out in full that month by our deputies."
+      open_city_deadline_prev: "have opened the deadline until "
+      open_city_deadline_post: " to receive your questions."
+      see_all_closed: "See proposals"
+      see_all_open: "Join in!"
       my_activity_link: "My activity"
       my_account_link: "My account"
       locale: "Language:"

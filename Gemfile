@@ -78,7 +78,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'fuubar'
   gem 'launchy'
-  gem 'quiet_assets'
+  # gem 'quiet_assets'
   gem 'letter_opener_web', '~> 1.3.0'
   gem 'i18n-tasks'
   gem 'capistrano', '3.4.0',           require: false
