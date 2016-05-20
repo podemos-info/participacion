@@ -161,7 +161,6 @@ es:
     update:
       form:
         submit_button: "Guardar cambios"
-
   medidas:
     index:
       title: "Programa"
@@ -236,7 +235,6 @@ es:
     update:
       form:
         submit_button: "Guardar cambios"
-
   proposals:
     index:
       title: "ICPs"
@@ -334,7 +332,7 @@ es:
       featured_enquiries_html: "Preguntas<br>destacadas"
       start_enquiry: "Crea una pregunta"
       select_order: "Ordenar por"
-      select_order_long: "Escaño Abierto"
+      select_order_long: "Estás viendo las preguntas"
       orders:
         confidence_score: "más apoyadas"
         hot_score: "más activas"
@@ -419,7 +417,6 @@ es:
     update:
       form:
         submit_button: "Guardar cambios"
-
   comments:
     select_order: "Ordenar por"
     orders:
