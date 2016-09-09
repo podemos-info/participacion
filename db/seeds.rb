@@ -32,3 +32,12 @@ Setting.create(key: 'proposal_code_prefix', value: 'MAD')
 
 # Number of votes needed for proposal success
 Setting.create(key: 'votes_for_proposal_success', value: '53726')
+
+# Max votes where a enquiry is still editable
+Setting.create(key: 'max_votes_for_enquiry_edit', value: '1000')
+
+# Prefix for the Enquiry codes
+Setting.create(key: 'enquiry_code_prefix', value: 'MAD')
+
+# Number of votes needed for enquiry success
+Setting.create(key: 'votes_for_enquiry_success', value: '53726')

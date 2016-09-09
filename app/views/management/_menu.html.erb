@@ -33,5 +33,26 @@
         <%= t("management.menu.print_proposals") %>
       <% end %>
     </li>
+
+    <li <%= "class=active" if controller_name == "enquiries" and action_name == "new" %>>
+      <%= link_to new_management_enquiry_path do %>
+        <i class="icon-enquiries"></i>
+      <%= t("management.menu.create_enquiry") %>
+      <% end %>
+    </li>
+
+    <li <%= "class=active" if controller_name == "enquiries" and action_name == "index"  %>>
+      <%= link_to management_enquiries_path do %>
+        <i class="icon-like"></i>
+      <%= t("management.menu.support_enquiries") %>
+      <% end %>
+    </li>
+
+    <li <%= "class=active" if controller_name == "enquiries" and action_name == "print" %>>
+      <%= link_to print_management_enquiries_path do %>
+        <i class="icon-print"></i>
+      <%= t("management.menu.print_enquiries") %>
+      <% end %>
+    </li>
   </ul>
 </div>

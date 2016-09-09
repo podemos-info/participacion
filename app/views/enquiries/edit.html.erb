@@ -1,0 +1,17 @@
+<div class="enquiry-edit row">
+
+  <div class="small-12 column">
+    <%= link_to enquiries_path, class: "left back clear" do %>
+      <i class="icon-angle-left left"></i>
+    <%= t("enquiries.edit.back_link") %>
+    <% end %>
+
+    <div class="right">
+      <%= link_to t("enquiries.edit.show_link"), @enquiry %>
+    </div>
+
+    <h1><%= t("enquiries.edit.editing") %></h1>
+
+    <%= render "form" %>
+  </div>
+</div>

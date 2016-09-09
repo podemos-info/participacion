@@ -65,7 +65,7 @@ en:
       new:
         title: "Final Verification"
         explanation_html:
-          "<p>Congratulations! You can now participate in discussions or support proposals of others.</p><p>To finish we need to verify your account completely provide you with a <b>maximum security code</b>, we ensure that no one is using your data on your behalf.</p><p>This requirement is essential to participate in final votes on motions. This can approach any <b>Office of Citizen</b> where you will verify in person, or in case you is impossible, we can send you a letter home with the code.</p>"
+          "<p>Congratulations! You can now participate in discussions or support proposals and inquiries of others.</p><p>To finish we need to verify your account completely provide you with a <b>maximum security code</b>, we ensure that no one is using your data on your behalf.</p><p>This requirement is essential to participate in final votes on motions. This can approach any <b>Office of Citizen</b> where you will verify in person, or in case you is impossible, we can send you a letter home with the code.</p>"
         offices: "See Office of Citizen"
         offices_url: "http://www.madrid.es/portales/munimadrid/es/Inicio/El-Ayuntamiento/Atencion-al-ciudadano/Oficinas-de-Atencion-al-Ciudadano?vgnextfmt=default&vgnextchannel=5b99cde2e09a4310VgnVCM1000000b205a0aRCRD"
         send_letter: "Send me a letter with the code"

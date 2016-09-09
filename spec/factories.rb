@@ -1,4 +1,10 @@
 FactoryGirl.define do
+  factory :territory do
+    name "MyString"
+    ccaa_id 1
+    province_id 1
+    town_id 1
+  end
 
   factory :user do
     sequence(:username) { |n| "Manuela#{n}" }
@@ -45,6 +51,12 @@ FactoryGirl.define do
     user
     action "hide"
     association :actionable, factory: :proposal
+  end
+
+  factory :activity2 do
+    user
+    action "hide"
+    association :actionable, factory: :enquiry
   end
 
   factory :verification_residence, class: Verification::Residence do
@@ -172,6 +184,51 @@ FactoryGirl.define do
     summary              'In summary, what we want is...'
     description          'Proposal description'
     question             'Proposal question'
+    external_url         'http://external_documention.es'
+    video_url            'http://video_link.com'
+    responsible_name     'John Snow'
+    terms_of_service     '1'
+    association :author, factory: :user
+
+    trait :hidden do
+      hidden_at Time.now
+    end
+
+    trait :with_ignored_flag do
+      ignored_flag_at Time.now
+    end
+
+    trait :with_confirmed_hide do
+      confirmed_hide_at Time.now
+    end
+
+    trait :flagged do
+      after :create do |debate|
+        Flag.flag(FactoryGirl.create(:user), debate)
+      end
+    end
+
+    trait :with_hot_score do
+      before(:save) { |d| d.calculate_hot_score }
+    end
+
+    trait :with_confidence_score do
+      before(:save) { |d| d.calculate_confidence_score }
+    end
+
+    trait :conflictive do
+      after :create do |debate|
+        Flag.flag(FactoryGirl.create(:user), debate)
+        4.times { create(:vote, votable: debate) }
+      end
+    end
+  end
+
+  factory :enquiry do
+    sequence(:title)     { |n| "Enquiry #{n} title" }
+    summary              'In summary, what we want is...'
+    description          'Enquiry description'
+    question             'Enquiry question'
     external_url         'http://external_documention.es'
     video_url            'http://video_link.com'
     responsible_name     'John Snow'

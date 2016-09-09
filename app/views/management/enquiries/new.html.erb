@@ -1,0 +1,10 @@
+<div class="enquiry-new row">
+
+  <%= render '/shared/print' %>
+
+  <div class="small-12 medium-9 column">
+    <h1 class=""><%= t("management.enquiries.create_enquiry") %></h1>
+    <%= render "enquiries/form", form_url: management_enquiries_url %>
+  </div>
+
+</div>

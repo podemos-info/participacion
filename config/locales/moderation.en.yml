@@ -2,6 +2,7 @@ en:
   moderation:
     menu:
       proposals: Proposals
+      enquiries: Enquiries
       flagged_debates: Debates
       flagged_medidas: Measures
       flagged_comments: Comments
@@ -75,6 +76,25 @@ en:
         title: Proposals
         headers:
           proposal: Proposal
+          moderate: Moderate
+        filter: Filter
+        filters:
+          all: All
+          pending_flag_review: Pending
+          with_ignored_flag: Ignored
+        order: Order
+        orders:
+          created_at: Newest
+          flags: Most flagged
+        confirm: Are you sure?
+    enquiries:
+      index:
+        hide_enquiries: Hide enquiries
+        block_authors: Block authors
+        ignore_flags: Ignore flags
+        title: Enquiries
+        headers:
+          enquirie: Enquirie
           moderate: Moderate
         filter: Filter
         filters:

@@ -13,14 +13,17 @@ en:
       external_link_blog_url: "/blog"
       open_gov: "%{open} government"
       open: "open"
-      participation: Participation
+      participation: "Participation"
       transparency: "Transparency"
       open_data: "Open data"
-      open_city_title: "Love the city, and it will become a city you love."
-      open_city_slogan_html:
-        "There are cities that are governed directly by their inhabitants, who <b>discuss</b> the topics they are concerned about, <b>propose</b> ideas to improve
-        their lives and <b>decide</b> among themselves which ones will be carried out. Madrid is already one of these cities."
-      see_all: "See proposals"
+      closed_city_title: "A meeting place to build PODEMOS."
+      closed_city_slogan_html: "This square is a space in which political participation can discuss, propose initiatives and share your ideas in order to build jointly PODEMOS."
+      open_city_title: "Seat Open."
+      open_city_slogan_html: "Each month we will open a period of time to propose questions and support the rest of the people The most supported questions will be forwarded to the parliamentary group of the Assembly of Madrid to be set out in full that month by our deputies."
+      open_city_deadline_prev: "have opened the deadline until "
+      open_city_deadline_post: " to receive your questions."
+      see_all_closed: "See proposals"
+      see_all_open: "Join in!"
       my_activity_link: "My activity"
       my_account_link: "My account"
       locale: "Language:"
@@ -31,6 +34,7 @@ en:
       debates: "Debates"
       medidas: Measures
       proposals: "Proposals"
+      enquiries: "Enquiries"
     footer:
       description: "This portal uses the %{consul} which is %{open_source}. From Madrid out into the world."
       open_source: "open-source software"
@@ -71,6 +75,7 @@ en:
     user: "Account"
     debate: "Debate"
     proposal: "Proposal"
+    enquiry: "Enquiry"
     verification::sms: "Telephone"
     verification::letter: "the verification"
   application:
@@ -316,6 +321,98 @@ en:
     update:
       form:
         submit_button: "Save changes"
+
+  enquiries:
+    index:
+      title: Enquiries
+      featured_enquiries_html: "Featured<br>ICPs"
+      start_enquiry: Start a enquiry
+      select_order: Order by
+      select_order_long: Order enquiries by
+      orders:
+        confidence_score: "most supported"
+        hot_score: most active
+        created_at: newest
+        most_commented: most commented
+        random: random
+      filter_topic:
+        one: " with the topic '%{topic}'"
+        other: " with the topic '%{topic}'"
+      search_form:
+        title: Search
+        button: Search
+        placeholder: "Search enquiries..."
+      search_results:
+        one: " containing the term '%{search_term}'"
+        other: " containing the term '%{search_term}'"
+    enquiry:
+      enquiry: "Enquiry"
+      support: "Support"
+      support_title: "Support this enquiry"
+      comments:
+        zero: "No comments"
+        one: "1 comment"
+        other: "%{count} comments"
+      supports:
+        zero: "No supports"
+        one: "1 support"
+        other: "%{count} supports"
+      supports_necessary: "%{number} supports needed"
+      census_percent: "2% of census"
+      total_percent: "100%"
+      already_supported: "You have already supported this enquiry. Share it!"
+      already_closed: "The vote is over!"
+    form:
+      enquiry_title: "Enquiry title"
+      enquiry_question: "Enquiry question"
+      enquiry_question_example_html: "Must be summarised in one question with a Yes or No answer. <em>E.g. 'Do you agree with the pedestrianisation of Calle Mayor?'</em>"
+      enquiry_summary: "Enquiry summary"
+      enquiry_summary_note: "(maximum 200 characters)"
+      enquiry_text: "Enquiry text"
+      enquiry_external_url: "Link to additional documentation"
+      enquiry_video_url: "Link to external video"
+      enquiry_video_url_note: "You may add a link to YouTube or Vimeo"
+      enquiry_responsible_name: "Full name of the person submitting the enquiry"
+      enquiry_responsible_name_note: "(individually or as representative of a collective; will not be displayed publically)"
+      tags_label: "Tags"
+      tags_instructions: "Tag this enquiry. You can choose from our tags or add your own."
+      tags_placeholder: "Enter the tags you would like to use, separated by commas (',')"
+    show:
+      back_link: "Go back"
+      author_deleted: "User deleted"
+      code: "Enquiry code:"
+      comments_title: "Comments"
+      comments:
+        zero: "No comments"
+        one: "1 comment"
+        other: "%{count} comments"
+      login_to_comment: "You must %{signin} or %{signup} to leave a comment."
+      edit_enquiry_link: "Edit"
+      share: "Share"
+      flag: "This enquiry has been flagged as inappropriate by several users."
+    edit:
+      editing: "Edit enquiry"
+      show_link: "View enquiry"
+      back_link: "Go back"
+      form:
+        submit_button: "Save changes"
+    new:
+      start_new: "Create new enquiry"
+      more_info: "How do citizen enquiries work?"
+      back_link: "Go back"
+      recommendations_title: "Recommendations for creating an enquiry"
+      recommendation_one: "Do not use capital letters for the enquiry title or for whole sentences. On the internet, this is considered shouting. And nobody likes being shouted at."
+      recommendation_two: "Any enquiry or comment suggesting illegal action will be deleted, as well as those intending to sabotage the debate spaces. Anything else is allowed."
+      recommendation_three: "Enjoy this space and the voices that fill it. It belongs to you too."
+      form:
+        submit_button: "Create enquiry"
+    create:
+      form:
+        submit_button: "Create enquiry"
+    update:
+      form:
+        submit_button: "Save changes"
+
   comments:
     select_order: "Sort by"
     orders:
@@ -353,7 +450,7 @@ en:
     signin: "Sign in"
     signup: "Sign up"
     anonymous: "Too many anonymous votes to admit vote %{verify_account}."
-    verified_only: "Only verified users can vote on proposals; %{verify_account}."
+    verified_only: "Only verified users can vote on proposals and enquiries; %{verify_account}."
     verify_account: "verify your account"
     organizations: "Organisations are not permitted to vote"
   account:
@@ -363,7 +460,7 @@ en:
       change_credentials_link: "Change my credentials"
       avatar: "Avatar"
       public_activity_label: "Keep my list of activities public"
-      email_on_comment_label: "Notify me by email when someone comments on my proposals or debates"
+      email_on_comment_label: "Notify me by email when someone comments on my proposals, enquiries or debates"
       email_on_comment_reply_label: "Notify me by email when someone replies to my comments"
       erase_account_link: "Erase my account"
       personal: "Personal details"
@@ -380,6 +477,8 @@ en:
       user_permission_debates: "Participate on debates"
       user_permission_proposal: "Create new proposals"
       user_permission_support_proposal: "Support proposals"
+      user_permission_enquiry: "Create new enquiries"
+      user_permission_support_enquiry: "Support enquiries"
       user_permission_votes: "Participate on final voting"
       user_permission_verify: "To perform all the actions verify your account."
       user_permission_verify_info: "* Only for users on Madrid City Census."
@@ -391,6 +490,7 @@ en:
       user: "the secret code does not match the image"
       debate: "the secret code does not match the image"
       proposal: "the secret code does not match the image"
+      enquiry: "the secret code does not match the image"
   shared:
     author_info:
       author_deleted: "User deleted"
@@ -410,6 +510,9 @@ en:
         proposals:
           one: "1 Proposal"
           other: "%{count} Proposals"
+        enquiries:
+          one: "1 Enquiry"
+          other: "%{count} Enquiries"
         debates:
           one: "1 Debate"
           other: "%{count} Debates"
@@ -421,6 +524,7 @@ en:
       deleted: "Deleted"
       deleted_debate: "This debate has been deleted"
       deleted_proposal: "This proposal has been deleted"
+      deleted_enquiry: "This enquiry has been deleted"
   unauthorized:
     default: "You do not have permission to access this page."
     manage:
@@ -433,12 +537,15 @@ en:
     proposal:
       title: "You propose"
       description: "Open space for citizen proposals about the kind of city we want to live in."
+    enquiry:
+      title: "Your enquiry"
+      description: "Open space for citizen enquiries about the kind of city we want to live in."
     decide:
       title: "You decide"
-      description: "The public decides if it accepts or rejects the most supported proposals."
+      description: "The public decides if it accepts or rejects the most supported proposals/enquiries."
     do:
       title: "It gets done"
-      description: "If the proposal is accepted by the majority, the City Council accepts it as its own and it gets done."
+      description: "If the proposal/Enquiry is accepted by the majority, the City Council accepts it as its own and it gets done."
     welcome:
       title: Account verification
       instructions_1_html: "Welcome to the public participation website."

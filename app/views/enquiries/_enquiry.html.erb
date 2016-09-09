@@ -1,0 +1,56 @@
+<div id="<%= dom_id(enquiry) %>" class="enquiry clear">
+  <div class="panel">
+    <div class="row">
+
+      <div class="small-12 medium-9 column">
+        <div class="enquiry-content">
+          <span class="label-enquiry left"><%= t("enquiries.enquiry.enquiry") %></span>
+          <i class="icon-enquiries"></i>
+          <h3><%= link_to enquiry.title, namespaced_enquiry_path(enquiry) %></h3>
+          <p class="enquiry-info">
+            <i class="icon-comments"></i>&nbsp;
+            <%= link_to t("enquiries.enquiry.comments", count: enquiry.comments_count), namespaced_enquiry_path(enquiry, anchor: "comments") %>
+            <span class="bullet">&nbsp;&bull;&nbsp;</span>
+            <%= l enquiry.created_at.to_date %>
+
+            <% if enquiry.author.hidden? %>
+              <span class="bullet">&nbsp;&bull;&nbsp;</span>
+              <span class="author">
+                <%= t("enquiries.show.author_deleted") %>
+              </span>
+            <% else %>
+              <span class="bullet">&nbsp;&bull;&nbsp;</span>
+              <span class="author">
+                <%= enquiry.author.name %>
+              </span>
+              <% if enquiry.author.official? %>
+                <span class="bullet">&nbsp;&bull;&nbsp;</span>
+                <span class="label round level-<%= enquiry.author.official_level %>">
+                  <%= enquiry.author.official_position %>
+                </span>
+              <% end %>
+            <% end %>
+
+            <% if enquiry.author.verified_organization? %>
+              <span class="bullet">&nbsp;&bull;&nbsp;</span>
+              <span class="label round is-association">
+                <%= t("shared.collective") %>
+              </span>
+            <% end %>
+          </p>
+          <div class="enquiry-description">
+            <p><%= link_to enquiry.summary, namespaced_enquiry_path(enquiry) %></p>
+            <div class="truncate"></div>
+          </div>
+          <%= render "shared/tags", taggable: enquiry, limit: 5 %>
+        </div>
+      </div>
+
+      <div id="<%= dom_id(enquiry) %>_votes" class="small-12 medium-3 column text-center">
+          <%= render 'votes',
+                    { enquiry: enquiry, vote_url: vote_enquiry_path(enquiry, value: 'yes') } %>
+      </div>
+
+    </div>
+  </div>
+</div>

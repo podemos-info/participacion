@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151103194329) do
+ActiveRecord::Schema.define(version: 20160510091901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_trgm"
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
@@ -124,6 +125,58 @@ ActiveRecord::Schema.define(version: 20151103194329) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
+  create_table "enquiries", force: :cascade do |t|
+    t.string   "title",             limit: 80
+    t.text     "description"
+    t.string   "question"
+    t.string   "external_url"
+    t.integer  "author_id"
+    t.datetime "hidden_at"
+    t.integer  "flags_count",                  default: 0
+    t.datetime "ignored_flag_at"
+    t.integer  "cached_votes_up",              default: 0
+    t.integer  "comments_count",               default: 0
+    t.datetime "confirmed_hide_at"
+    t.integer  "hot_score",         limit: 8,  default: 0
+    t.integer  "confidence_score",             default: 0
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+    t.string   "responsible_name",  limit: 60
+    t.text     "summary"
+    t.string   "video_url"
+    t.integer  "physical_votes",               default: 0
+    t.integer  "id_enquiry_set",               default: 0
+    t.boolean  "chosen",                       default: false
+  end
+
+  add_index "enquiries", ["author_id", "hidden_at"], name: "index_enquiries_on_author_id_and_hidden_at", using: :btree
+  add_index "enquiries", ["author_id"], name: "index_enquiries_on_author_id", using: :btree
+  add_index "enquiries", ["cached_votes_up"], name: "index_enquiries_on_cached_votes_up", using: :btree
+  add_index "enquiries", ["confidence_score"], name: "index_enquiries_on_confidence_score", using: :btree
+  add_index "enquiries", ["hidden_at"], name: "index_enquiries_on_hidden_at", using: :btree
+  add_index "enquiries", ["hot_score"], name: "index_enquiries_on_hot_score", using: :btree
+  add_index "enquiries", ["question"], name: "index_enquiries_on_question", using: :btree
+  add_index "enquiries", ["summary"], name: "index_enquiries_on_summary", using: :btree
+  add_index "enquiries", ["title"], name: "index_enquiries_on_title", using: :btree
+
+  create_table "enquiry_sets", force: :cascade do |t|
+    t.string   "front_title",           limit: 80
+    t.text     "front_text"
+    t.string   "button_text",           limit: 20
+    t.boolean  "automatic_redirection",            default: true
+    t.datetime "start_at"
+    t.datetime "finish_at"
+    t.integer  "max_chosen_enquiries",             default: 10
+    t.boolean  "manual_selection",                 default: false
+    t.string   "body_title",            limit: 80
+    t.text     "body_text"
+    t.integer  "territory_id"
+    t.integer  "author_id"
+    t.datetime "hidden_at"
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
+  end
 
   create_table "failed_census_calls", force: :cascade do |t|
     t.integer  "user_id"
@@ -285,12 +338,23 @@ ActiveRecord::Schema.define(version: 20151103194329) do
     t.integer "debates_count",               default: 0
     t.integer "proposals_count",             default: 0
     t.integer "medidas_count",               default: 0
+    t.integer "enquiries_count",             default: 0
   end
 
   add_index "tags", ["debates_count"], name: "index_tags_on_debates_count", using: :btree
+  add_index "tags", ["enquiries_count"], name: "index_tags_on_enquiries_count", using: :btree
   add_index "tags", ["medidas_count"], name: "index_tags_on_medidas_count", using: :btree
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
   add_index "tags", ["proposals_count"], name: "index_tags_on_proposals_count", using: :btree
+
+  create_table "territories", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "ccaa_id"
+    t.integer  "province_id"
+    t.integer  "town_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                                default: "",    null: false

@@ -18,6 +18,13 @@
       <% end %>
     </li>
 
+    <li <%= "class=active" if controller_name == "enquiries" %>>
+      <%= link_to admin_enquiries_path do %>
+        <i class="icon-enquiries"></i>
+      <%= t("admin.menu.hidden_enquiries") %>
+      <% end %>
+    </li>
+
     <li <%= "class=active" if controller_name == "debates" %>>
       <%= link_to admin_debates_path do %>
         <i class="icon-debates"></i>
@@ -92,6 +99,18 @@
       <%= link_to admin_stats_path do %>
         <i class="icon-stats"></i>
         <%= t("admin.menu.stats") %>
+      <% end %>
+    </li>
+    <li <%= "class=active" if controller_name == "enquiry_sets" %>>
+      <%= link_to admin_enquiry_sets_path do %>
+        <i class="icon-enquiry-sets"></i>
+      <%= t("admin.menu.enquiry_sets") %>
+      <% end %>
+    </li>
+    <li <%= "class=active" if controller_name == "territories" %>>
+      <%= link_to admin_territories_path do %>
+        <i class="icon-territories"></i>
+      <%= t("admin.menu.territories") %>
       <% end %>
     </li>
   </ul>

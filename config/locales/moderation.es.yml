@@ -2,6 +2,7 @@ es:
   moderation:
     menu:
       proposals: Propuestas
+      enquiries: Preguntas
       flagged_debates: Debates
       flagged_medidas: Medidas
       flagged_comments: Comentarios
@@ -74,6 +75,25 @@ es:
         title: Propuestas
         headers:
           proposal: Propuesta
+          moderate: Moderar
+        filter: Filtro
+        filters:
+          all: Todas
+          pending_flag_review: Pendientes de revisión
+          with_ignored_flag: Marcadas como revisadas
+        order: Ordenar por
+        orders:
+          created_at: Más recientes
+          flags: Más denunciadas
+        confirm: ¿Estás seguro?
+    enquiries:
+      index:
+        hide_enquiries: Ocultar Preguntas
+        block_authors: Bloquear autores
+        ignore_flags: Marcar como revisadas
+        title: Preguntas
+        headers:
+          enquiry: Pregunta
           moderate: Moderar
         filter: Filtro
         filters:
