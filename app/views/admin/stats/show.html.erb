@@ -22,6 +22,10 @@
             <span class="number"><%= @proposals %></span>
           </p>
           <p>
+            <%= t "admin.stats.show.summary.enquiries" %><br>
+            <span class="number"><%= @enquiries %></span>
+          </p>
+          <p>
             <%= t "admin.stats.show.summary.medidas" %><br>
             <span class="number"><%= @medidas %></span>
           </p>
@@ -35,6 +39,11 @@
           <p class="featured">
             <%= t "admin.stats.show.summary.proposal_votes" %><br>
             <span class="number"><%= @proposal_votes %><br></span>
+          </p>
+
+          <p class="featured">
+            <%= t "admin.stats.show.summary.enquiry_votes" %><br>
+            <span class="number"><%= @enquiry_votes %><br></span>
           </p>
 
           <p>

@@ -47,6 +47,15 @@ module Abilities
       can :moderate, Proposal
       cannot :moderate, Proposal, author_id: user.id
 
+      can :hide, Enquiry, hidden_at: nil
+      cannot :hide, Enquiry, author_id: user.id
+
+      can :ignore_flag, Enquiry, ignored_flag_at: nil, hidden_at: nil
+      cannot :ignore_flag, Enquiry, author_id: user.id
+
+      can :moderate, Enquiry
+      cannot :moderate, Enquiry, author_id: user.id
+
       can :hide, User
       cannot :hide, User, id: user.id
 

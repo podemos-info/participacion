@@ -1,0 +1,116 @@
+<% provide :title do %><%= @enquiry.title %><% end %>
+<% provide :social_media_meta_tags do %>
+<%= render "shared/social_media_meta_tags",
+            social_url: enquiry_url(@enquiry),
+            social_title: @enquiry.title,
+            social_description: @enquiry.summary %>
+<% end %>
+<% cache [locale_and_user_status(@enquiry), @enquiry, @enquiry.author, Flag.flagged?(current_user, @enquiry), @enquiry_votes] do %>
+  <section class="enquiry-show">
+    <div id="<%= dom_id(@enquiry) %>" class="row">
+      <div class="small-12 medium-9 column">
+        <i class="icon-angle-left left"></i>&nbsp;
+        <%= link_to t("enquiries.show.back_link"), :back, class: 'left back' %>
+
+        <% if current_user && @enquiry.editable_by?(current_user) %>
+          <%= link_to edit_enquiry_path(@enquiry), class: 'edit-enquiry button success tiny radius right' do %>
+            <i class="icon-edit"></i>
+        <%= t("enquiries.show.edit_enquiry_link") %>
+          <% end %>
+        <% end %>
+
+        <h1><%= @enquiry.title %></h1>
+        <% if @enquiry.conflictive? %>
+          <div class="alert-box alert radius margin-top">
+            <strong><%= t("enquiries.show.flag") %></strong>
+          </div>
+        <% end %>
+
+        <div class="enquiry-info">
+		  <%= image_tag(
+		        @enquiry.author.gravatar_url(
+		          size: 32,
+		          default: 'identicon'
+		        ),
+		        size: 32,
+		        class: 'author-photo') %>
+
+          <% if @enquiry.author.hidden? %>
+            <i class="icon-deleted author-deleted"></i>
+            <span class="author">
+              <%= t("enquiries.show.author_deleted") %>
+            </span>
+          <% else %>
+            <span class="author">
+                <%= @enquiry.author.name %>
+            </span>
+            <% if @enquiry.author.official? %>
+              &nbsp;&bull;&nbsp;
+              <span class="label round level-<%= @enquiry.author.official_level %>">
+                <%= @enquiry.author.official_position %>
+              </span>
+            <% end %>
+          <% end %>
+
+          <% if @enquiry.author.verified_organization? %>
+            &nbsp;&bull;&nbsp;
+            <span class="label round is-association">
+              <%= t("shared.collective") %>
+            </span>
+          <% end %>
+
+          <span class="bullet">&nbsp;&bull;&nbsp;</span>
+          <%= l @enquiry.created_at.to_date %>
+          <span class="bullet">&nbsp;&bull;&nbsp;</span>
+          <i class="icon-comments"></i>&nbsp;
+          <%= link_to t("enquiries.show.comments", count: @enquiry.comments_count), "#comments" %>
+          <span class="bullet">&nbsp;&bull;&nbsp;</span>
+          <span class="js-flag-actions">
+            <%= render 'enquiries/flag_actions', enquiry: @enquiry %>
+          </span>
+          <br>
+          <%= t("enquiries.show.code") %>
+          <%= @enquiry.code %>
+        </div>
+
+        <blockquote><%= @enquiry.summary %></blockquote>
+
+        <%= safe_html_with_links @enquiry.description %>
+
+        <% if @enquiry.external_url.present? %>
+          <div class="document-link">
+            <%= text_with_links @enquiry.external_url %>
+          </div>
+        <% end %>
+
+        <% if @enquiry.video_url.present? %>
+          <div class="video-link">
+            <%= text_with_links @enquiry.video_url %>
+          </div>
+        <% end %>
+
+        <h4><%= @enquiry.question %></h4>
+
+        <%= render 'shared/tags', taggable: @enquiry %>
+
+        <div class="js-moderator-enquiry-actions moderator-actions">
+          <%= render 'actions', enquiry: @enquiry %>
+        </div>
+      </div>
+
+      <aside class="small-12 medium-3 column">
+        <div class="sidebar-divider"></div>
+        <h3><%= t("votes.supports") %></h3>
+        <div class="text-center">
+          <div id="<%= dom_id(@enquiry) %>_votes">
+            <%= render 'enquiries/votes', enquiry: @enquiry %>
+          </div>
+        </div>
+        <div class="sidebar-divider"></div>
+        <h3><%= t("enquiries.show.share") %></h3>
+        <%= social_share_button_tag(@enquiry.title) %>
+      </aside>
+    </div>
+  </section>
+<% end %>
+<%= render "comments" %>

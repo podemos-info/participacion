@@ -87,6 +87,10 @@ class ApplicationController < ActionController::Base
       @proposal_votes = current_user ? current_user.proposal_votes(proposals) : {}
     end
 
+  def set_enquiry_votes(enquiries)
+    @enquiry_votes = current_user ? current_user.enquiry_votes(enquiries) : {}
+    end
+
     def set_comment_flags(comments)
       @comment_flags = current_user ? current_user.comment_flags(comments) : {}
     end

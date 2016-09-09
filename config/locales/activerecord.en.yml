@@ -6,6 +6,7 @@ en:
       debate: Debate
       medida: Medida
       proposal: Proposal
+      enquiry: Enquiry
       tag: Topic
       user: User
       vote: Vote
@@ -20,6 +21,12 @@ en:
         terms_of_service: Terms of service
         title: Title
       proposal:
+        author: Author
+        title: Title
+        question: Question
+        description: Description
+        terms_of_service: Terms of service
+      enquiry:
         author: Author
         title: Title
         question: Question

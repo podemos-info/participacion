@@ -31,6 +31,7 @@
 //= require moderator_debates
 //= require moderator_medidas
 //= require moderator_proposals
+//= require moderator_enquiries
 //= require prevent_double_submission
 //= require rem.min
 //= require respond.min

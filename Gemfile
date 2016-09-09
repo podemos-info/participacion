@@ -32,8 +32,8 @@ gem 'kaminari'
 gem 'ancestry'
 gem 'acts-as-taggable-on'
 gem 'responders'
-gem 'foundation-rails'
-gem 'foundation_rails_helper'
+gem 'foundation-rails' ,'~> 5.5.3.2'
+gem 'foundation_rails_helper' , '~> 1.0.0'
 gem 'acts_as_votable'
 gem 'simple_captcha2', require: 'simple_captcha'
 gem 'ckeditor'
@@ -64,7 +64,7 @@ gem 'roo'
 gem 'gravtastic'
 gem 'redcarpet'
 gem 'font-awesome-rails'
-gem 'airbrake'
+gem 'airbrake','~>4.3.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -78,7 +78,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'fuubar'
   gem 'launchy'
-  gem 'quiet_assets'
+  # gem 'quiet_assets'
   gem 'letter_opener_web', '~> 1.3.0'
   gem 'i18n-tasks'
   gem 'capistrano', '3.4.0',           require: false

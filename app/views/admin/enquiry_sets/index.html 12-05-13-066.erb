@@ -1,0 +1,45 @@
+<h2><%= t("admin.enquiry_sets.index.title") %></h2>
+
+<!--%= render 'shared/filter_subnav', i18n_namespace: "admin.enquiry_sets.index" % -->
+<% render 'admin/enquiry_sets/header', i8n_namespace: "admin.enquiry_sets.index" %>
+
+<h3><%= page_entries_info @enquiry_set %></h3>
+
+<table>
+  <% @enquiry_set.each do |enquiry_set| %>
+  <tr id="<%= dom_id(enquiry_set) %>">
+      <td>
+        <strong><%= enquiry_set.title %></strong>
+        <br>
+        <div class="moderation-description">
+          <p><%= enquiry_set.summary %></p>
+          <%= enquiry_set.description %>
+          <% if enquiry_set.external_url.present? %>
+          <p><%= text_with_links enquiry_set.external_url %></p>
+          <% end %>
+          <% if enquiry_set.video_url.present? %>
+          <p><%= text_with_links enquiry_set.video_url %></p>
+          <% end %>
+          <p><%= enquiry_set.question %></p>
+        </div>
+      </td>
+      <td>
+        <%= link_to t("admin.actions.restore"),
+restore_admin_enquiry_set_path(enquiry_set, request.query_parameters),
+              method: :put,
+              data: { confirm: t("admin.actions.confirm") },
+              class: "button radius tiny success no-margin" %>
+      </td>
+      <td>
+        <% unless enquiry.confirmed_hide? %>
+          <%= link_to t("admin.actions.confirm_hide"),
+confirm_hide_admin_enquiry_set_path(enquiry_set, request.query_parameters),
+                method: :put,
+                class: "button radius tiny warning right" %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<%= paginate @enquiry_set %>

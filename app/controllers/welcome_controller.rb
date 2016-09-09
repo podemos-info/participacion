@@ -5,7 +5,8 @@ class WelcomeController < ApplicationController
 
   def index
     if current_user
-      redirect_to :highlights
+      #redirect_to :highlights
+      redirect_to :enquiries
     end
   end
 
@@ -22,11 +23,13 @@ class WelcomeController < ApplicationController
     proposals = Proposal.sort_by_hot_score.page(params[:page]).per(10).for_render
     set_proposal_votes(proposals)
 
-    @list = (debates.to_a + proposals.to_a).sort{|a, b| b.hot_score <=> a.hot_score}
+    enquiries = Enquiry.sort_by_hot_score.page(params[:page]).per(10).for_render
+    set_enquiry_votes(enquiries)
+
+    @list = (debates.to_a + proposals.to_a ).sort{|a, b| b.hot_score <=> a.hot_score}
     @paginator = debates.total_pages > proposals.total_pages ? debates : proposals
 
     render 'highlights'
   end
-
 
 end

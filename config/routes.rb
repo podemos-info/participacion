@@ -55,6 +55,16 @@ Rails.application.routes.draw do
     end
   end
 
+  #resources :enquiries, path: 'preguntas' do
+  resources :enquiries, path: 'la-gente-pregunta/asamblea-madrid' do
+    member do
+      post :vote
+      post :vote_featured
+      put :flag
+      put :unflag
+    end
+  end
+
   resources :comments, only: :create, shallow: true do
     member do
       post :vote
@@ -106,6 +116,13 @@ Rails.application.routes.draw do
     end
 
     resources :proposals, only: :index do
+      member do
+        put :restore
+        put :confirm_hide
+      end
+    end
+
+    resources :enquiries, only: :index do
       member do
         put :restore
         put :confirm_hide
@@ -170,6 +187,15 @@ Rails.application.routes.draw do
     end
 
     resources :proposals, only: :index do
+      member do
+        put :hide
+      end
+      collection do
+        put :moderate
+      end
+    end
+
+    resources :enquiries, only: :index do
       member do
         put :hide
       end
@@ -252,10 +278,12 @@ Rails.application.routes.draw do
   get "/how_it_works", to: "pages#how_it_works"
   get "/how_to_use", to: "pages#how_to_use"
   get "/more_information", to: "pages#more_information"
+  get "/que-es-la-gente-pregunta", to: "pages#que_es_la_gente_pregunta"
   get "/opendata", to: "pages#opendata"
   get "/participation", to: "pages#participation"
   get "/transparency", to: "pages#transparency"
 #  get "/proposals_info", to: "pages#proposals_info"
+#  get "/enquirie_info", to: "pages#enquiries_info"
   get "/participation_facts", to: "pages#participation_facts"
   get "/participation_world", to: "pages#participation_world"
   get "/blog", to: "pages#blog"

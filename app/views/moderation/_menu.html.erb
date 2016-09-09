@@ -11,6 +11,13 @@
       <% end %>
     </li>
 
+    <li <%= "class=active" if controller_name == "enquiries" %>>
+      <%= link_to moderation_enquiries_path do %>
+        <i class="icon-enquiries"></i>
+      <%= t("moderation.menu.enquiries") %>
+      <% end %>
+    </li>
+
     <li <%= "class=active" if controller_name == "debates" %>>
       <%= link_to moderation_debates_path do %>
         <i class="icon-debates"></i>

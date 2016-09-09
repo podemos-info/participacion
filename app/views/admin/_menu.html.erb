@@ -18,6 +18,13 @@
       <% end %>
     </li>
 
+    <li <%= "class=active" if controller_name == "enquiries" %>>
+      <%= link_to admin_enquiries_path do %>
+        <i class="icon-enquiries"></i>
+      <%= t("admin.menu.hidden_enquiries") %>
+      <% end %>
+    </li>
+
     <li <%= "class=active" if controller_name == "debates" %>>
       <%= link_to admin_debates_path do %>
         <i class="icon-debates"></i>

@@ -24,6 +24,7 @@ class User < ActiveRecord::Base
   has_many :debates, -> { with_hidden }, foreign_key: :author_id
   has_many :medidas, -> { with_hidden }, foreign_key: :author_id
   has_many :proposals, -> { with_hidden }, foreign_key: :author_id
+  has_many :enquiries, -> { with_hidden }, foreign_key: :author_id
   has_many :comments, -> { with_hidden }
   has_many :failed_census_calls
 
@@ -72,8 +73,14 @@ class User < ActiveRecord::Base
     if user.nil?
       name_parts = auth.info.name.split(' ')
       user_alias = name_parts[0][0]+name_parts[1]
-      nicks_count = User.where("username ~ ?",  "^#{user_alias}").count
-      user_alias += (nicks_count+1).to_s if nicks_count != 0
+      nick_count = User.where("username ~ ?",  "^#{user_alias}").count
+      if nick_count >0
+        lista = User.where("username ~ ?", "^#{user_alias}[0-9]+").pluck("username").map! { |nombre| nombre.gsub(/[^0-9]/,'').to_i }
+        maximo = lista.max.nil? ? 1 : lista.max + 1
+        diferencia = (1..maximo).to_a - lista
+        user_alias += diferencia.first.to_s
+      end
+
       user = User.new(
         #username: auth.info.nickname || auth.info.name || auth.extra.raw_info.name.parameterize('-') || auth.uid ,
         username: user_alias ,
@@ -131,6 +138,11 @@ class User < ActiveRecord::Base
     voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
   end
 
+  def enquiry_votes(enquiries)
+    voted = votes.for_enquiries(enquiries)
+    voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
+  end
+
   def comment_flags(comments)
     comment_flags = flags.for_comments(comments)
     comment_flags.each_with_object({}){ |f, h| h[f.flaggable_id] = true }
@@ -170,6 +182,7 @@ class User < ActiveRecord::Base
     medidas_ids = Medida.where(author_id: id).pluck(:id)
     comments_ids = Comment.where(user_id: id).pluck(:id)
     proposal_ids = Proposal.where(author_id: id).pluck(:id)
+    enquiry_ids = Enquiry.where(author_id: id).pluck(:id)
 
     self.hide
 
@@ -177,6 +190,7 @@ class User < ActiveRecord::Base
     Medida.hide_all medidas_ids
     Comment.hide_all comments_ids
     Proposal.hide_all proposal_ids
+    Enquiry.hide_all enquiry_ids
   end
 
 
