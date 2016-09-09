@@ -20,6 +20,7 @@
 /config/database.yml
 /config/secrets.yml
 /config/deploy-secrets.yml
+/config/parameters.yml
 
 /coverage
 
@@ -30,4 +31,7 @@
 .ruby-gemset
 
 # Gemfile local machine file
-/Gemfile.lock
+Gemfile.lock
+
+# Ignore RubyMine IDE Files
+.idea
