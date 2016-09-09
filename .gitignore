@@ -31,3 +31,6 @@
 
 # Gemfile local machine file
 Gemfile.lock
+
+# Ignore RubyMine IDE Files
+.idea
