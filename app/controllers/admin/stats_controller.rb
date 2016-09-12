@@ -6,6 +6,7 @@ class Admin::StatsController < Admin::BaseController
     @visits = Visit.count
     @debates = Debate.with_hidden.count
     @medidas = Medida.with_hidden.count
+    @laws = Law.with_hidden.count
     @proposals = Proposal.with_hidden.count
     @enquiries = Enquiry.with_hidden.count
     @comments = Comment.with_hidden.count

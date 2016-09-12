@@ -10,6 +10,7 @@ Setting.create(key: 'official_level_4_name', value: 'Moderadores')
 Setting.create(key: 'official_level_5_name', value: 'Entrevistados')
 Setting.create(key: 'max_ratio_anon_votes_on_debates', value: '50')
 Setting.create(key: 'max_ratio_anon_votes_on_medidas', value: '50')
+Setting.create(key: 'max_ratio_anon_votes_on_laws', value: '50')
 Setting.create(key: 'max_votes_for_debate_edit', value: '1000')
 Setting.create(key: 'max_votes_for_proposal_edit', value: '1000')
 Setting.create(key: 'proposal_code_prefix', value: 'MAD')
@@ -98,6 +99,22 @@ medida = Medida.create!(author: author,
 puts "    #{medida.title}"
 end
 
+puts "Creating Hilos"
+
+tags = Faker::Lorem.words(25)
+
+(1..30).each do |i|
+  author = User.reorder("RANDOM()").first
+  description = "<p>#{Faker::Lorem.paragraphs.join('</p><p>')}</p>"
+law = Law.create!(author: author,
+                          title: Faker::Lorem.sentence(3).truncate(60),
+                          created_at: rand((Time.now - 1.week) .. Time.now),
+                          description: description,
+                          tag_list: tags.sample(3).join(','),
+                          terms_of_service: "1")
+puts "    #{law.title}"
+end
+
 puts "Creating Proposals"
 
 tags = Faker::Lorem.words(25)
@@ -161,6 +178,17 @@ puts "Commenting Medidas"
                   body: Faker::Lorem.sentence)
 end
 
+puts "Commenting Hilos"
+
+(1..100).each do |i|
+  author = User.reorder("RANDOM()").first
+  law = Law.reorder("RANDOM()").first
+  Comment.create!(user: author,
+    created_at: rand(law.created_at .. Time.now),
+    commentable: law,
+                  body: Faker::Lorem.sentence)
+end
+
 puts "Commenting Proposals"
 
 (1..100).each do |i|
@@ -198,7 +226,7 @@ puts "Commenting Comments"
 end
 
 
-puts "Voting Debates, Medidas, Proposals, Enquiries & Comments"
+puts "Voting Debates, Medidas, Hilos, Proposals, Enquiries & Comments"
 
 (1..100).each do |i|
   voter  = not_org_users.reorder("RANDOM()").first
@@ -212,6 +240,13 @@ end
   vote   = [true, false].sample
   medida = Medida.reorder("RANDOM()").first
   medida.vote_by(voter: voter, vote: vote)
+end
+
+(1..100).each do |i|
+  voter  = not_org_users.reorder("RANDOM()").first
+  vote   = [true, false].sample
+  law = Law.reorder("RANDOM()").first
+  law.vote_by(voter: voter, vote: vote)
 end
 
 (1..100).each do |i|
@@ -233,7 +268,7 @@ end
   enquiry.vote_by(voter: voter, vote: true)
 end
 
-puts "Flagging Debates, Medidas & Comments"
+puts "Flagging Debates, Medidas, Hilos & Comments"
 
 (1..40).each do |i|
   debate = Debate.reorder("RANDOM()").first
@@ -245,6 +280,12 @@ end
   medida = Medida.reorder("RANDOM()").first
   flagger = User.where(["users.id <> ?", medida.author_id]).reorder("RANDOM()").first
   Flag.flag(flagger, medida)
+end
+
+(1..40).each do |i|
+  law = Law.reorder("RANDOM()").first
+  flagger = User.where(["users.id <> ?", law.author_id]).reorder("RANDOM()").first
+  Flag.flag(flagger, law)
 end
 
 (1..40).each do |i|
@@ -265,26 +306,29 @@ end
   Flag.flag(flagger, enquiry)
 end
 
-puts "Ignoring flags in Debates, Medidas,Enquiries, comments & proposals"
+puts "Ignoring flags in Debates, Medidas, Hilos,Enquiries, comments & proposals"
 
 Debate.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
 Medida.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
+Law.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
 Comment.flagged.reorder("RANDOM()").limit(30).each(&:ignore_flag)
 Proposal.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
 Enquiry.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
 
-puts "Hiding debates, medidas, enquiries, comments & proposals"
+puts "Hiding debates, medidas, hilos, enquiries, comments & proposals"
 
 Comment.with_hidden.flagged.reorder("RANDOM()").limit(30).each(&:hide)
 Debate.with_hidden.flagged.reorder("RANDOM()").limit(5).each(&:hide)
 Medida.with_hidden.flagged.reorder("RANDOM()").limit(5).each(&:hide)
+Law.with_hidden.flagged.reorder("RANDOM()").limit(5).each(&:hide)
 Proposal.with_hidden.flagged.reorder("RANDOM()").limit(10).each(&:hide)
 Enquiry.with_hidden.flagged.reorder("RANDOM()").limit(10).each(&:hide)
 
-puts "Confirming hiding in debates, medidas, enquiries, comments & proposals"
+puts "Confirming hiding in debates, medidas, hilos, enquiries, comments & proposals"
 
 Comment.only_hidden.flagged.reorder("RANDOM()").limit(10).each(&:confirm_hide)
 Debate.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)
 Medida.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)
+Law.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)
 Proposal.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)
 Enquiry.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)

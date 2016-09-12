@@ -133,7 +133,7 @@ form input[type]:not([type=submit]):not([type=file]):not([type=checkbox]),
     }
 }
 
-.medida-show .votes, .debate-show .votes {
+law-show .votes, .medida-show .votes, .debate-show .votes {
     background: #ddd;
     .icon-like, .icon-unlike {background: #B37EB4; border:0; border-radius: 5px;}
     .total-votes {color: #333; font-weight: bold;}
@@ -164,6 +164,30 @@ form input[type]:not([type=submit]):not([type=file]):not([type=checkbox]),
     &:hover {color: $morado;}
 }
 
+.law {
+    margin-bottom: 1rem; margin-top: 0.5rem;
+    .panel {
+        box-shadow: none; min-height: 0 !important; padding: 0;
+        .law-content {@include titulo-temas;}
+        .icon-laws {left: 5.2rem; top: 1rem;}
+    }
+    .votes {
+        background: #ddd;
+        border-color: #ddd;
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+        margin: 0;
+        &:after {content: none;}
+        .icon-like, .icon-unlike {background: #B37EB4; border:0; border-radius: 5px;}
+        .like span, .law .votes .unlike span, .total-votes {color: #333; font-weight: bold;}
+    }
+}
+
+#laws .vota-participa a {
+    color: $verde;
+    &:hover {color: $morado;}
+}
+
 .proposal .panel .label-proposal,
 .proposal .panel .icon-proposals,
 .proposal-featured .panel .proposal-info,
@@ -182,12 +206,18 @@ form input[type]:not([type=submit]):not([type=file]):not([type=checkbox]),
 .medida .panel .medida-info,
 .medida .panel .medida-info a{color: $morado-claro;}
 
+.law .panel .label-law,
+.law .panel .icon-laws,
+.law .panel .law-info,
+.law .panel .law-info a{color: $morado-claro;}
+
 .proposal-featured .panel .proposal-info .author,
 .proposal .panel .proposal-info .author,
 .enquiry-featured .panel .enquiry-info .author,
 .enquiry .panel .enquiry-info .author,
 .debate .panel .debate-info .author,
 .medida .panel .medida-info .author {color: #999;}
+.law .panel .law-info .author {color: #999;}
 
 .proposal .supports, .proposal-featured .supports, .proposal-show .supports {background: #ddd; border-color: #ddd; padding-bottom: 2rem; padding-top: 2rem;}
 
@@ -237,7 +267,7 @@ abbr, acronym {font-size: 100%; color: #333;}
     color: $morado-claro;
 }
 
-.proposal-info a:hover, .debate-info a:hover, .medida-info a:hover, .enquiry-info a:hover {color: $morado !important;}
+.proposal-info a:hover, .debate-info a:hover, .medida-info a:hover, .law-info a:hover, .enquiry-info a:hover {color: $morado !important;}
 .in-favor .button.expand {padding: 0.8rem 2rem;}
 .tag-cloud a .label.info {background: #aaa;}
 
@@ -253,6 +283,7 @@ button.success:hover, .button.success:hover {background: $morado-claro;}
 .tag-cloud h3 {text-transform: none;}
 
 .medida-new .icon-medidas, .medida-edit .icon-medidas {display: none;}
+.law-new .icon-laws, .law-edit .icon-laws {display: none;}
 
 .top-bar-section {top: 2rem;}
 .top-bar-section ul li:not(.has-form) a:not(.button) {

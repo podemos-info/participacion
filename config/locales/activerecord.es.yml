@@ -13,6 +13,9 @@ es:
       medida:
         one: Medida
         other: Medidas
+      law:
+        one: Ley
+        other: Leyes
       tag:
         one: Tema
         other: Temas
@@ -47,6 +50,11 @@ es:
         terms_of_service: Términos de servicio
         title: Título
       medida:
+        author: Autor
+        description: Opinión
+        terms_of_service: Términos de servicio
+        title: Título
+      law:
         author: Autor
         description: Opinión
         terms_of_service: Términos de servicio

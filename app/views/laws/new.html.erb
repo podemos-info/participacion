@@ -1,0 +1,28 @@
+<div class="law-new row">
+
+  <div class="small-12 medium-9 column">
+    <%= link_to laws_path, class: "left back" do %>
+      <i class="icon-angle-left left"></i>
+    <%= t("laws.new.back_link") %>
+    <% end %>
+    <h1><%= t("laws.new.start_new") %></h1>
+    <div class="alert-box info radius">
+      <%= t("laws.new.info")%>
+      <%= link_to "/more_information", target: "_blank" do %>
+      <strong><%= t("laws.new.more_info")%></strong>
+      <% end %>
+    </div>
+    <%= render "form" %>
+  </div>
+
+  <div class="small-12 medium-3 column">
+    <i class="icon-laws right"></i>
+    <h2><%= t("laws.new.recommendations_title") %></h2>
+    <ul class="recommendations">
+      <li><%= t("laws.new.recommendation_one") %></li>
+      <li><%= t("laws.new.recommendation_two") %></li>
+      <li><%= t("laws.new.recommendation_three") %></li>
+      <li><%= t("laws.new.recommendation_four") %></li>
+    </ul>
+  </div>
+</div>

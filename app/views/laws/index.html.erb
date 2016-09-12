@@ -1,0 +1,331 @@
+<% provide :title do %><%= t('laws.index.title') %><% end %>
+<% content_for :header_addon do %>
+  <%= render "shared/search_form_header",
+search_path: laws_path(page: 1),
+i18n_namespace: "laws.index.search_form" %>
+<% end %>
+
+<section role="main">
+  <div class="wrap row">
+    <div id="laws" class="laws-list small-12 medium-12 column">
+
+      <div class="filters">
+        <div class="small-12 medium-7 left">
+          <% if @search_terms %>
+            <h2 class="margin-top">
+              <%= page_entries_info @laws %>
+              <%= t("laws.index.search_results", count: @laws.size, search_term: @search_terms) %>
+            </h2>
+          <% elsif @tag_filter %>
+            <h2 class="margin-top">
+              <%= page_entries_info @laws %>
+              <%= t("laws.index.filter_topic", count: @laws.size, topic: t("programa.#{@tag_filter}")) %>
+            </h2>
+          <% end %>
+        </div>
+
+        <!--
+        <% if @tag_filter || @search_terms %>
+          <div class="small-12 medium-5 margin-top inline-block laws-order">
+            <h6 class="inline-block">
+              <%= t("laws.index.select_order") %>
+            </h6>
+            <%= render 'shared/order_selector', i18n_namespace: "laws.index" %>
+          </div>
+        <% else %>
+          <div class="small-12 inline-block">
+            <h2 class="inline-block">
+              <%= t("laws.index.select_order_long") %>
+            </h2>
+            <%= render 'shared/order_selector', i18n_namespace: "laws.index" %>
+          </div>
+        <% end %>
+        -->
+
+        <div id="header" class="small-12 medium-12 menu-programa">
+          <%= link_to taggable_path('law', 'bloque_1'), class: 'm', :data =>{:dropdown =>'epi-bloque1'} do %>
+             <%=  t('programa.bloque_1') %>
+          <% end %>
+          <ul id='epi-bloque1' class='medium f-dropdown' data-dropdown-content>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_1'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_1') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_2'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_2') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_3'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_3') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_4'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_4') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_5'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_5') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_6'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_6') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_7'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_7') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_8'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_8') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_9'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_9') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_10'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_10') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_11'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_11') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_12'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_12') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_1_13'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_1_13') %>
+              <% end %></li>
+
+          </ul>
+
+          <%= link_to taggable_path('law', 'bloque_2'), class: 'm', :data =>{:dropdown =>'epi-bloque2'} do %>
+             <%=  t('programa.bloque_2') %>
+          <% end %>
+          <ul id='epi-bloque2' class='medium f-dropdown' data-dropdown-content>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_2_1'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_2_1') %>
+              <% end %></li>
+
+          </ul>
+
+          <%= link_to taggable_path('law', 'bloque_3'), class: 'm', :data =>{:dropdown =>'epi-bloque3'} do %>
+             <%=  t('programa.bloque_3') %>
+          <% end %>
+          <ul id='epi-bloque3' class='medium f-dropdown' data-dropdown-content>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_3_1'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_3_1') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_3_2'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_3_2') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_3_3'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_3_3') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_3_4'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_3_4') %>
+              <% end %></li>
+
+          </ul>
+
+          <%= link_to taggable_path('law', 'bloque_4'), class: 'm', :data =>{:dropdown =>'epi-bloque4'} do %>
+             <%=  t('programa.bloque_4') %>
+          <% end %>
+          <ul id='epi-bloque4' class='medium f-dropdown' data-dropdown-content>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_4_1'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_4_1') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_4_2'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_4_2') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_4_3'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_4_3') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_4_4'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_4_4') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_4_5'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_4_5') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_4_6'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_4_6') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_4_7'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_4_7') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_4_8'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_4_8') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_4_9'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_4_9') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_4_10'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_4_10') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_4_11'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_4_11') %>
+              <% end %></li>
+
+          </ul>
+
+          <%= link_to taggable_path('law', 'bloque_5'), class: 'm', :data =>{:dropdown =>'epi-bloque5'} do %>
+             <%=  t('programa.bloque_5') %>
+          <% end %>
+          <ul id='epi-bloque5' class='medium f-dropdown' data-dropdown-content>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_5_1'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_5_1') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_5_2'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_5_2') %>
+              <% end %></li>
+
+          </ul>
+
+          <%= link_to taggable_path('law', 'bloque_6'), class: 'm', :data =>{:dropdown =>'epi-bloque6'} do %>
+             <%=  t('programa.bloque_6') %>
+          <% end %>
+          <ul id='epi-bloque6' class='medium f-dropdown' data-dropdown-content>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_6_1'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_6_1') %>
+              <% end %></li>
+
+          </ul>
+
+          <%= link_to taggable_path('law', 'bloque_7'), class: 'm', :data =>{:dropdown =>'epi-bloque7'} do %>
+             <%=  t('programa.bloque_7') %>
+          <% end %>
+          <ul id='epi-bloque7' class='medium f-dropdown' data-dropdown-content>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_7_1'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_7_1') %>
+              <% end %></li>
+
+          </ul>
+
+          <%= link_to taggable_path('law', 'bloque_8'), class: 'm', :data =>{:dropdown =>'epi-bloque8'} do %>
+             <%=  t('programa.bloque_8') %>
+          <% end %>
+          <ul id='epi-bloque8' class='medium f-dropdown' data-dropdown-content>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_1'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_1') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_2'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_2') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_3'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_3') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_4'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_4') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_5'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_5') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_6'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_6') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_7'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_7') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_8'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_8') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_9'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_9') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_10'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_10') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_11'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_11') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_12'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_12') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_13'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_13') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_14'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_14') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_15'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_15') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_16'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_16') %>
+              <% end %></li>
+
+            <li><%= link_to taggable_path('law', 'epigrafe_8_17'), class: 'm' do %>
+                  <%=  t('programa.epigrafe_8_17') %>
+              <% end %></li>
+
+          </ul>
+
+		</div>
+
+		<p class="vota-participa">* Tras informarte de las diferentes propuestas puedes votarlas en: <a href="https://participa.podemos.info/es">participa.podemos.info</a></p>
+
+
+        <!--div class="show-for-small-only">
+          <%= link_to t("laws.index.start_law"), new_law_path, class: 'button radius expand' %>
+        </div-->
+
+        <%= render @laws %>
+        <%= paginate @laws %>
+      </div>
+    </div>
+
+    <!--div class="small-12 medium-3 column">
+      <aside class="sidebar" role="complementary">
+        <!--%= link_to t("laws.index.start_law"), new_law_path, class: 'button radius expand' %-->
+        <!--%= render "shared/tag_cloud", taggable: 'law' %-->
+        <!--div class="tag-cloud">
+            <div class="sidebar-divider"></div>
+            <h3>Eje seleccionado</h3>
+            <br>
+            <a href="" class="l">Sub-eje 1</a>
+            <a href="" class="l">Sub-eje 2</a>
+            <a href="" class="l">Sub-eje 3</a>
+        </div>
+      </aside>
+    </div-->
+  </div>
+</section>

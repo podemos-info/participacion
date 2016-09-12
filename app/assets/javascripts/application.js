@@ -30,6 +30,7 @@
 //= require moderator_comment
 //= require moderator_debates
 //= require moderator_medidas
+//= require moderator_laws
 //= require moderator_proposals
 //= require moderator_enquiries
 //= require prevent_double_submission

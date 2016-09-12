@@ -8,6 +8,10 @@ module VotesHelper
     medida.likes.percent_of(medida.total_votes)
   end
 
+  def law_percentage_of_likes(law)
+    law.likes.percent_of(law.total_votes)
+  end
+
   def votes_percentage(vote, debate)
     return "0%" if debate.total_votes == 0
     if vote == 'likes'
@@ -23,6 +27,15 @@ module VotesHelper
       medida_percentage_of_likes(medida).to_s + "%"
     elsif vote == 'dislikes'
       (100 - medida_percentage_of_likes(medida)).to_s + "%"
+    end
+  end
+
+  def votes_law_percentage(vote, law)
+    return "0%" if law.total_votes == 0
+    if vote == 'likes'
+      law_percentage_of_likes(law).to_s + "%"
+    elsif vote == 'dislikes'
+      (100 - law_percentage_of_likes(law)).to_s + "%"
     end
   end
 

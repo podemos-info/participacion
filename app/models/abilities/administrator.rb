@@ -14,6 +14,9 @@ module Abilities
       can :restore, Medida
       cannot :restore, Medida, hidden_at: nil
 
+       can :restore, Law
+      cannot :restore, Law, hidden_at: nil
+
       can :restore, Proposal
       cannot :restore, Proposal, hidden_at: nil
 

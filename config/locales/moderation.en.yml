@@ -5,6 +5,7 @@ en:
       enquiries: Enquiries
       flagged_debates: Debates
       flagged_medidas: Measures
+      flagged_laws: Laws
       flagged_comments: Comments
       users: Ban users
     dashboard:
@@ -57,6 +58,25 @@ en:
         title: Measures
         headers:
           medida: Measure
+          moderate: Moderate
+        filter: Filter
+        filters:
+          all: All
+          pending_flag_review: Pending
+          with_ignored_flag: Ignored
+        order: Order
+        orders:
+          created_at: Newest
+          flags: Most flagged
+        confirm: Are you sure?
+    laws:
+      index:
+        hide_laws: Hide laws
+        block_authors: Block authors
+        ignore_flags: Ignore flags
+        title: Laws
+        headers:
+          law: Law
           moderate: Moderate
         filter: Filter
         filters:
