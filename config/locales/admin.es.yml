@@ -13,10 +13,12 @@ es:
       settings: "Configuración global"
       debate_topics: "Temas de debate"
       medida_topics: "Temas de medida"
+      law_topics: "Temas de Ley"
       hidden_proposals: "Propuestas ocultas"
       hidden_enquiries: "Preguntas ocultas"
       hidden_debates: "Debates ocultos"
       hidden_medidas: "Medidas ocultas"
+      hidden_laws: "Proposiciones ocultas"
       hidden_comments: "Comentarios ocultos"
       hidden_users: "Usuarios bloqueados"
       incomplete_verifications: "Verificaciones incompletas"
@@ -93,6 +95,14 @@ es:
     medidas:
       index:
         title: "Medidas ocultas"
+        filter: "Filtro"
+        filters:
+          all: "Todos"
+          with_confirmed_hide: "Confirmados"
+          without_confirmed_hide: "Pendientes"
+    laws:
+      index:
+        title: "Proposiciones ocultas"
         filter: "Filtro"
         filters:
           all: "Todos"
@@ -176,6 +186,7 @@ es:
           on_enquiries: "Preguntas"
           on_debates: "Debates"
           on_medidas: "Medidas"
+          on_laws: "Proposiciones"
           on_comments: "Comentarios"
           on_users: "Usuarios"
         actions:

@@ -38,6 +38,15 @@ module Abilities
       can :moderate, Medida
       cannot :moderate, Medida, author_id: user.id
 
+      can :hide, Law, hidden_at: nil
+      cannot :hide, Law, author_id: user.id
+
+      can :ignore_flag, Law, ignored_flag_at: nil, hidden_at: nil
+      cannot :ignore_flag, Law, author_id: user.id
+
+      can :moderate, Law
+      cannot :moderate, Law, author_id: user.id
+
       can :hide, Proposal, hidden_at: nil
       cannot :hide, Proposal, author_id: user.id
 

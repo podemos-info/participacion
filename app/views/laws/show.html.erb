@@ -1,0 +1,86 @@
+<% provide :title do %><%= @law.title %><% end %>
+<% cache [locale_and_user_status(@law), @law, @law.author, Flag.flagged?(current_user, @law), @law_votes] do %>
+  <section class="law-show">
+    <div id="<%= dom_id(@law) %>" class="row">
+      <div class="small-12 medium-9 column">
+        <i class="icon-angle-left left"></i>&nbsp;
+        <%= link_to t("laws.show.back_link"), :back, class: 'left back' %>
+
+        <% if current_user && @law.editable_by?(current_user) %>
+          <%= link_to edit_law_path(@law), class: 'edit-law button success tiny radius right' do %>
+            <i class="icon-edit"></i>
+            <%= t("laws.show.edit_law_link") %>
+          <% end %>
+        <% end %>
+
+        <h1><%= @law.title %></h1>
+        <% if @law.conflictive? %>
+          <div class="alert-box alert radius margin-top">
+            <strong><%= t("laws.show.flag") %></strong>
+          </div>
+        <% end %>
+
+        <div class="law-info">
+          <%= avatar_image(@law.author, seed: @law.author_id, size: 32, class: 'author-photo') %>
+
+          <% if @law.author.hidden? %>
+            <i class="icon-deleted author-deleted"></i>
+            <span class="author">
+                <%= t("laws.show.author_deleted") %>
+            </span>
+          <% else %>
+            <span class="author">
+                <%= @law.author.name %>
+            </span>
+            <% if @law.author.official? %>
+              &nbsp;&bull;&nbsp;
+              <span class="label round level-<%= @law.author.official_level %>">
+                <%= @law.author.official_position %>
+              </span>
+            <% end %>
+          <% end %>
+
+          <% if @law.author.verified_organization? %>
+            &nbsp;&bull;&nbsp;
+            <span class="label round is-association">
+              <%= t("shared.collective") %>
+            </span>
+          <% end %>
+
+          <span class="bullet">&nbsp;&bull;&nbsp;</span>
+          <%= l @law.created_at.to_date %>
+          <span class="bullet">&nbsp;&bull;&nbsp;</span>
+          <i class="icon-comments"></i>&nbsp;
+          <%= link_to t("laws.show.comments", count: @law.comments_count), "#comments" %>
+          <span class="bullet">&nbsp;&bull;&nbsp;</span>
+          <span class="js-flag-actions">
+            <%= render 'laws/flag_actions', law: @law %>
+          </span>
+        </div>
+
+        <%= safe_html_with_links @law.description %>
+
+        <%= render 'shared/tags', taggable: @law %>
+
+        <div class="js-moderator-law-actions moderator-actions">
+          <%= render 'actions', law: @law %>
+        </div>
+      </div>
+
+      <aside class="small-12 medium-3 column">
+        <div class="sidebar-divider"></div>
+        <h3><%= t("votes.supports") %></h3>
+        <div class="text-center">
+          <div id="<%= dom_id(@law) %>_votes">
+           <%= render 'laws/votes', law: @law %>
+          </div>
+        </div>
+        <div class="sidebar-divider"></div>
+        <h3><%= t("laws.show.share") %></h3>
+        <%= social_share_button_tag(@law.title) %>
+      </aside>
+    </div>
+  </section>
+<% end %>
+
+<%= render "comments" %>

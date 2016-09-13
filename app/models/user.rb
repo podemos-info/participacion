@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
   has_many :identities, dependent: :destroy
   has_many :debates, -> { with_hidden }, foreign_key: :author_id
   has_many :medidas, -> { with_hidden }, foreign_key: :author_id
+  has_many :laws, -> { with_hidden }, foreign_key: :author_id
   has_many :proposals, -> { with_hidden }, foreign_key: :author_id
   has_many :enquiries, -> { with_hidden }, foreign_key: :author_id
   has_many :comments, -> { with_hidden }
@@ -130,6 +131,11 @@ class User < ActiveRecord::Base
 
   def medida_votes(medidas)
     voted = votes.for_medidas(medidas)
+    voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
+  end
+
+  def law_votes(laws)
+    voted = votes.for_laws(laws)
     voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
   end
 

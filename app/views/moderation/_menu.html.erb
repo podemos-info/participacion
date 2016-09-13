@@ -32,6 +32,13 @@
       <% end %>
     </li>
 
+    <li <%= "class=active" if controller_name == "laws" %>>
+      <%= link_to moderation_laws_path do %>
+        <i class="icon-laws"></i>
+      <%= t('moderation.menu.flagged_laws') %>
+      <% end %>
+    </li>
+
     <li <%= "class=active" if controller_name == "comments" %>>
       <%= link_to moderation_comments_path do %>
         <i class="icon-comments"></i>

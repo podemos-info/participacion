@@ -76,15 +76,6 @@ class Enquiry < ActiveRecord::Base
     author_id == user.id && editable?
   end
 
-  #versión antigua
-  #def votable_by?(user)
-  #  total_votes <= 100 ||
-  #    !user.unverified? ||
-  #    Setting.value_for('max_ratio_anon_votes_on_medidas').to_i == 100 ||
-  #    anonymous_votes_ratio < Setting.value_for('max_ratio_anon_votes_on_medidas').to_i ||
-  #    user.voted_for?(self)
-  #end
-
   def self.is_closed?
     #return (DateTime.now.to_s >= DateTime.parse(Rails.application.secrets.closed_enquiry_date).to_s)
     return (DateTime.now.to_s >= @@closed_enquiry_date.to_s)

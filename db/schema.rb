@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229155920) do
+ActiveRecord::Schema.define(version: 20160910190345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -161,24 +161,22 @@ ActiveRecord::Schema.define(version: 20160229155920) do
   add_index "enquiries", ["title"], name: "index_enquiries_on_title", using: :btree
 
   create_table "enquiry_sets", force: :cascade do |t|
-    t.string   "front_title",           limit: 80,                 null: false
-    t.text     "front_text",                                       null: false
-    t.string   "button_text",           limit: 20,                 null: false
+    t.string   "front_title",           limit: 80
+    t.text     "front_text"
+    t.string   "button_text",           limit: 20
     t.boolean  "automatic_redirection",            default: true
-    t.datetime "start_at",                                         null: false
-    t.datetime "finish_at",                                        null: false
+    t.datetime "start_at"
+    t.datetime "finish_at"
     t.integer  "max_chosen_enquiries",             default: 10
     t.boolean  "manual_selection",                 default: false
-    t.string   "body_title",            limit: 80,                 null: false
-    t.text     "body_text",                                        null: false
+    t.string   "body_title",            limit: 80
+    t.text     "body_text"
+    t.integer  "territory_id"
     t.integer  "author_id"
     t.datetime "hidden_at"
     t.datetime "created_at",                                       null: false
     t.datetime "updated_at",                                       null: false
   end
-
-  add_index "enquiry_sets", ["body_title"], name: "index_enquiry_sets_on_body_title", using: :btree
-  add_index "enquiry_sets", ["front_title"], name: "index_enquiry_sets_on_front_title", using: :btree
 
   create_table "failed_census_calls", force: :cascade do |t|
     t.integer  "user_id"
@@ -213,6 +211,38 @@ ActiveRecord::Schema.define(version: 20160229155920) do
   end
 
   add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
+
+  create_table "laws", force: :cascade do |t|
+    t.string   "title",                        limit: 800
+    t.text     "description"
+    t.integer  "author_id"
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
+    t.string   "visit_id"
+    t.datetime "hidden_at"
+    t.integer  "flags_count",                              default: 0
+    t.datetime "ignored_flag_at"
+    t.integer  "cached_votes_total",                       default: 0
+    t.integer  "cached_votes_up",                          default: 0
+    t.integer  "cached_votes_down",                        default: 0
+    t.integer  "comments_count",                           default: 0
+    t.datetime "confirmed_hide_at"
+    t.integer  "cached_anonymous_votes_total",             default: 0
+    t.integer  "cached_votes_score",                       default: 0
+    t.integer  "hot_score",                    limit: 8,   default: 0
+    t.integer  "confidence_score",                         default: 0
+  end
+
+  add_index "laws", ["author_id", "hidden_at"], name: "index_laws_on_author_id_and_hidden_at", using: :btree
+  add_index "laws", ["author_id"], name: "index_laws_on_author_id", using: :btree
+  add_index "laws", ["cached_votes_down"], name: "index_laws_on_cached_votes_down", using: :btree
+  add_index "laws", ["cached_votes_score"], name: "index_laws_on_cached_votes_score", using: :btree
+  add_index "laws", ["cached_votes_total"], name: "index_laws_on_cached_votes_total", using: :btree
+  add_index "laws", ["cached_votes_up"], name: "index_laws_on_cached_votes_up", using: :btree
+  add_index "laws", ["confidence_score"], name: "index_laws_on_confidence_score", using: :btree
+  add_index "laws", ["hidden_at"], name: "index_laws_on_hidden_at", using: :btree
+  add_index "laws", ["hot_score"], name: "index_laws_on_hot_score", using: :btree
+  add_index "laws", ["title"], name: "index_laws_on_title", using: :btree
 
   create_table "locks", force: :cascade do |t|
     t.integer  "user_id"
@@ -340,14 +370,23 @@ ActiveRecord::Schema.define(version: 20160229155920) do
     t.integer "debates_count",               default: 0
     t.integer "proposals_count",             default: 0
     t.integer "medidas_count",               default: 0
-    t.integer "enquiries_count",             default: 0
+    t.integer "laws_count",                  default: 0
   end
 
   add_index "tags", ["debates_count"], name: "index_tags_on_debates_count", using: :btree
-  add_index "tags", ["enquiries_count"], name: "index_tags_on_enquiries_count", using: :btree
+  add_index "tags", ["laws_count"], name: "index_tags_on_laws_count", using: :btree
   add_index "tags", ["medidas_count"], name: "index_tags_on_medidas_count", using: :btree
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
   add_index "tags", ["proposals_count"], name: "index_tags_on_proposals_count", using: :btree
+
+  create_table "territories", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "ccaa_id"
+    t.integer  "province_id"
+    t.integer  "town_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                                default: "",    null: false

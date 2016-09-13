@@ -13,9 +13,11 @@ en:
       settings: "General settings"
       debate_topics: "Debate topics"
       medida_topics: "Measure topics"
+      law_topics: "Law topics"
       hidden_proposals: "Hidden proposals"
       hidden_enquiries: "Hidden enquiries"
       hidden_debates: "Hidden debates"
+      hidden_laws: "Hidden laws"
       hidden_medidas: "Hidden measures"
       hidden_comments: "Hidden comments"
       hidden_users: "Hidden users"
@@ -78,6 +80,7 @@ en:
         hidden_enquiry: "Hidden enquiry"
         hidden_debate: "Hidden debate"
         hidden_medida: "Hidden measure"
+        hidden_law: "Hidden law"
         filter: "Filter"
         filters:
           all: "All"
@@ -94,6 +97,14 @@ en:
     medidas:
       index:
         title: Hidden measures
+        filter: Filter
+        filters:
+          all: All
+          with_confirmed_hide: Confirmed
+          without_confirmed_hide: Pending
+    laws:
+      index:
+        title: Hidden laws
         filter: Filter
         filters:
           all: All
@@ -177,6 +188,7 @@ en:
           on_enquiries: "Enquiries"
           on_debates: "Debates"
           on_medidas: "On Measures"
+          on_laws: "On Laws"
           on_comments: "Comments"
           on_users: "Users"
         actions:

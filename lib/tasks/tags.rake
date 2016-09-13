@@ -5,6 +5,7 @@ namespace :tags do
       tasks.each do |task|
         task.recalculate_custom_counter_for('Debate')
         task.recalculate_custom_counter_for('Medida')
+        task.recalculate_custom_counter_for('Law')
         task.recalculate_custom_counter_for('Proposal')
         task.recalculate_custom_counter_for('Enquiry')
       end

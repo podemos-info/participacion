@@ -30,4 +30,7 @@
 .ruby-gemset
 
 # Gemfile local machine file
-/Gemfile.lock
+Gemfile.lock
+
+# Ignore RubyMine IDE Files
+.idea
