@@ -5,7 +5,7 @@ es:
       enquiries: Preguntas
       flagged_debates: Debates
       flagged_medidas: Medidas
-      flagged_laws: Hilos
+      flagged_laws: Artículos
       flagged_comments: Comentarios
       users: Bloquear usuarios
     dashboard:
@@ -70,12 +70,12 @@ es:
         confirm: ¿Estás seguro?
     laws:
       index:
-        hide_laws: Ocultar hilos
+        hide_laws: Ocultar artículos
         block_authors: Bloquear autores
         ignore_flags: Marcar como revisados
         title: Ley de Participación
         headers:
-          law: Hilo
+          law: Artículo
           moderate: Moderar
         filter: Filtrar
         filters:

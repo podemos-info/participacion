@@ -134,6 +134,11 @@ class User < ActiveRecord::Base
     voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
   end
 
+  def law_votes(laws)
+    voted = votes.for_laws(laws)
+    voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
+  end
+
   def proposal_votes(proposals)
     voted = votes.for_proposals(proposals)
     voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }

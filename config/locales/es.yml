@@ -238,9 +238,9 @@ es:
     laws:
     index:
       title: "Ley de Participación"
-      start_law: "Propón una hilo"
+      start_law: "Propón un articulo"
       select_order: "Ordenar por"
-      select_order_long: "Estás viendo los hilos"
+      select_order_long: "Estás viendo los articulos"
       orders:
         confidence_score: "mejor valorados"
         hot_score: "más activos"
@@ -253,7 +253,7 @@ es:
       search_form:
         title: "Buscar"
         button: "Buscar"
-        placeholder: "Buscar hilos..."
+        placeholder: "Buscar articulos..."
       search_results:
         one: " que contiene '%{search_term}'"
         other: " que contienen '%{search_term}'"
@@ -268,10 +268,10 @@ es:
         one: "1 voto"
         other: "%{count} votos"
     form:
-      law_title: "Título del hilo"
-      law_text: "Texto inicial del hilo"
+      law_title: "Título del artículo"
+      law_text: "Texto inicial del artículo"
       tags_label: "Temas"
-      tags_instructions: "Etiqueta este hilo. Puedes elegir entre nuestras propuestas o introducir las que desees."
+      tags_instructions: "Etiqueta este artículo. Puedes elegir entre nuestras propuestas o introducir las que desees."
       tags_placeholder: "Escribe las etiquetas que desees separadas por coma (',')"
     show:
       back_link: "Volver"
@@ -284,10 +284,10 @@ es:
       login_to_comment: "Necesitas %{signin} para comentar."
       edit_law_link: "Editar"
       share: "Compartir"
-      flag: "Este hilo ha sido marcado como inapropiado por varios usuarios."
+      flag: "Este artículo ha sido marcado como inapropiado por varios usuarios."
     edit:
-      editing: "Editar hilo"
-      show_link: "Ver hilo"
+      editing: "Editar artículo"
+      show_link: "Ver artículo"
       back_link: "Volver"
       form:
         submit_button: "Guardar cambios"
