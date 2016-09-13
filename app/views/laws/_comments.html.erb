@@ -1,28 +1,30 @@
-<% cache [locale_and_user_status, commentable_cache_key(@law), @all_visible_comments, @all_visible_comments.map(&:author), @law.comments_count, @comment_flags] do %>
-  <section class="row-full comments">
-    <div class="row">
-      <div id="comments" class="small-12 column">
-        <h2>
-          <%= t("laws.show.comments_title") %>
-          <span>(<%= @law.comments_count %>)</span>
-        </h2>
+<% if !@all_visible_comments.nil? %>
+  <% cache [locale_and_user_status, commentable_cache_key(@law), @all_visible_comments, @all_visible_comments.map(&:author), @law.comments_count, @comment_flags] do %>
+    <section class="row-full comments">
+      <div class="row">
+        <div id="comments" class="small-12 column">
+          <h2>
+            <%= t("laws.show.comments_title") %>
+            <span>(<%= @law.comments_count %>)</span>
+          </h2>
 
-        <% if user_signed_in? %>
-        <%= render 'comments/form', {commentable: @law, parent_id: nil, toggeable: false} %>
-        <% else %>
-        <br>
+          <% if user_signed_in? %>
+          <%= render 'comments/form', {commentable: @law, parent_id: nil, toggeable: false} %>
+          <% else %>
+          <br>
 
-        <div class="alert-box radius info">
-          <%= t("laws.show.login_to_comment",
-              signin: link_to(t("votes.signin"), user_omniauth_authorize_path(:openid))).html_safe %>
-          </div>
-        <% end %>
+          <div class="alert-box radius info">
+            <%= t("laws.show.login_to_comment",
+                signin: link_to(t("votes.signin"), user_omniauth_authorize_path(:openid))).html_safe %>
+            </div>
+          <% end %>
 
-        <% @root_comments.each do |comment| %>
-          <%= render 'comments/comment', comment: comment  %>
-        <% end %>
-        <%= paginate @root_comments %>
+          <% @root_comments.each do |comment| %>
+            <%= render 'comments/comment', comment: comment  %>
+          <% end %>
+          <%= paginate @root_comments %>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  <% end %>
 <% end %>

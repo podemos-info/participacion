@@ -6,6 +6,7 @@ es:
   layouts:
     header:
       programa: "Programa"
+      laws: "Ley de participacion"
       external_link_transparency: "Transparencia"
       external_link_transparency_url: "https://transparencia.podemos.info/"
       external_link_opendata: "Datos abiertos"
@@ -235,12 +236,12 @@ es:
     update:
       form:
         submit_button: "Guardar cambios"
-    laws:
+  laws:
     index:
       title: "Ley de Participación"
-      start_law: "Propón un articulo"
+      start_law: "Propón un artículo"
       select_order: "Ordenar por"
-      select_order_long: "Estás viendo los articulos"
+      select_order_long: "Estás viendo los artículos"
       orders:
         confidence_score: "mejor valorados"
         hot_score: "más activos"
@@ -258,7 +259,7 @@ es:
         one: " que contiene '%{search_term}'"
         other: " que contienen '%{search_term}'"
     law:
-      law: "Ley de participación"
+      law: "Ley de Participación"
       comments:
         zero: "Sin comentarios"
         one: "1 Comentario"
@@ -621,6 +622,9 @@ es:
     programa:
       title: "Programa"
       description: "Conoce al detalle las propuestas del programa electoral de PODEMOS antes de votarlas en nuestro portal de Participación."
+    law:
+      title: "Ley de participación"
+      description: "Conoce al detalle las propuestas de la Ley de participación de PODEMOS antes de votarlas en nuestro portal de Participación."
     do:
       title: "Se hace"
       description: "Si la propuesta es aceptada mayoritariamente se asume como propia y se hace."

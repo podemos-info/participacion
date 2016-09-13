@@ -18,9 +18,11 @@ class String
   end
 end
 
-def tag_code (tag, fichero, f_locale)
+#def tag_code (tag, fichero, f_locale)
+def tag_code (tag, fichero)
   #f_locale= f_locale? f_locale : "programa"
-  fichero = fichero["es"][f_locale]
+  #fichero = fichero["es"][f_locale]
+  fichero = fichero["es"]["programa"]
   fichero.each do |clave, valor|
     tag = clave if valor == tag
   end
@@ -43,9 +45,9 @@ namespace :init do
           t.title = r[1]
           t.description = r[2].gsub("\n","<br>\n")
           t.author_id = 2
-          t.tag_list = [ tag_code(r[3], programa,"programa"), tag_code(r[4], programa,"programa") ]
+          t.tag_list = [ tag_code(r[3], programa), tag_code(r[4], programa) ]
         end .save!(:validate => false)
-        puts "ID: #{r[0].to_i} \t\t tag_list: '#{tag_code(r[3], programa,"programa")}', '#{tag_code(r[4], programa,"programa")}'"
+        puts "ID: #{r[0].to_i} \t\t tag_list: '#{tag_code(r[3], programa)}', '#{tag_code(r[4], programa)}'"
       end
     end
   end
@@ -53,7 +55,7 @@ end
 
 def tag_code2 (tag, fichero)
   #f_locale= f_locale? f_locale : "programa"
-  fichero = fichero["es"]["ley_de_participacion"]
+  fichero = fichero["es"]["ley"]
   fichero.each do |clave, valor|
     tag = clave if valor == tag
   end
@@ -67,8 +69,8 @@ namespace :ley do
     xlsx = Roo::Spreadsheet.open("lib/tasks/init/Ley.xlsx")
     sheet = xlsx.sheet(0)
     headers = { ID: "ID", titulo: "Título del Artículo", descripcion: "Literal", bloque: "Bloque", epigrafe: "Epígrafe", oficial: "Oficial" }
-    f_locale="ley_de_participacion"
-    fichero = YAML.load_file("config/locales/${f_locale}.es.yml")
+    f_locale="ley"
+    fichero = YAML.load_file("config/locales/#{f_locale}.es.yml")
     sheet.each do |r|
       if r[0].to_i > 0 && !r[1].nil?
         Law.new do |t|

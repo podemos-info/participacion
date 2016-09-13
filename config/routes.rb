@@ -46,7 +46,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :laws do
+  resources :laws, path: 'articulos' do
     member do
       post :vote
       put :flag

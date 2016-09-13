@@ -14,8 +14,8 @@ es:
         one: Medida
         other: Medidas
       law:
-        one: Ley
-        other: Leyes
+        one: Artículo
+        other: Artículos
       tag:
         one: Tema
         other: Temas
