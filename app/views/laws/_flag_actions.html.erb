@@ -1,0 +1,23 @@
+<span class="flag-content">
+  <% if show_flag_action? law %>
+  <a class="button" id="flag-expand-law-<%= law.id %>" data-dropdown="flag-drop-law-<%= law.id %>" aria-controls="flag-drop-law-<%= law.id %>" aria-expanded="false" title="<%= t('shared.flag') %>">
+      &nbsp;<i class="icon-flag flag-disable"></i>&nbsp;&nbsp;
+    </a>
+  <ul id="flag-drop-law-<%= law.id %>" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+      <li>
+        <%= link_to t('shared.flag'), flag_law_path(law), method: :put, remote: true, id: "flag-law-#{ law.id }" %>
+      </li>
+    </ul>
+  <% end %>
+
+  <% if show_unflag_action? law %>
+    <a class="button" id="unflag-expand-law-<%= law.id %>" data-dropdown="unflag-drop-law-<%= law.id %>" aria-controls="unflag-drop-law-<%= law.id %>" aria-expanded="false" title="<%= t('shared.unflag') %>">
+      &nbsp;<i class="icon-flag flag-active"></i>&nbsp;&nbsp;
+    </a>
+  <ul id="unflag-drop-law-<%= law.id %>" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+      <li>
+        <%= link_to t('shared.unflag'), unflag_law_path(law), method: :put, remote: true, id: "unflag-law-#{ law.id }" %>
+      </li>
+    </ul>
+  <% end %>
+</span>

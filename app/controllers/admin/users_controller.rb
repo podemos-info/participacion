@@ -11,6 +11,7 @@ class Admin::UsersController < Admin::BaseController
     @user = User.with_hidden.find(params[:id])
     @debates = @user.debates.with_hidden.page(params[:page])
     @medidas = @user.medidas.with_hidden.page(params[:page])
+    @laws = @user.laws.with_hidden.page(params[:page])
     @comments = @user.comments.with_hidden.page(params[:page])
   end
 

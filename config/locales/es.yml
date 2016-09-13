@@ -6,6 +6,7 @@ es:
   layouts:
     header:
       programa: "Programa"
+      laws: "Ley de participacion"
       external_link_transparency: "Transparencia"
       external_link_transparency_url: "https://transparencia.podemos.info/"
       external_link_opendata: "Datos abiertos"
@@ -232,6 +233,80 @@ es:
     create:
       form:
         submit_button: "Propón un medida"
+    update:
+      form:
+        submit_button: "Guardar cambios"
+  laws:
+    index:
+      title: "Ley de Participación"
+      start_law: "Propón un artículo"
+      select_order: "Ordenar por"
+      select_order_long: "Estás viendo los artículos"
+      orders:
+        confidence_score: "mejor valorados"
+        hot_score: "más activos"
+        created_at: "más nuevos"
+        most_commented: "más comentados"
+        random: "aleatorio"
+      filter_topic:
+        one: " con el tema '%{topic}'"
+        other: " con el tema '%{topic}'"
+      search_form:
+        title: "Buscar"
+        button: "Buscar"
+        placeholder: "Buscar articulos..."
+      search_results:
+        one: " que contiene '%{search_term}'"
+        other: " que contienen '%{search_term}'"
+    law:
+      law: "Ley de Participación"
+      comments:
+        zero: "Sin comentarios"
+        one: "1 Comentario"
+        other: "%{count} Comentarios"
+      votes:
+        zero: "Sin votos"
+        one: "1 voto"
+        other: "%{count} votos"
+    form:
+      law_title: "Título del artículo"
+      law_text: "Texto inicial del artículo"
+      tags_label: "Temas"
+      tags_instructions: "Etiqueta este artículo. Puedes elegir entre nuestras propuestas o introducir las que desees."
+      tags_placeholder: "Escribe las etiquetas que desees separadas por coma (',')"
+    show:
+      back_link: "Volver"
+      author_deleted: "Usuario eliminado"
+      comments_title: "Comentarios"
+      comments:
+        zero: "Sin comentarios"
+        one: "1 Comentario"
+        other: "%{count} Comentarios"
+      login_to_comment: "Necesitas %{signin} para comentar."
+      edit_law_link: "Editar"
+      share: "Compartir"
+      flag: "Este artículo ha sido marcado como inapropiado por varios usuarios."
+    edit:
+      editing: "Editar artículo"
+      show_link: "Ver artículo"
+      back_link: "Volver"
+      form:
+        submit_button: "Guardar cambios"
+    new:
+      start_new: "Empezar un hilo"
+      info: "Un hilo es un foro de discusión, no una propuesta ciudadana."
+      more_info: "Más información"
+      back_link: "Volver"
+      recommendations_title: "Recomendaciones para crear un hilo"
+      recommendation_one: "No escribas el título del hilo o frases enteras en mayúsculas. En internet eso se considera gritar. Y a nadie le gusta que le griten."
+      recommendation_two: "Cualquier hilo o comentario que implique una acción ilegal será eliminado, también los que tengan la intención de sabotear los espacios del hilo, todo lo demás está permitido."
+      recommendation_three: "Las críticas despiadadas son muy bienvenidas. Este es un espacio de pensamiento. Pero te recomendamos conservar la elegancia y la inteligencia. El mundo es mejor con ellas presentes."
+      recommendation_four: "Disfruta de este espacio, de las voces que lo llenan, también es tuyo."
+      form:
+        submit_button: "Propón un hilo"
+    create:
+      form:
+        submit_button: "Propón un hilo"
     update:
       form:
         submit_button: "Guardar cambios"
@@ -547,6 +622,9 @@ es:
     programa:
       title: "Programa"
       description: "Conoce al detalle las propuestas del programa electoral de PODEMOS antes de votarlas en nuestro portal de Participación."
+    law:
+      title: "Ley de participación"
+      description: "Conoce al detalle las propuestas de la Ley de participación de PODEMOS antes de votarlas en nuestro portal de Participación."
     do:
       title: "Se hace"
       description: "Si la propuesta es aceptada mayoritariamente se asume como propia y se hace."

@@ -1,0 +1,17 @@
+<div class="law-edit row">
+
+  <div class="small-12 column">
+    <%= link_to laws_path, class: "left back clear" do %>
+      <i class="icon-angle-left left"></i>
+    <%= t("laws.edit.back_link") %>
+    <% end %>
+
+    <div class="right">
+      <%= link_to t("laws.edit.show_link"), @law %>
+    </div>
+
+    <h1><%= t("laws.edit.editing") %></h1>
+
+    <%= render "form" %>
+  </div>
+</div>

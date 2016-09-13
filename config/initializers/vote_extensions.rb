@@ -7,6 +7,10 @@ ActsAsVotable::Vote.class_eval do
     where(votable_type: 'Medida', votable_id: medidas)
   end
 
+  def self.for_laws(laws)
+    where(votable_type: 'Law', votable_id: laws)
+  end
+
   def self.for_proposals(proposals)
     where(votable_type: 'Proposal', votable_id: proposals)
   end

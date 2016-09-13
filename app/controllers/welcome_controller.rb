@@ -20,6 +20,9 @@ class WelcomeController < ApplicationController
     medidas = Medida.sort_by_hot_score.page(params[:page]).per(10).for_render
     set_medida_votes(medidas)
 
+    laws = Law.sort_by_hot_score.page(params[:page]).per(10).for_render
+    set_law_votes(laws)
+
     proposals = Proposal.sort_by_hot_score.page(params[:page]).per(10).for_render
     set_proposal_votes(proposals)
 

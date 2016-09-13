@@ -46,6 +46,14 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :laws, path: 'articulos' do
+    member do
+      post :vote
+      put :flag
+      put :unflag
+    end
+  end
+
   resources :proposals, path: 'propuestas' do
     member do
       post :vote
@@ -115,6 +123,13 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :laws, only: :index do
+      member do
+        put :restore
+        put :confirm_hide
+      end
+    end
+
     resources :proposals, only: :index do
       member do
         put :restore
@@ -178,6 +193,15 @@ Rails.application.routes.draw do
     end
 
     resources :medidas, only: :index do
+      member do
+        put :hide
+      end
+      collection do
+        put :moderate
+      end
+    end
+
+    resources :laws, only: :index do
       member do
         put :hide
       end
