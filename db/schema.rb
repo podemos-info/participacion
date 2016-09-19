@@ -160,24 +160,6 @@ ActiveRecord::Schema.define(version: 20160910190345) do
   add_index "enquiries", ["summary"], name: "index_enquiries_on_summary", using: :btree
   add_index "enquiries", ["title"], name: "index_enquiries_on_title", using: :btree
 
-  create_table "enquiry_sets", force: :cascade do |t|
-    t.string   "front_title",           limit: 80
-    t.text     "front_text"
-    t.string   "button_text",           limit: 20
-    t.boolean  "automatic_redirection",            default: true
-    t.datetime "start_at"
-    t.datetime "finish_at"
-    t.integer  "max_chosen_enquiries",             default: 10
-    t.boolean  "manual_selection",                 default: false
-    t.string   "body_title",            limit: 80
-    t.text     "body_text"
-    t.integer  "territory_id"
-    t.integer  "author_id"
-    t.datetime "hidden_at"
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
-  end
-
   create_table "failed_census_calls", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "document_number"
