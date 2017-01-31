@@ -12,11 +12,13 @@ es:
     menu:
       settings: "Configuración global"
       debate_topics: "Temas de debate"
+      cca_topics: "Temas de asamblea"
       medida_topics: "Temas de medida"
       law_topics: "Temas de Ley"
       hidden_proposals: "Propuestas ocultas"
       hidden_enquiries: "Preguntas ocultas"
       hidden_debates: "Debates ocultos"
+      hidden_ccas: "Asambleas ocultas"
       hidden_medidas: "Medidas ocultas"
       hidden_laws: "Proposiciones ocultas"
       hidden_comments: "Comentarios ocultos"
@@ -67,6 +69,16 @@ es:
       index:
         title: "Temas de debate"
         add_tag: "Añade un nuevo tema de debate"
+      mark_as_featured: "Proponer tema al crear debate"
+      name:
+        placeholder: "Escribe el nombre del tema"
+      create: "Crear Tema"
+      update: "Actualizar Tema"
+      destroy: "Eliminar Tema"
+    tags_cca:
+      index:
+        title: "Temas de asamblea"
+        add_tag: "Añade un nuevo tema de asamblea"
       mark_as_featured: "Proponer tema al crear debate"
       name:
         placeholder: "Escribe el nombre del tema"

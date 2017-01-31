@@ -40,6 +40,7 @@
       <%= link_to t("layouts.header.proposals"), proposals_path, class: ("active" if current_page?(controller: "/proposals")) %>
       <%= link_to t("layouts.header.enquiries"), enquiries_path, class: ("active" if current_page?(controller: "/enquiries")) %>
       <%= link_to t("layouts.header.debates"), debates_path, class: ("active" if current_page?(controller: "/debates")) %>
+      <%= link_to t("layouts.header.ccas"), ccas_path, class: ("active" if current_page?(controller: "/ccas")) %>
       <!--%= link_to t("layouts.header.programa"), "http://unpaiscontigo.es/programa/", class: ("active" if current_page?(controller: "/medidas")) %-->
       <%= link_to t("layouts.header.laws"), laws_path, class: ("active" if current_page?(controller: "/laws")) %>
       <%= link_to t("layouts.header.more_information"), "/more_information", class: ("active" if current_page?("/more_information"))  %>
@@ -95,6 +96,10 @@
       <div class="show-for-medium-up small-12 medium-5 column text-center">
         <i class="icon-debates icon-home-big"></i>
         <i class="icon-debates icon-home-small"></i>
+      </div>
+      <div class="show-for-medium-up small-12 medium-5 column text-center">
+        <i class="icon-ccas icon-home-big"></i>
+        <i class="icon-ccas icon-home-small"></i>
       </div>
       <div class="show-for-medium-up small-12 medium-5 column text-center">
         <i class="icon-medidas icon-home-big"></i>

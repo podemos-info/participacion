@@ -10,6 +10,7 @@ class Activity < ActiveRecord::Base
   scope :on_proposals, -> { where(actionable_type: 'Proposal') }
   scope :on_enquiries, -> { where(actionable_type: 'Enquiry') }
   scope :on_debates, -> { where(actionable_type: 'Debate') }
+  scope :on_ccas, -> { where(actionable_type: 'Cca') }
   scope :on_medidas, -> { where(actionable_type: 'Medida') }
   scope :on_laws, -> { where(actionable_type: 'Law') }
   scope :on_users, -> { where(actionable_type: 'User') }

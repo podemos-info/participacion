@@ -1,0 +1,22 @@
+<div id="<%= dom_id(cca) %>" class="cca-featured small-12 column">
+  <div class="panel">
+    <div class="content small-12 medium-9 left">
+      <h3><%= link_to cca.title, cca %></h3>
+      <div class="info">
+        <span class="author">
+          <% if cca.author.hidden? %>
+          <%= t("ccas.show.author_deleted") %>
+          <% else %>
+          <%= cca.author.name %>
+          <% end %>
+        </span>
+        <span>&nbsp;&bull;&nbsp;</span>
+        <%= t("ccas.cca.supports", count: cca.total_votes) %>
+      </div>
+    </div>
+
+    <div id="<%= dom_id(cca) %>_votes" class="small-12 medium-3 left">
+      <!--%= render 'featured_votes', cca: cca % -->
+    </div>
+  </div>
+</div>

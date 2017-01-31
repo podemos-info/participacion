@@ -1,0 +1,56 @@
+<% cache [locale_and_user_status, cca, @cca_votes[cca.id]] do %>
+  <div id="<%= dom_id(cca) %>" class="cca clear">
+    <div class="panel">
+      <div class="row">
+
+        <div class="small-12 medium-9 column">
+          <div class="cca-content">
+            <span class="label-cca left"><%= t("ccas.cca.cca") %></span>
+            <i class="icon-ccas"></i>
+            <h3><%= link_to cca.title, cca %></h3>
+            <p class="cca-info">
+              <i class="icon-comments"></i>&nbsp;
+              <%= link_to t("ccas.cca.comments", count: cca.comments_count), cca_path(cca, anchor: "comments") %>
+              <span class="bullet">&nbsp;&bull;&nbsp;</span>
+              <%= l cca.created_at.to_date %>
+              <% if cca.author.hidden? %>
+                <span class="bullet">&nbsp;&bull;&nbsp;</span>
+                <span class="author">
+                  <%= t("ccas.show.author_deleted") %>
+                </span>
+              <% else %>
+                <span class="bullet">&nbsp;&bull;&nbsp;</span>
+                <span class="author">
+                  <%= cca.author.name %>
+                </span>
+                <% if cca.author.official? %>
+                  <span class="bullet">&nbsp;&bull;&nbsp;</span>
+                  <span class="label round level-<%= cca.author.official_level %>">
+                    <%= cca.author.official_position %>
+                  </span>
+                <% end %>
+              <% end %>
+
+              <% if cca.author.verified_organization? %>
+                <span class="bullet">&nbsp;&bull;&nbsp;</span>
+                <span class="label round is-association">
+                  <%= t("shared.collective") %>
+                </span>
+              <% end %>
+            </p>
+            <div class="cca-description">
+              <%= link_to cca.description, cca %>
+              <div class="truncate"></div>
+            </div>
+            <%= render "shared/tags", taggable: cca, limit: 5 %>
+          </div>
+        </div>
+
+        <div id="<%= dom_id(cca) %>_votes" class="small-12 medium-3 column text-center">
+            <%= render 'ccas/votes', cca: cca %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<% end %>

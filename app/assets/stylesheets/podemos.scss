@@ -133,7 +133,23 @@ form input[type]:not([type=submit]):not([type=file]):not([type=checkbox]),
     }
 }
 
-law-show .votes, .medida-show .votes, .debate-show .votes {
+.cca {
+    margin-bottom: 1rem; margin-top: 0.5rem;
+    .panel {
+        box-shadow: none; min-height: 0 !important; padding: 0;
+        .cca-content {@include titulo-temas;}
+        .icon-ccas {left: 5.2rem; top: 1rem;}
+    }
+    .votes {
+        background: #ddd; border-color: #ddd; padding-bottom: 3rem; padding-top: 3rem;
+        margin: 0;
+        &:after {content: none;}
+        .icon-like, .icon-unlike {background: #B37EB4; border:0; border-radius: 5px;}
+        .like span, .cca .votes .unlike span, .total-votes {color: #333; font-weight: bold;}
+    }
+}
+
+law-show .votes, .medida-show .votes, .debate-show .votes, .cca-show .votes {
     background: #ddd;
     .icon-like, .icon-unlike {background: #B37EB4; border:0; border-radius: 5px;}
     .total-votes {color: #333; font-weight: bold;}
@@ -201,6 +217,12 @@ law-show .votes, .medida-show .votes, .debate-show .votes {
 .debate .panel .icon-debates,
 .debate .panel .debate-info,
 .debate .panel .debate-info a,
+
+.cca .panel .label-debate,
+.cca .panel .icon-debates,
+.cca .panel .cca-info,
+.cca .panel .cca-info a,
+
 .medida .panel .label-medida,
 .medida .panel .icon-medidas,
 .medida .panel .medida-info,
@@ -216,6 +238,7 @@ law-show .votes, .medida-show .votes, .debate-show .votes {
 .enquiry-featured .panel .enquiry-info .author,
 .enquiry .panel .enquiry-info .author,
 .debate .panel .debate-info .author,
+.cca .panel .cca-info .author,
 .medida .panel .medida-info .author {color: #999;}
 .law .panel .law-info .author {color: #999;}
 
@@ -267,7 +290,7 @@ abbr, acronym {font-size: 100%; color: #333;}
     color: $morado-claro;
 }
 
-.proposal-info a:hover, .debate-info a:hover, .medida-info a:hover, .law-info a:hover, .enquiry-info a:hover {color: $morado !important;}
+.proposal-info a:hover, .debate-info a:hover, .dcca-info a:hover, .medida-info a:hover, .law-info a:hover, .enquiry-info a:hover {color: $morado !important;}
 .in-favor .button.expand {padding: 0.8rem 2rem;}
 .tag-cloud a .label.info {background: #aaa;}
 
@@ -277,6 +300,10 @@ button.success, .button.success {background: $verde;}
 button.success:hover, .button.success:hover {background: $morado-claro;}
 
 .debate-show .votes {
+    background: #ddd;
+}
+
+.cca-show .votes {
     background: #ddd;
 }
 
@@ -301,8 +328,8 @@ button.success:hover, .button.success:hover {background: $morado-claro;}
 
 .top-bar-section ul li > a.button {margin-top: 0; top: 0;}
 
-.debate-new a, .debate-edit a, .proposal-new a, .proposal-show .document-link a, .proposal-show .video-link a, .enquiry-new a, .enquiry-show .document-link a, .enquiry-show .video-link a, {color: $morado;}
-.debate-new a:hover, .debate-edit a:hover, .proposal-new a:hover, .proposal-show .document-link a:hover, .proposal-show .video-link a:hover, .enquiry-new a:hover, .enquiry-show .document-link a:hover, .enquiry-show .video-link a:hover, .page .menu a:hover, .page .text a:hover {color: $verde;}
+.debate-new a, .debate-edit a, .cca-new a, .cca-edit a, .proposal-new a, .proposal-show .document-link a, .proposal-show .video-link a, .enquiry-new a, .enquiry-show .document-link a, .enquiry-show .video-link a, {color: $morado;}
+.debate-new a:hover, .debate-edit a:hover, .cca-new a:hover, .cca-edit a:hover, .proposal-new a:hover, .proposal-show .document-link a:hover, .proposal-show .video-link a:hover, .enquiry-new a:hover, .enquiry-show .document-link a:hover, .enquiry-show .video-link a:hover, .page .menu a:hover, .page .text a:hover {color: $verde;}
 .page .text a, .page .menu a {color: $morado-claro;}
 
 .menu-programa {
@@ -346,6 +373,7 @@ footer {
 .proposal-new .icon-proposals,
 .enquiry-new .icon-enquiries,
 .debate-new .icon-debates {display: none;}
+.cca-new .icon-ccas {display: none;}
 
 [class*='bloque1-epi'], [class*='bloque2-epi'], [class*='bloque3-epi'],
 [class*='bloque4-epi'], [class*='bloque5-epi'], [class*='bloque6-epi']
@@ -417,6 +445,11 @@ ul.pagination li.current button,
 .enquiry .supports .not-logged,
 .debate-featured .votes .not-logged,
 .debate .votes .not-logged {
+    background: $verde;
+}
+
+.cca-featured .votes .not-logged,
+.cca .votes .not-logged {
     background: $verde;
 }
 

@@ -9,9 +9,11 @@ Setting.create(key: 'official_level_3_name', value: 'Círculos')
 Setting.create(key: 'official_level_4_name', value: 'Moderadores')
 Setting.create(key: 'official_level_5_name', value: 'Entrevistados')
 Setting.create(key: 'max_ratio_anon_votes_on_debates', value: '50')
+Setting.create(key: 'max_ratio_anon_votes_on_ccas', value: '50')
 Setting.create(key: 'max_ratio_anon_votes_on_medidas', value: '50')
 Setting.create(key: 'max_ratio_anon_votes_on_laws', value: '50')
 Setting.create(key: 'max_votes_for_debate_edit', value: '1000')
+Setting.create(key: 'max_votes_for_cca_edit', value: '1000')
 Setting.create(key: 'max_votes_for_proposal_edit', value: '1000')
 Setting.create(key: 'proposal_code_prefix', value: 'MAD')
 Setting.create(key: 'votes_for_proposal_success', value: '100')
@@ -81,6 +83,22 @@ tags = Faker::Lorem.words(25)
                           tag_list: tags.sample(3).join(','),
                           terms_of_service: "1")
   puts "    #{debate.title}"
+end
+
+puts "Creating Asambleas"
+
+tags = Faker::Lorem.words(25)
+
+(1..30).each do |i|
+  author = User.reorder("RANDOM()").first
+  description = "<p>#{Faker::Lorem.paragraphs.join('</p><p>')}</p>"
+  cca = Cca.create!(author: author,
+                          title: Faker::Lorem.sentence(3).truncate(60),
+                          created_at: rand((Time.now - 1.week) .. Time.now),
+                          description: description,
+                          tag_list: tags.sample(3).join(','),
+                          terms_of_service: "1")
+  puts "    #{cca.title}"
 end
 
 puts "Creating Medidas"
@@ -167,6 +185,17 @@ puts "Commenting Debates"
                   body: Faker::Lorem.sentence)
 end
 
+puts "Commenting Asambleas"
+
+(1..100).each do |i|
+  author = User.reorder("RANDOM()").first
+  cca = Cca.reorder("RANDOM()").first
+  Comment.create!(user: author,
+                  created_at: rand(cca.created_at .. Time.now),
+                  commentable: cca,
+                  body: Faker::Lorem.sentence)
+end
+
 puts "Commenting Medidas"
 
 (1..100).each do |i|
@@ -226,13 +255,20 @@ puts "Commenting Comments"
 end
 
 
-puts "Voting Debates, Medidas, Artílos, Proposals, Enquiries & Comments"
+puts "Voting Debates,Asambleas, Medidas, Artílos, Proposals, Enquiries & Comments"
 
 (1..100).each do |i|
   voter  = not_org_users.reorder("RANDOM()").first
   vote   = [true, false].sample
   debate = Debate.reorder("RANDOM()").first
   debate.vote_by(voter: voter, vote: vote)
+end
+
+(1..100).each do |i|
+  voter  = not_org_users.reorder("RANDOM()").first
+  vote   = [true, false].sample
+  cca = Cca.reorder("RANDOM()").first
+  cca.vote_by(voter: voter, vote: vote)
 end
 
 (1..100).each do |i|
@@ -268,12 +304,18 @@ end
   enquiry.vote_by(voter: voter, vote: true)
 end
 
-puts "Flagging Debates, Medidas, Artículos & Comments"
+puts "Flagging Debates,Asambleas, Medidas, Artículos & Comments"
 
 (1..40).each do |i|
   debate = Debate.reorder("RANDOM()").first
   flagger = User.where(["users.id <> ?", debate.author_id]).reorder("RANDOM()").first
   Flag.flag(flagger, debate)
+end
+
+(1..40).each do |i|
+  cca = Cca.reorder("RANDOM()").first
+  flagger = User.where(["users.id <> ?", debate.author_id]).reorder("RANDOM()").first
+  Flag.flag(flagger, cca)
 end
 
 (1..40).each do |i|
@@ -306,28 +348,31 @@ end
   Flag.flag(flagger, enquiry)
 end
 
-puts "Ignoring flags in Debates, Medidas, Artículos,Enquiries, comments & proposals"
+puts "Ignoring flags in Debates, Asambleas, Medidas, Artículos,Enquiries, comments & proposals"
 
 Debate.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
+Cca.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
 Medida.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
 Law.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
 Comment.flagged.reorder("RANDOM()").limit(30).each(&:ignore_flag)
 Proposal.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
 Enquiry.flagged.reorder("RANDOM()").limit(10).each(&:ignore_flag)
 
-puts "Hiding debates, medidas, artículos, enquiries, comments & proposals"
+puts "Hiding debates, asambleas, medidas, artículos, enquiries, comments & proposals"
 
 Comment.with_hidden.flagged.reorder("RANDOM()").limit(30).each(&:hide)
 Debate.with_hidden.flagged.reorder("RANDOM()").limit(5).each(&:hide)
+Cca.with_hidden.flagged.reorder("RANDOM()").limit(5).each(&:hide)
 Medida.with_hidden.flagged.reorder("RANDOM()").limit(5).each(&:hide)
 Law.with_hidden.flagged.reorder("RANDOM()").limit(5).each(&:hide)
 Proposal.with_hidden.flagged.reorder("RANDOM()").limit(10).each(&:hide)
 Enquiry.with_hidden.flagged.reorder("RANDOM()").limit(10).each(&:hide)
 
-puts "Confirming hiding in debates, medidas, artículos, enquiries, comments & proposals"
+puts "Confirming hiding in debates, asambleas, medidas, artículos, enquiries, comments & proposals"
 
 Comment.only_hidden.flagged.reorder("RANDOM()").limit(10).each(&:confirm_hide)
 Debate.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)
+Cca.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)
 Medida.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)
 Law.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)
 Proposal.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)

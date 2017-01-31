@@ -25,6 +25,13 @@
       <% end %>
     </li>
 
+     <li <%= "class=active" if controller_name == "ccas" %>>
+      <%= link_to moderation_ccas_path do %>
+        <i class="icon-ccas"></i>
+        <%= t('moderation.menu.flagged_ccas') %>
+      <% end %>
+    </li>
+
     <li <%= "class=active" if controller_name == "medidas" %>>
       <%= link_to moderation_medidas_path do %>
         <i class="icon-medidas"></i>

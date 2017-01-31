@@ -15,8 +15,8 @@ class Moderation::UsersController < Moderation::BaseController
 
   def hide
     block_user
-
     redirect_to debates_path
+    #redirect_to ccas_path
   end
 
   private

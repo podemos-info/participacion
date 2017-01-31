@@ -1,0 +1,49 @@
+<%= form_for(@cca) do |f| %>
+  <%= render 'shared/errors', resource: @cca %>
+
+  <div class="row">
+    <div class="small-12 column">
+      <%= f.label :title, t("ccas.form.cca_title") %>
+      <%= f.text_field :title, maxlength: Cca.title_max_length, placeholder: t("ccas.form.cca_title"), label: false %>
+    </div>
+
+    <div class="ckeditor small-12 column">
+      <%= f.label :description, t("ccas.form.cca_text") %>
+      <%= f.cktext_area :description, maxlength: Cca.description_max_length, ckeditor: { language: I18n.locale }, label: false %>
+    </div>
+
+    <div class="small-12 column">
+      <%= f.label :tag_list, t("ccas.form.tags_label") %>
+      <p class="note"><%= t("ccas.form.tags_instructions") %></p>
+      <span class="tags">
+        <% @featured_tags.each do |tag| %>
+          <a class="js-add-tag-link"><%= tag.name %></a>
+        <% end %>
+      </span>
+      <%= f.text_field :tag_list, value: @cca.tag_list.to_s, label: false, placeholder: t("ccas.form.tags_placeholder"), class: 'js-tag-list' %>
+    </div>
+
+    <div class="small-12 column">
+      <% if @cca.new_record? %>
+        <%= f.label :terms_of_service do %>
+          <%= f.check_box :terms_of_service, label: false %>
+          <span class="checkbox">
+            <%= t("form.accept_terms",
+                policy: link_to(t("form.policy"), "/privacy", target: "blank"),
+                conditions: link_to(t("form.conditions"), "/conditions", target: "blank")).html_safe %>
+          </span>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="small-12 column">
+      <%= f.simple_captcha input_html: { required: false } %>
+    </div>
+
+    <div class="actions small-12 column">
+      <%= f.submit(class: "button radius", value: t("ccas.#{action_name}.form.submit_button")) %>
+    </div>
+  </div>
+<% end %>
+
+

@@ -23,6 +23,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://plaza.podemos.info/Ccas</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://plaza.podemos.info/medidas</loc>
     <priority>0.7</priority>
   </url>

@@ -1,5 +1,5 @@
 <% provide :title do %><%= t('welcome.signed_in_home_title') %><% end %>
-<% cache [locale_and_user_status, @list, @debate_votes, @proposal_votes,@enquiry_votes, @paginator.current_page, @paginator.total_pages] do %>
+<% cache [locale_and_user_status, @list, @debate_votes,@cca_votes, @proposal_votes,@enquiry_votes, @paginator.current_page, @paginator.total_pages] do %>
   <section role="main">
     <div class="wrap row">
       <div id="activities" class="debates-list small-12 medium-9 column">
@@ -26,6 +26,7 @@
           <%= link_to t("enquiries.index.start_enquiry"), new_enquiry_path, class: 'button radius expand' %>
           <% end %>
           <%= link_to t("debates.index.start_debate"), new_debate_path, class: 'button radius expand' %>
+           <%= link_to t("ccas.index.start_cca"), new_cca_path, class: 'button radius expand' %>
         </aside>
       </div>
     </div>

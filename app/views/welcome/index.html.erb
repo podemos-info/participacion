@@ -1,4 +1,4 @@
-<% cache [locale_and_user_status, @featured_debates, @featured_medidas, @featured_laws, @featured_proposals, @featured_enquiries, 'featured'] do %>
+<% cache [locale_and_user_status, @featured_debates,@featured_ccas, @featured_medidas, @featured_laws, @featured_proposals, @featured_enquiries, 'featured'] do %>
   <section role="main">
     <div class="row">
         <div class="small-12 medium-4 column">
@@ -12,6 +12,10 @@
         <div class="small-12 medium-4 column">
             <h3><%= t("welcome.debates.title") %></h3>
             <p><%= t("welcome.debates.description") %></p>
+        </div>
+         <div class="small-12 medium-4 column">
+            <h3><%= t("welcome.ccas.title") %></h3>
+            <p><%= t("welcome.ccas.description") %></p>
         </div>
         <!--div class="small-12 medium-4 column">
             <h3><%= t("welcome.programa.title") %></h3>

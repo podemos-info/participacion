@@ -4,6 +4,7 @@ module Abilities
 
     def initialize(user)
       can :read, Debate
+      can :read, Cca
       can :read, Medida
       can :read, Law
       can :read, Proposal

@@ -4,6 +4,7 @@ en:
       activity: Activity
       comment: Comment
       debate: Debate
+      cca: Asamblea
       medida: Medida
       law: Law
       proposal: Proposal
@@ -17,6 +18,11 @@ en:
         body: Comment
         user: User
       debate:
+        author: Author
+        description: Opinion
+        terms_of_service: Terms of service
+        title: Title
+      cca:
         author: Author
         description: Opinion
         terms_of_service: Terms of service

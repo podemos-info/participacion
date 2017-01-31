@@ -4,6 +4,10 @@ module VotesHelper
     debate.likes.percent_of(debate.total_votes)
   end
 
+  def cca_percentage_of_likes(cca)
+    cca.likes.percent_of(cca.total_votes)
+  end
+
   def medida_percentage_of_likes(medida)
     medida.likes.percent_of(medida.total_votes)
   end
@@ -18,6 +22,15 @@ module VotesHelper
       debate_percentage_of_likes(debate).to_s + "%"
     elsif vote == 'dislikes'
       (100 - debate_percentage_of_likes(debate)).to_s + "%"
+    end
+  end
+
+  def votes_cca_percentage(vote, cca)
+    return "0%" if cca.total_votes == 0
+    if vote == 'likes'
+      cca_percentage_of_likes(cca).to_s + "%"
+    elsif vote == 'dislikes'
+      (100 - cca_percentage_of_likes(cca)).to_s + "%"
     end
   end
 

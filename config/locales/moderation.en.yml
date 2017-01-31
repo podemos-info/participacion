@@ -4,6 +4,7 @@ en:
       proposals: Proposals
       enquiries: Enquiries
       flagged_debates: Debates
+      flagged_ccas: Asambleas
       flagged_medidas: Measures
       flagged_laws: Laws
       flagged_comments: Comments
@@ -49,7 +50,25 @@ en:
           created_at: Newest
           flags: Most flagged
         confirm: Are you sure?
-
+    ccas:
+      index:
+        hide_debates: Hide Asambleas
+        block_authors: Block authors
+        ignore_flags: Ignore flags
+        title: Asamblea Ciudadana CM
+        headers:
+          cca: Asamblea
+          moderate: Moderate
+        filter: Filter
+        filters:
+          all: All
+          pending_flag_review: Pending
+          with_ignored_flag: Ignored
+        order: Order
+        orders:
+          created_at: Newest
+          flags: Most flagged
+        confirm: Are you sure?
     medidas:
       index:
         hide_medidas: Hide measures

@@ -15,6 +15,9 @@ Setting.create(key: 'official_level_5_name', value: 'Entrevistados')
 # Max percentage of allowed anonymous votes on a debate
 Setting.create(key: 'max_ratio_anon_votes_on_debates', value: '50')
 
+# Max percentage of allowed anonymous votes on a cca
+Setting.create(key: 'max_ratio_anon_votes_on_ccas', value: '50')
+
 # Max votes where a debate is still editable
 Setting.create(key: 'max_votes_for_debate_edit', value: '1000')
 

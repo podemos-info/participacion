@@ -5,6 +5,7 @@ class Admin::StatsController < Admin::BaseController
 
     @visits = Visit.count
     @debates = Debate.with_hidden.count
+    @ccas = Cca.with_hidden.count
     @medidas = Medida.with_hidden.count
     @laws = Law.with_hidden.count
     @proposals = Proposal.with_hidden.count
@@ -12,6 +13,7 @@ class Admin::StatsController < Admin::BaseController
     @comments = Comment.with_hidden.count
 
     @debate_votes = Vote.where(votable_type: 'Debate').count
+    @cca_votes = Vote.where(votable_type: 'Cca').count
     @proposal_votes = Vote.where(votable_type: 'Proposal').count
     @enquiry_votes = Vote.where(votable_type: 'Enquiry').count
     @comment_votes = Vote.where(votable_type: 'Comment').count

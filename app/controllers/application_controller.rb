@@ -79,6 +79,10 @@ class ApplicationController < ActionController::Base
       @debate_votes = current_user ? current_user.debate_votes(debates) : {}
     end
 
+    def set_cca_votes(ccas)
+      @cca_votes = current_user ? current_user.cca_votes(ccas) : {}
+    end
+
     def set_medida_votes(medidas)
       @medida_votes = current_user ? current_user.medida_votes(medidas) : {}
     end

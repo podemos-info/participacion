@@ -29,6 +29,7 @@
 //= require location_changer
 //= require moderator_comment
 //= require moderator_debates
+//= require moderator_ccas
 //= require moderator_medidas
 //= require moderator_laws
 //= require moderator_proposals

@@ -1,0 +1,23 @@
+<span class="flag-content">
+  <% if show_flag_action? cca %>
+    <a class="button" id="flag-expand-cca-<%= cca.id %>" data-dropdown="flag-drop-cca-<%= cca.id %>" aria-controls="flag-drop-cca-<%= cca.id %>" aria-expanded="false" title="<%= t('shared.flag') %>">
+      &nbsp;<i class="icon-flag flag-disable"></i>&nbsp;&nbsp;
+    </a>
+    <ul id="flag-drop-cca-<%= cca.id %>" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+      <li>
+        <%= link_to t('shared.flag'), flag_cca_path(cca), method: :put, remote: true, id: "flag-cca-#{ cca.id }" %>
+      </li>
+    </ul>
+  <% end %>
+
+  <% if show_unflag_action? cca %>
+    <a class="button" id="unflag-expand-cca-<%= cca.id %>" data-dropdown="unflag-drop-cca-<%= cca.id %>" aria-controls="unflag-drop-cca-<%= cca.id %>" aria-expanded="false" title="<%= t('shared.unflag') %>">
+      &nbsp;<i class="icon-flag flag-active"></i>&nbsp;&nbsp;
+    </a>
+    <ul id="unflag-drop-cca-<%= cca.id %>" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+      <li>
+        <%= link_to t('shared.unflag'), unflag_cca_path(cca), method: :put, remote: true, id: "unflag-cca-#{ cca.id }" %>
+      </li>
+    </ul>
+  <% end %>
+</span>

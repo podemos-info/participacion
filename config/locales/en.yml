@@ -32,6 +32,7 @@ en:
       #highlights: "Highlights"
       more_information: "More information"
       debates: "Debates"
+      ccas: "Asambleas"
       medidas: "Measures"
       laws: "Laws"
       proposals: "Proposals"
@@ -75,6 +76,7 @@ en:
     conditions: "Terms and conditions of use"
     user: "Account"
     debate: "Debate"
+    cca: "Asamblea"
     proposal: "Proposal"
     enquiry: "Enquiry"
     verification::sms: "Telephone"
@@ -156,6 +158,81 @@ en:
     create:
       form:
         submit_button: "Start a debate"
+    update:
+      form:
+        submit_button: "Save changes"
+  asambleas:
+    index:
+      title: "Asambleas"
+      featured_debates_html: "Featured<br>Asambleas"
+      start_cca: "Start a asamblea"
+      select_order: "Order by"
+      select_order_long: "You are viewing asambleas according to:"
+      orders:
+        confidence_score: "highest rated"
+        hot_score: "most active"
+        created_at: "newest"
+        most_commented: "most commented"
+        random: "random"
+      filter_topic:
+        one: " with topic '%{topic}'"
+        other: " with topic '%{topic}'"
+      search_form:
+        title: "Search"
+        button: "Search"
+        placeholder: "Search asambleas..."
+      search_results:
+        one: " containing the term '%{search_term}'"
+        other: " containing the term '%{search_term}'"
+    cca:
+      cca: "Asamblea"
+      comments:
+        zero: "No comments"
+        one: "1 comment"
+        other: "%{count} comments"
+      votes:
+        zero: "No votes"
+        one: "1 vote"
+        other: "%{count} votes"
+    form:
+      cca_title: "Asamblea title"
+      cca_text: "Initial asamblea text"
+      tags_label: "Topics"
+      tags_instructions: "Tag this asamblea. You can choose from our suggestions or enter your own."
+      tags_placeholder: "Enter the tags you would like to use, separated by commas (',')"
+    show:
+      back_link: "Go back"
+      author_deleted: "User deleted"
+      comments_title: "Comments"
+      comments:
+        zero: "No comments"
+        one: "1 comment"
+        other: "%{count} comments"
+      login_to_comment: "You must %{signin} or %{signup} to leave a comment."
+      edit_debate_link: "Edit"
+      share: "Share"
+      flag: "This asamblea has been flagged as inappropriate by several users."
+    edit:
+      editing: "Edit asamblea"
+      show_link: "View asamblea"
+      back_link: "Go back"
+      form:
+        submit_button: "Save changes"
+    new:
+      start_new: "Start a asamblea"
+      info: "A asamblea is a discussion forum, not a citizen proposal. Very soon we will be opening the citizen proposal section, where anyone will be able to present a proposal which, if they receive support, will be implemented by the City Council."
+      more_info: "More information"
+      back_link: "Go back"
+      recommendations_title: "Recommendations for creating a asamblea"
+      recommendation_one: "Do not use capital letters for the debate title or for whole sentences. On the internet, this is considered shouting. And nobody likes being shouted at."
+      recommendation_two: "Any asamblea or comment suggesting illegal action will be deleted, as well as those intending to sabotage the asamblea spaces. Anything else is allowed."
+      recommendation_three: "Ruthless criticism is very welcome. This is a space for reflection. But we recommend that you stick to elegance and intelligence. The world is a better place with these virtues in it."
+      recommendation_four: "Enjoy this space and the voices that fill it. It belongs to you too."
+      form:
+        submit_button: "Start a asamblea"
+    create:
+      form:
+        submit_button: "Start a asamblea"
     update:
       form:
         submit_button: "Save changes"

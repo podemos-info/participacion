@@ -1,4 +1,4 @@
-// Table of Contents - Styles for debates, proposals and enquiries
+// Table of Contents - Styles for debates, ccas, proposals and enquiries
 //
 // 01. Votes and supports
 // 02. New participation
@@ -6,6 +6,7 @@
 // 04. List participation
 // 05. Featured proposals
 // 06. Featured debates
+// 07. Featured ccas
 //
 
 // 01. Votes and supports
@@ -340,6 +341,73 @@
   }
 }
 
+
+
+.cca-new, .cca-edit, .proposal-new, .proposal-edit,  {
+  background: white;
+  padding-top: rem-calc(24);
+
+  .back {
+    @include back;
+  }
+
+  h1 {
+    clear: both;
+    font-size: rem-calc(36);
+    font-weight: bold;
+    line-height: $line-height*2;
+    margin-bottom: rem-calc(24);
+  }
+
+  .icon-ccas {
+    color: $cca;
+    font-size: rem-calc(60);
+    line-height: $line-height;
+    opacity: .5;
+  }
+
+  .icon-proposals {
+    color: $proposals;
+    font-size: rem-calc(50);
+    line-height: $line-height;
+    opacity: .5;
+  }
+
+  h2 {
+    clear: both;
+    font-size: rem-calc(20);
+    font-weight: bold;
+    line-height: $line-height;
+    margin: 0;
+  }
+
+  .recommendations {
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: rem-calc(24);
+
+    li {
+      font-size: rem-calc(12);
+      margin: rem-calc(12) 0;
+
+      &:before {
+        content: "l ";
+        font-family: "icons" !important;
+      }
+    }
+  }
+}
+
+.cca-new, .cca-edit {
+
+  .recommendations li:before {
+    color: $ccas;
+  }
+}
+
+
+
+
 .proposal-new, .proposal-edit {
 
   .recommendations li:before {
@@ -545,6 +613,205 @@
     }
   }
 }
+
+
+.cca-show, .proposal-show {
+  padding-top: rem-calc(12);
+
+  .back, .icon-angle-left {
+    @include back;
+  }
+
+  h1 {
+    clear: both;
+    font-size: rem-calc(30);
+    font-weight: bold;
+    margin: 0;
+    text-transform: lowercase;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  h4 {
+    margin: rem-calc(12) 0;
+  }
+
+  .edit-cca, .edit-proposal {
+    margin-bottom: 0;
+  }
+
+  .cca-info, .proposal-info {
+    clear: both;
+    color: $text-medium;
+    font-weight: lighter;
+    line-height: $line-height*2;
+    text-align: justify;
+
+    a {
+        color: $text-medium;
+    }
+
+    p {
+      font-size: rem-calc(15);
+      line-height: $line-height;
+      margin-bottom: 0;
+    }
+  }
+
+  .cca-description, .proposal-description {
+    font-size: rem-calc(15);
+    line-height: rem-calc(30);
+  }
+
+  ul, ol {
+    margin: rem-calc(12) 0;
+
+    li {
+      font-size: rem-calc(15);
+      margin-bottom: rem-calc(15);
+    }
+  }
+
+  .author-photo {
+    line-height: $line-height*2;
+    margin-right: rem-calc(6);
+    vertical-align: middle;
+    width: 32px;
+  }
+
+  .author {
+    font-weight: bold;
+
+    a {
+      color: $link !important;
+
+      &:hover {
+        color: $link-hover !important;
+      }
+    }
+  }
+
+  aside {
+
+    h3 {
+      border-top: 2px solid $brand;
+      display: inline-block;
+      font-size: rem-calc(16);
+      margin: -1px 0 rem-calc(12);
+      padding-top: rem-calc(6);
+      text-transform: uppercase;
+    }
+  }
+
+  blockquote {
+    margin-top: rem-calc(12);
+    padding-top: 0;
+    font-size: rem-calc(15);
+    line-height: rem-calc(30);
+  }
+
+  .document-link, .video-link {
+    border: 1px solid $border;
+    display: block;
+    margin-top: rem-calc(12);
+    padding: rem-calc(12);
+    position: relative;
+
+    a {
+      padding-left: rem-calc(24);
+    }
+
+    :before {
+      color: #007BB7;
+      content: "G";
+      font-family: "icons" !important;
+      font-size: rem-calc(24);
+      left: rem-calc(6);
+      padding-top: rem-calc(3);
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .video-link {
+
+    :before {
+      color: #CC181E;
+      content: "D";
+    }
+  }
+
+  .votes {
+    @include votes;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+
+    .total-votes {
+      display: block;
+      float: none;
+      line-height: $line-height;
+    }
+
+    .not-logged {
+      line-height: $line-height;
+      padding: rem-calc(24);
+    }
+
+    @media (min-width: $small-breakpoint  + em-calc(1)) and (max-width:$medium-breakpoint) {
+      .in-favor, .against {
+        text-align: left;
+        width: rem-calc(100);
+      }
+    }
+
+    .divider {
+      display: none;
+    }
+
+    @media (min-width: $medium-breakpoint) {
+      .divider {
+        display: inline-block;
+      }
+    }
+  }
+
+  .supports {
+    @include supports;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+
+    .total-supports {
+      display: block;
+      float: none;
+      line-height: $line-height;
+    }
+
+    .not-logged {
+      line-height: $line-height;
+      padding: rem-calc(24);
+    }
+  }
+
+  .leave-comment {
+    display: inline-block;
+    margin-top: rem-calc(24);
+  }
+
+  .tags {
+    display: block;
+    margin: rem-calc(24) 0;
+
+    a {
+      margin-right: rem-calc(6);
+    }
+  }
+}
+
+
 
 .bullet {
   color: $border;
@@ -781,6 +1048,240 @@
     }
   }
 }
+
+
+.ccas-list, .proposals-list {
+
+  @media (min-width: $small-breakpoint) {
+    margin-bottom: rem-calc(48);
+  }
+}
+
+.cca, .proposal {
+  margin-bottom: 0;
+  margin-top: 0;
+
+  .panel {
+    background: white;
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 0;
+    box-shadow: 0px 1px 3px 0 $border;
+    margin-bottom: rem-calc(12);
+    min-height: rem-calc(192);
+    padding: rem-calc(12) rem-calc(12) 0 rem-calc(12);
+
+    @media (min-width: $small-breakpoint) {
+      margin-bottom: rem-calc(-1);
+      padding-bottom: rem-calc(12);
+    }
+
+    .label-cca, .label-proposal {
+      background: none;
+      clear: both;
+      display: block;
+      font-size: rem-calc(12);
+      font-weight: bold;
+      line-height: $line-height;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-top: 0;
+      text-transform: uppercase;
+    }
+
+    .label-cca {
+      color: $ccas;
+    }
+
+    .label-proposal {
+      color: $proposals;
+    }
+
+    h3 {
+      font-weight: bold;
+      margin: 0;
+      min-height: rem-calc(48);
+
+      a {
+        clear: both;
+        color: $text;
+        display: block;
+        font-size: rem-calc(16);
+        line-height: $line-height;
+        text-transform: lowercase;
+
+        &:first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .cca-content, .proposal-content {
+      margin: 0;
+      min-height: rem-calc(180);
+
+      .tags {
+        display: block;
+      }
+    }
+
+    .icon-ccas, .icon-proposals {
+      font-size: rem-calc(18);
+      line-height: $line-height;
+      position: absolute;
+      top: 0;
+    }
+
+    .icon-ccas {
+      color: $ccas;
+      left: rem-calc(60);
+    }
+
+    .icon-proposals {
+      color: $proposals;
+      left: rem-calc(88);
+    }
+
+    .cca-info, .proposal-info {
+      color: $text-medium;
+      font-weight: lighter;
+      margin-bottom: 0;
+
+      .icon-comments {
+        font-size: rem-calc(16);
+        vertical-align: top;
+      }
+
+      a {
+        color: $text-medium;
+      }
+    }
+
+    .cca-description, .proposal-description {
+      color: $text;
+      font-size: rem-calc(13);
+      height: rem-calc(72);
+      line-height: $line-height;
+      margin-bottom: rem-calc(12);
+      margin-top: 0;
+      overflow: hidden;
+      position: relative;
+
+      a {
+        color: $text;
+      }
+
+      ul, ol {
+
+        li {
+          font-size: rem-calc(13);
+          margin-bottom: rem-calc(12);
+        }
+      }
+    }
+
+    .truncate {
+      background: image-url('truncate.png');
+      background-repeat: repeat-x;
+      bottom: 0;
+      height: 24px;
+      position: absolute;
+      width: 100%;
+    }
+
+    p {
+      color: $text;
+      font-size: rem-calc(14);
+      line-height: $line-height;
+      margin-bottom: rem-calc(12);
+
+      &.cca-info {
+        font-size: rem-calc(13);
+      }
+    }
+  }
+
+  .not-logged {
+    line-height: $line-height;
+    padding-top: rem-calc(24);
+  }
+
+  .anonymous-votes, .organizations-votes {
+    padding-top: rem-calc(24);
+  }
+
+  .divider {
+    display: none;
+  }
+
+  @media (min-width: $medium-breakpoint) {
+    .divider {
+      display: inline-block;
+    }
+  }
+}
+
+.cca {
+
+  .votes {
+    @include votes;
+    border: 1px solid $votes-border;
+    margin: 0 rem-calc(-12);
+
+    @media (min-width: $small-breakpoint) {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      margin: 0 rem-calc(-25) 0 rem-calc(12);
+    }
+
+    &:after {
+      content: none;
+      position: absolute;
+      display: block;
+      border-style: solid;
+      border-color: #166387 transparent transparent transparent;
+      bottom: rem-calc(-14);
+      border-left-width: 0;
+      border-right-color: transparent;
+      right: rem-calc(-1);
+      border-width: 1em 1em 0 0;
+
+      @media (min-width: $small-breakpoint) {
+        content: "";
+      }
+    }
+
+    .total-votes {
+      display: inline-block;
+      line-height: $line-height;
+      margin-left: rem-calc(24);
+      padding-top: rem-calc(12);
+      vertical-align: top;
+
+      @media (min-width: $small-breakpoint) {
+        display: block;
+        float: none;
+        line-height: $line-height*2;
+        margin-left: 0;
+        padding-top: 0;
+      }
+    }
+
+    @media (min-width: $small-breakpoint) {
+      .like, .unlike {
+
+        span {
+          display: block;
+          line-height: $line-height/2;
+        }
+      }
+    }
+  }
+}
+
+
+
+
 
 .proposal {
 
@@ -1178,6 +1679,184 @@
     }
   }
 }
+
+// 07. Featured ccas
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.featured-ccas-container {
+  background: #FED900;
+  margin: 0 !important;
+
+  @media (min-width: $medium-breakpoint) {
+    margin-left: 0 !important;
+    margin-right: rem-calc(-15) !important;
+  }
+
+  h2 {
+    color: $text;
+    font-size: rem-calc(24);
+    margin: rem-calc(12) 0 0;
+    position: relative;
+    text-transform: uppercase;
+
+    @media (min-width: $medium-breakpoint) {
+      margin-bottom: rem-calc(27);
+    }
+
+    .icon-ccas {
+      font-size: rem-calc(20);
+      position: absolute;
+      right: -26px;
+      top: -5px;
+    }
+  }
+
+  .ccas-list {
+    margin: rem-calc(6) 0;
+
+    @media (min-width: $medium-breakpoint) {
+      border-left: 1px solid #D2B400;
+    }
+
+    &:after {
+      content: none;
+      position: absolute;
+      display: block;
+      border-style: solid;
+      border-color: #C9AF00 transparent transparent transparent;
+      bottom: rem-calc(-20);
+      border-left-width: 0;
+      border-right-color: transparent;
+      right: rem-calc(1);
+      border-width: rem-calc(14) rem-calc(14) 0 0;
+
+      @media (min-width: $medium-breakpoint) {
+        content: " ";
+      }
+    }
+  }
+}
+
+.cca-featured {
+  background: #FED900;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+
+  .panel {
+    background: none;
+    border: 0;
+    margin-bottom: 0;
+    padding: 0 rem-calc(12);
+
+    h3 {
+      font-weight: bold;
+      margin: rem-calc(8) 0 0 0;
+      min-height: auto;
+
+      a {
+        clear: both;
+        color: $text;
+        display: block;
+        font-size: rem-calc(14);
+        line-height: $line-height;
+        text-transform: lowercase;
+
+        &:first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .progress {
+    display: none !important;
+  }
+
+  .content {
+    height: rem-calc(60);
+    overflow: hidden;
+  }
+
+  .info {
+    color: #806C00 !important;
+  }
+
+  .supports {
+    //@include supports;
+    background: none;
+    border: 0;
+    padding: 0;
+    padding-left: rem-calc(13);
+    margin-right: rem-calc(-26);
+
+    &:after {
+      content: none;
+    }
+
+    .total-supports {
+      display: none;
+    }
+
+    .not-logged, .organizations-votes {
+      background: #FED900;
+      color: $warning-color;
+      line-height: rem-calc(24);
+      padding-top: rem-calc(6);
+
+      a {
+        color: $warning-color;
+        font-weight: bold;
+      }
+    }
+
+    .anonymous-votes {
+      background: #FED900;
+      padding: 0;
+      padding-top: rem-calc(6);
+
+      p {
+        font-size: rem-calc(12);
+        line-height: rem-calc(20);
+        margin: 0;
+      }
+    }
+
+    .organizations-votes p {
+      color: $text;
+      line-height: rem-calc(24);
+      padding-top: rem-calc(6);
+      text-align: center;
+    }
+
+    .button-support {
+      margin-top: rem-calc(4);
+    }
+
+    .supported {
+      margin-top: 0;
+    }
+
+    .share-supported {
+
+      .social-share-button-twitter,
+      .social-share-button-facebook,
+      .social-share-button-google_plus {
+        height: rem-calc(33);
+      }
+
+      .social-share-button-twitter:before,
+      .social-share-button-facebook:before,
+      .social-share-button-google_plus:before {
+        font-size: rem-calc(18);
+        line-height: rem-calc(33);
+      }
+    }
+  }
+}
+
+
+
 
 // 05. Featured enquiries
 // - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -131,6 +131,68 @@ feature 'Admin activity' do
     end
   end
 
+  context "Ccas" do
+    scenario "Shows moderation activity on ccas", :js do
+      debate = create(:cca)
+
+      visit debate_path(cca)
+
+      within("#cca_#{cca.id}") do
+        click_link 'Hide'
+      end
+
+      visit admin_activity_path
+
+      within("#activity_#{Activity.last.id}") do
+        expect(page).to have_content(cca.title)
+        expect(page).to have_content("Hidden")
+        expect(page).to have_content(@admin.user.username)
+      end
+    end
+
+    scenario "Shows moderation activity from moderation screen" do
+      cca1 = create(:cca)
+      cca2 = create(:cca)
+      cca3 = create(:cca)
+
+      visit moderation_debates_path(filter: 'all')
+
+      within("#cca_#{cca1.id}") do
+        check "cca_#{cca1.id}_check"
+      end
+
+      within("#cca_#{cca3.id}") do
+        check "cca_#{cca3.id}_check"
+      end
+
+      click_on "Hide debates"
+
+      visit admin_activity_path
+
+      expect(page).to have_content(cca1.title)
+      expect(page).to_not have_content(cca2.title)
+      expect(page).to have_content(cca3.title)
+    end
+
+    scenario "Shows admin restores" do
+      cca = create(:cca, :hidden)
+
+      visit admin_ccas_path
+
+      within("#cca_#{cca.id}") do
+        click_on "Restore"
+      end
+
+      visit admin_activity_path
+
+      within("#activity_#{Activity.last.id}") do
+        expect(page).to have_content(cca.title)
+        expect(page).to have_content("Restored")
+        expect(page).to have_content(@admin.user.username)
+      end
+    end
+  end
+
   context "Medidas" do
     scenario "Shows moderation activity on medidas", :js do
       medida = create(:medida)

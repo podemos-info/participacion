@@ -10,6 +10,9 @@ es:
       debate:
         one: Debate
         other: Debates
+      cca:
+        one: Asamblea
+        other: Asambleas
       medida:
         one: Medida
         other: Medidas
@@ -45,6 +48,11 @@ es:
         body: Comentario
         user: Usuario
       debate:
+        author: Autor
+        description: Opinión
+        terms_of_service: Términos de servicio
+        title: Título
+      cca:
         author: Autor
         description: Opinión
         terms_of_service: Términos de servicio

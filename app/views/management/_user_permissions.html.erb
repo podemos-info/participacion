@@ -2,14 +2,14 @@
     # Parameters:
     #   message: A string explaining the permissions
     #   permissions: An array of symbols containing the permissions
-#   (can be :debates, :proposal, :support_proposal, :enquiry, :support_enquiry, :votes)
+#   (can be :debates, :ccas, :proposal, :support_proposal, :enquiry, :support_enquiry, :votes)
 %>
 <div class="user-permissions">
 
   <p><%= message %></p>
 
   <ul>
-    <% [:debates, :create_proposals, :support_proposals, :vote_proposals,:create_enquiries, :support_enquiries, :vote_enquiries].each do |permission| %>
+    <% [:debates, :ccas, :create_proposals, :support_proposals, :vote_proposals,:create_enquiries, :support_enquiries, :vote_enquiries].each do |permission| %>
       <li>
         <i class="<%= permissions.include?(permission) ? 'icon-check' : 'icon-x' %>"></i>
         <%= t("management.permissions.#{permission}") %>

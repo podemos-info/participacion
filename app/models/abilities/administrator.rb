@@ -11,10 +11,13 @@ module Abilities
       can :restore, Debate
       cannot :restore, Debate, hidden_at: nil
 
+      can :restore, Cca
+      cannot :restore, Cca, hidden_at: nil
+
       can :restore, Medida
       cannot :restore, Medida, hidden_at: nil
 
-       can :restore, Law
+      can :restore, Law
       cannot :restore, Law, hidden_at: nil
 
       can :restore, Proposal
@@ -32,6 +35,9 @@ module Abilities
       can :confirm_hide, Debate
       cannot :confirm_hide, Debate, hidden_at: nil
 
+      can :confirm_hide, Cca
+      cannot :confirm_hide, Cca, hidden_at: nil
+
       can :confirm_hide, Medida
       cannot :confirm_hide, Medida, hidden_at: nil
 
@@ -44,7 +50,7 @@ module Abilities
       can :confirm_hide, User
       cannot :confirm_hide, User, hidden_at: nil
 
-      can :comment_as_administrator, [Debate, Medida, Comment, Proposal, Enquiry]
+      can :comment_as_administrator, [Debate, Cca, Medida, Comment, Proposal, Enquiry]
 
       can [:search, :create, :index, :destroy], ::Moderator
     end

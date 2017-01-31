@@ -1,0 +1,28 @@
+<div class="cca-new row">
+
+  <div class="small-12 medium-9 column">
+    <%= link_to ccas_path, class: "left back" do %>
+      <i class="icon-angle-left left"></i>
+      <%= t("ccas.new.back_link") %>
+    <% end %>
+    <h1><%= t("ccas.new.start_new") %></h1>
+    <div class="alert-box info radius">
+      <%= t("ccas.new.info")%>
+      <%= link_to "/more_information", target: "_blank" do %>
+        <strong><%= t("ccas.new.more_info")%></strong>
+      <% end %>
+    </div>
+    <%= render "form" %>
+  </div>
+
+  <div class="small-12 medium-3 column">
+    <i class="icon-ccas right"></i>
+    <h2><%= t("ccas.new.recommendations_title") %></h2>
+    <ul class="recommendations">
+      <li><%= t("ccas.new.recommendation_one") %></li>
+      <li><%= t("ccas.new.recommendation_two") %></li>
+      <li><%= t("ccas.new.recommendation_three") %></li>
+      <li><%= t("ccas.new.recommendation_four") %></li>
+    </ul>
+  </div>
+</div>

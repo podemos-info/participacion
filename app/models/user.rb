@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
   has_many :flags
   has_many :identities, dependent: :destroy
   has_many :debates, -> { with_hidden }, foreign_key: :author_id
+  has_many :ccas, -> { with_hidden }, foreign_key: :author_id
   has_many :medidas, -> { with_hidden }, foreign_key: :author_id
   has_many :laws, -> { with_hidden }, foreign_key: :author_id
   has_many :proposals, -> { with_hidden }, foreign_key: :author_id
@@ -129,6 +130,11 @@ class User < ActiveRecord::Base
     voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
   end
 
+  def cca_votes(ccas)
+    voted = votes.for_ccas(ccas)
+    voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
+  end
+
   def medida_votes(medidas)
     voted = votes.for_medidas(medidas)
     voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
@@ -185,6 +191,7 @@ class User < ActiveRecord::Base
 
   def block
     debates_ids = Debate.where(author_id: id).pluck(:id)
+    ccas_ids = Cca.where(author_id: id).pluck(:id)
     medidas_ids = Medida.where(author_id: id).pluck(:id)
     comments_ids = Comment.where(user_id: id).pluck(:id)
     proposal_ids = Proposal.where(author_id: id).pluck(:id)
@@ -193,6 +200,7 @@ class User < ActiveRecord::Base
     self.hide
 
     Debate.hide_all debates_ids
+    Cca.hide_all ccas_ids
     Medida.hide_all medidas_ids
     Comment.hide_all comments_ids
     Proposal.hide_all proposal_ids

@@ -4,6 +4,7 @@ es:
       proposals: Propuestas
       enquiries: Preguntas
       flagged_debates: Debates
+      flagged_ccas: Asambleas
       flagged_medidas: Medidas
       flagged_laws: Artículos
       flagged_comments: Comentarios
@@ -38,6 +39,25 @@ es:
         title: Debates
         headers:
           debate: Debate
+          moderate: Moderar
+        filter: Filtrar
+        filters:
+          all: Todos
+          pending_flag_review: Pendientes
+          with_ignored_flag: Marcados como revisados
+        order: Orden
+        orders:
+          created_at: Más nuevos
+          flags: Más denunciados
+        confirm: ¿Estás seguro?
+    ccas:
+      index:
+        hide_ccas: Ocultar Asambleas
+        block_authors: Bloquear autores
+        ignore_flags: Marcar como revisados
+        title: Asambleas
+        headers:
+          cca: Asamblea
           moderate: Moderar
         filter: Filtrar
         filters:

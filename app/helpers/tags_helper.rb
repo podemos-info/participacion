@@ -4,6 +4,8 @@ module TagsHelper
     case taggable_type
     when 'debate'
       debates_path(tag: tag_name)
+    when 'cca'
+      ccas_path(tag: tag_name)
     when 'medida'
       medidas_path(tag: tag_name)
     when 'law'

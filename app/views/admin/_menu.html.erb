@@ -11,6 +11,13 @@
       <% end %>
     </li>
 
+    <li <%= "class=active" if controller_name == "tags" %>>
+      <%= link_to admin_tags_path do %>
+        <i class="icon-tag"></i>
+        <%= t("admin.menu.cca_topics") %>
+      <% end %>
+    </li>
+
     <li <%= "class=active" if controller_name == "proposals" %>>
       <%= link_to admin_proposals_path do %>
         <i class="icon-proposals"></i>
@@ -29,6 +36,13 @@
       <%= link_to admin_debates_path do %>
         <i class="icon-debates"></i>
         <%= t("admin.menu.hidden_debates") %>
+      <% end %>
+    </li>
+
+    <li <%= "class=active" if controller_name == "ccas" %>>
+      <%= link_to admin_ccas_path do %>
+        <i class="icon-ccas"></i>
+        <%= t("admin.menu.hidden_ccas") %>
       <% end %>
     </li>
 
