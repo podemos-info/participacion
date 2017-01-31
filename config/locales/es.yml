@@ -622,7 +622,7 @@ es:
     programa:
       title: "Programa"
       description: "Conoce al detalle las propuestas del programa electoral de PODEMOS antes de votarlas en nuestro portal de Participación."
-    law:
+    laws:
       title: "Ley de participación"
       description: "Conoce al detalle las propuestas de la Ley de participación de PODEMOS antes de votarlas en nuestro portal de Participación."
     do:
