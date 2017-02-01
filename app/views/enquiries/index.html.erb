@@ -33,13 +33,12 @@ i18n_namespace: "enquiries.index.search_form" %>
             <%= render 'shared/order_selector', i18n_namespace: "enquiries.index" %>
           </div>
         <% else %>
-          <div class="small-12 inline-block">
+          <!--div class="small-12 inline-block">
             <h2 class="inline-block">
               <%= image_tag('escanno_a.jpg', :class => "logo-escano-abierto") %>
-              <!--%= t("enquiries.index.select_order_long") %-->
+              <%= t("enquiries.index.select_order_long") %>
             </h2>
-
-          </div>
+          </div-->
         <% end %>
         <div>
           <% if  (!Enquiry.is_closed?) %>
@@ -75,11 +74,11 @@ i18n_namespace: "enquiries.index.search_form" %>
           <div id="featured-enquiries" class="row featured-enquiries-container">
             <div class="small-12 medium-12 column">
               <h2>
-                PREGUNTAS MÁS APOYADAS
+                APORTACIONES MÁS APOYADAS
               </h2>
-              <span class="show-for-medium-up">
-                <%= image_tag("featured_enquiries.jpg", size: "210x135") %>
-              </span>
+              <!--span class="show-for-medium-up"-->
+                <!--%= image_tag("featured_enquiries.jpg", size: "210x135") %>
+              </span-->
             </div>
             <div class="small-12 medium-12 column enquiries-list">
               <% @featured_enquiries.each do |featured_enquiry| %>

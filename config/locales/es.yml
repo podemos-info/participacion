@@ -24,7 +24,7 @@ es:
       #"Pregunta lo que quieras a cuatro de nuestros cantidatos a las elecciones del 20D. En directo desde las 17h a las 21h."
       closed_city_title: "Un lugar de encuentro para construir PODEMOS."
       closed_city_slogan_html: "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
-      open_city_title: "Aportaciones a Debates."
+      open_city_title: "Aportaciones al Debate."
       open_city_slogan_html: "Cada mes abriremos un plazo de tiempo para poder proponer preguntas y apoyar la del resto de la gente. Las preguntas más apoyadas serán trasladadas al grupo parlamentario de la Asamblea de Madrid para que sean expuestas en los plenos de ese mes por parte de nuestros diputados."
       open_city_deadline_prev: "Hemos abierto el plazo hasta el "
       open_city_deadline_post: " para recibir tus preguntas."
@@ -39,7 +39,7 @@ es:
       more_information: "Más información"
       debates: "Debates y Opinión"
       proposals: "ICPs"
-      enquiries: "Aportaciones a Debates"
+      enquiries: "Aportaciones al Debate"
     footer:
       description: "Este portal usa la %{consul}, que es %{open_source}, y está basado en el portal de <a href='https://decide.madrid.es/' target='_blank'>Participación</a> del Ayuntamiento de Madrid."
       open_source: "software libre"
@@ -403,11 +403,11 @@ es:
 
   enquiries:
     index:
-      title: "Aportaciones a Debates"
+      title: "Aportaciones al Debate"
       featured_enquiries_html: "Preguntas<br>destacadas"
       start_enquiry: "Crea una pregunta"
       select_order: "Ordenar por"
-      select_order_long: "Estás viendo las preguntas"
+      select_order_long: "Estás viendo las aportaciones"
       orders:
         confidence_score: "más apoyadas"
         hot_score: "más activas"
@@ -617,7 +617,7 @@ es:
       title: "ICPs"
       description: "Iniciativas Ciudadanas Populares: herramienta a través de la cual los inscritos en PODEMOS pueden hacer propuestas que, si reciben el apoyo suficiente, son llevadas a referéndum interno vinculante para su posible adopción."
     enquiry:
-      title: "Aportaciones a Debates"
+      title: "Aportaciones al Debate"
       description: "Herramienta a través de la cual los inscritos en PODEMOS pueden hacer preguntas que, si reciben el apoyo suficiente, son llevadas a para su formulación en la Asamblea de Madrid."
     programa:
       title: "Programa"
