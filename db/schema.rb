@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20160910190345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "unaccent"
   enable_extension "pg_trgm"
 
   create_table "activities", force: :cascade do |t|
@@ -48,6 +49,13 @@ ActiveRecord::Schema.define(version: 20160910190345) do
   add_index "ahoy_events", ["time"], name: "index_ahoy_events_on_time", using: :btree
   add_index "ahoy_events", ["user_id"], name: "index_ahoy_events_on_user_id", using: :btree
   add_index "ahoy_events", ["visit_id"], name: "index_ahoy_events_on_visit_id", using: :btree
+
+  create_table "campaigns", force: :cascade do |t|
+    t.string   "name"
+    t.string   "track_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.integer  "commentable_id"
@@ -159,24 +167,6 @@ ActiveRecord::Schema.define(version: 20160910190345) do
   add_index "enquiries", ["question"], name: "index_enquiries_on_question", using: :btree
   add_index "enquiries", ["summary"], name: "index_enquiries_on_summary", using: :btree
   add_index "enquiries", ["title"], name: "index_enquiries_on_title", using: :btree
-
-  create_table "enquiry_sets", force: :cascade do |t|
-    t.string   "front_title",           limit: 80
-    t.text     "front_text"
-    t.string   "button_text",           limit: 20
-    t.boolean  "automatic_redirection",            default: true
-    t.datetime "start_at"
-    t.datetime "finish_at"
-    t.integer  "max_chosen_enquiries",             default: 10
-    t.boolean  "manual_selection",                 default: false
-    t.string   "body_title",            limit: 80
-    t.text     "body_text"
-    t.integer  "territory_id"
-    t.integer  "author_id"
-    t.datetime "hidden_at"
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
-  end
 
   create_table "failed_census_calls", force: :cascade do |t|
     t.integer  "user_id"
@@ -370,26 +360,19 @@ ActiveRecord::Schema.define(version: 20160910190345) do
     t.integer "debates_count",               default: 0
     t.integer "proposals_count",             default: 0
     t.integer "medidas_count",               default: 0
+    t.integer "enquiries_count",             default: 0
     t.integer "laws_count",                  default: 0
   end
 
   add_index "tags", ["debates_count"], name: "index_tags_on_debates_count", using: :btree
+  add_index "tags", ["enquiries_count"], name: "index_tags_on_enquiries_count", using: :btree
   add_index "tags", ["laws_count"], name: "index_tags_on_laws_count", using: :btree
   add_index "tags", ["medidas_count"], name: "index_tags_on_medidas_count", using: :btree
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
   add_index "tags", ["proposals_count"], name: "index_tags_on_proposals_count", using: :btree
 
-  create_table "territories", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "ccaa_id"
-    t.integer  "province_id"
-    t.integer  "town_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "users", force: :cascade do |t|
-    t.string   "email",                                default: "",    null: false
+    t.string   "email",                                default: ""
     t.string   "encrypted_password",                   default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -416,7 +399,6 @@ ActiveRecord::Schema.define(version: 20160910190345) do
     t.string   "document_number"
     t.string   "document_type"
     t.datetime "residence_verified_at"
-    t.datetime "letter_sent_at"
     t.string   "email_verification_token"
     t.datetime "verified_at"
     t.string   "unconfirmed_phone"
@@ -427,8 +409,9 @@ ActiveRecord::Schema.define(version: 20160910190345) do
     t.integer  "failed_census_calls_count",            default: 0
     t.string   "reddit_user"
     t.string   "reddit_uid"
-    t.integer  "circle_agent",                         default: 0
-    t.boolean  "public_activity",                      default: true
+    t.datetime "level_two_verified_at"
+    t.string   "erase_reason"
+    t.datetime "erased_at"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
