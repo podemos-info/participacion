@@ -64,7 +64,8 @@ Rails.application.routes.draw do
   end
 
   #resources :enquiries, path: 'preguntas' do
-  resources :enquiries, path: 'la-gente-pregunta/asamblea-madrid' do
+  #resources :enquiries, path: 'la-gente-pregunta/asamblea-madrid' do
+  resources :enquiries, path: 'aportaciones/debates', except: [:new, :create, :edit, :update, :destroy] do
     member do
       post :vote
       post :vote_featured

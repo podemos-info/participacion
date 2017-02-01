@@ -14,7 +14,7 @@ class EnquiriesController < ApplicationController
 
   def index_customization
     if Enquiry.is_closed?
-      @featured_enquiries = Enquiry.all.sort_by_confidence_score.limit(Rails.application.secrets.max_chosen_enquiries) if (@search_terms.blank? && @tag_filter.blank?)
+      @featured_enquiries = Enquiry.all.where("id_enquiry_set = ?",Rails.application.secrets.id_enquiry_set).sort_by_confidence_score.limit(Rails.application.secrets.max_chosen_enquiries) if (@search_terms.blank? && @tag_filter.blank?)
       #@featured_enquiries = Enquiry.where("chosen = true") if (@search_terms.blank? && @tag_filter.blank?)
       if @featured_enquiries.present?
         set_featured_enquiry_votes(@featured_enquiries)

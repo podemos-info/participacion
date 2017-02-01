@@ -87,3 +87,33 @@ namespace :ley do
     end
   end
 end
+
+namespace :aportaciones do
+  desc "[init] Cargar datos de aportaciones"
+  task :importacion => :environment do
+    Enquiry.delete_all(["id_enquiry_set = ?",4]) #dejo 4 por que es el id que se ha dado a la importación de aportaciones,
+    #importantisimo asegurarse del ID correcto antes de ejecutar la orden de borrado
+    xlsx = Roo::Spreadsheet.open("lib/tasks/init/aportaciones.xlsx")
+    sheet = xlsx.sheet(0)
+    headers = { ID: "ID", titulo: "titulo", descripcion: "resumen", tematica: "tematica", email: "email", persona1: "persona1",
+      persona2: "persona2", persona3: "persona3", persona4: "persona4", persona5: "persona5", persona6: "persona6", persona7: "persona7",
+      persona8: "persona18", persona9: "persona9", persona10: "persona10", persona11: "persona11", persona12: "persona12", persona13: "persona13",
+      persona14: "persona14", persona15: "persona15", persona16: "persona16", persona17: "persona17", persona18: "persona18", persona19: "persona19"
+      }
+    #programa = YAML.load_file('config/locales/programa.es.yml')
+    sheet.each(headers) do |r|
+      if r[:ID].to_i > 0 && !r[:titulo].nil?
+        Enquiry.new do |t|
+          t.id = r[:ID].to_i
+          t.title = r[:titulo][0..79]
+          t.description = r[:descripcion].gsub("\n","<br>\n")
+          t.summary = r[:descripcion].gsub("\n","<br>\n")
+          t.author_id = 2
+          t.tag_list = [ r[:tematica] ]
+          t.id_enquiry_set =Rails.application.secrets.id_enquiry_set
+        end .save!(:validate => false)
+        puts "ID: #{r[:id].to_i} \t\t tag_list: '#{r[:tematica]}'"
+      end
+    end
+  end
+end
