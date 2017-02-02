@@ -96,10 +96,13 @@ namespace :aportaciones do
     xlsx = Roo::Spreadsheet.open("lib/tasks/init/aportaciones.xlsx")
     sheet = xlsx.sheet(0)
     headers = { ID: "ID", titulo: "titulo", descripcion: "resumen", tematica: "tematica",
-      pdf: "pdf", email: "email", persona1: "persona1",
-      persona2: "persona2", persona3: "persona3", persona4: "persona4", persona5: "persona5", persona6: "persona6", persona7: "persona7",
-      persona8: "persona8", persona9: "persona9", persona10: "persona10", persona11: "persona11", persona12: "persona12", persona13: "persona13",
-      persona14: "persona14", persona15: "persona15", persona16: "persona16", persona17: "persona17", persona18: "persona18", persona19: "persona19"
+      pdf: "pdf", email: "email",
+      persona1: "persona1",persona2: "persona2", persona3: "persona3", persona4: "persona4", persona5: "persona5", persona6: "persona6", persona7: "persona7",persona8: "persona8", persona9: "persona9", persona10: "persona10",
+      persona11: "persona11", persona12: "persona12", persona13: "persona13",persona14: "persona14", persona15: "persona15", persona16: "persona16", persona17: "persona17", persona18: "persona18", persona19: "persona19", persona20: "persona20",
+      persona21: "persona21", persona22: "persona22", persona23: "persona23",persona24: "persona24", persona25: "persona25", persona26: "persona26", persona27: "persona27", persona28: "persona28", persona29: "persona29", persona30: "persona30",
+      persona31: "persona31", persona32: "persona32", persona33: "persona33",persona34: "persona34", persona35: "persona35", persona36: "persona36", persona37: "persona37", persona38: "persona38", persona39: "persona39", persona40: "persona40",
+      persona41: "persona41", persona42: "persona42", persona43: "persona43",persona44: "persona44", persona45: "persona45", persona46: "persona46", persona47: "persona47", persona48: "persona48", persona49: "persona49", persona50: "persona50",
+      persona51: "persona51", persona52: "persona52", persona53: "persona53",persona54: "persona54", persona55: "persona55", persona56: "persona56", persona57: "persona57", persona58: "persona58", persona59: "persona59", persona60: "persona60",
       }
     #programa = YAML.load_file('config/locales/programa.es.yml')
     sheet.each(headers) do |r|
