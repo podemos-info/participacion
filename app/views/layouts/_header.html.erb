@@ -64,7 +64,7 @@
             <%= link_to t("layouts.header.see_all_closed"), highlights_path, class: "button radius see-more warning" %>
             <% else %>
               <h1><%= t("layouts.header.open_city_title") %></h1>
-            <p><%= "#{t('layouts.header.open_city_slogan_html')}" %><br> <%= "#{t('layouts.header.open_city_deadline_prev')} #{localize(Enquiry.closed_enquiry_date,format: "%A, %d de %B")} #{t('layouts.header.open_city_deadline_post')}" %></p>
+            <p><%= "#{t('layouts.header.open_city_slogan_html')}" %><br> <%= "#{t('layouts.header.open_city_deadline_prev')} #{localize(Enquiry.closed_enquiry_date,format: "%d de %B")} #{t('layouts.header.open_city_deadline_post')}" %></p>
             <%= link_to t("layouts.header.see_all_open"), enquiries_path, class: "button radius see-more warning" %>
             <% end %>
 
