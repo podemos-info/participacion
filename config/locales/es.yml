@@ -467,6 +467,7 @@ es:
         one: "1 Comentario"
         other: "%{count} Comentarios"
       login_to_comment: "Necesitas %{signin} para comentar."
+      login_to_support: "Necesitas %{signin} para apoyar."
       edit_enquiry_link: "Editar"
       share: "Compartir"
       flag: "Esta Pregunta ha sido marcada como inapropiada por varios usuarios."

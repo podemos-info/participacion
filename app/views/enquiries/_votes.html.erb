@@ -26,6 +26,11 @@
       <div class="supported">
         <%= t("enquiries.enquiry.already_supported") %>
       </div>
+    <% elsif !user_signed_in? %>
+        <div class="alert-box radius info">
+          <%= t("enquiries.show.login_to_support",
+              signin: link_to(t("votes.signin"), user_omniauth_authorize_path(:openid))).html_safe %>
+        </div>
     <% else %>
     <%= link_to vote_enquiry_path(enquiry, value: 'yes'),
           class: "button button-support tiny radius expand",
