@@ -19,6 +19,7 @@
           <!--% end %-->
         <!--% end %-->
 
+        <% session[:user_return_to] = enquiry_path(@enquiry)%>
         <h1><%= @enquiry.title %></h1>
         <% if @enquiry.conflictive? %>
           <div class="alert-box alert radius margin-top">
