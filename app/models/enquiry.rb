@@ -59,6 +59,8 @@ class Enquiry < ActiveRecord::Base
 
   cattr_accessor :closed_enquiry_date
   @@closed_enquiry_date =DateTime.parse(Rails.application.secrets.closed_enquiry_date)
+  cattr_accessor :opened_enquiry_date
+  @@opened_enquiry_date =DateTime.parse(Rails.application.secrets.opened_enquiry_date)
 
   def description
     super.try :html_safe
@@ -78,7 +80,7 @@ class Enquiry < ActiveRecord::Base
 
   def self.is_closed?
     #return (DateTime.now.to_s >= DateTime.parse(Rails.application.secrets.closed_enquiry_date).to_s)
-    return (DateTime.now.to_s >= @@closed_enquiry_date.to_s)
+    return (DateTime.now.to_s < @@opened_enquiry_date.to_s or DateTime.now.to_s >= @@closed_enquiry_date.to_s)
   end
 
   def votable_by?(user)
