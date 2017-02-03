@@ -425,7 +425,7 @@ es:
         one: " que contiene '%{search_term}'"
         other: " que contienen '%{search_term}'"
     enquiry:
-      enquiry: "Pregunta"
+      enquiry: "Aportación"
       support: "Apoyar"
       support_title: "Apoyar esta Pregunta"
       comments:
@@ -441,7 +441,7 @@ es:
       census_percent: "0.2% del Censo"
       total_percent: "100%"
       already_supported: "¡Ya has apoyado esta Pregunta, compártela!"
-      already_closed: "¡La votación ha terminado!"
+      already_closed: "¡La votación esta cerrada!"
     form:
       enquiry_title: "Título de la Pregunta"
       enquiry_question: "texto de la Pregunta"
