@@ -57,7 +57,7 @@ i18n_namespace: "enquiries.index.search_form" %>
             <br>Las 10 preguntas que se trasladaran al grupo parlamentario de la Asamblea de Madrid son las remarcadas a continuación. Muchas gracias por participar.
             <br><br>*NOTA: Las preguntas deberán estar enfocadas al ámbito legislativo de la Comunidad de Madrid y deberán enmarcarse en el código ético y político de la formación.
           </p>-->
-          <p>A continuación encontrarás el listado de las Aportaciones al Debate que hemos recibido hasta el momento, con un resumen de cada una de ellas</p>
+          <p>A continuación encontrarás el listado de las Aportaciones al Debate recibidas, con un resumen de cada una de ellas</p>
           <% end %>
         </div>
         <div class="small-12 inline-block">
@@ -98,7 +98,7 @@ i18n_namespace: "enquiries.index.search_form" %>
         <% if  (!Enquiry.is_closed?) %>
         <!--%= link_to t("enquiries.index.start_enquiry"), new_enquiry_path, class: 'button radius expand' %-->
         <% end %>
-        <%= render "shared/tag_cloud", taggable: 'enquiry' %>
+        <!--%= render "shared/tag_cloud", taggable: 'enquiry' %-->
       </aside>
     </div>
   </div>
