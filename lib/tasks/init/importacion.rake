@@ -110,6 +110,7 @@ namespace :aportaciones do
         Enquiry.new do |t|
           t.id = r[:ID].to_i
           t.title = r[:titulo][0..79]
+          t.question=r[:titulo][0..79]
           t.description = r[:descripcion].gsub("\n","<br>\n")
           t.summary = r[:descripcion].gsub("\n","<br>\n")
           t.author_id = 2
