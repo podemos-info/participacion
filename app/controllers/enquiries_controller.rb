@@ -6,7 +6,7 @@ class EnquiriesController < ApplicationController
   before_action :parse_tag_filter, only: :index
   before_action :authenticate_user!, except: [:index, :show]
 
-  has_orders %w{hot_score confidence_score created_at most_commented random}, only: :index
+  has_orders %w{hot_score random confidence_score created_at most_commented}, only: :index
   has_orders %w{most_voted newest oldest}, only: :show
 
   load_and_authorize_resource
