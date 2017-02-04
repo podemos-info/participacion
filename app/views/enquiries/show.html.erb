@@ -12,13 +12,14 @@
         <i class="icon-angle-left left"></i>&nbsp;
         <%= link_to t("enquiries.show.back_link"), :back, class: 'left back' %>
 
-        <% if current_user && @enquiry.editable_by?(current_user) %>
-          <%= link_to edit_enquiry_path(@enquiry), class: 'edit-enquiry button success tiny radius right' do %>
-            <i class="icon-edit"></i>
-        <%= t("enquiries.show.edit_enquiry_link") %>
-          <% end %>
-        <% end %>
+        <!--% if current_user && @enquiry.editable_by?(current_user) % -->
+          <!--%= link_to edit_enquiry_path(@enquiry), class: 'edit-enquiry button success tiny radius right' do %-->
+            <!--i class="icon-edit"></i-->
+        <!--%= t("enquiries.show.edit_enquiry_link") %-->
+          <!--% end %-->
+        <!--% end %-->
 
+        <% session[:user_return_to] = enquiry_path(@enquiry)%>
         <h1><%= @enquiry.title %></h1>
         <% if @enquiry.conflictive? %>
           <div class="alert-box alert radius margin-top">
@@ -73,7 +74,7 @@
           <%= @enquiry.code %>
         </div>
 
-        <blockquote><%= @enquiry.summary %></blockquote>
+        <!--blockquote --><!--%= @enquiry.summary %></blockquote-->
 
         <%= safe_html_with_links @enquiry.description %>
 

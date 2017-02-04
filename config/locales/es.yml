@@ -24,10 +24,10 @@ es:
       #"Pregunta lo que quieras a cuatro de nuestros cantidatos a las elecciones del 20D. En directo desde las 17h a las 21h."
       closed_city_title: "Un lugar de encuentro para construir PODEMOS."
       closed_city_slogan_html: "Esta plaza es un espacio de participación política en la que puedes debatir, proponer iniciativas y compartir tus ideas con el fin de construir de forma conjunta PODEMOS."
-      open_city_title: "Escaño Abierto."
-      open_city_slogan_html: "Cada mes abriremos un plazo de tiempo para poder proponer preguntas y apoyar la del resto de la gente. Las preguntas más apoyadas serán trasladadas al grupo parlamentario de la Asamblea de Madrid para que sean expuestas en los plenos de ese mes por parte de nuestros diputados."
-      open_city_deadline_prev: "Hemos abierto el plazo hasta el "
-      open_city_deadline_post: " para recibir tus preguntas."
+      open_city_title: "Aportaciones al Debate."
+      open_city_slogan_html: "Las Aportaciones al Debate resumen posiciones respecto a cuestiones no contempladas en los documentos políticos, organizativos, éticos y de igualdad, con el objetivo de que sean ampliamente conocidas y compartidas."
+      open_city_deadline_prev: "Hemos publicado las aportaciones que nos habéis hecho llegar y que podréis valorar desde el día 4 hasta el "
+      open_city_deadline_post: ""
 
       see_all_closed: "Ver debates y propuestas"
       see_all_open: "¡Participa!"
@@ -39,7 +39,7 @@ es:
       more_information: "Más información"
       debates: "Debates y Opinión"
       proposals: "ICPs"
-      enquiries: "Escaño Abierto"
+      enquiries: "Aportaciones al Debate"
     footer:
       description: "Este portal usa la %{consul}, que es %{open_source}, y está basado en el portal de <a href='https://decide.madrid.es/' target='_blank'>Participación</a> del Ayuntamiento de Madrid."
       open_source: "software libre"
@@ -403,11 +403,11 @@ es:
 
   enquiries:
     index:
-      title: "Escaño Abierto"
+      title: "Aportaciones al Debate"
       featured_enquiries_html: "Preguntas<br>destacadas"
       start_enquiry: "Crea una pregunta"
       select_order: "Ordenar por"
-      select_order_long: "Estás viendo las preguntas"
+      select_order_long: "Estás viendo las aportaciones"
       orders:
         confidence_score: "más apoyadas"
         hot_score: "más activas"
@@ -425,7 +425,7 @@ es:
         one: " que contiene '%{search_term}'"
         other: " que contienen '%{search_term}'"
     enquiry:
-      enquiry: "Pregunta"
+      enquiry: "Aportación"
       support: "Apoyar"
       support_title: "Apoyar esta Pregunta"
       comments:
@@ -440,8 +440,8 @@ es:
       supports_necessary: ""
       census_percent: "0.2% del Censo"
       total_percent: "100%"
-      already_supported: "¡Ya has apoyado esta Pregunta, compártela!"
-      already_closed: "¡La votación ha terminado!"
+      already_supported: "¡Ya has apoyado esta Aportación, compártela!"
+      already_closed: "¡La votación esta cerrada!"
     form:
       enquiry_title: "Título de la Pregunta"
       enquiry_question: "texto de la Pregunta"
@@ -467,6 +467,7 @@ es:
         one: "1 Comentario"
         other: "%{count} Comentarios"
       login_to_comment: "Necesitas %{signin} para comentar."
+      login_to_support: "Necesitas %{signin} para apoyar."
       edit_enquiry_link: "Editar"
       share: "Compartir"
       flag: "Esta Pregunta ha sido marcada como inapropiada por varios usuarios."
@@ -617,12 +618,12 @@ es:
       title: "ICPs"
       description: "Iniciativas Ciudadanas Populares: herramienta a través de la cual los inscritos en PODEMOS pueden hacer propuestas que, si reciben el apoyo suficiente, son llevadas a referéndum interno vinculante para su posible adopción."
     enquiry:
-      title: "Escaño Abierto: tu voz en el parlamento"
-      description: "Herramienta a través de la cual los inscritos en PODEMOS pueden hacer preguntas que, si reciben el apoyo suficiente, son llevadas a para su formulación en la Asamblea de Madrid."
+      title: "Aportaciones al Debate"
+      description: "Hasta el 11 de febrero cada inscrita y cada inscrito en Podemos podrá votar hasta un máximo de diez Aportaciones al Debate. ¡Anímate y participa!"
     programa:
       title: "Programa"
       description: "Conoce al detalle las propuestas del programa electoral de PODEMOS antes de votarlas en nuestro portal de Participación."
-    law:
+    laws:
       title: "Ley de participación"
       description: "Conoce al detalle las propuestas de la Ley de participación de PODEMOS antes de votarlas en nuestro portal de Participación."
     do:
