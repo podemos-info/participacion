@@ -54,7 +54,4 @@ module VotesHelper
     votes[votable.id]
   end
 
-  def max_voted_by?(voter)
-    Vote.where('voter_id =?',voter.id).count >=Rails.application.secrets.max_votes
-  end
 end

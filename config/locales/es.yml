@@ -441,7 +441,6 @@ es:
       census_percent: "0.2% del Censo"
       total_percent: "100%"
       already_supported: "¡Ya has apoyado esta Aportación, compártela!"
-      max_supported: "¡Ya has apoyado el máximo número de Aportaciones!"
       already_closed: "¡La votación esta cerrada!"
     form:
       enquiry_title: "Título de la Pregunta"
