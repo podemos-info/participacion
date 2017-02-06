@@ -6,7 +6,6 @@
       <%= supports_percentage(enquiry) %>&nbsp;/&nbsp;<%= t("enquiries.enquiry.total_percent") %>
     </span>
   </div>
-
   <span class="total-supports">
     <%= t("enquiries.enquiry.supports", count: enquiry.total_votes) %>&nbsp;
     <span>
@@ -25,6 +24,10 @@
     <% elsif voted_for?(@enquiry_votes, enquiry) %>
       <div class="supported">
         <%= t("enquiries.enquiry.already_supported") %>
+      </div>
+    <% elsif current_user && enquiry.max_supported?(current_user) %>
+      <div class="supported">
+        <%= t("enquiries.enquiry.max_supported") %>
       </div>
     <% else %>
     <%= link_to vote_enquiry_path(enquiry, value: 'yes'),
@@ -61,3 +64,5 @@ title: t('enquiries.enquiry.support_title'), method: "post", remote: true do %>
     </div>
   <% end %>
 </div>
+
+

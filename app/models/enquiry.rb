@@ -87,8 +87,12 @@ class Enquiry < ActiveRecord::Base
     user && user.level_two_or_three_verified?
   end
 
+  def max_supported?(user)
+    user && user.votes.for_type(Enquiry).votables.count {|e| e.id_enquiry_set == Rails.application.secrets.current_enquiry_set } >= Rails.application.secrets.max_votes
+  end
+
   def register_vote(user, vote_value)
-    if votable_by?(user)
+    if votable_by?(user) && !max_supported?(user)
       vote_by(voter: user, vote: vote_value)
     end
   end
