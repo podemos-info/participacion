@@ -148,6 +148,23 @@ namespace :aportaciones do
     end
   end
 
+  desc "[init] actualiza datos de enlaces desde fichero sacado de vistalegre2"
+  task :update_VA_urls => :environment do
+    xlsx = Roo::Spreadsheet.open("lib/tasks/init/aportaciones_urls.xlsx")
+    sheet = xlsx.sheet(0)
+    headers = { ID: "ID", titulo: "titulo", descripcion: "resumen", tematica: "tematica", pdf: "pdf", email: "email",equipo: "equipo"}
+    #programa = YAML.load_file('config/locales/programa.es.yml')
+    sheet.each(headers) do |r|
+      if r[:ID].to_i > 0 && !r[:titulo].nil?
+        Enquiry.update(
+          r[:ID].to_i,
+          :external_url => r[:pdf]
+        ).save!(:validate => false)
+        puts "ID: #{r[:ID].to_i} \t\t url: '#{r[:pdf]}'"
+      end
+    end
+  end
+
   desc "[init] Añadir datos de aportaciones"
   task :agregar => :environment do
     # IMPORTANTISIMO usar esta tarea sólo para AÑADIR pues no borra las ya existentes y daria error de clave duplicada lo cual
