@@ -88,7 +88,15 @@ class Enquiry < ActiveRecord::Base
   end
 
   def max_supported?(user)
-    user && user.votes.for_type(Enquiry).votables.count {|e| e.id_enquiry_set == Rails.application.secrets.current_enquiry_set } >= Rails.application.secrets.max_votes
+    if user
+      votes_count = user.votes.for_type(Enquiry).votables.count do |e|
+        aux = e.nil? ? 0 : e.id_enquiry_set
+        aux == Rails.application.secrets.current_enquiry_set
+      end
+    else
+      votes_count = 0
+    end
+    user && votes_count >= Rails.application.secrets.max_votes
   end
 
   def register_vote(user, vote_value)
