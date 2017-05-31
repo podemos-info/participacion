@@ -5,6 +5,8 @@ en:
       user_not_found: "User not found"
   layouts:
     header:
+      proceso_murcia_2017: "Proceso interno Murcia"
+      proceso_murcia_2017_url: "https://www.reddit.com/r/PlazaRegionMurcia/"
       external_link_transparency: "Transparency"
       external_link_transparency_url: "https://transparencia.podemos.info"
       external_link_opendata: "Open data"
