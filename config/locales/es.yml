@@ -6,7 +6,9 @@ es:
   layouts:
     header:
       programa: "Programa"
-      laws: "Ley de participacion"
+      laws: "Ley de participación"
+      proceso_murcia_2017: "Proceso interno Murcia"
+      proceso_murcia_2017_url: "https://www.reddit.com/r/PlazaRegionMurcia/"
       external_link_transparency: "Transparencia"
       external_link_transparency_url: "https://transparencia.podemos.info/"
       external_link_opendata: "Datos abiertos"
@@ -622,7 +624,7 @@ es:
     programa:
       title: "Programa"
       description: "Conoce al detalle las propuestas del programa electoral de PODEMOS antes de votarlas en nuestro portal de Participación."
-    law:
+    laws:
       title: "Ley de participación"
       description: "Conoce al detalle las propuestas de la Ley de participación de PODEMOS antes de votarlas en nuestro portal de Participación."
     do:
