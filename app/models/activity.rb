@@ -11,6 +11,7 @@ class Activity < ActiveRecord::Base
   scope :on_enquiries, -> { where(actionable_type: 'Enquiry') }
   scope :on_debates, -> { where(actionable_type: 'Debate') }
   scope :on_medidas, -> { where(actionable_type: 'Medida') }
+  scope :on_laws, -> { where(actionable_type: 'Law') }
   scope :on_users, -> { where(actionable_type: 'User') }
   scope :on_comments, -> { where(actionable_type: 'Comment') }
   scope :for_render, -> { includes(user: [:moderator, :administrator]).includes(:actionable) }

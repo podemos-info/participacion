@@ -1,0 +1,448 @@
+1º Hilo: DISPOSICIONES GENERALES (del artículo 1 al 5)
+
+Artículo 1: Objeto.
+1. La presente Ley tiene por objeto la regulación del derecho de participación ciudadana en el diseño de las políticas públicas autonómicas y locales de la Comunidad de Madrid, ordenando la colaboración entre la Comunidad Autónoma de Madrid y las entidades locales de dicha Comunidad para la promoción de la participación ciudadana.
+2. Se fomentará la participación ciudadana, tanto de forma individual como colectiva, en la actividad administrativa de la Comunidad Autónoma de Madrid, comprendiendo en todo caso, en los términos previstos en esta Ley, el derecho a participar en las iniciativas populares dirigidas a la Asamblea Legislativa autonómica.
+
+Artículo 2: Ámbito de aplicación
+1. El ámbito de aplicación de la presente Ley se refiere al ejercicio de las competencias de la Asamblea de Madrid, el Gobierno y Administración de la Comunidad Autónoma y de los Entes Locales de la Comunidad de Madrid.
+
+2. Las disposiciones de esta Ley se aplicarán a:
+a. La Administración de la Comunidad de Madrid, incluidos sus órganos superiores de gobierno.
+b. Las entidades que integran la Administración Local madrileña, incluidos sus órganos de gobierno.
+c. En adelante, cualquier mención realizada a las Administraciones Públicas se entenderá respecto de los sujetos de derecho público enumerados en el presente artículo
+
+Artículo 3: Finalidad 
+"La presente ley persigue las siguientes finalidades:
+1. Fomentar medidas que impulsen la participación ciudadana en una sociedad plural para la defensa de los valores democráticos y solidarios, así como desarrollar los correspondientes instrumentos de intervención de la ciudadanía en las actuaciones de las administraciones públicas.
+2. Profundizar en el acercamiento de las instituciones públicas madrileñas a la ciudadanía, tratando de involucrarla en la gestión pública que realizan.
+3. Garantizar a la ciudadanía la información en los procedimientos que promueven, desarrollen o tramiten las administraciones públicas para conseguir la mayor transparencia en la gestión pública, sin perjuicio de los procedimientos en los que previamente se establezca un periodo de información pública. 
+4. Establecer mecanismos de evaluación de las políticas públicas y de investigación del estado de la opinión pública por parte de la ciudadanía.
+5. Fomentar la vida asociativa de la Comunidad de Madrid, garantizando la convivencia solidaria y equilibrada en la libre concurrencia de iniciativas ciudadanas sobre los asuntos públicos.
+6. Desarrollar los correspondientes instrumentos de participación ciudadana, entendiendo que son los mecanismos establecidos para la intervención de la ciudadanía en las políticas públicas de las administraciones."
+Artículo 4: Principios básicos.
+"Se tendrán en cuenta en la interpretación y aplicación de esta Ley los siguientes principios básicos:
+1. Principio de universalidad, en cuya virtud el derecho de participación debe ser aplicable al conjunto de la ciudadanía, teniéndose en cuenta la diversidad de personas, territorial, social y económica existente en la Comunidad de Madrid.
+2. Principio de transversalidad, orientará el diseño y el desarrollo de las políticas públicas de la Administración Pública y Local.
+3. Principio de transparencia, en cuya virtud se garantiza una actividad fundada en la accesibilidad de la información y en la excepcionalidad de las restricciones que sólo podrán fundarse en la protección de otros derechos.
+4. Principio de publicidad, en cuya virtud la información difundida será veraz y objetiva, siendo actualizada y publicada periódicamente.
+5. Principio de rendición de cuentas, control y seguimiento, en cuya virtud las Administraciones Públicas y entidades responsables de la gestión pública serán evaluadas por la ciudadanía a través de los mecanismos de participación.
+6. Principio de relevancia, en cuya virtud las conclusiones de los procesos de participación ciudadana contemplados en esta Ley se tomarán en consideración en la gestión pública.
+7. Principio de accesibilidad, no discriminación tecnológica y adaptación de medios y lenguajes, en cuya virtud los cauces y medios habilitados para la participación no deben constituir un factor de exclusión para determinados sectores de la población. 
+8. Principio de gobernanza democrática, en cuya virtud la acción de gobierno es ejercida desde una perspectiva global, integradora de mecanismos, procesos y reglas que permiten la interacción entre la ciudadanía y los órganos de gobierno de las Administraciones Públicas madrileñas para la toma de decisiones.
+9. Principio de modernización y neutralidad tecnológica, en cuya virtud se impulsará el empleo de las nuevas tecnologías con el objeto de diseñar procesos más eficiente y cercanos a la ciudadanía articulándose mediante la adopción de estándares tecnológicos abiertos y neutrales.
+10. Principio de reutilización de la información, en cuya virtud la información se publicará y difundirá en formatos que posibiliten y favorezcan su reutilización, como forma de creación de valor añadido."
+Artículo 5: Tratamiento de la información
+"1. Con el fin de garantizar la difusión y transparencia de una información pública objetiva, veraz y actualizada, los sujetos comprendidos en el ámbito de aplicación de esta Ley adoptarán políticas de gestión integral de la información, tanto en soporte analógico como electrónico, y diseñarán e implementarán los sistemas y las medidas técnicas y organizativas necesarias que garanticen la interoperabilidad, seguridad, integridad, conservación y accesibilidad de la información, así como la integración de conjunto de datos.
+2. Este sistema integral facilitará a las personas la accesibilidad a la información pública necesaria a fin de promover una participación informada y en igualdad de condiciones en los asuntos públicos."
+
+2º Hilo: DERECHOS Y OBLIGACIONES (del artículo 6 al 13)
+
+Artículo 6. Ámbito subjetivo de la ley
+"1. Tienen derecho a participar de todos los instrumentos de participación recogidos en la presente ley:
+  a. Todas las personas que tengan la condición política de madrileños o madrileñas y quienes tengan la vecindad administrativa en la Comunidad de Madrid, 
+  b. así como la ciudadanía española residentes en el extranjero registrados en el ERTA o CERA asignados a la junta electoral provincial de Madrid. 
+2. La participación ciudadana podrá ser ejercida, en los términos recogidos en esta Ley, directamente o a través de las entidades de participación ciudadana. A efectos de esta Ley tienen la consideración de entidades de participación ciudadana:
+  a. Las entidades sin ánimo de lucro que:
+    i. Estén válidamente constituidas, de acuerdo con la normativa que le sea de aplicación.
+    ii. Su ámbito de actuación esté vinculado al interés de la Comunidad de Madrid.
+  b. Las agrupaciones de personas físicas y/o jurídicas que se conformen como plataformas, movimientos, foros o redes ciudadanas sin personalidad jurídica, incluso las constituidas circunstancialmente, cuya actuación se desarrolle en el territorio madrileño y cumplan los requisitos:
+    i. Notoriedad
+    ii. Condiciones de demostrar actividad
+    iii. Designen a una persona responsable"
+
+Artículo 7: Derecho a promover procesos de participación ciudadana.
+Las personas a las que se refiere el artículo anterior, ya sea individual o colectivamente, tienen el derecho a promover la realización de procesos participación ciudadana en los términos recogidos en esta Ley.
+
+Artículo 8: Derecho a la información.
+"1. Las Administraciones Públicas garantizarán a la ciudadanía el derecho a la información sobre el ejercicio de sus competencias y sobre aquellas cuestiones que sean de especial interés, de acuerdo con las disposiciones legales vigentes y con la presente ley, con los únicos límites previstos en el artículo 105, párrafo b), de la Constitución.
+2. A los efectos específicos de facilitar la participación ciudadana, las Administraciones Públicas harán pública la información sobre los procesos de decisión que se recogen en los términos de esta ley, en los plazos que permitan el pleno ejercicio del derecho a una participación informada. 
+1. A tal efecto, las Administraciones Públicas harán públicos y facilitarán el acceso a todos aquellos datos e información que permitan a la ciudadanía contar con elementos de juicio fundados y un conocimiento suficiente para intervenir en los procesos de participación ciudadana. Dicha información será facilitada de manera accesible, comprensible y en tiempo.
+2. De conformidad con las leyes de acceso a la información vigentes, las Administraciones públicas habilitarán los mecanismos necesarios para que cualquier persona pueda solicitar información sobre los procesos de participación abiertos, teniendo en todo caso obligación de responder.
+3. Se garantizará el uso de imágenes y lenguaje inclusivo y no discriminatorio en todos los sistemas y soportes de difusión de la información. Siendo en todo caso accesibles para las personas con diversidad funcional."
+Artículo 9: Medios de información para la participación ciudadana.
+"1. Se entiende por medios de información y atención ciudadana el conjunto de actividades que se ponen a disposición de la ciudadanía para facilitarles el ejercicio de sus derechos, el cumplimiento de sus obligaciones y el acceso a los servicios públicos.
+2. La información se prestará preferentemente por internet a través de los portales institucionales, mediante vínculos web, estableciendo cauces de relación directa con la ciudadanía y viceversa, previo suministro y recepción de información que permita obtener a las Administraciones Públicas de ella dependientes información suficiente al objeto de adecuar el diseño de las políticas públicas a las demandas e inquietudes de la ciudadanía, o, por aquellos nuevos canales que la tecnología o los medios de comunicación permitan en el futuro.
+3. Para garantizar la inclusividad del acceso a la información, se podrá hacer uso también de:
+  i. La red de centros públicos, sectoriales y/o territoriales, relacionados con la naturaleza específica del proceso participativo.
+  ii. Radio Televisiones públicas
+  iii. Todos aquellos soportes, en medios de transportes públicos u otros similares, reservados habitualmente para publicidad institucional.
+  iv. Cualquier otro medio físico que se considera adecuada por la naturaleza de la audiencia destinataria de la información"
+
+Artículo 10:  Derecho a la propuesta de iniciativa reglamentaria
+La ciudadanía madrileña podrá presentar a la Administración autonómica, en aquellas materias que sean de su competencia, propuestas de iniciativas que afecten a sus derechos e intereses legítimos, proponiendo su tramitación como disposición reglamentaria.
+Artículo 11:  Garantía de la Igualdad de género y representatividad.
+"1. Los procedimientos de decisión o procesos deliberativos contemplados en la presente Ley, deberán tener adscrita, desde su inicio hasta su evaluación, una persona responsable experta en igualdad de género que vele por el cumplimento de los criterios de género en la toma de decisiones y acciones llevadas a cabo a lo largo del procedimiento o proceso.
+2. Los órganos o comisiones que se constituyan al amparo del desarrollo de alguno de los instrumentos de participación ciudadana contemplados en la Ley, deberán ser paritarios en género, al 50%.
+3. En todo caso, los órganos o comisiones que se constituyan al amparo del desarrollo de alguno de los instrumentos de participación ciudadana contemplados en la Ley, deberán respetar la proporcionalidad demográfica en su composición. En cualquier caso, existirá representación de ciudadanos y ciudadanas a título individual, representantes de asociaciones sociales vinculados al objeto del proceso, técnicos de la administración y partidos políticos con representación institucional en el ámbito territorial de la audiencia."
+
+Artículo 12. Participación ciudadana desde  el exterior
+
+"1. Las Administraciones Públicas, a los efectos de esta Ley, adoptarán las medidas necesarias para fomentar y facilitar la participación efectiva de los ciudadanos y ciudadanas madrileños residente en el exterior, en las mismas condiciones y con los mismos requisitos que los residentes en la Comunidad de Madrid.
+2. A los efectos del apartado anterior, se entiende por ciudadanos y ciudadanas madrileños en el exterior, los ciudadanos y ciudadanas españoles que hayan tenido su última vecindad administrativa en la Comunidad de Madrid."
+
+Artículo 13. Centros madrileños en el exterior
+"1. La Comunidad de Madrid apoyará el movimiento asociativo de los ciudadanos y ciudadanas madrileños en el exterior, fomentando la creación de centros madrileños en el exterior (CEMEX), que tendrán como objetivo el fomento de la participación ciudadana exterior.
+2. A los efectos de esta ley, tendrá la consideración de centro madrileño en el exterior cualquier asociación legalmente reconocida, sin ánimo de lucro y con personalidad jurídica propia de acuerdo con las normas vigentes en el territorio en el que se encuentre ubicada, constituida por una comunidad de madrileños o madrileñas asentada fuera de la Comunidad de Madrid, que sea reconocida como tal por el órgano competente del país donde esté registrada.
+3. A los efectos de defender e integrar sus intereses y de facilitar el cumplimiento conjunto y coordinado de sus fines, los centros madrileños en el exterior reconocidos podrán constituirse en federaciones o confederaciones."
+
+3º Hilo: INSTRUMENTOS DE PARTICIPACIÓN (del artículo 14 al 61)
+Artículo 14. Instrumentos de participación
+"1. Los instrumentos de participación ciudadana son cauces para la participación de la ciudadanía en las políticas públicas y para la coordinación de las entidades entre sí. Serán desarrollados por las Administraciones Públicas madrileñas en el ámbito de sus competencias, para posibilitar el ejercicio del derecho de la ciudadanía a la participación, conforme a los principios enumerados en la presente ley, en el diseño de los asuntos públicos autonómicos y locales
+2. Las acciones destinadas a canalizar la participación ciudadana se desarrollarán a través de los instrumentos previstos en los siguientes capítulos. 
+"
+Artículo 15. Proceso participativo
+"1. Los programas o políticas de actuación sectorial del Gobierno así como los instrumentos normativos de carácter reglamentario que los desarrollen, cuando no se refieran a materias excluidas de las iniciativas legislativas deberán someterse con carácter general en su fase de elaboración a un proceso de participación ciudadana. 
+2. Sin perjuicio de lo establecido en el apartado anterior, cuando así lo consideren las Administraciones Públicas madrileñas, cualquier otra iniciativa de actuación podrá ser sometida a un proceso participativo a través de los instrumentos previstos en este título o cualesquiera otros de naturaleza análoga.
+3. El resultado del proceso participativo se plasmará en un informe de participación ciudadana elaborado por el órgano o departamento de la Administración Pública que inició el proceso en el que se indicarán:
+1. Los mecanismos de participación que han sido utilizados
+2. El resultado del proceso participativo
+3. La evaluación por parte del órgano proponente del proceso de participación, especificando qué propuestas o influencias ciudadanas de la ciudadanía, en su caso, han sido incorporadas al texto."
+
+Artículo 16. Definición:
+Las Conferencias de Políticas Públicas son procesos de participación y deliberación mediante los cuales se establecen las prioridades y líneas estratégicas fundamentales para la elaboración de políticas públicas dentro de las diferentes Consejerías de Gobierno de la Comunidad de Madrid, en el ámbito de las competencias de la Comunidad de Madrid. 
+
+Artículo 17. Tramitación de la iniciativa de los procesos de Conferencias de Políticas Públicas
+"1. Las Consejerías de Gobierno madrileñas en sus respectivos ámbitos competenciales podrán iniciar  procesos de Conferencias de Políticas Públicas de oficio o a instancia de una iniciativa ciudadana. 
+2. Las Conferencias de Políticas Públicas podrán convocarse por iniciativa popular de cualquiera de los sujetos de derecho recogidos en el artículo 6 de la presente Ley. Para promover el desarrollo de procesos de Conferencias de Políticas Públicas deberán requerir el apoyo de un mínimo de avales del 0,1% del censo de la población de la Comunidad Autónoma. 
+1. Para la recogida de dichos avales se admitirá la recepción de firmas en soportes físicos o electrónicos. 
+2. Las personas o entidades de participación ciudadana promotoras dirigirán su solicitud al titular de la Consejería competente en la materia, quien resolverá en el plazo máximo de 30 días. Dicha solicitud deberá incluir al menos una breve descripción del asunto objeto de deliberación y un cauce de comunicación, que preferentemente será a través de un correo electrónico.
+3. En el caso de que se decida la realización del proceso de Conferencias de Políticas Públicas, el órgano competente deberá proceder, en el plazo máximo de 30 días, a la iniciación del proceso conforme se establece en los artículos siguientes. En el caso de desestimación de la iniciativa, esta deberá estar motivada y cabe recurso de alzada contra la misma."
+
+Artículo 18. Inicio de los procesos de Conferencia de Políticas Pública.
+"1. El proceso de Conferencia de Políticas Públicas se iniciará por acuerdo de la Consejería competente de la Comunidad de Madrid, mediante la adopción por resolución de un Acuerdo Básico. 
+2. En el Acuerdo Básico se deberán especificar como mínimo los siguientes contenidos:
+  a. Objeto del proceso de deliberación, concretado en una propuesta o proyecto inicial.
+  b. Composición de la Comisión Organizadora en virtud de los siguientes porcentajes respetando en todo caso los criterios de paridad y diversidad recogidos en la presente Ley:
+    i. 50 % ciudadanía - individual, organizada en plataformas o entidades sociales
+    ii. 30 % representantes de las administraciones públicas autonómica y municipal y de los partidos políticos
+    iii. 20 % personal técnico de la administración correspondiente especializado en la materia de la Administración pública.
+  c. Calendario del proceso.
+  d. Sistemas y soportes de difusión de la información y recogida de propuestas y argumentos.
+3. La duración máxima de las Conferencias de Políticas Públicas será de seis meses desde que se publique la resolución del Acuerdo Básico."
+
+Artículo 19. Composición de la Comisión Organizadora
+"1. La Comisión Organizadora será la encargada de elaborar el Reglamento del Proceso de la Conferencia de Políticas Públicas
+2. Este Reglamento deberá incluir como mínimo los siguientes extremos
+  a. Criterios y metodología para la elección de los representantes y personal técnico de la administración pública y de la sociedad civil, cumpliendo en todo caso las garantías de paridad y diversidad recogidas en esta Ley.
+  b. Disponibilidad de materiales y documentación a emplear en el proceso.
+  c. Metodología del proceso, definiendo como mínimo las fases siendo preciso que existan como mínimo fase municipal y fase regional, forma de recogida y devolución de los contenidos del debate, forma de adoptar acuerdos o resultados por las personas o entidades participantes, así como la metodología para la evaluación del proceso.
+  d. Publicación de resultados."
+
+Artículo 20: Desarrollo del proceso
+"1. Una vez aprobado el Acuerdo Básico, se procederá a realizar la primer fase denominada “Conferencias Municipales” en los diferentes municipios de la Comunidad de Madrid. Los municipios con menos de 10.000 habitantes, que así lo soliciten, deberán (podrán) agruparse, hasta un máximo de 5, para la celebración de una única Conferencia Municipal.
+2. La Comisión Organizadora de las diferentes etapas municipales determinará el reglamento específico de esta etapa del proceso, siempre de acuerdo con los criterios establecidos dentro del reglamento regional de dicha Conferencia.
+3. Cada Conferencia Municipal elegirá:
+  a. Un conjunto de propuestas para debatir en la última fase del proceso.
+  b. Un conjunto de delegados para participar en la fase regional
+  c. Opcionalmente podrán incluir también propuestas dirigidas a los Gobiernos Municipales.
+4. Las Consejerías competentes deberán establecer los mecanismos telemáticos de deliberación dentro del procesos. Los resultados definitivos de esa deliberación se incorporarán en la última fase de la Conferencia, la Conferencia Regional.
+5. La Conferencia Regional constituirá la fase de cierre del proceso. Deberá partir de las propuestas derivadas de las fases municipales y establecerán las directrices generales de la política pública que se debatirá."
+Artículo 21. Obligación del inicio de procesos de Conferencias de Políticas Públicas
+"1. Todas las Consejerías deberán de realizar al menos, un proceso de Conferencia de Políticas Públicas para establecer las líneas generales de su trabajo. 
+2. Dichos procesos deberán de tener lugar en la primera mitad de la Legislatura, cuando se trate del primero que se realiza. 
+3. Una vez superado ese periodo, la Comisión de Participación Ciudadana de la Asamblea Autonómica de Madrid deberá convocar este proceso."
+Artículo 22. Obligación de suspensión
+La resolución de inicio de un proceso de Conferencia de Políticas Públicas en relación con una determinada política pública suspenderá cualquier actuación que condicione la decisión final a adoptar, salvo los actos de trámite.
+Artículo 23. Conclusión del proceso de Conferencias de Políticas Públicas y efectos.
+"1. Una vez concluido el proceso de la Conferencia de Políticas Públicas, la Comisión organizadora elaborará un informe final sobre el proceso que contendrá las propuestas debatidas y la memoria de todas las fases del proceso. Asimismo, el informe deberá incluir las conclusiones del proceso efectuado.
+2. El informe final deberá comunicarse directamente a las personas o entidades que hubieran participado en el proceso. 
+3. Elaborado el informe final, el órgano competente para adoptar la decisión o aprobar la política pública, emitirá un pronunciamiento motivado sobre los efectos que producirá dichas conclusiones en la política pública."
+
+Artículo 24. Definición
+"Se denomina proceso de deliberación participativa al conjunto de actos por el cual una política pública concreta se somete a debate ciudadano a través de los argumentos, preferencias, intereses y propuestas de la ciudadanía. Este debate ciudadano se llevará a cabo en todo caso antes de tomar la decisión determinada sobre la política pública.
+ámbito"
+
+Artículo 25. Iniciativa de los Procesos de deliberación participativa.
+"1. La Administración Pública de la Comunidad de Madrid en sus respectivos ámbitos competenciales  competenciales, y las entidades municipales, podrán iniciar procesos de deliberación participativa.
+2. Los procesos de deliberación participativa también podrán iniciarse por iniciativa popular de cualquiera de los sujetos de derecho recogidos en el artículo 6 de la presente Ley. Para promover el desarrollo de procesos de deliberación participativa deberán requerir el apoyo de un mínimo  de avales del 0,1% del censo de la población de la Comunidad Autónoma, o del municipio, en su caso.
+  a. Para la recogida de dichos avales se admitirá la recepción de firmas en soportes físicos o a través de plataformas telemáticas habilitadas a tal efecto.
+  b. Las personas o entidades de participación ciudadana promotoras dirigirán su solicitud al titular de la Consejería competente por razón de materia, o al presidente de la entidad local a la que afecte la iniciativa, quien resolverá en el plazo máximo de 30 días. Dicha solicitud deberá incluir al menos una breve descripción del asunto objeto de deliberación y un cauce de comunicación, que preferentemente será a través de un correo electrónico.
+  c. En el caso de que se decida la realización del proceso de deliberación participativa, el órgano competente deberá proceder, en el plazo máximo de 30 días, a la iniciación del proceso conforme se establece en los artículos siguientes. En el caso de desestimación de la iniciativa, está deberá estar motivada y cabe recurso de alzada contra la misma.
+3. El pleno municipal, tiene capacidad para iniciar un procesos de deliberación participativa en su municipio, sobre un asunto público, del que es objeto de forma directa."
+
+Artículo 26. Tramitación de la iniciativa ciudadana para realizar procesos de participación ciudadana.
+"1. Los procesos de deliberación participativa se iniciarán por acuerdo del órgano competente autonómico o local, mediante la adopción de una resolución inicial
+2. De forma excepcional también podrán realizarse procesos de deliberación participativa en fases sucesivas  del procedimiento cuando el proyecto o política pública a adoptar haya adquirido durante su tramitación una trascendencia imprevista en el momento inicial o cuando las características del mismo se hayan transformado de forma sustancial.  Para la acreditación de dicha trascendencia o cambio sustancial se ha de contar con los siguientes requisitos:
+  a. Un informe público de personas expertas en la materia.
+  b. Petición de la mayoría simple de la Asamblea Legislativa o pleno municipal; o la petición del 0,2 del censo de la Comunidad o del municipio, en su caso."
+Artículo 27. Resolución de inicio. 
+"1. Una vez acreditados los requisitos para iniciar un proceso de deliberación participativa, la Consejería competente de la Comunidad de Madrid, o la autoridad de la entidad local que se determine, a la que afecte la iniciativa, emitirá una resolución inicial, que deberá contener como mínimo los siguientes extremos:
+  a. Naturaleza y carácter del proceso deliberativo
+  b. Objeto del proceso de deliberación, concretado en una propuesta o proyecto inicial.
+  c. Relación de miembros del Equipo coordinador del proceso. Deberá incluirse como mínimo:
+    i. Un responsable de la Administración Pública, ya sea de la Comunidad Autónoma o de la entidad local en caso de procesos de deliberación participativa municipal.
+    ii. Un experto en la materia sobre la que se delibera
+    iii. Un responsable de Igualdad
+    iv. Un representante de cada colectivo promotor de la iniciativa
+  d. Duración del proceso, que en ningún caso podrá exceder el año.
+  e. La inclusión en su caso de un proceso de consulta popular.
+  f. Los sistemas y soportes de difusión de la información y recogida de propuestas y argumentos.
+2. Si la iniciativa corresponde al gobierno autonómico o local, éste deberá determinar el contenido de la resolución. Si la iniciativa fuera ciudadana, el gobierno autonómico o local elaborará una propuesta de resolución que trasladará a las personas o entidades promotoras con el fin de que realicen cuantas observaciones y sugerencias estimen oportunas sobre los términos de la resolución antes de su determinación.
+3. El proceso contará con la siguientes fases: Publicidad, deliberación, exposición de conclusiones y aportaciones finales."
+Artículo 28. Desarrollo del proceso de deliberación participativa
+"1. Una vez aprobado la resolución inicial, se procederá a la apertura del proceso de deliberación participativa, que se hará público en la sede electrónica, portal o página web del órgano competente de acordar el inicio del proceso y se podrá publicar mediante anuncio en el Boletín Oficial de la Comunidad de Madrid. El anuncio en la sede electrónica, portal o página web incluirá el texto íntegro de la resolución.
+2. Es obligación de las Administraciones Públicas madrileñas facilitar en el desarrollo de los procesos de deliberación participativa, mecanismos presenciales de participación según el ámbito territorial.
+3. Si las Administraciones Públicas madrileñas tuvieran conocimiento de la existencia de otra información referente al tema objeto del proceso que no obre en su poder, informarán de su existencia."
+Artículo 29. Obligación de suspensión
+La resolución de inicio de un proceso de deliberación participativa en relación con una determinada política pública suspenderá cualquier actuación que condicione la decisión final a adoptar, salvo los actos de trámite.
+Artículo 30. Conclusión del Proceso de deliberación participativa y efectos.
+"1. Una vez concluido el proceso de deliberación, el Equipo coordinador elaborará un informe final sobre el proceso que contendrá las propuestas debatidas y en el que se recogerá la memoria de todas las fases del proceso.  Asimismo, el informe deberá incluir las conclusiones del proceso efectuado y una valoración del conjunto de la deliberación. El informe final deberá comunicarse directamente a las personas o entidades que hubieran participado en el proceso. 
+2. Elaborado el informe final, el órgano competente emitirá un pronunciamiento motivado sobre los efectos que producirían las conclusiones contenidas en él en la política pública. Estos efectos supondrán la continuación del proyecto en sus términos iniciales, su renuncia, la presentación de un proyecto alternativo o la  modificación del mismo. En todo caso el pronunciamiento deberá motivarse
+3. El pronunciamiento adoptado se publicará por los mismos medios o canales que la resolución de inicio. Dicho pronunciamiento permitirá continuar con la tramitación del procedimiento."
+
+Artículo 31.  Definición
+Las Administraciones públicas de la Comunidad de Madrid y entidades Locales podrán promover, en el ámbito de sus competencias, instrumentos de consulta popular que tienen por objeto el conocimiento de la opinión de un determinado sector o colectivo de la población sobre determinados asuntos o políticas públicas.
+Artículo 32. Clasificación
+"1. Las consultas populares podrán ser autonómicas o locales.
+2. Se entiende por consulta popular autonómica la que tiene por objeto cuestiones relativas  materias de la competencia de la Comunidad Autónoma de Madrid, y su ámbito territorial podrá ser autonómico.
+3. Se entiende por consulta popular local la que tiene por objeto cuestiones relativas a materias de la competencia propia de las Entidades Locales, y su ámbito territorial podrá ser municipal, inferior al territorio municipal y supramunicipal."
+
+Artículo 33. Instrumentos de consulta popular
+"Las consultas populares podrán realizarse mediante:
+1. Las audiencias públicas. A través de un procedimiento oral y público, las Administraciones Públicas garantizarán a las personas directamente afectadas por una política pública ser escuchadas antes de adoptar una decisión sobre el asunto que les afecta.
+2. Los foros de consulta. Consisten en espacios de debate sobre los efectos de una política pública. En ellos podrá hacerse un análisis valorativo de los efectos de dichas políticas en la ciudadanía.
+3. Las consultas participativas."
+
+Artículo 34. Limitación temporal.
+Una vez iniciados los trámites para una consulta popular no se puede promover otra consulta sobre el mismo objeto hasta la siguiente legislatura en que se inició, con un mínimo transcurrido de dos años. 
+Artículo 35. Asuntos excluidos de los instrumentos de consulta popular.
+
+"Las consultas reguladas en esta Ley no podrán plantear ninguno de los siguientes asuntos: 
+
+1. Asuntos contrarios al ordenamiento jurídico
+2. Asuntos que cuestionen la dignidad de la persona y los derechos fundamentales y libertades públicas reconocidos por el ordenamiento jurídico vigente
+3. Asuntos relativos a la organización institucional de la Comunidad Autónoma de Madrid o de las Entidades Locales
+4. Recursos de la Hacienda Pública de la Comunidad Autónoma de Madrid o de las Haciendas Locales."
+
+Artículo 36. Participación en las Consultas Populares
+
+Tienen derecho a participar en las consultas populares todas las personas mayores de 16 años que residan en el territorio donde se circunscribe la consulta.
+
+Artículo 37. Sistema de votación.
+
+"1. En las consultas participativas reguladas en esta Ley, la participación se articulará mediante un sistema de votación y tendrá la condición de universal, igual, libre, directo y secreto. Se habilitará un procedimiento tanto presencial como electrónico.
+2. La votación presencial se celebrará en uno o varios días determinados, preferentemente en instalaciones públicas y con las garantías determinadas en la Ley."
+
+Artículo 38. Iniciativa de Consulta Popular.
+
+"Las consultas populares reguladas en esta Ley podrán ser de iniciativa institucional o de iniciativa ciudadana.
+
+1. Para asuntos de competencia autonómica la iniciativa será a instancia del Consejo de Gobierno de la Comunidad de Madrid o del 10% de los Ayuntamientos de la Comunidad por acuerdo adoptado por mayoría simple de sus respectivos Plenos.
+2. Para asuntos de competencia local la iniciativa podrá ser 
+  a. A instancia del Presidente del Gobierno municipal
+  b. Del Pleno por mayoría simple de al menos dos grupos políticos con representación en el pleno 
+  c. De un tercio de los miembros de la corporación para asuntos de su competencia.
+3. Con independencia del ámbito territorial al que competa la consulta, los distintos instrumentos de consulta popular podrán ser promovidas por los sujetos contemplados en el artículo 6 de la presente Ley. Al efecto de impulsar una iniciativa popular, En estos casos, se constituirá un Grupo Motor [cp]compuesto por tres personas, que deberá contar con el aval del 0,2% de la población mayor de 16 años[cq] residente en la Comunidad o municipio, atendiendo al ámbito competencial donde se encuadre la consulta.
+4. Para la recogida de dichos avales se admitirá la recepción de firmas en soportes físicos o a través de plataformas telemáticas habilitadas a tal efecto."
+
+Artículo 39: Documentación que debe acompañar la propuesta de consulta.
+
+"1. La propuesta de consulta deberá ir acompañada de la siguiente documentación:
+  a. Memoria explicativa de las razones que hacen conveniente la consulta y el ámbito competencial y territorial para su realización, así como el sector o colectivo de la población llamado a participar.
+  b. Texto de la pregunta o preguntas propuestas
+2. En caso de iniciativa popular deberá acompañarse, además la siguiente documentación:
+  a. Relación de los miembros del Grupo Motor con sus datos personales.
+  b. Declaración responsable de los miembros del Grupo Motor de que cumplen los requisitos establecidos en el artículo 36.3 de la presente Ley.
+  c. Cuando la iniciativa sea promovida por personas jurídicas, además deberá aportarse el documento acreditativo de representación de la persona que firme en nombre de la entidad, así como el acta de la sesión del órgano estatutario competente para acordar la presentación de la iniciativa."
+
+Artículo 40: Presentación de las Iniciativas de Consultas Populares
+
+"1. Las iniciativas de consulta popular, se presentarán mediante escrito donde se expresará con claridad el contenido de la propuesta, acompañado de la documentación establecida en el artículo 37, dirigido al Presidente o Presidenta de la Comunidad de Madrid, o al Presidente o Presidenta de la respectiva entidad local, que dará traslado al órgano competente para su tramitación.
+2. Si la documentación aportada no reúne los requisitos exigidos en la presente Ley, el órgano competente para su tramitación requerirá a quienes la hubieran presentado para que en el plazo de 10 días subsane la falta o acompañen los documentos preceptivos, con indicación de que, si así no lo hicieran se les tendrá por desistidos de las iniciativa, previa resolución que deberá ser dictada por el órgano competente. 
+3. Admitida a trámite la propuesta, el órgano competente para su tramitación procederá a su notificación a quien hubiese promovido la iniciativa."
+
+Artículo 41: Información pública e informes
+
+La propuesta de consulta participativa admitida a trámite se someterá a información pública por un plazo no inferior a 15 días, mediante la publicación de la iniciativa de consulta en la sede electrónica, portal o página web de la Administración Pública correspondiente, así como en el Boletín Oficial que corresponda. Cualquier persona física o jurídica, así como las plataformas, foros o redes sociales constituidas de acuerdo con lo previsto en esta Ley, podrán presentar alegaciones a tales iniciativas.
+
+Artículo 42. Formulación de la pregunta o preguntas
+
+"1. La consulta se realizará mediante una o varias preguntas, que serán formuladas de forma concisa, clara y sencilla, con la finalidad de que la ciudadanía pueda en todo caso comprender su alcance y responder afirmativamente, de forma negativa, o en su caso, en blanco.
+2. La consulta, en los casos que sea necesario, se podrá formalizar mediante el planteamiento  de diferentes soluciones o respuestas alternativas, al efecto de que el voto se emita sobre una de ellas."
+
+Artículo 43. Competencia para convocar la consulta
+
+"1. La competencia para convocar consultas autonómicas corresponde al Presidente o Presidenta de la Comunidad de Madrid, que dará cuenta al Consejo de Gobierno cuando la iniciativa sea a iniciativa propia o previo acuerdo del Consejo de Gobierno en el resto de supuestos.
+2. La convocatoria para convocar consultas locales es el Alcalde o la Alcaldesa del municipio previo acuerdo motivado por mayoría simple del Pleno de la Entidad Local"
+
+Artículo 44. Convocatoria
+
+"La convocatoria de la consulta se efectuará por medio de Decreto de la persona titular de la Presidencia de la Comunidad de Madrid o Decreto del Alcalde o Alcaldesa del Municipio y deberá realizarse en el plazo máximo de 45 días desde que haya sido acordada por el órgano competente, debiendo contener al menos los siguientes datos:
+
+a. Colectivo al que va dirigida la consulta
+b. Pregunta o preguntas que se someten a votación
+c. El día o días y horario de votación
+d. Los lugares en los que se puede formalizar el voto, la posibilidad de emitir el voto por correo, y si cabe por medios electrónicos.
+e. El día de inicio y la duración de la campaña informativa"
+
+
+Artículo 45. Obligación de suspensión con el inicio de un proceso de consulta popular
+
+El acuerdo administrativo de inicio de un proceso de consulta popular en relación con una determinada política pública suspenderá cualquier actuación que condicione la decisión final a adoptar, salvo los actos de trámite.
+
+Artículo 46. Organización de la Consulta
+
+"1. La Administración Pública convocante será la responsable del desarrollo de la consulta, debiendo velar por la objetividad y transparencia de la misma, por el principio de igualdad, por el carácter secreto del voto y por la pureza e imparcialidad de los sistemas de votación adoptados.
+2. El régimen de organización y funcionamiento de las consultas populares será objeto de desarrollo parlamentario, que contemplará al menos:
+  a. Los criterios para la formación de las mesas de votación y para la distribución entre ellas de las personas con derecho a participar en la consulta
+  b. El voto electrónico y por correo, su emisión y recuento.
+  c. El desarrollo de la jornada o jornadas de la consulta: composición y constitución de las mesas de votación, custodia de los votos y desarrollo de las votaciones y recuento"
+
+Artículo 47. Votación y recuento
+
+"1. La votación se llevará a cabo presencialmente, por correo o mediante voto electrónico, cuando así se prevea en la convocatoria. En este último caso se podrán habilitar oficinas para facilitar el acceso al certificado digital y a los medios telemáticos.
+2. Previo a la votación deberá existir una lista con las personas que tengan el derecho a participar en la consulta participativa, cuyo contenido en todo caso deberá respetar lo dispuesto en la normativa reguladora de la protección de datos de carácter personal según el tipo de convocatoria. La lista de las personas con derecho a participar deberá ser elaborada por la Administración pública convocante y proceder de los datos de orden en poder de la Administración convocante o que hayan sido acreditados por la persona que pretenda participar en la consulta. Tales listados serán públicos con al menos treinta días de antelación a la celebración de la consulta, al objeto de que se puedan formular reclamaciones y ser resueltas con carácter previo a la votación.
+3. La votación se iniciará una vez se haya formalizado el acta de constitución de cada mesa, continuando el día o los días y horarios que establezca el decreto de convocatoria, hasta la finalización del periodo de votación.
+4. En la votación se utilizarán papeletas oficiales
+5. Serán nulas aquellas que no se ajusten al modelo oficial, las que susciten dudas sobre la decisión de la persona votante y las que contengan enmiendas, signos o palabras ajenas a la consulta. Se considera voto en blanco el sobre que no contiene ninguna papeleta. Si el sobre contiene más de una papeleta de la misma opción, el voto es válido. Si el sobre contiene papeletas de diferentes opciones, el voto tendrá la condición de nulo.
+6. Finalizada la votación, las mesas procederán al recuento de los votos, que será público, cumplimentándose la correspondiente acta que será firmada por los miembros de cada mesa y en la que se indicará detalladamente el número de personas con derecho a participar, el de votantes, el de votos a favor y en contra de las distintas opciones planteadas en la consulta, el de votos en blanco y el de votos nulos."
+
+Artículo 48. Conclusión del sistema de consulta y efectos.
+"1. El órgano administrativo correspondiente, en base al resultado de la consulta  emitirá un pronunciamiento motivado sobre los efectos que producirá el resultado de las misma en la política pública. Estos efectos supondrán la continuación del procedimiento en sus términos iniciales, su renuncia, la presentación de un proyecto alternativo o la  modificación del mismo. 
+2. Dicho pronunciamiento permitirá continuar con la tramitación del procedimiento."
+
+CAPÍTULO IV
+INICIATIVAS POPULARES PARA LA ELABORACIÓN DE NORMAS Y REGLAMENTOS  
+Artículo 49
+
+La Asamblea Legislativa de la Comunidad de Madrid y las entidades locales establecerán formas de participación ciudadana presenciales y electrónicas  en la elaboración de los Anteproyectos de ley y Reglamentos autonómicos y ordenanzas municipales que tengan como objeto cuestiones de especial relevancia en materia económica, social, ambiental, cultural, de género o territorial, para la región.
+Artículo 50.
+La participación ciudadana en la elaboración de normas y reglamentos se realizará a través de la participación de las personas residentes o de entidades de participación ciudadana cuyo ámbito de actuación, desde el punto de vista territorial o material, resulte afectado de forma directa por dicha norma o reglamento.
+
+Artículo 51.
+Las entidades de participación ciudadana o las personas residentes podrán solicitar la participación en el proceso de elaboración de un determinado anteproyecto de ley o reglamento, cuando consideren que incide de forma especial en su ámbito de actuación o de intereses y tengan el aval del 0,1 de la población censada en el ámbito territorial afectado por la norma. 
+Artículo 52.
+La incorporación de las formas de participación ciudadana establecidas en este artículo se acomodarán al calendario legislativo o elaboración de reglamento cuyo cumplimiento haya comprometido el órgano correspondiente.
+ 
+Artículo 53. Iniciativa De Oposición Popular.  
+Las entidades ciudadanas o las personas residentes podrán solicitar audiencia para mostrar su oposición a una norma o reglamento aprobado por las Cámara legislativa o Pleno Municipal, cuando consideren que les afecta directamente y de forma negativa.
+Artículo 54. 
+Para iniciar un proceso de oposición popular se debe contar con el aval del 0,2 % del censo de la población.
+Artículo 55.
+El órgano competente deberá resolver de forma motivada sobre los efectos de la iniciativa de Oposición Popular.
+Artículo 56.
+Cuando una iniciativa de Oposición Popular alcance el aval del 0,5 % del censo de la población deberá tomarse en consideración la realización de una consulta popular. 
+
+
+Artículo 57.  Proposiciones no de ley de iniciativa popular
+"1. Cualquier persona de las recogidas en el artículo 6 de la presente ley podrá promover la presentación de proposiciones no de ley a la Asamblea de Madrid.
+2. El procedimiento para la presentación de proposiciones no de ley de iniciativa popular se iniciará mediante la presentación el el Registro del Parlamento de un escrito dirigido a la Mesa que contendrá:
+  a. El texto articulado de la Proposición no de ley, precedido de una exposición de motivos.
+  b. Una exposicion de las razones que, a juicio de los firmantes, aconsejen la tramitación y aprobación por la Asamblea de Madrid de la proposicion no de ley. 
+  c. La Mesa de la Cámara se pronunciará sobre la admisibilidad de cada una de ellas, y rechazará de manera motivada, pero sin posible recurso, las que considere improcedentes, con arreglo a lo dispuesto en el Reglamento de la Asamblea de Madrid y en sus acuerdos complementarios.
+  d. El número requerido de firmas de personas legitimadas para suscribir una proposición no de ley de iniciativa popular es de 2.500
+  e. Una vez admitida una proposición no de ley, quedará depositada en el Registro de la Cámara. En ese momento, cualquier grupo parlamentario podrá asumirla, debiendo convertirla en proposición no de ley en pleno o en comisión. Si son varios los grupos parlamentarios que manifiesten la asunción, quedará asignada al primero que lo solicite.
+  f. Al formularla, deberá mencionarse siempre su origen.
+  g. Las proposiciones no de ley admitidas por la Mesa y no asumidas por ningún grupo parlamentario durante el periodo de sesiones en que se registre, se considerarán decaídas al término del mismo."
+Artículo 58.  Participación popular en el Control al Gobierno
+"1. Cualquier persona de las recogidas en el artículo 6 de la presente ley podrá dirigir preguntas a la Asamblea de Madrid con el ruego de que sean formuladas al Consejo de Gobierno de la Comunidad de Madrid.
+2. La Mesa de la Cámara se pronunciará sobre la admisibilidad de cada una de ellas, y rechazarla de manera motivada, pero sin posible recurso, las que considere improcedentes, conforme a lo dispuesto en el Reglamento de la Asamblea de Madrid y en sus acuerdos complementarios. 
+3. Una vez admitida la pregunta, quedará depositada en el Registro de la Cámara y será calificada y admitida, en su caso, por la Mesa. Las preguntas admitidas se anunciarán en el Boletín Oficial de la Asamblea de Madrid. En ese momento, cualquier diputado o diputada podrá asumirla, debiendo convertirla en pregunta escrita u oral, tanto de Pleno como de Comisión. Si son varios los diputados o diputadas que manifiesten la asunción, quedará asignada al primero que lo solicite.
+4. Las preguntas admitidas por la Mesa y no asumidas por ningún diputado o diputada durante el periodo de sesiones en que se registre, se considerarán decaídas al término del mismo.
+5. Al formularlas deberá mencionarse siempre su origen, aunque preservando, si se trata de una persona física, el nombre y apellidos del firmante."
+Artículo 59. Definición:
+Para la elaboración de los presupuestos anuales de la Comunidad de Madrid, se habilitará un proceso de deliberación y participación ciudadana, denominado proceso de Presupuestos Participativos. 
+
+Artículo 60. Convocatoria
+La convocatoria del proceso de Presupuestos Participativos corresponderá a la Consejería competente en materia de Hacienda en colaboración con la Comisión de Participación Ciudadana de la Comunidad de Madrid, contemplada en el artículo 60 de la presente Ley, que coordinará la reglamentación del proceso.[28] 
+
+Artículo 61. Reglamentación
+"1. El primer año que se realice dicho proceso, la Comisión de Participación Ciudadana de la Comunidad de Madrid elaborará el Proyecto de  Reglamento mediante un proceso de consultas a la ciudadanía que se elevará a la Administración para que evalúe y apruebe. Dicho reglamento se someterá a evaluación una vez concluido cada ciclo presupuestario.
+2. El Reglamento garantizará el acceso al proceso según los derechos recogidos en esta Ley y la existencia de procesos a nivel municipal, virtual y autonómico."
+
+4º Hilo: ORGANIZACIÓN PARA LA PARTICIPACION CIUDADANA (del artículo 62 al 68)
+Artículo 62. Creación y finalidad
+
+"1. En el seno de la Asamblea de la Comunidad de Madrid se creará la Comisión Permanente no Legislativa de “Peticiones y Participación Ciudadana”. 
+2. Tendrá como objeto examinar las peticiones individuales y colectivas, velando por la coherencia en el desarrollo de los instrumentos participativos regulados en la presente Ley."
+
+Artículo 63. Composición
+
+"1. La Comisión permanente no legislativa “Peticiones y Participación Ciudadana” estará compuesta por un miembro de cada Grupo Parlamentario. Tendrá una Presidencia, una Vicepresidencia y una Secretaria que corresponderá por su orden, a miembros de los tres Grupos Parlamentarios de mayor importancia numérica al comienzo de la legislatura.
+2. Esta Comisión podrá recabar la presencia en la misma, a propuesta de al menos un Grupo Parlamentario, de los miembros del Gobierno, autoridades autonómicas o locales, empleados públicos y cualquier persona o agrupación de personas, estén o no constituidas jurídicamente, a efectos de informar y asesorar a los miembros de la Comisión, según lo establecido en el Reglamento de la Cámara."
+
+Artículo 64. Régimen de funcionamiento
+"1. La Comisión permanente no legislativa “Peticiones y Participación Ciudadana” se reunirá como mínimo una vez al mes
+2. Corresponde a la Comisión las siguientes funciones:
+  a. Examinar la petición individual o colectiva, remitiendo, en su caso, al organismo público competente, o archivando la misma. Podrá requerir a la autoridad correspondiente para que comparezca ante la comisión y valerse de cuantos medios disponga dentro del ámbito de su legitimación para actuar y  proponer las demás actuaciones a quienes consideren procedentes. En cualquier caso es obligatorio la remisión al peticionario el acuerdo adoptado.
+  b. Asegurar la coherencia, complementariedad y coordinación de las iniciativas de participación ciudadana de la Comunidad de Madrid.
+  c. Realizar una atención prioritaria para garantizar el voto y el apoyo legal a las personas con derechos a la participación, residentes en el extranjero.
+  d. Resolver las discrepancias sobre la determinación del ámbito territorial de afectación de la política o decisión a adoptar por la Comunidad de Madrid en los procesos de de participación ciudadana iniciados.
+  e. Evaluación de la aplicación de la ley, incluyendo específicamente el impacto de género e instar a la mejora de esta norma."
+Artículo 65. De las peticiones ciudadanas
+"1. Las peticiones se presentarán por escrito a través de cualquier medio (también electrónico) incluirán, necesariamente, la identidad del peticionario, así como la exposición clara y razonada de los hechos en  que aquellas se basan, pudiendo adjuntarse cuantos documentos pudieran servir para la mejor  comprensión del caso. 
+2. Si la petición fuese colectiva, además de reunir los requisitos anteriores, se deberá firmar por parte  de todos los peticionarios; y deberán figurar, junto a la firma de cada uno de ellos, sus nombres y  apellidos. 
+3. Las personas que realizan dicha petición tendrán derecho a comparecer en la Comisión con objeto de concretar la petición o ampliar la explicación sobre los motivos que la  provocan.
+4. Asimismo,  salvaguardando la correspondiente protección de datos personales, se irán publicando las peticiones  que se vayan registrando y el resultado de la consulta y de las medidas adoptadas.
+5. La Comisión de Peticiones estará obligada a hacer un seguimiento de las peticiones recibidas y podrá requerir al órgano  al que ha dado traslado en el  plazo de tres meses la remisión de información respecto al estado del trámite seguido.
+6. La Cámara de la Asamblea estará obligada a publicitar, tanto a través de  elementos físicos como digitales, la existencia de dicha comisión, con el fin de que toda la población madrileña sepa de su existencia y utilidad. 
+7. El impulso y la coordinación de la participación ciudadana corresponderá a un Órgano Directivo que ejercerá sus funciones con plena autonomía, adscrito a la Consejería de la Presidencia o equivalente.
+8. Se creará un Servicio Administrativo de participación ciudadana por cada una de las Consejerías de la Comunidad de Madrid, para coordinar las actuaciones de participación en el ámbito de dicha consejería y dependerá funcionalmente del Órgano directivo de Participación Ciudadana."
+Artículo 66. Composición y funcionamiento del Órgano Directivo para la Participación ciudadana.
+"1. El Órgano Directivo para la Participación Ciudadana se constituirá como un órgano paritario designado por el Consejo de Gobierno  entre personas de reconocida competencia y experiencia en el ámbito, siguiendo los principios de igualdad, mérito y capacidad y adscritas el Estatuto básico del Empleado Público. El mandato de los miembros de este Órgano tendrá una vigencia de cuatro años, renovable hasta un máximo de ocho años.
+2. Su funcionamiento estará basado en los criterios de autonomía, transparencia, neutralidad e igualdad entre mujeres y hombres, y dará cuenta de sus actuaciones a la Comisión de Peticiones y Participación Ciudadana de la Asamblea Legislativa de Madrid.
+3. Se consignará anualmente en Los Presupuestos Generales de la Comunidad de Madrid los recursos económicos necesarios para la financiación del Órgano Directivo para la participación ciudadana."
+Artículo 67. Funciones  del Órgano Directivo para la Participación ciudadana.
+"Las funciones del Órgano Directivo de Participación ciudadana serán las siguientes: 
+1. Ejecutar el presupuesto previsto para este Órgano.
+2. Elaborar de un informe anual de la actividad participativa y donde se contendrán  sugerencias para la mejora de los procesos participativos. Será obligatorio la inclusión de una evaluación de impacto de género.
+3. El impulsar y coordinar la Oficina para la Participación Ciudadana con el objeto de  informar y asesorar a las personas residentes en el territorio nacional y en el extranjero, así como agrupaciones de personas y colectivos constituidos legalmente, sobre los derechos a la participación y los procesos participativos abiertos en la Comunidad.
+4. El desarrollo los programas de formación para la participación, tanto para el personal de la administración pública como para la ciudadanía en general. 
+5. La coordinación de la Red de Experiencias de Participación Ciudadanas y el Observatorio Público contemplados en los artículos x, y de la presente Ley
+6. La coordinación el portal web de participación de la Comunidad de Madrid."
+Artículo 68. Red de experiencias de participación
+"1. Se creará un Red de experiencias de participación ciudadana integradas por personas  o agrupaciónes de personas vinculadas con experiencias de participación ciudadana de la Comunidad de Madrid, tanto a nivel autonómico como local.
+2. Entre sus funciones se encuentran:
+  a. La organización de foros de sistematización donde se produzcan intercambios de experiencias municipales o autonómicas.
+  b. El asesoramiento al Órgano Directivo para la Participación ciudadana.
+  c. La participación en la evaluación de esta ley."
+
+5º Hilo: FOMENTO DE LA PARTICIPACION CIUDADANA (del articulo 69 al 76)
+Artículo 69 Fomento de la participación
+"1. Las Administraciones Públicas madrileñas y sus órganos de gobierno pondrán en marcha o consolidarán las medidas de fomento que permitan el desarrollo de una cultura participativa en el conjunto de la sociedad andaluza, entidades e instituciones que garanticen la accesibilidad de los distintos cauces de participación a todas las personas de la Comunidad de Madrid.
+2. Sin perjuicio de otras medidas que puedan ponerse en marcha, se llevarán a cabo las siguientes:
+  a. Líneas de subvenciones y Ayudas
+  b. Programas de formación para la ciudadanía
+  c. programas de formación para el personal al servicio de las Administraciones Públicas.
+  d. Campañas de sensibilización y difusión
+  e. Medias de apoyo y seguimiento
+  f. Medidas de accesibilidad, especialmente en lo relativo a las nuevas tecnologías
+  g. Convenios de colaboración con entes locales"
+
+Artículo 70. Ayudas y Subvenciones
+"1. Con carácter anual, las Administraciones públicas fomentarán la participación a través de convocatorias de subvenciones públicas para la promoción y desarrollo de actividades relacionadas con la participación ciudadana, con pleno respeto a los principios de libre concurrencia e igualdad, de acuerdo con lo que establezca la legislación general en materia de subvenciones.
+2. La Comunidad de Madrid, a través de la Consejería competente en materia de participación ciudadana, convocará líneas de subvenciones y ayudas para la promoción de la participación ciudadana destinadas a entidades locales y entidades sociales de participación ciudadana, de conformidad con los principios de objetividad, igualdad, no discriminación, concurrencia y publicidades, garantizando la transparencia del procedimiento de concesión de las mismas."
+Artículo 71. Programas de formación
+"1. La Administración de la Comunidad de Madrid pondrá en marcha una estrategia de formación para el conjunto de la sociedad madrileña, las entidades y las instituciones públicas a través de los medios de formación existentes y del impulso de nuevos programas de formación. 
+2. Los programas de formación se planificarán integrando el principio de igualdad de género de forma transversal, como un principio fundamental en los procesos de participación ciudadana."
+Artículo 72. Medidas de sensibilización y difusión
+"Las Administraciones públicas madrileñas y sus órganos de gobierno podrán en marcha o consolidarán:
+1. Campañas de sensibilización y difusión: se desarrollarán campañas informativas de amplia difusión con el objetivo de aumentar la cultura participativa en todos los niveles de la sociedad madrileña, a través de todos los medios disponibles y especialmente mediante el uso de las nuevas tecnologías, sede electrónica, portal o página web y los medios de comunicación públicos de su titularidad.
+2. Promoción de la participación en los medios de comunicación públicos de ámbito autonómico y en los medios de comunicación comunitarios de acuerdo con los mecanismos e instrumentos contemplados en el actual marco normativo. Especialmente, promoverá la participación ciudadana en los medios de comunicación públicos de la Comunidad de Madrid."
+Artículo 73. Medidas para la accesibilidad
+La Administración de la Comunidad de Madrid incorporará en los distintos procesos de participación las medidas de accesibilidad y adaptación de medios y lenguajes a las distintas discapacidades en cumplimiento de la normativa existente en materia de accesibilidad y respondiendo al principio de facilidad y comprensión de la presente Ley.
+Artículo 74. Convenios de colaboración con entidades de participación ciudadana
+"1. Las Administraciones públicas madrileñas, a través de la Consejería competente por razón de la materia, o del Ayuntamiento respectivo, pondrán en marcha medidas de apoyo a las entidades sociales de participación ciudadana a través de la firma de Convenios de colaboración, para la promoción, difusión, formación y aprendizaje en temas de participación.
+2. El apoyo podrá concretarse por cualquier medio de los previstos en la legislación, tales como la cesión temporal u ocasional de medios públicos, el apoyo técnico u otras medidas similares."
+Artículo 75. Convenios de colaboración con las entidades locales
+"1. El Órgano directivo para la Participación Ciudadana impulsará la suscripción de convenios de colaboración con las entidades locales para el fomento de la participación en el ámbito de competencia e interés de éstas.
+2. Los convenios de colaboración establecerán las ayudas económicas para el desarrollo de una cultura de la participación y la realización de actividades participativas. Podrán tener un carácter plurianual.
+3. Se impulsarán planes de formación para los empleados públicos municipales en participación.
+4. Las entidades locales recibirán asistencia técnica para la realización de procesos participativo en su ámbito."
+Artículo 76. 
+En los proyectos de intervención autonómica de iniciativa local, la Comunidad de Madrid, previa audiencia a la entidad local interesada, podrá solicitar la realización de un proceso participativo cuando la relevancia o características del proyecto lo aconsejen.
+
+6º Hilo: EVALUACION DEL SISTEMA DE PARTICIPACION Y DE LOS PROCESOS PARTICIPATIVOS (del artículo 77 al 79)
+
+Artículo 77. Evaluación de los procesos.
+"1. Los procesos participativos previstos en la presente Ley serán objeto de seguimiento y evaluación desde el momento de inicio.
+2. En la evaluación podrá darse audiencia a todas las personas o entidades intervinientes en el mismo, así como al personal al servicio de la administración interviniente.
+3. Deberá recoger en las conclusiones las propuestas de mejora para futuros procesos."
+Artículo 78. Observatorio Público de la participación
+Con el objeto de evaluar los instrumentos de participación regulados en la presente Ley, se creará el Observatorio Público de la participación, dependiente de la Consejería competente en materia de participación ciudadana. 
+
+Artículo 79. Evaluación global del sistema de participación ciudadana
+"1. Transcurrido un periodo de cinco años desde la entrada en vigor de esta Ley, la Asamblea de la Comunidad de Madrid procederá a realizar una evaluación global de la aplicación de la presente Ley.
+2. La evaluación del sistema de participación se realizará con la asistencia técnica de profesionales expertos y expertas en la materia, así como participantes en los procesos regulado por la presente Ley.
+3. La evaluación finalizará con un informe que podrá incluir el acuerdo de reforma de aspectos de la presente Ley para mejorar su efectividad y adecuación."

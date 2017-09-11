@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
   has_many :identities, dependent: :destroy
   has_many :debates, -> { with_hidden }, foreign_key: :author_id
   has_many :medidas, -> { with_hidden }, foreign_key: :author_id
+  has_many :laws, -> { with_hidden }, foreign_key: :author_id
   has_many :proposals, -> { with_hidden }, foreign_key: :author_id
   has_many :enquiries, -> { with_hidden }, foreign_key: :author_id
   has_many :comments, -> { with_hidden }
@@ -66,7 +67,7 @@ class User < ActiveRecord::Base
   # If no verified email was provided we assign a temporary email and ask the
   # user to verify it on the next step via RegistrationsController.finish_signup
   def self.first_or_create_for_oauth(auth)
-    email = auth.info.email if auth.info.verified || auth.info.verified_email
+    email = auth.info.email #if auth.info.verified || auth.info.verified_email
     user  = User.where(email: email).first if email
     dni = User.dni_from_id(auth.uid.split('/').pop)
     # Create the user if it's a new registration
@@ -76,8 +77,13 @@ class User < ActiveRecord::Base
       nick_count = User.where("username ~ ?",  "^#{user_alias}").count
       if nick_count >0
         lista = User.where("username ~ ?", "^#{user_alias}[0-9]+").pluck("username").map! { |nombre| nombre.gsub(/[^0-9]/,'').to_i }
+<<<<<<< HEAD
         maximo = lista.max + 1
         diferencia = (2..maximo).to_a - lista
+=======
+        maximo = lista.max.nil? ? 1 : lista.max + 1
+        diferencia = (1..maximo).to_a - lista
+>>>>>>> master
         user_alias += diferencia.first.to_s
       end
 
@@ -95,6 +101,9 @@ class User < ActiveRecord::Base
         document_number:dni, document_type: 'Spanish ID', email: email
         )
       verified.save
+    else
+      user.document_number = dni
+      user.save
     end
 
     user
@@ -130,6 +139,11 @@ class User < ActiveRecord::Base
 
   def medida_votes(medidas)
     voted = votes.for_medidas(medidas)
+    voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
+  end
+
+  def law_votes(laws)
+    voted = votes.for_laws(laws)
     voted.each_with_object({}) { |v, h| h[v.votable_id] = v.value }
   end
 

@@ -35,12 +35,17 @@
 
   <div class="row-full subnavigation-container">
     <section class="subnavigation row">
-      <div class="small-12 medium-8 column">
+      <div class="small-12 medium-12 column">
       <%= link_to t("layouts.header.highlights"), highlights_path, class: ("active" if current_page? highlights_path) %>
       <%= link_to t("layouts.header.proposals"), proposals_path, class: ("active" if current_page?(controller: "/proposals")) %>
       <%= link_to t("layouts.header.enquiries"), enquiries_path, class: ("active" if current_page?(controller: "/enquiries")) %>
       <%= link_to t("layouts.header.debates"), debates_path, class: ("active" if current_page?(controller: "/debates")) %>
-      <%= link_to t("layouts.header.programa"), "http://unpaiscontigo.es/programa/", class: ("active" if current_page?(controller: "/medidas")) %>
+      <!--%= link_to t("layouts.header.programa"), "http://unpaiscontigo.es/programa/", class: ("active" if current_page?(controller: "/medidas")) %-->
+      <!--%= link_to t("layouts.header.laws"), laws_path, class: ("active" if current_page?(controller: "/laws")) %-->
+      <%= link_to t("layouts.header.proceso_murcia_2017_url"), target: "_blank" do %>
+        <%= t("layouts.header.proceso_murcia_2017")%>
+        <i class="icon-external"></i>
+      <% end %>
       <%= link_to t("layouts.header.more_information"), "/more_information", class: ("active" if current_page?("/more_information"))  %>
       <%= link_to t("layouts.header.external_link_blog_url"), target: "_blank" do %>
         <!--%= t("layouts.header.external_link_blog") %-->
@@ -57,10 +62,16 @@
     <div class="wrapper-home">
         <div class="row home-page">
           <div class="small-12 medium-7 column">
-            <h1><%= t("layouts.header.open_city_title") %></h1>
-            <p><%= t("layouts.header.open_city_slogan_html") %></p>
-            <!--%= link_to t("layouts.header.see_all"), highlights_path, class: "button radius see-more warning" % -->
-            <%= link_to t("layouts.header.see_all"), enquiries_path, class: "button radius see-more warning" %>
+            <% if Enquiry.is_closed? %>
+              <h1><%= t("layouts.header.closed_city_title") %></h1>
+              <p><%= t("layouts.header.closed_city_slogan_html") %></p>
+            <%= link_to t("layouts.header.see_all_closed"), highlights_path, class: "button radius see-more warning" %>
+            <% else %>
+              <h1><%= t("layouts.header.open_city_title") %></h1>
+            <p><%= "#{t('layouts.header.open_city_slogan_html')}" %><br> <%= "#{t('layouts.header.open_city_deadline_prev')} #{localize(Enquiry.closed_enquiry_date,format: "%A, %d de %B")} #{t('layouts.header.open_city_deadline_post')}" %></p>
+            <%= link_to t("layouts.header.see_all_open"), enquiries_path, class: "button radius see-more warning" %>
+            <% end %>
+
             <%= link_to t("layouts.header.more_information"), "/more_information", class: "more-info" %>
           </div>
 
@@ -96,12 +107,12 @@
     </div>
   <% end %>
 
-  <% if opendata_page? %>
-    <div class="row home-page">
+  <!--% if opendata_page? %-->
+    <!--div class="row home-page">
       <div class="small-12 medium-7 column">
-        <h1><%= t("pages.opendata") %></h1>
+        <h1><!--%= t("pages.opendata") % ></h1>
         <p>Estamos trabajando en el nuevo Portal de Datos Abiertos del Ayuntamiento de Madrid, por ahora puedes visitar el portal que existía hasta ahora:</p>
-        <%= link_to "Ir al Portal de Datos Abiertos", t("layouts.header.external_link_opendata_url"), target: "_blank", class: "button radius" %>
+        <!-- %= link_to "Ir al Portal de Datos Abiertos", t("layouts.header.external_link_opendata_url"), target: "_blank", class: "button radius" %>
       </div>
       <div class="show-for-medium-up small-12 medium-5 column text-center">
         <i class="icon-debates icon-home-big"></i>
@@ -111,6 +122,6 @@
         <i class="icon-medidas icon-home-big"></i>
         <i class="icon-medidas icon-home-small"></i>
       </div>
-    </div>
-  <% end %>
+    </div -->
+  <!--% end % -->
 </header>

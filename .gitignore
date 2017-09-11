@@ -34,4 +34,8 @@
 Gemfile.lock
 
 # Ignore RubyMine IDE Files
+<<<<<<< HEAD
 .idea
+=======
+.idea
+>>>>>>> master

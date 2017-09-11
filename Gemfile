@@ -16,19 +16,28 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'turbolinks', '2.5.3'
 
 gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+<<<<<<< HEAD
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook', '~> 3.0.0'
 gem 'omniauth-google-oauth2', '0.2.8'
 gem 'omniauth-openid'
+=======
+gem 'hashie', '3.4.6'
+gem 'omniauth', '1.3.1'
+#gem 'omniauth-twitter', '1.2.1'
+#gem 'omniauth-facebook', '3.0.0'
+#gem 'omniauth-google-oauth2', '0.2.10'
+gem 'omniauth-openid', '1.0.1'
+>>>>>>> master
 gem 'omniauth-reddit' , :git => 'git://github.com/jackdempsey/omniauth-reddit.git'
 
-gem 'kaminari'
+gem 'kaminari', '0.17'
 gem 'ancestry'
 gem 'acts-as-taggable-on'
 gem 'responders'
@@ -46,7 +55,7 @@ gem 'paranoia'
 gem 'rinku', require: 'rails_rinku'
 gem 'savon'
 gem 'dalli'
-gem 'rollbar', '~> 2.6.0'
+gem 'rollbar', '2.14'
 gem 'delayed_job_active_record', '~> 4.1.0'
 gem 'daemons'
 gem 'devise-async'
@@ -78,7 +87,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'fuubar'
   gem 'launchy'
-  gem 'quiet_assets'
+  # gem 'quiet_assets'
   gem 'letter_opener_web', '~> 1.3.0'
   gem 'i18n-tasks'
   gem 'capistrano', '3.4.0',           require: false

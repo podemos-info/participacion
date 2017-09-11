@@ -1,65 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://decide.madrid.es/</loc>
+    <loc>https://plaza.podemos.info/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://decide.madrid.es/highlights</loc>
+    <loc>https://plaza.podemos.info/highlights</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://decide.madrid.es/proposals</loc>
+    <loc>https://plaza.podemos.info/proposals</loc>
     <priority>0.9</priority>
     <changefreq>always</changefreq>
   </url>
 <url>
-    <loc>https://decide.madrid.es/enquiries</loc>
+    <loc>https://plaza.podemos.info/enquiries</loc>
     <priority>0.9</priority>
     <changefreq>always</changefreq>
   </url>
   <url>
-    <loc>https://decide.madrid.es/debates</loc>
+    <loc>https://plaza.podemos.info/debates</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://decide.madrid.es/medidas</loc>
+    <loc>https://plaza.podemos.info/medidas</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://decide.madrid.es/users/sign_up</loc>
+    <loc>https://plaza.podemos.info/laws</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://decide.madrid.es/users/sign_in</loc>
+    <loc>https://plaza.podemos.info/users/sign_up</loc>
   </url>
   <url>
-    <loc>https://decide.madrid.es/more_information</loc>
+    <loc>https://plaza.podemos.info/users/sign_in</loc>
   </url>
   <url>
-    <loc>https://decide.madrid.es/how_it_works</loc>
+    <loc>https://plaza.podemos.info/more_information</loc>
   </url>
   <url>
-    <loc>https://decide.madrid.es/how_to_use</loc>
+    <loc>https://plaza.podemos.info/how_it_works</loc>
   </url>
   <url>
-    <loc>https://decide.madrid.es/participation</loc>
+    <loc>https://plaza.podemos.info/how_to_use</loc>
   </url>
   <url>
-    <loc>https://decide.madrid.es/proposals_info</loc>
+    <loc>https://plaza.podemos.info/participation</loc>
   </url>
   <url>
-    <loc>https://decide.madrid.es/enquiries_info</loc>
+    <loc>https://plaza.podemos.info/proposals_info</loc>
   </url>
   <url>
-    <loc>https://decide.madrid.es/participation_world</loc>
+    <loc>https://plaza.podemos.info/enquiries_info</loc>
   </url>
   <url>
-    <loc>https://decide.madrid.es/participation_facts</loc>
+    <loc>https://plaza.podemos.info/participation_world</loc>
   </url>
   <url>
-    <loc>https://decide.madrid.es/privacy</loc>
+    <loc>https://plaza.podemos.info/participation_facts</loc>
   </url>
   <url>
-    <loc>https://decide.madrid.es/conditions</loc>
+    <loc>https://plaza.podemos.info/privacy</loc>
+  </url>
+  <url>
+    <loc>https://plaza.podemos.info/conditions</loc>
   </url>
 </urlset>

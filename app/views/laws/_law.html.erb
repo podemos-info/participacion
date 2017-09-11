@@ -1,0 +1,56 @@
+<% cache [locale_and_user_status, law, @law_votes[law.id]] do %>
+  <div id="<%= dom_id(law) %>" class="law clear">
+    <div class="panel">
+      <div class="row">
+
+        <div class="small-12 medium-12 column">
+          <div class="law-content">
+            <span class="label-law left"><%= t("laws.law.law") %></span>
+            <i class="icon-laws"></i>
+            <h3><%= link_to law.title, law %></h3>
+            <p class="law-info">
+              <i class="icon-comments"></i>&nbsp;
+              <%= link_to t("laws.law.comments", count: law.comments_count), law_path(law, anchor: "comments") %>
+              <span class="bullet">&nbsp;&bull;&nbsp;</span>
+              <%= l law.created_at.to_date %>
+              <% if law.author.hidden? %>
+                <span class="bullet">&nbsp;&bull;&nbsp;</span>
+                <span class="author">
+                  <%= t("laws.show.author_deleted") %>
+                </span>
+              <% else %>
+                <span class="bullet">&nbsp;&bull;&nbsp;</span>
+                <span class="author">
+                  <%= law.author.name %>
+                </span>
+                <% if law.author.official? %>
+                  <span class="bullet">&nbsp;&bull;&nbsp;</span>
+                  <span class="label round level-<%= law.author.official_level %>">
+                    <%= law.author.official_position %>
+                  </span>
+                <% end %>
+              <% end %>
+
+              <% if law.author.verified_organization? %>
+                <span class="bullet">&nbsp;&bull;&nbsp;</span>
+                <span class="label round is-association">
+                  <%= t("shared.collective") %>
+                </span>
+              <% end %>
+            </p>
+            <div class="law-description">
+              <%= link_to law.description, law %>
+              <div class="truncate"></div>
+            </div>
+            <%= render "shared/tags", taggable: law, limit: 5 %>
+          </div>
+        </div>
+
+        <!--div id="<%= dom_id(law) %>_votes" class="small-12 medium-3 column text-center">
+          <%= render 'laws/votes', law: law %>
+        </div-->
+
+      </div>
+    </div>
+  </div>
+<% end %>

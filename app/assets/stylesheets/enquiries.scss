@@ -262,6 +262,10 @@
       &.medida-info {
         font-size: rem-calc(13);
       }
+
+      &.law-info {
+        font-size: rem-calc(13);
+      }
     }
   }
 
@@ -780,3 +784,5 @@
   @extend .flag-disable;
   color: $delete;
 }
+
+.logo-escano-abierto {max-width: 250px;}

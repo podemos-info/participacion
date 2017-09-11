@@ -83,6 +83,10 @@ class ApplicationController < ActionController::Base
       @medida_votes = current_user ? current_user.medida_votes(medidas) : {}
     end
 
+    def set_law_votes(laws)
+      @law_votes = current_user ? current_user.law_votes(laws) : {}
+    end
+
     def set_proposal_votes(proposals)
       @proposal_votes = current_user ? current_user.proposal_votes(proposals) : {}
     end

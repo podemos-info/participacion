@@ -1074,6 +1074,13 @@ label.error, label.error a {
     opacity: .5;
   }
 
+  .icon-laws {
+    color: $laws;
+    font-size: rem-calc(60);
+    line-height: $line-height;
+    opacity: .5;
+  }
+
   .avatar {
     margin-bottom: rem-calc(24);
   }
@@ -1198,6 +1205,18 @@ img.initialjs-avatar {
     text-align: left;
 
     @media (min-width: $small-breakpoint) {
+      text-align: right;
+    }
+
+    select {
+      margin-left: 0;
+    }
+  }
+
+  .laws-order {
+    text-align: left;
+
+    @law (min-width: $small-breakpoint) {
       text-align: right;
     }
 

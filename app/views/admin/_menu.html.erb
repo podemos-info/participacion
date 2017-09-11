@@ -39,6 +39,13 @@
       <% end %>
     </li>
 
+     <li <%= "class=active" if controller_name == "laws" %>>
+      <%= link_to admin_laws_path do %>
+        <i class="icon-laws"></i>
+      <%= t("admin.menu.hidden_laws") %>
+      <% end %>
+    </li>
+
     <li <%= "class=active" if controller_name == "comments" %>>
       <%= link_to admin_comments_path do %>
         <i class="icon-comments"></i>

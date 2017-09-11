@@ -5,6 +5,8 @@ en:
       user_not_found: "User not found"
   layouts:
     header:
+      proceso_murcia_2017: "Proceso interno Murcia"
+      proceso_murcia_2017_url: "https://www.reddit.com/r/PlazaRegionMurcia/"
       external_link_transparency: "Transparency"
       external_link_transparency_url: "https://transparencia.podemos.info"
       external_link_opendata: "Open data"
@@ -13,14 +15,17 @@ en:
       external_link_blog_url: "/blog"
       open_gov: "%{open} government"
       open: "open"
-      participation: Participation
+      participation: "Participation"
       transparency: "Transparency"
       open_data: "Open data"
-      open_city_title: "Love the city, and it will become a city you love."
-      open_city_slogan_html:
-        "There are cities that are governed directly by their inhabitants, who <b>discuss</b> the topics they are concerned about, <b>propose</b> ideas to improve
-        their lives and <b>decide</b> among themselves which ones will be carried out. Madrid is already one of these cities."
-      see_all: "See proposals"
+      closed_city_title: "A meeting place to build PODEMOS."
+      closed_city_slogan_html: "This square is a space in which political participation can discuss, propose initiatives and share your ideas in order to build jointly PODEMOS."
+      open_city_title: "Seat Open."
+      open_city_slogan_html: "Each month we will open a period of time to propose questions and support the rest of the people The most supported questions will be forwarded to the parliamentary group of the Assembly of Madrid to be set out in full that month by our deputies."
+      open_city_deadline_prev: "have opened the deadline until "
+      open_city_deadline_post: " to receive your questions."
+      see_all_closed: "See proposals"
+      see_all_open: "Join in!"
       my_activity_link: "My activity"
       my_account_link: "My account"
       locale: "Language:"
@@ -29,7 +34,8 @@ en:
       #highlights: "Highlights"
       more_information: "More information"
       debates: "Debates"
-      medidas: Measures
+      medidas: "Measures"
+      laws: "Laws"
       proposals: "Proposals"
       enquiries: "Enquiries"
     footer:
@@ -226,6 +232,80 @@ en:
     create:
       form:
         submit_button: "Start a measure"
+    update:
+      form:
+        submit_button: "Save changes"
+  laws:
+    index:
+      title: "Measures"
+      start_law: "Start a measure"
+      select_order: "Order by"
+      select_order_long: "Order measures by"
+      orders:
+        confidence_score: "best rated"
+        hot_score: "most active"
+        created_at: "newest"
+        most_commented: "most commented"
+        random: "random"
+      filter_topic:
+        one: " with the topic '%{topic}'"
+        other: " with the topic '%{topic}'"
+      search_form:
+        title: "Search"
+        button: "Search"
+        placeholder: "Search laws..."
+      search_results:
+        one: " containing '%{search_term}'"
+        other: " containing '%{search_term}'"
+    law:
+      law: "Law"
+      comments:
+        zero: "No comments"
+        one: "1 Comment"
+        other: "%{count} Comments"
+      votes:
+        zero: "No votes"
+        one: "1 vote"
+        other: "%{count} votes"
+    form:
+      law_title: "Law title"
+      law_text: "Initial text for law"
+      tags_label: "Topics"
+      tags_instructions: "Tag this law. You can choose from our suggestions or enter your own."
+      tags_placeholder: "Add topics writing them separated by ','"
+    show:
+      back_link: "Back"
+      author_deleted: "Deleted user"
+      comments_title: "Comments"
+      comments:
+        zero: "No comments"
+        one: "1 Comment"
+        other: "%{count} Comments"
+      login_to_comment: "You need to %{signin} or %{signup} to comment."
+      edit_debate_link: "Edit"
+      share: "Share"
+      flag: "This law has been flag as innapropiate for some users."
+    edit:
+      editing: "Edit law"
+      show_link: "Show law"
+      back_link: "Back"
+      form:
+        submit_button: "Save changes"
+    new:
+      start_new: "Start a law"
+      info: "A law is a discussion forum, not a proposal. And soon... we opened the section of citizen proposals."
+      more_info: "More info"
+      back_link: "Back"
+      recommendations_title: "Tips for creating a law"
+      recommendation_one: "Do not write the title of the law or whole sentences in capital. On the Internet this is considered shouting. And nobody likes to scream."
+      recommendation_two: "Any discussion or comment that involves an illegal act will be eliminated, also intending to sabotage the measure spaces, everything else is permitted."
+      recommendation_three: "The harsh criticism are very welcome. This is a space of thought but we recommend preserving the elegance and intelligence. The world is better with them present."
+      recommendation_four: "Enjoy this space, voices that fill it, it is yours too."
+      form:
+        submit_button: "Start a law"
+    create:
+      form:
+        submit_button: "Start a law"
     update:
       form:
         submit_button: "Save changes"

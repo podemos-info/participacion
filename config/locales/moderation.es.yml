@@ -5,6 +5,7 @@ es:
       enquiries: Preguntas
       flagged_debates: Debates
       flagged_medidas: Medidas
+      flagged_laws: Artículos
       flagged_comments: Comentarios
       users: Bloquear usuarios
     dashboard:
@@ -56,6 +57,25 @@ es:
         title: Medidas
         headers:
           medida: Medida
+          moderate: Moderar
+        filter: Filtrar
+        filters:
+          all: Todos
+          pending_flag_review: Pendientes
+          with_ignored_flag: Marcadas como revisadas
+        order: Orden
+        orders:
+          created_at: Más nuevas
+          flags: Más denunciadas
+        confirm: ¿Estás seguro?
+    laws:
+      index:
+        hide_laws: Ocultar artículos
+        block_authors: Bloquear autores
+        ignore_flags: Marcar como revisados
+        title: Ley de Participación
+        headers:
+          law: Artículo
           moderate: Moderar
         filter: Filtrar
         filters:

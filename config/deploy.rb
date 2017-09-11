@@ -1,6 +1,9 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
+set :application, "Usuarios25M"
+set :repository,"git@github.com:ggalancs@gmail.com/podemos-info/users-i25m"
+
 def deploysecret(key)
   @deploy_secrets_yml ||= YAML.load_file('config/deploy-secrets.yml')[fetch(:stage).to_s]
   @deploy_secrets_yml.fetch(key.to_s, 'undefined')

@@ -6,6 +6,8 @@ module TagsHelper
       debates_path(tag: tag_name)
     when 'medida'
       medidas_path(tag: tag_name)
+    when 'law'
+      laws_path(tag: tag_name)
     when 'proposal'
       proposals_path(tag: tag_name)
     when 'enquiry'

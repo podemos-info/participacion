@@ -17,6 +17,11 @@ module Abilities
         medida.editable_by?(user)
       end
 
+      can :read, Law
+      can :update, Law do |law|
+        law.editable_by?(user)
+      end
+
       can :read, Proposal
       can :update, Proposal do |proposal|
         proposal.editable_by?(user)

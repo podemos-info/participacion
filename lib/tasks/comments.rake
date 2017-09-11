@@ -4,6 +4,7 @@ namespace :comments do
   task count: :environment do
     Debate.all.pluck(:id).each{ |id| Debate.reset_counters(id, :comments) }
     Medida.all.pluck(:id).each{ |id| Medida.reset_counters(id, :comments) }
+    Law.all.pluck(:id).each{ |id| Law.reset_counters(id, :comments) }
     Proposal.all.pluck(:id).each{ |id| Proposal.reset_counters(id, :comments) }
     Enquiry.all.pluck(:id).each{ |id| Enquiry.reset_counters(id, :comments) }
   end

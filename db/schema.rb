@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160229155920) do
+=======
+ActiveRecord::Schema.define(version: 20160910190345) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "unaccent"
+  enable_extension "pg_trgm"
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
@@ -47,6 +53,13 @@ ActiveRecord::Schema.define(version: 20160229155920) do
   add_index "ahoy_events", ["time"], name: "index_ahoy_events_on_time", using: :btree
   add_index "ahoy_events", ["user_id"], name: "index_ahoy_events_on_user_id", using: :btree
   add_index "ahoy_events", ["visit_id"], name: "index_ahoy_events_on_visit_id", using: :btree
+
+  create_table "campaigns", force: :cascade do |t|
+    t.string   "name"
+    t.string   "track_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.integer  "commentable_id"
@@ -213,6 +226,38 @@ ActiveRecord::Schema.define(version: 20160229155920) do
 
   add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
 
+  create_table "laws", force: :cascade do |t|
+    t.string   "title",                        limit: 800
+    t.text     "description"
+    t.integer  "author_id"
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
+    t.string   "visit_id"
+    t.datetime "hidden_at"
+    t.integer  "flags_count",                              default: 0
+    t.datetime "ignored_flag_at"
+    t.integer  "cached_votes_total",                       default: 0
+    t.integer  "cached_votes_up",                          default: 0
+    t.integer  "cached_votes_down",                        default: 0
+    t.integer  "comments_count",                           default: 0
+    t.datetime "confirmed_hide_at"
+    t.integer  "cached_anonymous_votes_total",             default: 0
+    t.integer  "cached_votes_score",                       default: 0
+    t.integer  "hot_score",                    limit: 8,   default: 0
+    t.integer  "confidence_score",                         default: 0
+  end
+
+  add_index "laws", ["author_id", "hidden_at"], name: "index_laws_on_author_id_and_hidden_at", using: :btree
+  add_index "laws", ["author_id"], name: "index_laws_on_author_id", using: :btree
+  add_index "laws", ["cached_votes_down"], name: "index_laws_on_cached_votes_down", using: :btree
+  add_index "laws", ["cached_votes_score"], name: "index_laws_on_cached_votes_score", using: :btree
+  add_index "laws", ["cached_votes_total"], name: "index_laws_on_cached_votes_total", using: :btree
+  add_index "laws", ["cached_votes_up"], name: "index_laws_on_cached_votes_up", using: :btree
+  add_index "laws", ["confidence_score"], name: "index_laws_on_confidence_score", using: :btree
+  add_index "laws", ["hidden_at"], name: "index_laws_on_hidden_at", using: :btree
+  add_index "laws", ["hot_score"], name: "index_laws_on_hot_score", using: :btree
+  add_index "laws", ["title"], name: "index_laws_on_title", using: :btree
+
   create_table "locks", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "tries",        default: 0
@@ -340,16 +385,18 @@ ActiveRecord::Schema.define(version: 20160229155920) do
     t.integer "proposals_count",             default: 0
     t.integer "medidas_count",               default: 0
     t.integer "enquiries_count",             default: 0
+    t.integer "laws_count",                  default: 0
   end
 
   add_index "tags", ["debates_count"], name: "index_tags_on_debates_count", using: :btree
   add_index "tags", ["enquiries_count"], name: "index_tags_on_enquiries_count", using: :btree
+  add_index "tags", ["laws_count"], name: "index_tags_on_laws_count", using: :btree
   add_index "tags", ["medidas_count"], name: "index_tags_on_medidas_count", using: :btree
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
   add_index "tags", ["proposals_count"], name: "index_tags_on_proposals_count", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                                default: "",    null: false
+    t.string   "email",                                default: ""
     t.string   "encrypted_password",                   default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -376,7 +423,6 @@ ActiveRecord::Schema.define(version: 20160229155920) do
     t.string   "document_number"
     t.string   "document_type"
     t.datetime "residence_verified_at"
-    t.datetime "letter_sent_at"
     t.string   "email_verification_token"
     t.datetime "verified_at"
     t.string   "unconfirmed_phone"
@@ -387,8 +433,9 @@ ActiveRecord::Schema.define(version: 20160229155920) do
     t.integer  "failed_census_calls_count",            default: 0
     t.string   "reddit_user"
     t.string   "reddit_uid"
-    t.integer  "circle_agent",                         default: 0
-    t.boolean  "public_activity",                      default: true
+    t.datetime "level_two_verified_at"
+    t.string   "erase_reason"
+    t.datetime "erased_at"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

@@ -1,0 +1,110 @@
+<% provide :title do %><%= t('laws.index.title') %><% end %>
+<% content_for :header_addon do %>
+  <%= render "shared/search_form_header",
+search_path: laws_path(page: 1),
+i18n_namespace: "laws.index.search_form" %>
+<% end %>
+
+<section role="main">
+  <div class="wrap row">
+    <div id="laws" class="laws-list small-12 medium-12 column">
+
+      <div class="filters">
+        <div class="small-12 medium-7">
+          <% if @search_terms %>
+            <h2 class="margin-top">
+              <%= page_entries_info @laws %>
+              <%= t("laws.index.search_results", count: @laws.size, search_term: @search_terms) %>
+            </h2>
+          <% elsif @tag_filter %>
+            <h2 class="margin-top">
+              <%= page_entries_info @laws %>
+              <%= t("laws.index.filter_topic", count: @laws.size, topic: t("ley.#{@tag_filter}")) %>
+            </h2>
+          <% end %>
+        </div>
+
+        <!--
+        <% if @tag_filter || @search_terms %>
+          <div class="small-12 medium-5 margin-top inline-block laws-order">
+            <h6 class="inline-block">
+              <%= t("laws.index.select_order") %>
+            </h6>
+            <%= render 'shared/order_selector', i18n_namespace: "laws.index" %>
+          </div>
+        <% else %>
+          <div class="small-12 inline-block">
+            <h2 class="inline-block">
+              <%= t("laws.index.select_order_long") %>
+            </h2>
+            <%= render 'shared/order_selector', i18n_namespace: "laws.index" %>
+          </div>
+        <% end %>
+        -->
+
+        <div id="header" class="small-12 medium-12 menu-programa">
+          <%= link_to taggable_path('law', 'titulo_0'), class: 'm' do %>
+             <%=  t('ley.titulo_0') %>
+          <% end %>
+
+          <%= link_to taggable_path('law', 'titulo_1'), class: 'm' do %>
+             <%=  t('ley.titulo_1') %>
+          <% end %>
+
+          <%= link_to taggable_path('law', 'titulo_2'), class: 'm' do %>
+             <%=  t('ley.titulo_2') %>
+          <% end %>
+
+          <%= link_to taggable_path('law', 'titulo_3'), class: 'm' do %>
+             <%=  t('ley.titulo_3') %>
+          <% end %>
+
+          <%= link_to taggable_path('law', 'titulo_4'), class: 'm' do %>
+             <%=  t('ley.titulo_4') %>
+          <% end %>
+
+          <%= link_to taggable_path('law', 'titulo_5'), class: 'm' do %>
+             <%=  t('ley.titulo_5') %>
+          <% end %>
+
+          <%= link_to taggable_path('law', 'titulo_6'), class: 'm' do %>
+             <%=  t('ley.titulo_6') %>
+          <% end %>
+
+		</div>
+
+		<!-- p class="vota-participa">* Tras informarte de las diferentes propuestas puedes votarlas en: <a href="https://participa.podemos.info/es">participa.podemos.info</a></p -->
+    <p class="vota-participa" style="line-height: normal;"><strong>¿Cómo participar en el proceso de elaboración colectiva de la ley?</strong><br/><br/>
+Para poder participar en el proceso abierto de elaboración de la <a href="https://files.podemos.info/3sHIvw7Px0.pdf"  target="_blank">Ley de Participación para la Comunidad de Madrid</a>, creado por el grupo parlamentario de Podemos de la Asamblea de Madrid, solo debes seguir estos sencillos pasos: <br/><br/>
+1- Una vez accedido a Plaza Podemos 2.0 y entrado en la pestaña “Ley de Participación”, encontraras 6 sub-pestañas nuevas que corresponden a los diferentes bloques de la ley, y todos los artículos de esta divididos cada uno en diferentes hilos.<br/><br/>
+2- Al acceder a los diferentes bloques, encontraras los diferentes artículos que lo componen en forma de hilos.<br/><br/>
+3- Si al leer alguno de los artículos, te gustaría añadir, eliminar, concretar, modificar o proponer una alternativa, lo puedes hacer dejando un comentario en el hilo del artículo en cuestión.<br/><br/>
+4- Cuando el proceso de elaboración termine, todas las modifcaciones y propuestas planteadas serán recogidas y estudiadas para su posible introducción en la ley que se presentara en la Asamblea de Madrid.<br/><br/>
+Desde Podemos queremos que abrir los procesos legislativos y las instituciones a la ciudadanía y eso empieza por elaborar de forma conjunta la ley que nos permita hacerlo.<br/><br/><br/>
+Comenta, propón y participa.</p>
+
+        <!--div class="show-for-small-only">
+          <%= link_to t("laws.index.start_law"), new_law_path, class: 'button radius expand' %>
+        </div-->
+
+        <%= render @laws %>
+        <%= paginate @laws %>
+      </div>
+    </div>
+
+    <!--div class="small-12 medium-3 column">
+      <aside class="sidebar" role="complementary">
+        <!--%= link_to t("laws.index.start_law"), new_law_path, class: 'button radius expand' %-->
+        <!--%= render "shared/tag_cloud", taggable: 'law' %-->
+        <!--div class="tag-cloud">
+            <div class="sidebar-divider"></div>
+            <h3>Eje seleccionado</h3>
+            <br>
+            <a href="" class="l">Sub-eje 1</a>
+            <a href="" class="l">Sub-eje 2</a>
+            <a href="" class="l">Sub-eje 3</a>
+        </div>
+      </aside>
+    </div-->
+  </div>
+</section>
