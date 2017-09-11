@@ -67,7 +67,7 @@ class User < ActiveRecord::Base
   # If no verified email was provided we assign a temporary email and ask the
   # user to verify it on the next step via RegistrationsController.finish_signup
   def self.first_or_create_for_oauth(auth)
-    email = auth.info.email if auth.info.verified || auth.info.verified_email
+    email = auth.info.email #if auth.info.verified || auth.info.verified_email
     user  = User.where(email: email).first if email
     dni = User.dni_from_id(auth.uid.split('/').pop)
     # Create the user if it's a new registration
@@ -96,6 +96,9 @@ class User < ActiveRecord::Base
         document_number:dni, document_type: 'Spanish ID', email: email
         )
       verified.save
+    else
+      user.document_number = dni
+      user.save
     end
 
     user
